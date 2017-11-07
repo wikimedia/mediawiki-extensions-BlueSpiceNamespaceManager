@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Cedric31"
+		]
+	},
+	"bs-namespacemanager-label": "Gestionari d’espacis de noms",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Espaci de noms",
+	"bs-namespacemanager-label-editable": "Renomenable",
+	"bs-namespacemanager-label-content": "Espaci de noms del contengut",
+	"bs-namespacemanager-label-subpages": "Sospaginas",
+	"bs-namespacemanager-tipadd": "Apondre l'espaci de noms",
+	"bs-namespacemanager-tipedit": "Modificar l’espaci de noms",
+	"bs-namespacemanager-tipremove": "Suprimir l’espaci de noms",
+	"bs-namespacemanager-labelnsname": "Nom de l’espaci de noms",
+	"bs-namespacemanager-willdelete": "Serà suprimit",
+	"bs-namespacemanager-willmove": "Serà desplaçat dins « {{int:bs-ns_main}} »"
+}

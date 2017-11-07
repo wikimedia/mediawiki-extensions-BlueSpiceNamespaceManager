@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"John Reid"
+		]
+	},
+	"bs-namespacemanager-desc": "Admeenistration interface fer eikin, eeditin n delytin namespaces",
+	"bs-namespacemanager-label": "Namespace manager",
+	"bs-namespacemanager-wrong-name": "The namespace haes onvalit chairacters.",
+	"bs-namespacemanager-ns-length": "The namespace maun hae ae mineemum length o twa chairacters.",
+	"bs-namespacemanager-label-namespaces": "Namespace",
+	"bs-namespacemanager-label-editable": "Renameable",
+	"bs-namespacemanager-label-searchable": "Rake bi defaut",
+	"bs-namespacemanager-label-subpages": "Subpages",
+	"bs-namespacemanager-nsremoved": "The namespace has been remuived.",
+	"bs-namespacemanager-nsedited": "The namespace haes been eeditit.",
+	"bs-namespacemanager-tipadd": "Eik namespace",
+	"bs-namespacemanager-tipedit": "Eedit namespace",
+	"bs-namespacemanager-tipremove": "Remuiv namespace",
+	"bs-namespacemanager-labelnsname": "Namespace name",
+	"bs-namespacemanager-willdelete": "Will be delytit",
+	"bs-namespacemanager-willmovesuffix": "Will be muived intae \"{{int:bs-ns_main}}\" wi the suffeex \"$1\"",
+	"bs-namespacemanager-deletewarning": "Ar ye siccar that ye want tae delyte this namespace? Delytin ae namespace canna be onduin.",
+	"bs-namespacemanager-pagepresent": "Pages in this namespace:"
+}

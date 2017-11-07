@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Zygimantus",
+			"Eitvys200"
+		]
+	},
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Vardų sritis",
+	"bs-namespacemanager-label-editable": "Galima pervadinti",
+	"bs-namespacemanager-label-content": "Turinio vardų sritis",
+	"bs-namespacemanager-label-searchable": "Ieškoti pagal numatytąjį",
+	"bs-namespacemanager-label-pagecount": "Puslapiai",
+	"bs-namespacemanager-label-system": "Sistema",
+	"bs-namespacemanager-willdelete": "Bus ištrinta",
+	"bs-namespacemanager-willmove": "Bus perkelta į „{{int:bs-ns_main}}“",
+	"bs-namespacemanager-willmovesuffix": "Bus perkelta į „{{int:bs-ns_main}}“ su priešdėliu „$1“",
+	"log-name-bs-namespace-manager": "Vardų srities tvarkymo žurnalas",
+	"bs-namespacemanager-label-istalk": "Aptarimas"
+}

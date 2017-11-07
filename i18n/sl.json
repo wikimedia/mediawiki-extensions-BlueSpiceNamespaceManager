@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alojz.tic",
+			"Skalcaa"
+		]
+	},
+	"bs-namespacemanager-desc": "Skrbniški vmesnik za dodajanje, urejanje in odstranjevanje imenskih prostorov.",
+	"bs-namespacemanager-label": "Skrbnik imenskega prostora",
+	"bs-namespacemanager-wrong-name": "Imenski prostor vsebuje neveljavne znake.",
+	"bs-namespacemanager-ns-exists": "Imenski prostor že obstaja.",
+	"bs-namespacemanager-ns-length": "Ime imenskega prostora mora biti dolgo vsaj dva znaka.",
+	"bs-namespacemanager-invalid-id": "Ni veljavna številka ID imenskega prostora",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Imenski prostor",
+	"bs-namespacemanager-label-editable": "Preimenovanje mogoče",
+	"bs-namespacemanager-label-content": "Vsebina imenskega prostora",
+	"bs-namespacemanager-label-searchable": "Privzeto iskanje",
+	"bs-namespacemanager-label-subpages": "Podstrani",
+	"bs-namespacemanager-nsadded": "Imenski prostor je bil dodan.",
+	"bs-namespacemanager-nsremoved": "Imenski prostor je bil odstranjen.",
+	"bs-namespacemanager-nsedited": "Imenski prostor je bil urejen.",
+	"bs-namespacemanager-tipadd": "Dodaj imenski prostor",
+	"bs-namespacemanager-tipedit": "Uredi imenski prostor",
+	"bs-namespacemanager-tipremove": "Odstrani imenski prostor",
+	"bs-namespacemanager-msgnoteditabledelete": "Ta imenski prostor je sistemski in ga ni mogoče odstraniti.",
+	"bs-namespacemanager-labelnsname": "Ime imenskega prostora",
+	"bs-namespacemanager-willdelete": "Bo pobrisano",
+	"bs-namespacemanager-willmove": "Bo premaknjeno v \"{{int:bs-ns_main}}\"",
+	"bs-namespacemanager-willmovesuffix": "Bo prestavjeno v \"{{int:bs-ns_main}}\" s končnico \"$1\"",
+	"bs-namespacemanager-deletewarning": "Ste prepričani, da želite izbrisati ta imenski prostor? Brisanje imenskega prostora ne bo mogoče razveljaviti.",
+	"bs-namespacemanager-pagepresent": "Strani v tem imenskem prostoru:",
+	"bs-namespacemanager-deletens-movepages": "Ta stran je bila prestavljena iz imenskega prostora \"$1\" v imenski prostor \"{{int:bs-ns_main}}\", ker je bil imenski prostor \"$1\" izbrisan.",
+	"bs-namespacemanager-deletens-deletepages": "Ta stran je bila izbrisana, ker je bil imenski prostor \"$1\" izbrisan."
+}

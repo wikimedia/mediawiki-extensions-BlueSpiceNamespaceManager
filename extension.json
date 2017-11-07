@@ -1,0 +1,84 @@
+{
+	"name": "BlueSpiceNamespaceManager",
+	"version": "2.27.2",
+	"url": "https://help.bluespice.com/index.php/Namespacemanager",
+	"author":   [
+		"Sebastian Ulbricht",
+		"Stefan Widmann",
+		"Robert Vogel"
+	],
+	"license-name":"GPL-2.0+",
+	"descriptionmsg": "bs-namespacemanager-desc",
+	"type": "bluespice",
+	"bsgExtensions": {
+		"BlueSpiceNamespaceManager": {
+			"className": "NamespaceManager",
+			"extPath": "/BlueSpiceNamespaceManager"
+		}
+	},
+	"callback": "NamespaceManager::onRegistration",
+	"LogTypes": [
+		"bs-namespace-manager"
+	],
+	"FilterLogTypes": {
+		"bs-namespace-manager": true
+	},
+	"LogActionsHandlers": {
+		"bs-namespace-manager/*": "LogFormatter"
+	},
+	"APIModules": {
+		"bs-namespace-store": "BSApiNamespaceStore",
+		"bs-namespace-tasks": "BSApiNamespaceTasks"
+	},
+	"SpecialPages": {
+		"NamespaceManager": "SpecialNamespaceManager"
+	},
+	"MessagesDirs": {
+		"NamespaceManager": [
+			"i18n"
+		]
+	},
+	"ExtensionMessagesFiles": {
+		"NamespaceManagerAlias": "includes/specials/SpecialNamespaceManager.alias.php"
+	},
+	"AutoloadClasses": {
+		"NamespaceManager": "NamespaceManager.class.php",
+		"NamespaceNuker": "includes/NamespaceNuker.php",
+		"BSApiNamespaceStore": "includes/api/BSApiNamespaceStore.php",
+		"BSApiNamespaceTasks": "includes/api/BSApiNamespaceTasks.php",
+		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php"
+	},
+	"Hooks": {
+		"UnitTestsList": "NamespaceManager::onUnitTestsList",
+		"LoadExtensionSchemaUpdates": "NamespaceManager::onLoadExtensionSchemaUpdates"
+	},
+	"ResourceModules": {
+		"ext.bluespice.namespaceManager": {
+			"scripts": "resources/bluespice.namespaceManager.js",
+			"dependencies": "ext.bluespice.extjs",
+			"messages": [
+				"bs-namespacemanager-tipadd",
+				"bs-namespacemanager-tipedit",
+				"bs-namespacemanager-tipremove",
+				"bs-namespacemanager-msgnoteditabledelete",
+				"bs-namespacemanager-labelnsname",
+				"bs-namespacemanager-willdelete",
+				"bs-namespacemanager-willmove",
+				"bs-namespacemanager-willmovesuffix",
+				"bs-namespacemanager-deletewarning",
+				"bs-namespacemanager-pagepresent",
+				"bs-namespacemanager-label-editable",
+				"bs-ns_main",
+				"bs-from-something",
+				"bs-namespacemanager-label-istalk",
+				"bs-namespacemanager-nodeletetalk"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "BlueSpiceNamespaceManager"
+	},
+	"load_composer_autoloader" : true,
+	"manifest_version": 1
+}

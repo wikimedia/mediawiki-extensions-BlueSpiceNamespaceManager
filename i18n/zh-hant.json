@@ -1,0 +1,20 @@
+{
+	"@metadata": {
+		"authors": [
+			"Liuxinyu970226",
+			"Cwlin0416"
+		]
+	},
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "命名空間",
+	"bs-namespacemanager-label-subpages": "子頁",
+	"bs-namespacemanager-label-pagecount": "頁面",
+	"bs-namespacemanager-label-system": "系統",
+	"bs-namespacemanager-tipadd": "加入命名空間",
+	"bs-namespacemanager-tipedit": "編輯命名空間",
+	"bs-namespacemanager-tipremove": "移除命名空間",
+	"bs-namespacemanager-labelnsname": "命名空間名稱",
+	"bs-namespacemanager-willmove": "將移動至 \"{{int:bs-ns_main}}\"",
+	"bs-namespacemanager-willmovesuffix": "將移動至 \"{{int:bs-ns_main}}\" 帶字尾 \"$1\"",
+	"bs-namespacemanager-pagepresent": "於此命名空間的頁面："
+}

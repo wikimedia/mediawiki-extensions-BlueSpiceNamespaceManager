@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hwangjy9",
+			"밥풀떼기",
+			"SeoJeongHo",
+			"아라",
+			"Ykhwong"
+		]
+	},
+	"bs-namespacemanager-label": "이름공간 관리자",
+	"bs-namespacemanager-wrong-name": "이 이름공간은 올바르지 않은 문자를 포함합니다.",
+	"bs-namespacemanager-ns-exists": "이 이름공간은 이미 존재합니다.",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "이름공간",
+	"bs-namespacemanager-label-pagecount": "페이지들",
+	"bs-namespacemanager-label-system": "시스템",
+	"bs-namespacemanager-nsadded": "이름공간이 추가되었습니다.",
+	"bs-namespacemanager-nsremoved": "이름공간이 제거되었습니다.",
+	"bs-namespacemanager-nsedited": "이름공간이 편집되었습니다.",
+	"bs-namespacemanager-tipadd": "이름공간 추가",
+	"bs-namespacemanager-tipedit": "이름공간 편집",
+	"bs-namespacemanager-labelnsname": "이름공간 이름",
+	"log-name-bs-namespace-manager": "이름공간 관리자 기록",
+	"log-show-hide-bs-namespace-manager": "이름공간 관리자 기록 $1",
+	"logentry-bs-namespace-manager-create": "$1님이 $4 이름공간을 {{GENDER:$2|만들었습니다}}",
+	"logentry-bs-namespace-manager-modify": "$1님이 $4 이름공간의 설정을 {{GENDER:$2|바꾸었습니다}}",
+	"logentry-bs-namespace-manager-rename": "$1님이 $4 이름공간을 $5(으)로 {{GENDER:$2|바꾸었습니다}}",
+	"logentry-bs-namespace-manager-remove": "$1님이 $4 이름공간을 {{GENDER:$2|제거했습니다}}",
+	"apihelp-bs-namespace-tasks-summary": "이름공간 구성의 수정을 허용합니다.",
+	"action-namespacemanager-viewspecialpage": "이름공간 관리자의 특수문서 보기",
+	"namespacemanager": "이름공간 관리자",
+	"bs-namespacemanager-nodeletetalk": "토론 이름공간은 지울 수 없습니다",
+	"bs-namespacemanager-label-istalk": "토론"
+}

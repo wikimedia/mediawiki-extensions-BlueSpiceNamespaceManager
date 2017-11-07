@@ -1,0 +1,32 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robby"
+		]
+	},
+	"bs-namespacemanager-wrong-name": "Den Nummraum huet net valabel Zeechen.",
+	"bs-namespacemanager-ns-exists": "Den Nummraum gëtt et schonn.",
+	"bs-namespacemanager-ns-length": "Den Nummraum muss mindestens zwee Zeeche laang sinn.",
+	"bs-namespacemanager-label-id": "Nummer (ID)",
+	"bs-namespacemanager-label-namespaces": "Nummraum",
+	"bs-namespacemanager-label-editable": "Ëmbenennbar",
+	"bs-namespacemanager-label-content": "Nummraum Inhalt",
+	"bs-namespacemanager-label-subpages": "Ënnersäiten",
+	"bs-namespacemanager-label-pagecount": "Säiten",
+	"bs-namespacemanager-label-system": "System",
+	"bs-namespacemanager-nsadded": "Den Nummraum gouf derbäigesat.",
+	"bs-namespacemanager-nsremoved": "Den Nummraum gouf ewechgeholl.",
+	"bs-namespacemanager-nsedited": "Den Nummraum gouf geännert.",
+	"bs-namespacemanager-tipadd": "Nummraum derbäisetzen",
+	"bs-namespacemanager-tipedit": "Nummraum änneren",
+	"bs-namespacemanager-tipremove": "Nummraum ewechhuelen",
+	"bs-namespacemanager-msgnoteditabledelete": "Dësen Nummraum ass ee System-Nummraum a kann net geläscht ginn.",
+	"bs-namespacemanager-labelnsname": "Numm vum Nummraum",
+	"bs-namespacemanager-willdelete": "Gi geläscht",
+	"bs-namespacemanager-willmove": "Gëtt a(n) \"{{int:bs-ns_main}}\" geréckelt",
+	"bs-namespacemanager-willmovesuffix": "Gi mam Suffix \"$1\" a(n) \"{{int:bs-ns_main}}\" geréckelt",
+	"bs-namespacemanager-deletewarning": "Sidd Dir sécher datt Dir dësen Nummraum läsche wëllt? D'Läsche vun engem Nummraum kann net réckgängeg gemaach ginn.",
+	"bs-namespacemanager-pagepresent": "Säiten an dësem Nummraum:",
+	"bs-namespacemanager-nodeletetalk": "Den Nummraum Diskussioun däerf net geläscht ginn",
+	"bs-namespacemanager-label-istalk": "Diskussioun"
+}

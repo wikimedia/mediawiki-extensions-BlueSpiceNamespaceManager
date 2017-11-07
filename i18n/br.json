@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Fohanno",
+			"Y-M D",
+			"Fulup"
+		]
+	},
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Esaouenn anv",
+	"bs-namespacemanager-label-editable": "A c'haller adenvel",
+	"bs-namespacemanager-label-content": "Er stadegoù",
+	"bs-namespacemanager-label-searchable": "Klask dre ziouer",
+	"bs-namespacemanager-label-subpages": "Ispajennoù",
+	"bs-namespacemanager-label-pagecount": "Pajennoù",
+	"bs-namespacemanager-label-system": "Reizhiad",
+	"bs-namespacemanager-tipadd": "Ouzhpennañ an esaouenn anv",
+	"bs-namespacemanager-tipedit": "Kemmañ an esaouenn anv",
+	"bs-namespacemanager-tipremove": "Lemel an esaouenn anv",
+	"bs-namespacemanager-labelnsname": "Anv an esaouenn anv",
+	"bs-namespacemanager-willdelete": "A vo dilamet",
+	"bs-namespacemanager-willmove": "A vo dilec'hiet e-barzh \"{{int:bs-ns_main}}\"",
+	"bs-namespacemanager-willmovesuffix": "A vo dilec'hiet e-barzh \"{{int:bs-ns_main}}\" gant an dibenn-ger \"$1\""
+}

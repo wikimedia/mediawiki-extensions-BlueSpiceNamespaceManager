@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Purodha"
+		]
+	},
+	"bs-namespacemanager-desc": "Schnettschtäll för Appachtemangs ze verwallde: derbeidonn, ändere, fottschmiiße.",
+	"bs-namespacemanager-label": "Appachtemangs verwallde",
+	"bs-namespacemanager-wrong-name": "En dämm Nahme för dat Appachtemang sin onjölltejje Zeijsche dren.",
+	"bs-namespacemanager-ns-exists": "Dat Appachemang jidd_et alt.",
+	"bs-namespacemanager-ns-length": "Dä Nahme för dat Appachtemang moß winnischßdens zwai Zeische lang sin.",
+	"bs-namespacemanager-invalid-id": "Kein jölltejje Kännong vör e Appachtemang",
+	"bs-namespacemanager-label-id": "Kännong",
+	"bs-namespacemanager-label-namespaces": "Appachtemang",
+	"bs-namespacemanager-label-editable": "Ömzedäufe",
+	"bs-namespacemanager-label-content": "Et Appachtemang för der Ennhald:",
+	"bs-namespacemanager-label-searchable": "schtndattmähßesch söhke",
+	"bs-namespacemanager-label-subpages": "Ongersigge",
+	"bs-namespacemanager-nsadded": "Dat Appachtemang es derbei jedonn.",
+	"bs-namespacemanager-nsremoved": "Dat Appachtemang es fott jeschmeße.",
+	"bs-namespacemanager-nsedited": "Dat Appachtemang es verändert.",
+	"bs-namespacemanager-tipadd": "E Appachtemang derbeidonn",
+	"bs-namespacemanager-tipedit": "Dat Appachtemang verändere",
+	"bs-namespacemanager-tipremove": "E Appachtemang fott schmiiße",
+	"bs-namespacemanager-labelnsname": "Dämm Appachtemang singe Nahme",
+	"bs-namespacemanager-willdelete": "Weed fott jeschmeße",
+	"bs-namespacemanager-pagepresent": "Sigge en heh däm Appachtemang:",
+	"bs-namespacemanager-deletens-deletepages": "Heh di Sigg wohd fottjeschmeße, weil dat Appachtemang „$1“ fottjeschmeße woode es.",
+	"log-name-bs-namespace-manager": "Logbohch övver de Verwalldong vun de Appachtemangs",
+	"log-description-bs-namespace-manager": "Logbohch vun de Ännderonge aan de Appachtemangs.",
+	"log-show-hide-bs-namespace-manager": "$1 et Logbohch övver de Verwalldong vun de Appachtemangs",
+	"logentry-bs-namespace-manager-create": "{{GENDER:$2|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher}} $1 hädd et Appachtemang $4 aanjelaat.",
+	"logentry-bs-namespace-manager-modify": "{{GENDER:$2|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher}} $1 hät de Enschtällonge för et Appachtemang $4 veränndert.",
+	"logentry-bs-namespace-manager-rename": "{{GENDER:$2|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher}} $1 hädd_et Appachtemang $4 op $5 omjenannt.",
+	"logentry-bs-namespace-manager-remove": "{{GENDER:$2|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher|De Metmaacherėn|Dä Metmaacher}} $1 hädd_et Appachtemang $4 fott jeschmeße."
+}

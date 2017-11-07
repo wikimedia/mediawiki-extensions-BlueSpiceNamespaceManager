@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Alirezaaa",
+			"Huji"
+		]
+	},
+	"bs-namespacemanager-desc": "رابط مدیریتی برای افزودن، ویرایش یا حذف فضاهای نام",
+	"bs-namespacemanager-label": "مدیر فضای نام",
+	"bs-namespacemanager-wrong-name": "این فضای نام شامل نویسه‌های نامعتبر است.",
+	"bs-namespacemanager-ns-exists": "این فضای نام از پیش وجود دارد.",
+	"bs-namespacemanager-ns-length": "این فضای نام باید حداقل طول دو نویسه را داشته باشد.",
+	"bs-namespacemanager-invalid-id": "بدون شناسه معتبر فضای نام",
+	"bs-namespacemanager-label-id": "شناسه",
+	"bs-namespacemanager-label-namespaces": "فضای نام",
+	"bs-namespacemanager-label-editable": "قابل تغییرنام",
+	"bs-namespacemanager-label-content": "فضای نام محتوا",
+	"bs-namespacemanager-label-searchable": "جستجوی پیش‌فرض",
+	"bs-namespacemanager-label-subpages": "زیرصفحه‌ها",
+	"bs-namespacemanager-nsadded": "فضای نام اضافه شد.",
+	"bs-namespacemanager-nsremoved": "فضای نام حذف شد.",
+	"bs-namespacemanager-nsedited": "فضای نام ویرایش شد.",
+	"bs-namespacemanager-tipadd": "افزودن فضای نام",
+	"bs-namespacemanager-tipedit": "ویرایش فضای نام",
+	"bs-namespacemanager-tipremove": "حذف فضای نام",
+	"bs-namespacemanager-msgnoteditabledelete": "این فضای نام یک فضای نام سیستمی است و نمی‌تواند حذف شود.",
+	"bs-namespacemanager-labelnsname": "نام فضای نام",
+	"bs-namespacemanager-willdelete": "حذف خواهد شد",
+	"bs-namespacemanager-willmove": "به «{{int:bs-ns_main}}» منتقل خواهد شد",
+	"bs-namespacemanager-willmovesuffix": "به «{{int:bs-ns_main}}» با پسوند «$1» منتقل خواهد شد",
+	"bs-namespacemanager-deletewarning": "آیا مطئنید می‌خواهید این فضای نام را حذف کنید؟ حذف یک فضای نام قابل بازگشت نیست.",
+	"bs-namespacemanager-pagepresent": "صفحات در این فضای نام:"
+}

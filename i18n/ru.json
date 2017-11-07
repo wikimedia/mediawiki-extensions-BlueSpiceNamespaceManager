@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"Okras",
+			"Striking Blue",
+			"Kaganer"
+		]
+	},
+	"bs-namespacemanager-desc": "Административный интерфейс для добавления, правки и удаления имён",
+	"bs-namespacemanager-label": "Диспетчер пространств имён",
+	"bs-namespacemanager-wrong-name": "Пространство имён содержит недопустимые символы.",
+	"bs-namespacemanager-ns-exists": "Пространство имён уже существует.",
+	"bs-namespacemanager-ns-length": "Минимальная длина пространства имён - два символа.",
+	"bs-namespacemanager-invalid-id": "Нет допустимого идентификатора пространства имён",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Пространство имён",
+	"bs-namespacemanager-label-editable": "Возможно переименование",
+	"bs-namespacemanager-label-content": "Пространство имён содержимого",
+	"bs-namespacemanager-label-searchable": "Поиск по умолчанию",
+	"bs-namespacemanager-label-subpages": "Подстраницы",
+	"bs-namespacemanager-nsadded": "Пространство имён было добавлено.",
+	"bs-namespacemanager-nsremoved": "Пространство имён было удалено.",
+	"bs-namespacemanager-nsedited": "Пространство имён было отредактировано.",
+	"bs-namespacemanager-tipadd": "Добавить пространство имён",
+	"bs-namespacemanager-tipedit": "Редактировать пространство имён",
+	"bs-namespacemanager-tipremove": "Удалить пространство имён.",
+	"bs-namespacemanager-msgnoteditabledelete": "Это системное пространство имён, которое не может быть удалено.",
+	"bs-namespacemanager-labelnsname": "Название пространства имён",
+	"bs-namespacemanager-willdelete": "Будет удалено",
+	"bs-namespacemanager-willmove": "Будет переименовано в «{{int:bs-ns_main}}».",
+	"bs-namespacemanager-willmovesuffix": "Будет переименовано в «{{int:bs-ns_main}}» с суффиксом «$1».",
+	"bs-namespacemanager-deletewarning": "Вы уверены, что хотите удалить это пространство имён? Удаление пространства имён необратимо.",
+	"bs-namespacemanager-pagepresent": "Страницы в этом пространстве имён:",
+	"bs-namespacemanager-deletens-movepages": "Эта страница была перемещена из пространства имён «$1» в «{{int:bs-ns_main}}», поскольку пространство имён «$1» было удалено.",
+	"bs-namespacemanager-deletens-deletepages": "Эта страница была удалена, поскольку было удалено пространство имён «$1»."
+}

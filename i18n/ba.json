@@ -1,0 +1,38 @@
+{
+	"@metadata": {
+		"authors": [
+			"Sagan",
+			"Айбикә",
+			"З. ӘЙЛЕ"
+		]
+	},
+	"bs-namespacemanager-desc": "Атамаларҙы өҫтәү, төҙәтеү һәм юйыу өсөн административ интерфейс",
+	"bs-namespacemanager-label": "Атамалар киңлеге диспетчеры",
+	"bs-namespacemanager-wrong-name": "Атамалар киңлегендә рөхсәт ителмәгән символдар бар",
+	"bs-namespacemanager-ns-exists": "Исемдәр тупланмаһы бар",
+	"bs-namespacemanager-ns-length": "Исемдәр тупланмаһының иң кәм оҙонлоғо - ике символ",
+	"bs-namespacemanager-invalid-id": "Исемдәр тупланмаһының мөмкин булған идентификаторы юҡ",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Исемдәр тупланмаһы",
+	"bs-namespacemanager-label-editable": "Атама алмаштырыу ихтимал",
+	"bs-namespacemanager-label-content": "Йөкмәткенең исемдәр арауығы",
+	"bs-namespacemanager-label-searchable": "Автоматик эҙләү",
+	"bs-namespacemanager-label-subpages": "Ярҙамсы бит",
+	"bs-namespacemanager-label-pagecount": "Биттәр",
+	"bs-namespacemanager-label-system": "Система",
+	"bs-namespacemanager-nsadded": "Исем тупланмалары өҫтәлде",
+	"bs-namespacemanager-nsremoved": "Исемдәр тупланмаһы юйылды",
+	"bs-namespacemanager-nsedited": "Исемдәр тупланмаһы мөхәррирләнде",
+	"bs-namespacemanager-tipadd": "Исемдәр тупланмаһын өҫтәргә",
+	"bs-namespacemanager-tipedit": "Исемдәр тупланмаһын мөхәррирләргә",
+	"bs-namespacemanager-tipremove": "Исемдәр тупланмаһын юйырға",
+	"bs-namespacemanager-msgnoteditabledelete": "Был исемдәр тупланмаһы юйыла алмай",
+	"bs-namespacemanager-labelnsname": "Исемдәр тупланмаһы атамаһы",
+	"bs-namespacemanager-willdelete": "Юйыласаҡ",
+	"bs-namespacemanager-willmove": "«{{int:bs-ns_main}}»-ҡа үҙгәртеләсәк.",
+	"bs-namespacemanager-willmovesuffix": "$1 суффиксы ярҙамында «{{int:bs-ns_main}}»-ға үҙгәртелә.",
+	"bs-namespacemanager-deletewarning": "Был исемдәр тупланмаһын юйҙырырға теләйһегеҙме? Исемдәр тупланмаһын кире тергеҙеп булмай.",
+	"bs-namespacemanager-pagepresent": "Ошо исемдәр тупланмаһындағы биттәр:",
+	"bs-namespacemanager-deletens-movepages": "Был бит $1 исемдәр тупланмаһынан «{{int:bs-ns_main}}» күсерелде,  сөнки $1 исемдәр тупланмаһы юйылды.",
+	"bs-namespacemanager-deletens-deletepages": "Был бит юйылған, сөнки $1 исемдәр тупланмаһы юйылды."
+}

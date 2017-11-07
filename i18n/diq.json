@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirzali",
+			"Kumkumuk",
+			"Asmen"
+		]
+	},
+	"bs-namespacemanager-label-id": "Kamiye",
+	"bs-namespacemanager-label-namespaces": "Heruna nami",
+	"bs-namespacemanager-label-editable": "Fınanamebeno",
+	"bs-namespacemanager-label-content": "Zerrekê herunanamey",
+	"bs-namespacemanager-label-subpages": "Bınpeli",
+	"bs-namespacemanager-label-pagecount": "Peli",
+	"bs-namespacemanager-label-system": "Sistem",
+	"bs-namespacemanager-willmove": "\"{{int:bs-ns_main}}\" ra  peyser kırışti"
+}

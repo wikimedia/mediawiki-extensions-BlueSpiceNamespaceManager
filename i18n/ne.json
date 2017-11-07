@@ -1,0 +1,34 @@
+{
+	"@metadata": {
+		"authors": [
+			"बिप्लब आनन्द"
+		]
+	},
+	"bs-namespacemanager-desc": "नामस्थानहरू जोड्न, सम्पादन गर्न, मेट्न प्रवन्धक अवतरण",
+	"bs-namespacemanager-label": "नामस्थान प्रवन्धक",
+	"bs-namespacemanager-wrong-name": "यो नामस्थानले अमान्य क्यारेक्टर बोकेको छ।",
+	"bs-namespacemanager-ns-exists": "यो नामस्थान पहिले देखि समावेस छ।",
+	"bs-namespacemanager-ns-length": "नामस्थान कमसेकम २ क्यारेक्टरको हुनु जरूरी छ।",
+	"bs-namespacemanager-invalid-id": "कुनै पनि मान्य नामस्थान आइडी",
+	"bs-namespacemanager-label-id": "आईडी",
+	"bs-namespacemanager-label-namespaces": "नामस्थान",
+	"bs-namespacemanager-label-editable": "पुन:नामाकरण",
+	"bs-namespacemanager-label-content": "सामग्री नामस्थान",
+	"bs-namespacemanager-label-searchable": "पूर्वनिर्धारित खोज",
+	"bs-namespacemanager-label-subpages": "सहपृष्ठहरू",
+	"bs-namespacemanager-nsadded": "यो नामस्थान जोडिएको छ।",
+	"bs-namespacemanager-nsremoved": "यो नामस्थान मेटिएको छ।",
+	"bs-namespacemanager-nsedited": "यो नामस्थान सम्पादन गरिएको छ।",
+	"bs-namespacemanager-tipadd": "नामस्थान जोड्ने",
+	"bs-namespacemanager-tipedit": "नामस्थान सम्पादन",
+	"bs-namespacemanager-tipremove": "नामस्थान हटाउने",
+	"bs-namespacemanager-msgnoteditabledelete": "यो नामस्थान प्रणाली नामस्थान भएको हुनाले मेट्न सकिदैन।",
+	"bs-namespacemanager-labelnsname": "नामस्थान नाम",
+	"bs-namespacemanager-willdelete": "मेटिनेछ",
+	"bs-namespacemanager-willmove": "\"{{int:bs-ns_main}}\"मा सारिनेछ",
+	"bs-namespacemanager-willmovesuffix": "\"$1\" प्रत्यय सँग \"{{int:bs-ns_main}}\"मा सारिनेछ",
+	"bs-namespacemanager-deletewarning": "के तपाईं यस नामस्थानलाई पक्का मेट्न चाहनुहुन्छ? एक नामस्थानलाई मेट्दा पूर्ववत गर्न सकिँदैन।",
+	"bs-namespacemanager-pagepresent": "यस नामस्थानमा रहेका पृष्ठहरू:",
+	"bs-namespacemanager-deletens-movepages": "\"$1\" नामस्थानबाट यो पृष्ठलाई \"{{int:bs-ns_main}}\"मा सारिएको छ, किनभने नामस्थान \"$1\" लाइ मेटिएको थियो ।",
+	"bs-namespacemanager-deletens-deletepages": "यो पृष्ठलाई मेटिएको छ, किनभने नामस्थान \"$1\" लाइ मेटिएको थियो।"
+}

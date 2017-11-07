@@ -1,0 +1,28 @@
+{
+	"@metadata": {
+		"authors": [
+			"Pyscowicz"
+		]
+	},
+	"bs-namespacemanager-ns-exists": "Nimiavaruus on jo olemassa.",
+	"bs-namespacemanager-ns-length": "Nimiavaruus on oltava pituudeltaan vähintään kaksi merkkiä.",
+	"bs-namespacemanager-label-namespaces": "Nimiavaruus",
+	"bs-namespacemanager-label-subpages": "Alasivut",
+	"bs-namespacemanager-label-pagecount": "Sivut",
+	"bs-namespacemanager-label-system": "Järjestelmä",
+	"bs-namespacemanager-hide-system-ns": "Piilota järjestelmänimiavaruudet",
+	"bs-namespacemanager-hide-talk-ns": "Piilota keskustelunimiavaruudet",
+	"bs-namespacemanager-nsadded": "Nimiavaruus on lisätty",
+	"bs-namespacemanager-nsremoved": "Nimiavaruus on poistettu.",
+	"bs-namespacemanager-nsedited": "Nimiavaruutta on muokattu.",
+	"bs-namespacemanager-tipadd": "Lisää nimiavaruus",
+	"bs-namespacemanager-tipedit": "Muokkaa nimiavaruutta",
+	"bs-namespacemanager-tipremove": "Poista nimiavaruus",
+	"bs-namespacemanager-msgnoteditabledelete": "Tämä nimiavaruus on järjestelmänimiavaruus joten sitä ei voi poistaa.",
+	"bs-namespacemanager-labelnsname": "Nimiavaruuden nimi",
+	"bs-namespacemanager-willdelete": "Tullaan poistamaan",
+	"bs-namespacemanager-pagepresent": "Sivut nimiavaruudessa:",
+	"bs-namespacemanager-deletens-deletepages": "Tämä sivu on poistettu, koska nimiavaruus \"$1\" on poistettu.",
+	"bs-namespacemanager-ns-config-saved": "Nimiavaruuden määritys on tallennettu.",
+	"bs-namespacemanager-error-ns-config-not-saved": "Nimiavaruuden määritystä ei voitu tallentaa $1."
+}

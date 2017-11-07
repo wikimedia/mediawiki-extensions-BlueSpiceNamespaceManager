@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Csega",
+			"Wolf Rex"
+		]
+	},
+	"bs-namespacemanager-label": "Névtér kezelő",
+	"bs-namespacemanager-ns-exists": "A névtér már létezik.",
+	"bs-namespacemanager-ns-length": "A névtér nevének minimum két karaktert kell tartalmaznia.",
+	"bs-namespacemanager-label-id": "Azonosító",
+	"bs-namespacemanager-label-namespaces": "Névtér",
+	"bs-namespacemanager-label-editable": "Átnevezhető",
+	"bs-namespacemanager-label-content": "Tartalmi névtér",
+	"bs-namespacemanager-label-subpages": "Allapok",
+	"bs-namespacemanager-label-pagecount": "Lapok",
+	"bs-namespacemanager-label-system": "Rendszer",
+	"bs-namespacemanager-hide-system-ns": "Rendszer-névterek elrejtése",
+	"bs-namespacemanager-hide-talk-ns": "Vitalap-névterek elrejtése",
+	"bs-namespacemanager-nsremoved": "A névtér törölve lett.",
+	"bs-namespacemanager-nsedited": "A névteret szerkesztették.",
+	"bs-namespacemanager-tipadd": "Névtér hozzáadása",
+	"bs-namespacemanager-tipedit": "Névtér szerkesztése",
+	"bs-namespacemanager-tipremove": "Névtér eltávolítása",
+	"bs-namespacemanager-labelnsname": "Névtér név",
+	"bs-namespacemanager-willdelete": "Törlésre kerül",
+	"bs-namespacemanager-pagepresent": "A névtérhez tartozó oldalak:",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|létrehozta}} a(z) $4 névteret",
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|megváltoztatta}} a(z) $4 névtér beállításait",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|átnevezte}} a(z) $4 névteret a következő névre: $5",
+	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|törölte}} a(z) $4 névteret",
+	"bs-namespacemanager-ns-config-saved": "A névtér-beállítások mentésre kerültek."
+}
