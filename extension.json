@@ -1,13 +1,13 @@
 {
 	"name": "BlueSpiceNamespaceManager",
-	"version": "2.27.2",
+	"license-name":"GPL-3.0",
+	"version": "3.0.0",
 	"url": "https://help.bluespice.com/index.php/Namespacemanager",
 	"author":   [
 		"Sebastian Ulbricht",
 		"Stefan Widmann",
 		"Robert Vogel"
 	],
-	"license-name":"GPL-2.0+",
 	"descriptionmsg": "bs-namespacemanager-desc",
 	"type": "bluespice",
 	"bsgExtensions": {

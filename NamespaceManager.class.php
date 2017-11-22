@@ -7,8 +7,7 @@
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 2 of the License, or
- * (at your option) any later version.
+ * the Free Software Foundation, version 3.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -25,11 +24,10 @@
  * @author     Sebastian Ulbricht
  * @author     Stefan Widmann <widmann@hallowelt.com>
  * @author     Robert Vogel <vogel@hallowelt.com>
- * @version    2.23.2
  * @package    Bluespice_Extensions
  * @subpackage NamespaceManager
  * @copyright  Copyright (C) 2016 Hallo Welt! GmbH, All rights reserved.
- * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v2 or later
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
  * @filesource
  */
 

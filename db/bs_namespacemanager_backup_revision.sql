@@ -7,7 +7,7 @@
 -- @package    BlueSpice_Extensions
 -- @subpackage NamespaceManager
 -- @copyright  Copyright (C) 2016 Hallo Welt! GmbH, All rights reserved.
--- @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v2 or later
+-- @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
 -- @filesource
 
 CREATE TABLE IF NOT EXISTS /*$wgDBprefix*/bs_namespacemanager_backup_revision (
