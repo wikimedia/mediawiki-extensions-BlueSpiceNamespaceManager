@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Joetaras"
+		]
+	},
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Namespace",
+	"bs-namespacemanager-label-editable": "Renomenabbele",
+	"bs-namespacemanager-label-content": "Namespace de condenute",
+	"bs-namespacemanager-label-pagecount": "Pàggene",
+	"bs-namespacemanager-label-system": "Sisteme",
+	"bs-namespacemanager-label-istalk": "'Ngazzamende"
+}
