@@ -10,10 +10,14 @@
 	],
 	"descriptionmsg": "bs-namespacemanager-desc",
 	"type": "bluespice",
-	"bsgExtensions": {
-		"BlueSpiceNamespaceManager": {
-			"className": "NamespaceManager",
-			"extPath": "/BlueSpiceNamespaceManager"
+	"attributes": {
+		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceNamespaceManager": {
+					"className": "NamespaceManager",
+					"extPath": "/BlueSpiceNamespaceManager"
+				}
+			}
 		}
 	},
 	"callback": "NamespaceManager::onRegistration",
@@ -40,6 +44,12 @@
 	},
 	"ExtensionMessagesFiles": {
 		"NamespaceManagerAlias": "includes/specials/SpecialNamespaceManager.alias.php"
+	},
+	"config-prefix": "bsg",
+	"config": {
+		"NamespaceManagerNsOffset": {
+			"value": 2999
+		}
 	},
 	"AutoloadClasses": {
 		"NamespaceManager": "NamespaceManager.class.php",
@@ -80,5 +90,5 @@
 		"remoteExtPath": "BlueSpiceNamespaceManager"
 	},
 	"load_composer_autoloader" : true,
-	"manifest_version": 1
+	"manifest_version": 2
 }

@@ -67,8 +67,6 @@ class NamespaceManager extends BsExtensionMW {
 	public function initExt() {
 		wfProfileIn( 'BS::'.__METHOD__ );
 
-		BsConfig::registerVar( 'MW::NamespaceManager::NsOffset', 2999, BsConfig::TYPE_INT, BsConfig::LEVEL_PRIVATE );
-
 		$this->mCore->registerPermission( 'namespacemanager-viewspecialpage', array( 'sysop' ), array( 'type' => 'global' ) );
 
 		$this->setHook( 'NamespaceManager::editNamespace', 'onEditNamespace', true );
