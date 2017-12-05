@@ -3,7 +3,8 @@
 		"authors": [
 			"Ата",
 			"Andriykopanytsia",
-			"Piramidion"
+			"Piramidion",
+			"SimondR"
 		]
 	},
 	"bs-namespacemanager-desc": "Адміністративний інтерфейс для додавання, редагування та видалення просторів назв",
@@ -51,5 +52,7 @@
 	"apihelp-bs-namespace-tasks-description": "Дозволяє модифікувати налаштування простору назв.",
 	"apihelp-bs-namespace-tasks-summary": "Дозволяє модифікувати налаштування простору назв.",
 	"action-namespacemanager-viewspecialpage": "перегляд спеціальної сторінки менеджера просторів назв",
-	"namespacemanager": "Менеджер просторів назв"
+	"namespacemanager": "Менеджер просторів назв",
+	"bs-namespacemanager-nodeletetalk": "Простір назв Обговорення вилучити неможливо",
+	"bs-namespacemanager-label-istalk": "Обговорення"
 }

@@ -1,8 +1,50 @@
 {
 	"@metadata": {
 		"authors": [
-			"TheEduGobi"
+			"TheEduGobi",
+			"Felipe L. Ewald"
 		]
 	},
-	"bs-namespacemanager-deletens-deletepages": "Esta página foi apagada após a exclusão do espaço nominal “$1”."
+	"bs-namespacemanager-desc": "Interface administrativa para adicionar, editar e excluir espaços nominais",
+	"bs-namespacemanager-label": "Gerenciador do espaço nominal",
+	"bs-namespacemanager-wrong-name": "O espaço nominal contém caracteres inválidos.",
+	"bs-namespacemanager-ns-exists": "O espaço nominal já existe.",
+	"bs-namespacemanager-invalid-id": "ID do espaço nominal inválido",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Espaço nominal",
+	"bs-namespacemanager-label-editable": "Renomeável",
+	"bs-namespacemanager-label-content": "Conteúdo do espaço nominal",
+	"bs-namespacemanager-label-searchable": "Pesquisar por padrão",
+	"bs-namespacemanager-label-subpages": "Subpáginas",
+	"bs-namespacemanager-label-pagecount": "Páginas",
+	"bs-namespacemanager-label-system": "Sistema",
+	"bs-namespacemanager-hide-system-ns": "Ocultar espaços nominais do sistema",
+	"bs-namespacemanager-hide-talk-ns": "Ocultar espaços nominais de discussão",
+	"bs-namespacemanager-nsadded": "O espaço nominal foi adicionado.",
+	"bs-namespacemanager-nsremoved": "O espaço nominal foi removido.",
+	"bs-namespacemanager-nsedited": "O espaço nominal foi editado.",
+	"bs-namespacemanager-tipadd": "Adicionar espaço nominal",
+	"bs-namespacemanager-tipedit": "Editar espaço nominal",
+	"bs-namespacemanager-tipremove": "Remover espaço nominal",
+	"bs-namespacemanager-labelnsname": "Nome do espaço nominal",
+	"bs-namespacemanager-willdelete": "Será excluído",
+	"bs-namespacemanager-willmove": "Será movido para dentro de \"{{int:bs-ns_main}}\"",
+	"bs-namespacemanager-pagepresent": "Páginas no espaço nominal:",
+	"bs-namespacemanager-deletens-deletepages": "Esta página foi apagada após a exclusão do espaço nominal “$1”.",
+	"log-name-bs-namespace-manager": "Log do gerenciador de espaço nominal",
+	"log-description-bs-namespace-manager": "Este é um registro das mudanças feitas nos espaços nominais.",
+	"log-show-hide-bs-namespace-manager": "$1 log do gerenciador de espaço nominal",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criou}} o espaço nominal $4",
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|alterou}} as permissões de acesso do espaço nominal $4",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|renomeou}} o espaço nominal  $4 para $5",
+	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|removeu}} o espaço nominal $4",
+	"bs-namespacemanager-ns-config-saved": "A configuração do espaço nominal foi salva.",
+	"apihelp-bs-namespace-store-description": "Lista todas as espaços nominais e configuração arbitrária. Permite classificar, filtrar e paginação. Implementa os parâmetros ExtJS Store.",
+	"apihelp-bs-namespace-store-summary": "Lista todas as espaços nominais e configuração arbitrária. Permite classificar, filtrar e paginação. Implementa os parâmetros ExtJS Store.",
+	"apihelp-bs-namespace-tasks-description": "Permite a modificação da configuração do espaço nominal.",
+	"apihelp-bs-namespace-tasks-summary": "Permite a modificação da configuração do espaço nominal.",
+	"action-namespacemanager-viewspecialpage": "ver a página especial do gerenciador de espaço nominal",
+	"namespacemanager": "Gerenciador do espaço nominal",
+	"bs-namespacemanager-nodeletetalk": "O espaço nominal de discussão não pode ser eliminado",
+	"bs-namespacemanager-label-istalk": "Discussão"
 }

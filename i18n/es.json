@@ -44,7 +44,7 @@
 	"log-show-hide-bs-namespace-manager": "$1 el registro del gestor de espacios de nombres",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|ha creado}} el espacio de nombres $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|ha cambiado}} la configuración del espacio de nombres $4",
-	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|ha renombrado}} el espacio de nombres $4 a $5",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|cambió el nombre}} del espacio de nombres $4 a $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|ha eliminado}} el espacio de nombres $4",
 	"bs-namespacemanager-ns-config-saved": "La configuración de los espacios de nombres ha sido guardada.",
 	"bs-namespacemanager-error-ns-config-not-saved": "La configuración de los espacios de nombres no se pudo guardar en $1.",

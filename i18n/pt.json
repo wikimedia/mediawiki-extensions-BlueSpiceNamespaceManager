@@ -32,7 +32,7 @@
 	"bs-namespacemanager-willdelete": "Será eliminado",
 	"bs-namespacemanager-willmove": "Será movido para \"{{int:bs-ns_main}}\"",
 	"bs-namespacemanager-willmovesuffix": "Será movido para  \"{{int:bs-ns_main}}\" com o sufixo \"$1\"",
-	"bs-namespacemanager-deletewarning": "Tem certeza de que deseja eliminar este domínio? A eliminação de um domínio não pode ser desfeita.",
+	"bs-namespacemanager-deletewarning": "Tem a certeza de que deseja eliminar este domínio? A eliminação de um domínio não pode ser desfeita.",
 	"bs-namespacemanager-pagepresent": "Páginas neste domínio:",
 	"bs-namespacemanager-deletens-movepages": "Esta página foi movida do domínio \"$1\" para o domínio \"{{int:bs-ns_main}}\", porque o domínio \"$1\" foi eliminado.",
 	"bs-namespacemanager-deletens-deletepages": "Esta página foi eliminada, porque o domínio \"$1\" foi eliminado.",
