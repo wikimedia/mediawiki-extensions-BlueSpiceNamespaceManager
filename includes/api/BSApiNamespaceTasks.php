@@ -111,8 +111,10 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$iNS = key( $aNamespaces ) + 1;
 		reset( $aNamespaces );
 
-		if ( $iNS < BsConfig::get( 'MW::NamespaceManager::NsOffset' ) ) {
-			$iNS = BsConfig::get( 'MW::NamespaceManager::NsOffset' ) + 1;
+		$config = \MediaWiki\MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+
+		if ( $iNS < $config->get( 'MW::NamespaceManager::NsOffset' ) ) {
+			$iNS = $config->get( 'MW::NamespaceManager::NsOffset' ) + 1;
 		}
 
 		$sResult = true;
