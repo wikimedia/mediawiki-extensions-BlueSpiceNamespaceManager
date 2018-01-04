@@ -1,6 +1,6 @@
 {
 	"name": "BlueSpiceNamespaceManager",
-	"license-name":"GPL-3.0",
+	"license-name":"GPL-3.0-only",
 	"version": "3.0.0",
 	"url": "https://help.bluespice.com/index.php/Namespacemanager",
 	"author":   [
