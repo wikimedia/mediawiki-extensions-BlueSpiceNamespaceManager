@@ -49,6 +49,7 @@
 	"bs-namespacemanager-ns-config-saved": "La configuración de los espacios de nombres ha sido guardada.",
 	"bs-namespacemanager-error-ns-config-not-saved": "La configuración de los espacios de nombres no se pudo guardar en $1.",
 	"apihelp-bs-namespace-tasks-description": "Permite la modificación de la configuración de los espacios de nombres.",
+	"apihelp-bs-namespace-tasks-summary": "Permite modificar la configuración del espacio de nombres.",
 	"action-namespacemanager-viewspecialpage": "ver la página especial del gestor de espacios de nombres",
 	"namespacemanager": "Gestor de espacios de nombres"
 }
