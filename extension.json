@@ -21,6 +21,11 @@
 		}
 	},
 	"callback": "NamespaceManager::onRegistration",
+	"requires": {
+		"extensions": {
+			"BlueSpiceFoundation": "*"
+        }
+	},
 	"LogTypes": [
 		"bs-namespace-manager"
 	],
@@ -45,7 +50,7 @@
 	"ExtensionMessagesFiles": {
 		"NamespaceManagerAlias": "includes/specials/SpecialNamespaceManager.alias.php"
 	},
-	"config-prefix": "bsg",
+	"config_prefix": "bsg",
 	"config": {
 		"NamespaceManagerNsOffset": {
 			"value": 2999
