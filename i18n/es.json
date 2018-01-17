@@ -51,5 +51,7 @@
 	"apihelp-bs-namespace-tasks-description": "Permite la modificación de la configuración de los espacios de nombres.",
 	"apihelp-bs-namespace-tasks-summary": "Permite modificar la configuración del espacio de nombres.",
 	"action-namespacemanager-viewspecialpage": "ver la página especial del gestor de espacios de nombres",
-	"namespacemanager": "Gestor de espacios de nombres"
+	"namespacemanager": "Gestor de espacios de nombres",
+	"bs-namespacemanager-nodeletetalk": "No se puede borrar el espacio de nombres Discusión",
+	"bs-namespacemanager-label-istalk": "Discusión"
 }
