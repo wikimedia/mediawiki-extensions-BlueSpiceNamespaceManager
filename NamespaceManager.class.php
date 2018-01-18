@@ -49,18 +49,6 @@ class NamespaceManager extends BsExtensionMW {
 		'dir' => ''
 	);
 
-	public function __construct() {
-		wfProfileIn( 'BS::NamespaceManager::__construct' );
-		WikiAdmin::registerModule( 'NamespaceManager', [
-			'image' => '/extensions/BlueSpiceExtensions/WikiAdmin/resources/images/bs-btn_namespaces_v1.png',
-			'level' => 'wikiadmin',
-			'message' => 'bs-namespacemanager-label',
-			'iconCls' => 'bs-icon-register-box',
-			'permissions' => [ 'namespacemanager-viewspecialpage' ],
-		]);
-		wfProfileOut( 'BS::NamespaceManager::__construct' );
-	}
-
 	/**
 	 * Initialization of NamespaceManager extension
 	 */
