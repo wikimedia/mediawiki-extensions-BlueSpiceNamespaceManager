@@ -3,7 +3,7 @@
 	"license-name":"GPL-3.0-only",
 	"version": "3.0.0",
 	"url": "https://help.bluespice.com/index.php/Namespacemanager",
-	"author":   [
+	"author": [
 		"Sebastian Ulbricht",
 		"Stefan Widmann",
 		"Robert Vogel"
@@ -27,7 +27,7 @@
 	"requires": {
 		"extensions": {
 			"BlueSpiceFoundation": "*"
-        }
+		}
 	},
 	"LogTypes": [
 		"bs-namespace-manager"
