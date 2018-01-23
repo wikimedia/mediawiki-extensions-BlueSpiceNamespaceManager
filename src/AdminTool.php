@@ -28,6 +28,7 @@ class AdminTool implements IAdminTool {
 	}
 
 	public function getDataAttributes() {
+		return [];
 	}
 
 	public function getPermissions() {
