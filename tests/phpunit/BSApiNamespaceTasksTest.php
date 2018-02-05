@@ -37,10 +37,19 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 		$iInsertedID = $this->getLastNS();
 
-		$this->assertTrue( $oData->success );
+		$this->assertTrue(
+			$oData->success,
+			"Namespace could not be added via API"
+		);
 		//Is saved to nm-settings.php
-		$this->assertTrue( $this->isNSSaved( $iInsertedID ) ); // main NS
-		$this->assertTrue( $this->isNSSaved( $iInsertedID + 1 ) ); // talk page
+		$this->assertTrue(
+			$this->isNSSaved( $iInsertedID ),
+			"Namespace cannot be found in settings file."
+		); // main NS
+		$this->assertTrue(
+			$this->isNSSaved( $iInsertedID + 1 ),
+			"Talk namespace cannot be found in settings file."
+		); // talk page
 	}
 
 	public function testEdit() {
@@ -63,7 +72,10 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 			)
 		);
 
-		$this->assertTrue( $oData->success );
+		$this->assertTrue(
+			$oData->success,
+			"Namespace could not be edited via API"
+		);
 	}
 
 	public function testRemove() {
@@ -80,10 +92,16 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 				)
 			);
 
-			$this->assertTrue( $oData->success );
+			$this->assertTrue(
+				$oData->success,
+				"Namespace could not be deleted via API"
+			);
 
 			//Is removed from nm-settings.php
-			$this->assertFalse( $this->isNSSaved( $iID ) );
+			$this->assertFalse(
+				$this->isNSSaved( $iID ),
+				"Namespace is still present settings file."
+			);
 		}
 	}
 

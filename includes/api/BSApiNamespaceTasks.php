@@ -181,7 +181,10 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		global $bsSystemNamespaces, $wgContLang;
 
-		$oNamespaceManager = BsExtensionManager::getExtension( 'NamespaceManager' );
+		$oNamespaceManager =
+			\MediaWiki\MediaWikiServices::getInstance()
+			->getService( 'BSExtensionFactory' )
+			->getExtension( 'BlueSpiceNamespaceManager' );
 		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', array( $oNamespaceManager, &$bsSystemNamespaces ) );
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 
