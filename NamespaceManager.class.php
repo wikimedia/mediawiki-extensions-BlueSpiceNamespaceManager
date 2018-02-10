@@ -53,8 +53,6 @@ class NamespaceManager extends BsExtensionMW {
 	 * Initialization of NamespaceManager extension
 	 */
 	public function initExt() {
-		wfProfileIn( 'BS::'.__METHOD__ );
-
 		$this->mCore->registerPermission( 'namespacemanager-viewspecialpage', array( 'sysop' ), array( 'type' => 'global' ) );
 
 		$this->setHook( 'NamespaceManager::editNamespace', 'onEditNamespace', true );
@@ -64,8 +62,6 @@ class NamespaceManager extends BsExtensionMW {
 		//At the moment the implementation relies on an hardcoded mapping,
 		//which is bad. We need to change this and make it more generic!
 		$GLOBALS['bsSystemNamespaces'] = BsNamespaceHelper::getMwNamespaceConstants();
-
-		wfProfileOut( 'BS::'.__METHOD__ );
 	}
 
 	/**
