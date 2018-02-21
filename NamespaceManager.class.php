@@ -71,7 +71,7 @@ class NamespaceManager extends BsExtensionMW {
 	public static function onRegistration() {
 		global $bsgConfigFiles;
 		$bsgConfigFiles['NamespaceManager']
-			= BSCONFIGDIR . DS . 'nm-settings.php';
+			= BSCONFIGDIR . '/nm-settings.php';
 	}
 
 	/**
