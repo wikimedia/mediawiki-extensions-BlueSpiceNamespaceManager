@@ -59,7 +59,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
 	public function sortCallback($oA, $oB) {
 		//TODO: Check if this hook from the old implementation was used somewhere...
-		//wfRunHooks( 'NamespaceManager::namespaceManagerRemoteSort', array( $value1, $value2, self::$aSortConditions ) );
+		//Hooks::run( 'NamespaceManager::namespaceManagerRemoteSort', array( $value1, $value2, self::$aSortConditions ) );
 		parent::sortCallback($oA, $oB);
 	}
 }
