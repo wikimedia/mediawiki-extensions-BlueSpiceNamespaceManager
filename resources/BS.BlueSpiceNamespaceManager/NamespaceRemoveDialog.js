@@ -12,11 +12,11 @@
  * @filesource
  */
 
-Ext.define( 'BS.NamespaceManager.NamespaceRemoveDialog', {
-	extend: 'BS.Window',
+Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceRemoveDialog', {
+	extend: 'MWExt.Dialog',
 	currentData: {},
 	selectedData: {},
-	afterInitComponent: function() {
+	makeItems: function() {
 		var msg = mw.message( 'bs-from-something', this.nsName ).text();
 		this.rgNamespacenuker = Ext.create('Ext.form.RadioGroup', {
 			// Arrange radio buttons into two columns, distributed vertically
@@ -28,15 +28,13 @@ Ext.define( 'BS.NamespaceManager.NamespaceRemoveDialog', {
 				{ boxLabel: mw.message( 'bs-namespacemanager-willmovesuffix', msg ).text(), name: 'rb', inputValue: '2', checked: true }
 			]
 		});
-		this.items = [{
+		return [{
 				html: mw.message( 'bs-namespacemanager-deletewarning' ).text()
 			}, {
 				html: mw.message( 'bs-namespacemanager-pagepresent' ).text()
 			},
 			this.rgNamespacenuker
 		];
-
-		this.callParent(arguments);
 	},
 	resetData: function() {
 		this.rgNamespacenuker.reset();

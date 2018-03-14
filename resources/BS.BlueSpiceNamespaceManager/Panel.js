@@ -12,9 +12,12 @@
  * @filesource
  */
 
-Ext.define( 'BS.NamespaceManager.Panel', {
+Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 	extend: 'BS.CRUDGridPanel',
-	requires: [ 'BS.store.BSApi' ],
+	requires: [
+		'BS.store.BSApi', 'BS.BlueSpiceNamespaceManager.NamespaceRemoveDialog',
+		'BS.BlueSpiceNamespaceManager.NamespaceDialog'
+	],
 	pageSize: 20,
 
 	initComponent: function() {
@@ -45,7 +48,7 @@ Ext.define( 'BS.NamespaceManager.Panel', {
 			}
 			if( i === 0 ){ //Typically the ID column
 				column.flex = 0;
-				column.width = 50;
+				column.width = 70;
 			}
 			columns.push( column );
 		}
@@ -118,7 +121,9 @@ Ext.define( 'BS.NamespaceManager.Panel', {
 	},
 	onBtnAddClick: function( oButton, oEvent ) {
 		if ( !this.dlgNamespaceAdd ) {
-			this.dlgNamespaceAdd = Ext.create( 'BS.NamespaceManager.NamespaceDialog', {id:"bs-namespacemanager-add-dlg"} );
+			this.dlgNamespaceAdd = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
+				id:"bs-namespacemanager-add-dlg"
+			} );
 			this.dlgNamespaceAdd.on( 'ok', this.onDlgNamespaceAddOk, this );
 		}
 
@@ -132,7 +137,9 @@ Ext.define( 'BS.NamespaceManager.Panel', {
 	onBtnEditClick: function( oButton, oEvent ) {
 		var selectedRow = this.grdMain.getSelectionModel().getSelection();
 		if ( !this.dlgNamespaceEdit ) {
-			this.dlgNamespaceEdit = Ext.create( 'BS.NamespaceManager.NamespaceDialog', {id:"bs-namespacemanager-edit-dlg"} );
+			this.dlgNamespaceEdit = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
+				id:"bs-namespacemanager-edit-dlg"
+			} );
 			this.dlgNamespaceEdit.on( 'ok', this.onDlgNamespaceEditOk, this );
 		}
 
@@ -168,13 +175,10 @@ Ext.define( 'BS.NamespaceManager.Panel', {
 			return;
 		}
 		if ( !this.dlgNamespaceRemove ) {
-			this.dlgNamespaceRemove = Ext.create(
-				'BS.NamespaceManager.NamespaceRemoveDialog',
-				{
+			this.dlgNamespaceRemove = new BS.BlueSpiceNamespaceManager.NamespaceRemoveDialog( {
 					id: "bs-namespacemanager-remove-dlg",
 					nsName: selectedRow[0].get( 'name' )
-				}
-			);
+			} );
 			this.dlgNamespaceRemove.on( 'ok', this.onDlgNamespaceRemoveOk, this );
 		}
 

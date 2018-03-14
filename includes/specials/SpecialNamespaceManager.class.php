@@ -50,7 +50,7 @@ class SpecialNamespaceManager extends BsSpecialPage {
 				'hidden' => true,
 				'sortable' => true,
 				'filter' => array(
-					'type' => 'bool'
+					'type' => 'boolean'
 				),
 			),
 			array(
@@ -60,7 +60,7 @@ class SpecialNamespaceManager extends BsSpecialPage {
 				'hidden' => true,
 				'sortable' => true,
 				'filter' => array(
-					'type' => 'bool'
+					'type' => 'boolean'
 				),
 			),
 			array(
@@ -69,7 +69,7 @@ class SpecialNamespaceManager extends BsSpecialPage {
 				'label' => wfMessage( 'bs-namespacemanager-label-subpages' )->plain(),
 				'sortable' => true,
 				'filter' => array(
-					'type' => 'bool'
+					'type' => 'boolean'
 				),
 			),
 			array(
@@ -78,7 +78,7 @@ class SpecialNamespaceManager extends BsSpecialPage {
 				'label' => wfMessage( 'bs-namespacemanager-label-searchable' )->plain(),
 				'sortable' => true,
 				'filter' => array(
-					'type' => 'bool'
+					'type' => 'boolean'
 				),
 			),
 			array(
@@ -87,7 +87,7 @@ class SpecialNamespaceManager extends BsSpecialPage {
 				'label' => wfMessage( 'bs-namespacemanager-label-content' )->plain(),
 				'sortable' => true,
 				'filter' => array(
-					'type' => 'bool'
+					'type' => 'boolean'
 				),
 			)
 		);

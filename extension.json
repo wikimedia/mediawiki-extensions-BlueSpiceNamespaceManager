@@ -20,6 +20,14 @@
 			},
 			"AdminToolRegistry": {
 				"bs-namespace-manager": "BlueSpice\\NamespaceManager\\AdminTool"
+			},
+			"PermissionRegistry": {
+				"namespacemanager-viewspecialpage": {
+					"type": "namespace",
+					"roles": [
+						"admin", "demo"
+					]
+				}
 			}
 		}
 	},
@@ -97,6 +105,14 @@
 		"localBasePath": "",
 		"remoteExtPath": "BlueSpiceNamespaceManager"
 	},
+	"GroupPermissions": {
+		"sysop": {
+			"namespacemanager-viewspecialpage": true
+		}
+	},
+	"AvailableRights": [
+		"namespacemanager-viewspecialpage"
+	],
 	"load_composer_autoloader" : true,
 	"manifest_version": 2
 }

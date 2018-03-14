@@ -53,8 +53,6 @@ class NamespaceManager extends BsExtensionMW {
 	 * Initialization of NamespaceManager extension
 	 */
 	public function initExt() {
-		$this->mCore->registerPermission( 'namespacemanager-viewspecialpage', array( 'sysop' ), array( 'type' => 'global' ) );
-
 		$this->setHook( 'NamespaceManager::editNamespace', 'onEditNamespace', true );
 		$this->setHook( 'NamespaceManager::writeNamespaceConfiguration', 'onWriteNamespaceConfiguration', true );
 

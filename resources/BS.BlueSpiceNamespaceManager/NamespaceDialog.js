@@ -12,11 +12,11 @@
  * @filesource
  */
 
-Ext.define( 'BS.NamespaceManager.NamespaceDialog', {
-	extend: 'BS.Window',
+Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
+	extend: 'MWExt.Dialog',
 	currentData: {},
 	selectedData: {},
-	afterInitComponent: function() {
+	makeItems: function() {
 		this.tfNamespaceName = Ext.create( 'Ext.form.TextField', {
 			fieldLabel: mw.message( 'bs-namespacemanager-labelnsname' ).plain(),
 			labelWidth: 130,
@@ -25,7 +25,7 @@ Ext.define( 'BS.NamespaceManager.NamespaceDialog', {
 			allowBlank: false
 		});
 
-		this.items = [
+		var items = [
 			this.tfNamespaceName
 		];
 		this.checkboxControls = {};
@@ -46,10 +46,10 @@ Ext.define( 'BS.NamespaceManager.NamespaceDialog', {
 				name: 'cb-'+fieldDef.name
 			});
 			this.checkboxControls[fieldDef.name] = cbControl;
-			this.items.push( cbControl );
+			items.push( cbControl );
 		}
 
-		this.callParent(arguments);
+		return items;
 	},
 	resetData: function() {
 		this.tfNamespaceName.reset();
