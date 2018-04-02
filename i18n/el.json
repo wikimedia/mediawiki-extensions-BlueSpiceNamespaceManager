@@ -1,0 +1,33 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"bs-namespacemanager-invalid-id": "Μη έγκυρο αναγνωριστικό ονοματοχώρου",
+	"bs-namespacemanager-label-id": "Αναγνωριστικό",
+	"bs-namespacemanager-label-namespaces": "Ονοματοχώρος",
+	"bs-namespacemanager-label-editable": "Μετονομάσιμο",
+	"bs-namespacemanager-label-content": "Ονοματοχώρος περιεχομένου",
+	"bs-namespacemanager-label-searchable": "Αναζήτηση από προεπιλογή",
+	"bs-namespacemanager-label-subpages": "Υποσελίδες",
+	"bs-namespacemanager-label-pagecount": "Σελίδες",
+	"bs-namespacemanager-label-system": "Σύστημα",
+	"bs-namespacemanager-hide-system-ns": "Απόκρυψη ονοματοχώρων συστήματος",
+	"bs-namespacemanager-hide-talk-ns": "Απόκρυψη ονοματοχώρων συζήτησης",
+	"bs-namespacemanager-nsadded": "Ο ονοματοχώρος έχει προστεθεί.",
+	"bs-namespacemanager-nsremoved": "Ο ονοματοχώρος έχει αφαιρεθεί.",
+	"bs-namespacemanager-nsedited": "Ο ονοματοχώρος έχει τροποποιηθεί.",
+	"bs-namespacemanager-tipadd": "Πρόσθεση ονοματοχώρων",
+	"bs-namespacemanager-tipedit": "Επεξεργασία ονοματοχώρου",
+	"bs-namespacemanager-tipremove": "Αφαίρεση ονοματοχώρου",
+	"bs-namespacemanager-msgnoteditabledelete": "Ο ονοματοχώρος είναι ένας ονοματοχώρος του συστήματος και δεν μπορεί να διαγραφεί.",
+	"bs-namespacemanager-labelnsname": "Όνομα ονοματοχώρου",
+	"bs-namespacemanager-willdelete": "Θα διαγραφεί",
+	"bs-namespacemanager-pagepresent": "Σελίδες σε αυτό το ονοματοχώρο:",
+	"bs-namespacemanager-deletens-deletepages": "Αυτή η σελίδα έχει διαγραφεί, επειδή ο ονοματοχώρος \"$1\" διεγράφη.",
+	"log-name-bs-namespace-manager": "Μητρώο διαχειριστή ονοματοχώρων",
+	"namespacemanager": "Διαχειριστής ονοματοχώρων",
+	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
+	"bs-namespacemanager-label-istalk": "Συζήτηση"
+}
