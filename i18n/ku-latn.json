@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"George Animal"
+			"George Animal",
+			"Ghybu"
 		]
 	},
 	"bs-namespacemanager-label-pagecount": "Rûpel",
-	"bs-namespacemanager-label-system": "Sîstem"
+	"bs-namespacemanager-label-system": "Sîstem",
+	"bs-namespacemanager-label-istalk": "Gotûbêj"
 }
