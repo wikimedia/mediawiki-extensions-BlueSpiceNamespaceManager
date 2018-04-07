@@ -46,7 +46,7 @@
 	"bs-namespacemanager-error-ns-config-not-saved": "לא ניתן היה לשמור את הגדרות התצורה של מרחב השם בקובץ $1.",
 	"apihelp-bs-namespace-tasks-description": "אפשרות לעריכת הגדרות התצורה של מרחב שם.",
 	"apihelp-bs-namespace-tasks-summary": "אפשרות לעריכת הגדרות התצורה של מרחב שם.",
-	"action-namespacemanager-viewspecialpage": "לצפות בדף המיוחד \"ניהול מרחבי השם\"",
+	"action-namespacemanager-viewspecialpage": "לצפות בדף המיוחד \"ניהול מרחבי שם\"",
 	"namespacemanager": "ניהול מרחבי שם",
 	"bs-namespacemanager-nodeletetalk": "לא ניתן למחוק מרחב שיחה.",
 	"bs-namespacemanager-label-istalk": "שיחה"
