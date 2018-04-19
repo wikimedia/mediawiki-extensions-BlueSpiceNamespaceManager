@@ -75,7 +75,6 @@
 		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php"
 	},
 	"Hooks": {
-		"UnitTestsList": "NamespaceManager::onUnitTestsList",
 		"LoadExtensionSchemaUpdates": "NamespaceManager::onLoadExtensionSchemaUpdates"
 	},
 	"ResourceModules": {
