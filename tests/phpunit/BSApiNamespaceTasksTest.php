@@ -1,5 +1,9 @@
 <?php
 
+namespace BlueSpice\NamespaceManager\Tests;
+
+use BlueSpice\Tests\BSApiTasksTestBase;
+
 /**
  * @group medium
  * @group API
@@ -14,6 +18,17 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		'searched' => true,
 		'content' => false
 	);
+
+	protected function setUp() {
+		$time = time();
+		$this->setMwGlobals( [
+			'bsgConfigFiles' => [
+				'NamespaceManager' => wfTempDir() . "/nm-settings.$time.php"
+			]
+		] );
+
+		return parent::setUp();
+	}
 
 	protected function getModuleName () {
 		return 'bs-namespace-tasks';

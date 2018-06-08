@@ -38,7 +38,7 @@
  */
 class NamespaceManager extends BsExtensionMW {
 
-	private $_aDefaultNamespaceSettings = array(
+	private static $_aDefaultNamespaceSettings = array(
 		'content' => false,
 		'subpages' => true,
 		'searched' => false
@@ -53,9 +53,6 @@ class NamespaceManager extends BsExtensionMW {
 	 * Initialization of NamespaceManager extension
 	 */
 	public function initExt() {
-		$this->setHook( 'NamespaceManager::editNamespace', 'onEditNamespace', true );
-		$this->setHook( 'NamespaceManager::writeNamespaceConfiguration', 'onWriteNamespaceConfiguration', true );
-
 		//CR, RBV: This is suposed to return all constants! Not just system NS.
 		//At the moment the implementation relies on an hardcoded mapping,
 		//which is bad. We need to change this and make it more generic!
@@ -152,7 +149,7 @@ class NamespaceManager extends BsExtensionMW {
 	 * Hook-Handler for NamespaceManager::editNamespace
 	 * @return boolean Always true to kepp hook alive
 	 */
-	public function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings, $bUseInternalDefaults ) {
+	public static function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings, $bUseInternalDefaults ) {
 		if ( !$bUseInternalDefaults ) {
 			if ( empty( $aNamespaceDefinition[$iNs] ) ) {
 				$aNamespaceDefinition[$iNs] = array();
@@ -162,12 +159,12 @@ class NamespaceManager extends BsExtensionMW {
 				'subpages' => $aAdditionalSettings['subpages'],
 				'searched' => $aAdditionalSettings['searched'] );
 		} else {
-			$aNamespaceDefinition[$iNs] += $this->_aDefaultNamespaceSettings;
+			$aNamespaceDefinition[$iNs] += static::$_aDefaultNamespaceSettings;
 		}
 		return true;
 	}
 
-	public function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNs, $aDefinition ) {
+	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNs, $aDefinition ) {
 		if ( isset( $aDefinition[ 'content' ] ) && $aDefinition['content'] === true ) {
 			$sSaveContent .= "\$GLOBALS['wgContentNamespaces'][] = {$sConstName};\n";
 		}
