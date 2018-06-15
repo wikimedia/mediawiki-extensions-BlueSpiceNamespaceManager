@@ -75,7 +75,9 @@
 		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php"
 	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": "NamespaceManager::onLoadExtensionSchemaUpdates"
+		"LoadExtensionSchemaUpdates": "NamespaceManager::onLoadExtensionSchemaUpdates",
+		"NamespaceManager::editNamespace": "NamespaceManager::onEditNamespace",
+		"NamespaceManager::writeNamespaceConfiguration": "NamespaceManager::onWriteNamespaceConfiguration"
 	},
 	"ResourceModules": {
 		"ext.bluespice.namespaceManager": {
