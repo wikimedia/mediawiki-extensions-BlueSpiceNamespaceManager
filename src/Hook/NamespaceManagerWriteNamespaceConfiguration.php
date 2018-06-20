@@ -67,4 +67,30 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 		$this->ns = $ns;
 		$this->definition = $definition;
 	}
+
+	/**
+	 * Convinience function - most of the extension will do the same thing here
+	 *
+	 * @param string $configVar - name of the global (bsg) variable
+	 * @param string $nsManagerOptionName - name of the option as registered with NSManager
+	 */
+	protected function writeConfiguration( $configVar, $nsManagerOptionName ) {
+		$enabledNamespaces = $this->getConfig()->get( $configVar );
+
+		$currentlyActivated = in_array( $this->ns, $enabledNamespaces );
+
+		$explicitlyDeactivated = false;
+		if ( isset( $this->definition[$nsManagerOptionName] ) && $this->definition[$nsManagerOptionName] === false ) {
+			$explicitlyDeactivated = true;
+		}
+
+		$explicitlyActivated = false;
+		if ( isset( $this->definition[$nsManagerOptionName] ) && $this->definition[$nsManagerOptionName] === true ) {
+			$explicitlyActivated = true;
+		}
+
+		if( ( $currentlyActivated && !$explicitlyDeactivated ) || $explicitlyActivated ) {
+			$this->saveContent .= "\$GLOBALS['bsg$configVar'][] = {$this->constName};\n";
+		}
+	}
 }
