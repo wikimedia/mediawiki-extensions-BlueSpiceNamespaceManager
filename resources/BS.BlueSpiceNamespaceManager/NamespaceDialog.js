@@ -41,6 +41,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 			if( fieldDef.name === 'isTalkNS' ) {
 				continue;
 			}
+
 			var cbControl =  Ext.create( 'Ext.form.field.Checkbox', {
 				boxLabel: fieldDef.label,
 				name: 'cb-'+fieldDef.name
@@ -70,7 +71,22 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 
 		this.tfNamespaceName.setValue( this.currentData.name );
 		for( var name in this.checkboxControls ) {
-			this.checkboxControls[name].setValue( this.currentData[name] );
+			var value = this.currentData[name];
+			if( typeof( value ) === 'object' ) {
+				if( value.disabled && value.disabled === true ) {
+					//If this field in not applicable to this NS - hide it
+					this.checkboxControls[name].hide();
+					continue;
+				}
+
+				if( value.read_only && value.read_only === true ) {
+					//If field is applicable, but should not be changed
+					//show the value but disable it
+					this.checkboxControls[name].disable();
+				}
+				value = value.value;
+			}
+			this.checkboxControls[name].setValue( value );
 		}
 	},
 	getData: function() {

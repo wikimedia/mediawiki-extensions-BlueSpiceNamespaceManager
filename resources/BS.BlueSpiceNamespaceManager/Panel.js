@@ -69,7 +69,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			this.colMainConf.actions.unshift({
 				glyph: true, //Needed to have the "BS.override.grid.column.Action" render an <span> instead of an <img>,
 				tooltip: mw.message( 'bs-extjs-delete' ).plain(),
-				handler: this.onActionRemoveClick,
+					handler: this.onActionRemoveClick,
 				getClass: function( value, meta, record ) {
 					if( record.get( 'isTalkNS' ) || record.get( 'isSystemNS' ) ) {
 						return "x-hide-display";
@@ -93,20 +93,34 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		return this.colMainConf.actions;
 	},
 	renderIcon: function( value ) {
-		//TODO: make CSS class icon
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
-		if ( value === false ) {
-			return icon.format( 'bs-cross.png');
+		var disabled = false;
+
+		if( typeof( value ) == 'object' ) {
+			if( value.disabled && value.disabled === true ) {
+				disabled = true;
+			}
+			value = value.value;
 		}
-		return icon.format( 'bs-tick.png');
+
+		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+
+		if( disabled === true ) {
+			return icon.format( 'bs-dash.png' );
+		}
+
+		if ( value === false ) {
+			return icon.format( 'bs-cross.png' );
+		}
+
+		return icon.format( 'bs-tick.png' );
 	},
 	renderInvertedIcon: function( value ) {
-		//TODO: make CSS class icon
 		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+
 		if ( value === true ) {
-			return icon.format( 'bs-cross.png');
+			return icon.format( 'bs-cross.png' );
 		}
-		return icon.format( 'bs-tick.png');
+		return icon.format( 'bs-tick.png ');
 	},
 	onGrdMainRowClick: function( oSender, iRowIndex, oEvent ) {
 		this.callParent( oSender, iRowIndex, oEvent );
