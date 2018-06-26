@@ -1,5 +1,5 @@
 {
-	"name": "mediawiki/blue-spice-namespace-manager",
+	"name": "bluespice/namespacemanager",
 	"type": "mediawiki-extension",
 	"description": "BlueSpiceNamespaceManager Administration interface for adding, editing and deleting namespaces",
 	"license": "GPL-3.0-only",
@@ -23,5 +23,8 @@
 			"parallel-lint . --exclude vendor --exclude node_modules",
 			"minus-x check ."
 		]
+	},
+	"extra": {
+		"installer-name": "BlueSpiceNamespaceManager"
 	}
 }
