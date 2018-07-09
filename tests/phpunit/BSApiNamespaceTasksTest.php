@@ -20,6 +20,9 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	);
 
 	protected function setUp() {
+		if( !defined( BSCONFIGDIR ) ) {
+			define( BSCONFIGDIR, wfTempDir() );
+		}
 		$time = time();
 		$this->setMwGlobals( [
 			'bsgConfigFiles' => [
