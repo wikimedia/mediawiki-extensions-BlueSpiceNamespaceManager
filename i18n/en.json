@@ -38,6 +38,7 @@
 	"log-name-bs-namespace-manager": "Namespace manager log",
 	"log-description-bs-namespace-manager": "This is a log of changes on the namespaces.",
 	"log-show-hide-bs-namespace-manager": "$1 namespace manager log",
+	"logeventslist-bs-namespace-manager-log": "Namespace manager log",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|has created}} the namespace $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|has changed}} the settings for the namespace $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|has renamed}} the namespace $4 to $5",
