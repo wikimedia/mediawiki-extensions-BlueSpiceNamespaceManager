@@ -31,7 +31,7 @@
 	"bs-namespacemanager-willdelete": "Va desaniciase",
 	"bs-namespacemanager-willmove": "Va treslladase a «{{int:bs-ns_main}}»",
 	"bs-namespacemanager-willmovesuffix": "Va treslladase a «{{int:bs-ns_main}}» col sufixu «$1»",
-	"bs-namespacemanager-deletewarning": "¿Tas seguro de que quies desaniciar esti espaciu de nomes? El desaniciu d'un espaciu de nomes nun pué desfacese.",
+	"bs-namespacemanager-deletewarning": "¿Tas seguro de que quies desaniciar esti espaciu de nomes? El desaniciu d'un espaciu de nomes nun puede desfacese.",
 	"bs-namespacemanager-pagepresent": "Páxines d'esti espaciu de nomes:",
 	"bs-namespacemanager-deletens-movepages": "Esta páxina treslladóse del espaciu de nomes «$1» al espaciu de nomes «{{int:bs-ns_main}}», porque «$1» desanicióse.",
 	"bs-namespacemanager-deletens-deletepages": "Esta páxina desanicióse porque l'espaciu de nomes «$1» desanicióse.",
@@ -50,6 +50,6 @@
 	"apihelp-bs-namespace-tasks-summary": "Permite cambiar la configuración del espaciu de nomes.",
 	"action-namespacemanager-viewspecialpage": "ver la páxina especial del xestor d'espacios de nomes",
 	"namespacemanager": "Xestor d'espacios de nomes",
-	"bs-namespacemanager-nodeletetalk": "L'espaciu de nomes Alderique nun pué desaniciase",
+	"bs-namespacemanager-nodeletetalk": "L'espaciu de nomes Alderique nun puede desaniciase",
 	"bs-namespacemanager-label-istalk": "Alderique"
 }
