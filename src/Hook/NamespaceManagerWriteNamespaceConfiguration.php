@@ -53,7 +53,7 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 	/**
 	 *
 	 * @param \IContextSource $context
-	 * @param \Congif $config
+	 * @param \Config $config
 	 * @param string $saveContent
 	 * @param string $constName
 	 * @param integer $ns
