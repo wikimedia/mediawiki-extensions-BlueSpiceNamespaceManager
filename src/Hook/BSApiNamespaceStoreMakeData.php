@@ -30,7 +30,7 @@ abstract class BSApiNamespaceStoreMakeData extends Hook {
 	/**
 	 *
 	 * @param \IContextSource $context
-	 * @param \Congif $config
+	 * @param \Config $config
 	 * @param array $results
 	 */
 	public function __construct( $context, $config, &$results ) {

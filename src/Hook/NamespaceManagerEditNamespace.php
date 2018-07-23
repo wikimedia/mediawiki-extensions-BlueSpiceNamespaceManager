@@ -53,7 +53,7 @@ abstract class NamespaceManagerEditNamespace extends Hook {
 	/**
 	 *
 	 * @param \IContextSource $context
-	 * @param \Congif $config
+	 * @param \Config $config
 	 * @param array $namespaceDefinition
 	 * @param int $nsId
 	 * @param array $additionalSettings

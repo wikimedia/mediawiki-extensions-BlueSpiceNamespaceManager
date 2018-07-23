@@ -37,7 +37,7 @@ abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 	/**
 	 *
 	 * @param \IContextSource $context
-	 * @param \Congif $config
+	 * @param \Config $config
 	 * @param \BlueSpice\Extension $namespaceManager
 	 * @param array $bsSystemNamespaces
 	 */

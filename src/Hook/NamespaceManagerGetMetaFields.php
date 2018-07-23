@@ -30,7 +30,7 @@ abstract class NamespaceManagerGetMetaFields extends Hook {
 	/**
 	 *
 	 * @param \IContextSource $context
-	 * @param \Congif $config
+	 * @param \Config $config
 	 * @param array $metaFields
 	 */
 	public function __construct( $context, $config, &$metaFields ) {
