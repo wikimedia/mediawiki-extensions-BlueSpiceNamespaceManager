@@ -275,16 +275,20 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		$aNamespacesToRemove = array( array( $iNS, 0 ) );
+		$aNamespacesToRemoveNames = [];
 		$sOriginalNamespace = $sNamespace = $aUserNamespaces[ $iNS ][ 'name' ];
-
+		$aNamespacesToRemoveNames[] = $sNamespace;
 		if ( strstr( $sNamespace, '_'.$wgContLang->getNsText( NS_TALK ) ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-nodeletetalk' )->plain();
-			return $oResult;
+			if (isset($aUserNamespaces[ ($iNS -1 ) ])) {
+				$oResult->message = wfMessage( 'bs-namespacemanager-nodeletetalk' )->plain();
+				return $oResult;
+			}
 		}
 
 		if ( isset( $aUserNamespaces[ ($iNS + 1) ] ) && strstr( $aUserNamespaces[ ($iNS + 1) ][ 'name' ], '_'.$wgContLang->getNsText( NS_TALK ) ) ) {
 			$aNamespacesToRemove[] = array( ($iNS + 1), 1 );
 			$sNamespace = $aUserNamespaces[ ($iNS + 1) ][ 'name' ];
+			$aNamespacesToRemoveNames[] = $sNamespace;
 		}
 
 		$bErrors = false;
@@ -331,10 +335,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
 			if( $aResult[ 'success' ] === true ) {
 				// Create a log entry for the removal of the namespace
-				$this->logTaskAction(
-					'remove',
-					array( '4::namespace' => $sOriginalNamespace )
-				);
+				foreach ($aNamespacesToRemoveNames as $nameSpace) {
+					$this->logTaskAction(
+						'remove',
+						array( '4::namespace' => $nameSpace )
+					);
+				}
 
 				$oResult->success = $aResult[ 'success' ];
 				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
