@@ -43,6 +43,7 @@
 	"log-name-bs-namespace-manager": "Namensraumverwaltungs-Logbuch",
 	"log-description-bs-namespace-manager": "Logbuch von Änderungen an den Namensräumen.",
 	"log-show-hide-bs-namespace-manager": "$1 Namensraumverwaltung-Logbuch",
+	"logeventslist-bs-namespace-manager-log": "Namensraumverwaltungs-Logbuch",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|hat}} den Namespace $4 angelegt",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|hat}} die Einstellungen für den Namespace $4 geändert",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|hat}} den Namespace $4 in $5 umbenannt",
