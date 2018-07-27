@@ -42,6 +42,7 @@
 	"log-name-bs-namespace-manager": "Used in [[Special:Log]], title of the log type",
 	"log-description-bs-namespace-manager": "Used in [[Special:Log]], description of the log type",
 	"log-show-hide-bs-namespace-manager": "Used in [[Special:Log]]. Parameters:\n* $1 - link text; one of {{msg-mw|Show}} or {{msg-mw|Hide}}\n{{Related|Log-show-hide}}",
+	"logeventslist-bs-namespace-manager-log": "Namespace manager log option label on [[Special:Log]]",
 	"logentry-bs-namespace-manager-create": "Log message about the creation of a new namespace.\nParameters:\n* $4 - name of the namespace",
 	"logentry-bs-namespace-manager-modify": "Log message about changes in the settings of a namespace.\nParameters:\n* $4 - name of the namespace",
 	"logentry-bs-namespace-manager-rename": "Log message about changes of the name of a namespace.\nParameters:\n* $4 - old name of the namespace\n* $5 - new name of the namespace",
