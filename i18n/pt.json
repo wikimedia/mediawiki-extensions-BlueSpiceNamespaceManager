@@ -5,8 +5,8 @@
 			"Hamilton Abreu"
 		]
 	},
-	"bs-namespacemanager-desc": "Interface de administração para criar, editar e eliminar domínios",
-	"bs-namespacemanager-label": "Administração de domínios",
+	"bs-namespacemanager-desc": "Interface de administração para criar, editar e eliminar domínios/espaços nominais",
+	"bs-namespacemanager-label": "Administração de domínios/espaços nominais",
 	"bs-namespacemanager-wrong-name": "O domínio contém caracteres inválidos.",
 	"bs-namespacemanager-ns-exists": "O domínio já existe.",
 	"bs-namespacemanager-ns-length": "O nome do domínio tem de ter um mínimo de dois caracteres.",
@@ -36,9 +36,10 @@
 	"bs-namespacemanager-pagepresent": "Páginas neste domínio:",
 	"bs-namespacemanager-deletens-movepages": "Esta página foi movida do espaço nominal \"$1\" para \"{{int:bs-ns_main}}\", porque o espaço nominal \"$1\" foi eliminado.",
 	"bs-namespacemanager-deletens-deletepages": "Esta página foi eliminada, porque o domínio \"$1\" foi eliminado.",
-	"log-name-bs-namespace-manager": "Registo de administração de domínios",
+	"log-name-bs-namespace-manager": "Registo de administração de domínios/espaços nominais",
 	"log-description-bs-namespace-manager": "Este é um registo de alterações aos domínios.",
-	"log-show-hide-bs-namespace-manager": "$1 registo de administração de domínios",
+	"log-show-hide-bs-namespace-manager": "$1 registo de administração de domínios/espaços nominais",
+	"logeventslist-bs-namespace-manager-log": "Registo de administração de domínios/espaços nominais",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criou}} o domínio $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|alterou}} as configurações do domínio $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|alterou}} o nome do domínio $4 para $5",
@@ -49,8 +50,8 @@
 	"apihelp-bs-namespace-store-summary": "Lista todos os domínios e configurações arbitrárias. Permite ordenação, filtragem e paginação. Implementa parâmetros ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Permite alterar a configuração dos domínios.",
 	"apihelp-bs-namespace-tasks-summary": "Permite a modificação da configuração dos espaços nominais.",
-	"action-namespacemanager-viewspecialpage": "ver a página especial de administração de domínios",
-	"namespacemanager": "Administração de domínios",
+	"action-namespacemanager-viewspecialpage": "ver a página especial de administração de domínios/espaços nominais",
+	"namespacemanager": "Administração de domínios/espaços nominais",
 	"bs-namespacemanager-nodeletetalk": "O espaço nominal de discussão não pode ser eliminado",
 	"bs-namespacemanager-label-istalk": "Discussão"
 }

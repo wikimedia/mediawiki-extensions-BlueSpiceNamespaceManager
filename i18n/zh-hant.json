@@ -40,6 +40,7 @@
 	"log-name-bs-namespace-manager": "命名空間管理日誌",
 	"log-description-bs-namespace-manager": "此為變更命名空間的日誌。",
 	"log-show-hide-bs-namespace-manager": "$1命名空間管理日誌",
+	"logeventslist-bs-namespace-manager-log": "命名空間管理日誌",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|已建立}}命名空間 $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|已更改}}命名空間 $4 上的設定",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|已重新命名}}命名空間 $4 為 $5",

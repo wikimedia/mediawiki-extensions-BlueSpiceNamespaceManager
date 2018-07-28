@@ -23,6 +23,7 @@
 	"bs-namespacemanager-labelnsname": "이름공간 이름",
 	"log-name-bs-namespace-manager": "이름공간 관리자 기록",
 	"log-show-hide-bs-namespace-manager": "이름공간 관리자 기록 $1",
+	"logeventslist-bs-namespace-manager-log": "이름공간 관리자 기록",
 	"logentry-bs-namespace-manager-create": "$1님이 $4 이름공간을 {{GENDER:$2|만들었습니다}}",
 	"logentry-bs-namespace-manager-modify": "$1님이 $4 이름공간의 설정을 {{GENDER:$2|바꾸었습니다}}",
 	"logentry-bs-namespace-manager-rename": "$1님이 $4 이름공간을 $5(으)로 {{GENDER:$2|바꾸었습니다}}",

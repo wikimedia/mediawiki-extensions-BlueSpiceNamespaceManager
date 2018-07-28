@@ -3,7 +3,8 @@
 		"authors": [
 			"Okras",
 			"Striking Blue",
-			"Kaganer"
+			"Kaganer",
+			"Vlad5250"
 		]
 	},
 	"bs-namespacemanager-desc": "Административный интерфейс для добавления, правки и удаления имён",
@@ -32,5 +33,6 @@
 	"bs-namespacemanager-deletewarning": "Вы уверены, что хотите удалить это пространство имён? Удаление пространства имён необратимо.",
 	"bs-namespacemanager-pagepresent": "Страницы в этом пространстве имён:",
 	"bs-namespacemanager-deletens-movepages": "Эта страница была перемещена из пространства имён «$1» в «{{int:bs-ns_main}}», поскольку пространство имён «$1» было удалено.",
-	"bs-namespacemanager-deletens-deletepages": "Эта страница была удалена, поскольку было удалено пространство имён «$1»."
+	"bs-namespacemanager-deletens-deletepages": "Эта страница была удалена, поскольку было удалено пространство имён «$1».",
+	"logeventslist-bs-namespace-manager-log": "Журнал пространств имён"
 }

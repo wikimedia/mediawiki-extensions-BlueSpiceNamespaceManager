@@ -41,6 +41,7 @@
 	"log-name-bs-namespace-manager": "Logg för namnrymdshantering",
 	"log-description-bs-namespace-manager": "Detta är en ändringslogg för namnrymderna.",
 	"log-show-hide-bs-namespace-manager": "Hanteringslogg för namnrymden $1",
+	"logeventslist-bs-namespace-manager-log": "Logg för namnrymdshantering",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|har ändrat}} namnrymden $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|har ändrat}} inställningarna för namnrymden $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|har namnändrat}} namnrymden $4 till $5",
