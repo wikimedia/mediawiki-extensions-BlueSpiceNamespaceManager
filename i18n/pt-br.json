@@ -40,6 +40,7 @@
 	"log-name-bs-namespace-manager": "Log do gerenciador de espaço nominal",
 	"log-description-bs-namespace-manager": "Este é um registro das mudanças feitas nos espaços nominais.",
 	"log-show-hide-bs-namespace-manager": "$1 log do gerenciador de espaço nominal",
+	"logeventslist-bs-namespace-manager-log": "Registo de administração de domínios/espaços nominais",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criou}} o espaço nominal $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|alterou}} as permissões de acesso do espaço nominal $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|renomeou}} o espaço nominal  $4 para $5",
