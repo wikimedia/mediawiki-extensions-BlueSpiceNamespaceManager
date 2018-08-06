@@ -56,5 +56,6 @@
 	"action-namespacemanager-viewspecialpage": "die Spezialseite zur Namensraumverwaltung anzusehen",
 	"namespacemanager": "Namensraumverwaltung",
 	"bs-namespacemanager-nodeletetalk": "Es ist nicht möglich, einen Diskussionsnamensraum zu löschen.",
-	"bs-namespacemanager-label-istalk": "Diskussion"
+	"bs-namespacemanager-label-istalk": "Diskussion",
+	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]] gewähren."
 }

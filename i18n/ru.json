@@ -34,5 +34,6 @@
 	"bs-namespacemanager-pagepresent": "Страницы в этом пространстве имён:",
 	"bs-namespacemanager-deletens-movepages": "Эта страница была перемещена из пространства имён «$1» в «{{int:bs-ns_main}}», поскольку пространство имён «$1» было удалено.",
 	"bs-namespacemanager-deletens-deletepages": "Эта страница была удалена, поскольку было удалено пространство имён «$1».",
-	"logeventslist-bs-namespace-manager-log": "Журнал пространств имён"
+	"logeventslist-bs-namespace-manager-log": "Журнал пространств имён",
+	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]]."
 }

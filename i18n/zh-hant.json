@@ -54,5 +54,6 @@
 	"action-namespacemanager-viewspecialpage": "檢視命名空間管理的特殊頁面",
 	"namespacemanager": "命名空間管理",
 	"bs-namespacemanager-nodeletetalk": "討論命名空間無法刪除",
-	"bs-namespacemanager-label-istalk": "討論"
+	"bs-namespacemanager-label-istalk": "討論",
+	"right-namespacemanager-viewspecialpage": "授予存取特殊頁面 [[Special:NamespaceManager]] 的權限。"
 }

@@ -51,5 +51,6 @@
 	"action-namespacemanager-viewspecialpage": "visar specialsidan för namnrymdshanteraren",
 	"namespacemanager": "Namnrymdshanterare",
 	"bs-namespacemanager-nodeletetalk": "Diskussionsnamnrymden kan inte raderas",
-	"bs-namespacemanager-label-istalk": "Diskussion"
+	"bs-namespacemanager-label-istalk": "Diskussion",
+	"right-namespacemanager-viewspecialpage": "Ger åtkomst till specialsidan [[Special:NamespaceManager]]."
 }

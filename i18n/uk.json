@@ -4,7 +4,8 @@
 			"Ата",
 			"Andriykopanytsia",
 			"Piramidion",
-			"SimondR"
+			"SimondR",
+			"Vlad5250"
 		]
 	},
 	"bs-namespacemanager-desc": "Адміністративний інтерфейс для додавання, редагування та видалення просторів назв",
@@ -54,5 +55,6 @@
 	"action-namespacemanager-viewspecialpage": "перегляд спеціальної сторінки менеджера просторів назв",
 	"namespacemanager": "Менеджер просторів назв",
 	"bs-namespacemanager-nodeletetalk": "Простір назв Обговорення вилучити неможливо",
-	"bs-namespacemanager-label-istalk": "Обговорення"
+	"bs-namespacemanager-label-istalk": "Обговорення",
+	"right-namespacemanager-viewspecialpage": "доступ до спеціальної сторінки [[Special:NamespaceManager]]."
 }

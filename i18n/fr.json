@@ -55,5 +55,6 @@
 	"action-namespacemanager-viewspecialpage": "voir la page spéciale du gestionnaire d'espaces de noms",
 	"namespacemanager": "Gestionnaire de l'espace de noms",
 	"bs-namespacemanager-nodeletetalk": "L’espace de noms de discussion ne peut pas être supprimé",
-	"bs-namespacemanager-label-istalk": "Discussion"
+	"bs-namespacemanager-label-istalk": "Discussion",
+	"right-namespacemanager-viewspecialpage": "Donne les droits d'accès à la page spéciale [[Special:NamespaceManager]]."
 }

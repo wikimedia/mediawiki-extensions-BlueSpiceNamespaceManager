@@ -54,5 +54,6 @@
 	"action-namespacemanager-viewspecialpage": "ver a página especial do gerenciador de espaço nominal",
 	"namespacemanager": "Gerenciador do espaço nominal",
 	"bs-namespacemanager-nodeletetalk": "O espaço nominal de discussão não pode ser eliminado",
-	"bs-namespacemanager-label-istalk": "Discussão"
+	"bs-namespacemanager-label-istalk": "Discussão",
+	"right-namespacemanager-viewspecialpage": "Concede acesso à página especial [[Special:NamespaceManager]]."
 }

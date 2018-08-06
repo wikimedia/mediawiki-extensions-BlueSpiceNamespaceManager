@@ -27,6 +27,7 @@
 	"bs-namespacemanager-pagepresent": "Σελίδες σε αυτό το ονοματοχώρο:",
 	"bs-namespacemanager-deletens-deletepages": "Αυτή η σελίδα έχει διαγραφεί, επειδή ο ονοματοχώρος \"$1\" διεγράφη.",
 	"log-name-bs-namespace-manager": "Μητρώο διαχειριστή ονοματοχώρων",
+	"logeventslist-bs-namespace-manager-log": "Μητρώο διαχειριστή ονοματοχώρων",
 	"namespacemanager": "Διαχειριστής ονοματοχώρων",
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
 	"bs-namespacemanager-label-istalk": "Συζήτηση"
