@@ -51,5 +51,6 @@
 	"action-namespacemanager-viewspecialpage": "vise spesialsiden for navneromsbehandling",
 	"namespacemanager": "Navneromsbehandling",
 	"bs-namespacemanager-nodeletetalk": "Diskusjonsnavnerom kan ikke slettes",
-	"bs-namespacemanager-label-istalk": "Diskusjon"
+	"bs-namespacemanager-label-istalk": "Diskusjon",
+	"right-namespacemanager-viewspecialpage": "Gir tilgang til spesialsiden [[Special:NamespaceManager]]."
 }
