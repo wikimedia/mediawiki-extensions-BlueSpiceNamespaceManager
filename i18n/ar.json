@@ -40,6 +40,7 @@
 	"log-name-bs-namespace-manager": "سجل مدير النطاق",
 	"log-description-bs-namespace-manager": "هذا سجل تغييرات النطاقات.",
 	"log-show-hide-bs-namespace-manager": "$1 سجل مدير النطاق",
+	"logeventslist-bs-namespace-manager-log": "سجل مدير النطاق",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|أنشأ|أنشأت}} النطاق $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|غير|غيرت}} إعدادات النطاق $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|غير|غيرت}} اسم النطاق $4 إلى $5",
@@ -53,5 +54,6 @@
 	"action-namespacemanager-viewspecialpage": "عرض صفحة خاصة لمدير النطاق",
 	"namespacemanager": "مدير النطاق",
 	"bs-namespacemanager-nodeletetalk": "لا يمكن حذف نطاق النقاش",
-	"bs-namespacemanager-label-istalk": "نقاش"
+	"bs-namespacemanager-label-istalk": "نقاش",
+	"right-namespacemanager-viewspecialpage": "يمنح الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]]."
 }
