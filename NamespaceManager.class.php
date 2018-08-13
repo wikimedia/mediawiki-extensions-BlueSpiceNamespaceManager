@@ -38,16 +38,15 @@
  */
 class NamespaceManager extends BsExtensionMW {
 
-	private static $_aDefaultNamespaceSettings = array(
+	private static $_aDefaultNamespaceSettings = [
 		'content' => false,
-		'subpages' => true,
-		'searched' => false
-	);
+		'subpages' => true
+	];
 
-	public static $aSortConditions = array(
+	public static $aSortConditions = [
 		'sort' => '',
 		'dir' => ''
-	);
+	];
 
 	/**
 	 * Initialization of NamespaceManager extension
@@ -77,102 +76,53 @@ class NamespaceManager extends BsExtensionMW {
 	* @return boolean
 	*/
 	public static function onLoadExtensionSchemaUpdates( $updater ) {
-		global $wgExtPGNewFields, $wgDBtype;
 		$dir = __DIR__ . '/' . 'db' . '/';
 
-		if ( $wgDBtype == 'oracle' ) {
-			$updater->addExtensionTable(
-				'bs_ns_bak_page',
-				$dir . 'bs_namespacemanager_backup_page.sql'
-			);
-			$updater->addExtensionTable(
-				'bs_ns_bak_revision',
-				$dir . 'bs_namespacemanager_backup_revision.sql'
-			);
-			$updater->addExtensionTable(
-				'bs_ns_bak_text',
-				$dir . 'bs_namespacemanager_backup_text.sql'
-			);
-		} else {
-			$updater->addExtensionTable(
-				'bs_namespacemanager_backup_page',
-				$dir . 'bs_namespacemanager_backup_page.sql'
-			);
-			$updater->addExtensionTable(
-				'bs_namespacemanager_backup_revision',
-				$dir . 'bs_namespacemanager_backup_revision.sql'
-			);
-			$updater->addExtensionTable(
-				'bs_namespacemanager_backup_text',
-				$dir . 'bs_namespacemanager_backup_text.sql'
-			);
-		}
-
-		if ( $wgDBtype == 'postgres' ) {
-			$wgExtPGNewFields[] = array(
-				'bs_namespacemanager_backup_page',
-				'page_content_model',
-				$dir . 'bs_namespacemanager_backup_page.patch.pg.sql'
-			);
-			$wgExtPGNewFields[] = array(
-				'bs_namespacemanager_backup_revision',
-				'rev_sha1',
-				$dir . 'bs_namespacemanager_backup_revision.patch.rev_sha1.pg.sql'
-			);
-			$wgExtPGNewFields[] = array(
-				'bs_namespacemanager_backup_revision',
-				'rev_content_model',
-				$dir . 'bs_namespacemanager_backup_revision.patch2.pg.sql'
-			);
-		} elseif ( $wgDBtype != 'sqlite' ) { /* Do not apply patches to sqlite */
-			$updater->addExtensionField(
-				'bs_namespacemanager_backup_page',
-				'page_content_model',
-				$dir . 'bs_namespacemanager_backup_page.patch.sql'
-			);
-			$updater->addExtensionField(
-				'bs_namespacemanager_backup_revision',
-				'rev_sha1',
-				$dir . 'bs_namespacemanager_backup_revision.patch.rev_sha1.sql'
-			);
-			$updater->addExtensionField(
-				'bs_namespacemanager_backup_revision',
-				'rev_content_model',
-				$dir . 'bs_namespacemanager_backup_revision.patch2.sql'
-			);
-		}
+		$updater->addExtensionTable(
+			'bs_namespacemanager_backup_page',
+			$dir . 'bs_namespacemanager_backup_page.sql'
+		);
+		$updater->addExtensionTable(
+			'bs_namespacemanager_backup_revision',
+			$dir . 'bs_namespacemanager_backup_revision.sql'
+		);
+		$updater->addExtensionTable(
+			'bs_namespacemanager_backup_text',
+			$dir . 'bs_namespacemanager_backup_text.sql'
+		);
 
 		return true;
 	}
 
 	/**
 	 * Hook-Handler for NamespaceManager::editNamespace
-	 * @return boolean Always true to kepp hook alive
+	 * @return boolean Always true to keep hook alive
 	 */
 	public static function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings, $bUseInternalDefaults ) {
 		if ( !$bUseInternalDefaults ) {
 			if ( empty( $aNamespaceDefinition[$iNs] ) ) {
-				$aNamespaceDefinition[$iNs] = array();
+				$aNamespaceDefinition[$iNs] = [];
 			}
-			$aNamespaceDefinition[$iNs] += array(
+			$aNamespaceDefinition[$iNs] += [
 				'content'  => $aAdditionalSettings['content'],
-				'subpages' => $aAdditionalSettings['subpages'],
-				'searched' => $aAdditionalSettings['searched'] );
+				'subpages' => $aAdditionalSettings['subpages']
+			];
 		} else {
 			$aNamespaceDefinition[$iNs] += static::$_aDefaultNamespaceSettings;
 		}
 		return true;
 	}
 
+	/**
+	 * Hook-Handler for NamespaceManager::writeNamespaceConfiguration
+	 * @return boolean Always true to keep hook alive
+	 */
 	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNs, $aDefinition ) {
 		if ( isset( $aDefinition[ 'content' ] ) && $aDefinition['content'] === true ) {
 			$sSaveContent .= "\$GLOBALS['wgContentNamespaces'][] = {$sConstName};\n";
 		}
 		if ( isset( $aDefinition[ 'subpages' ] ) && $aDefinition['subpages'] === true ) {
 			$sSaveContent .= "\$GLOBALS['wgNamespacesWithSubpages'][{$sConstName}] = true;\n";
-		}
-		if ( isset( $aDefinition[ 'searched' ] ) && $aDefinition['searched'] === true ) {
-			$sSaveContent .= "\$GLOBALS['wgNamespacesToBeSearchedDefault'][{$sConstName}] = true;\n";
 		}
 		return true;
 	}
@@ -184,25 +134,24 @@ class NamespaceManager extends BsExtensionMW {
 	 */
 	public static function getUserNamespaces( $bFullDetails = false ) {
 		global $wgExtraNamespaces, $wgNamespacesWithSubpages,
-			$wgContentNamespaces, $wgNamespacesToBeSearchedDefault,
-			$bsgConfigFiles;
+			$wgContentNamespaces, $bsgConfigFiles;
 
 		if ( !file_exists( $bsgConfigFiles['NamespaceManager'] ) ) {
-			return array();
+			return [];
 		}
 		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
-		$aUserNamespaces = array();
+		$aUserNamespaces = [];
+		$aMatches = [];
 		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
 			$aUserNamespaces = $aMatches[ 2 ];
 		}
 		if ( $bFullDetails ) {
-			$aTmp = array();
+			$aTmp = [];
 			foreach ( $aUserNamespaces as $iNS ) {
-				$aTmp[$iNS] = array(
+				$aTmp[$iNS] = [
 					'content' => in_array( $iNS, $wgContentNamespaces ),
-					'subpages' => ( isset( $wgNamespacesWithSubpages[$iNS] ) && $wgNamespacesWithSubpages[$iNS] ),
-					'searched' => ( isset( $wgNamespacesToBeSearchedDefault[$iNS] ) && $wgNamespacesToBeSearchedDefault[$iNS] )
-				);
+					'subpages' => ( isset( $wgNamespacesWithSubpages[$iNS] ) && $wgNamespacesWithSubpages[$iNS] )
+				];
 				if ( $iNS >= 100 ) {
 					$aTmp[$iNS]['name'] = $wgExtraNamespaces[$iNS];
 				}
@@ -225,7 +174,7 @@ class NamespaceManager extends BsExtensionMW {
 			\MediaWiki\MediaWikiServices::getInstance()
 			->getService( 'BSExtensionFactory' )
 			->getExtension( 'BlueSpiceNamespaceManager' );
-		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', array( $oNamespaceManager, &$bsSystemNamespaces ) );
+		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
 
 		$sSaveContent = "<?php\n\n";
 		foreach ( $aUserNamespaceDefinition as $iNS => $aDefinition ) {
@@ -243,7 +192,7 @@ class NamespaceManager extends BsExtensionMW {
 					$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '" . $aDefinition['name'] . "';\n";
 				}
 
-				Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', array( &$sSaveContent, $sConstName, $iNS, $aDefinition ) );
+				Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [ &$sSaveContent, $sConstName, $iNS, $aDefinition ] );
 				if ( !$bIsSystemNs && isset( $aDefinition['alias'] ) && $aDefinition['alias'] ) {
 					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
 				}
@@ -254,24 +203,23 @@ class NamespaceManager extends BsExtensionMW {
 		$res = file_put_contents( $bsgConfigFiles['NamespaceManager'], $sSaveContent );
 
 		if ( $res ) {
-			return array(
+			return [
 				'success' => true,
 				'message' => wfMessage( 'bs-namespacemanager-ns-config-saved' )->plain()
-			);
+			];
 		}
-		return array(
+		return [
 			'success' => false,
 			'message' => wfMessage( 'bs-namespacemanager-error-ns-config-not-saved' , $bsgConfigFiles['NamespaceManager'] )->plain()
-		);
+		];
 	}
 
 	public static function getNamespaceConstName( $iNS, $aDefinition ) {
-		global $bsSystemNamespaces;
 
 		$sConstName = '';
 
 		// find existing NS_ definitions
-		$aNSConstants = array();
+		$aNSConstants = [];
 		foreach ( get_defined_constants() as $key => $value ) {
 			if ( strpos( $key, "NS_" ) === 0
 				// ugly solution to identify smw namespaces as they don't adhere to the convention

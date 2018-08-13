@@ -13,11 +13,10 @@ use BlueSpice\Tests\BSApiTasksTestBase;
  */
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
-	protected $aSettings = array(
+	protected $aSettings = [
 		'subpages' => true,
-		'searched' => true,
 		'content' => false
-	);
+	];
 
 	protected function setUp() {
 		if( !defined( BSCONFIGDIR ) ) {
@@ -42,15 +41,14 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	public function testAdd() {
-		global $wgContentNamespaces, $wgNamespacesWithSubpages,
-				$wgNamespacesToBeSearchedDefault;
+		global $wgContentNamespaces, $wgNamespacesWithSubpages;
 
 		$oData = $this->executeTask(
 			'add',
-			array(
+			[
 				'name' => 'DummyNS',
 				'settings' => $this->aSettings
-			)
+			]
 		);
 
 		$iInsertedID = $this->getLastNS();
@@ -83,11 +81,11 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 		$oData = $this->executeTask(
 			'edit',
-			array(
+			[
 				'id' => $iNS,
 				'name' => 'FakeNS',
 				'settings' => $aSettings
-			)
+			]
 		);
 
 		$this->assertTrue(
@@ -99,15 +97,15 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	public function testRemove() {
 		$iNS = $this->getLastNS();
 
-		$aToRemove = array( $iNS, $iNS +1 );
+		$aToRemove = [ $iNS, $iNS +1 ];
 
 		foreach( $aToRemove as $iID ) {
 			$oData = $this->executeTask(
 				'remove',
-				array(
+				[
 					'id' => $iID,
 					'doArticle' => 0
-				)
+				]
 			);
 
 			$this->assertTrue(
@@ -141,7 +139,8 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	protected function isNSSaved( $iID ) {
 		global $bsgConfigFiles;
 		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
-		$aUserNamespaces = array();
+		$aUserNamespaces = [];
+		$aMatches = [];
 		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
 			$aUserNamespaces = $aMatches[ 2 ];
 		}

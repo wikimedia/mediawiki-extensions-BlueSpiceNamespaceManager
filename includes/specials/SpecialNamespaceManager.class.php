@@ -15,84 +15,61 @@ class SpecialNamespaceManager extends BsSpecialPage {
 	public function execute( $sParameter ) {
 		parent::execute( $sParameter );
 		$this->getOutput()->addModules( 'ext.bluespice.namespaceManager' );
-		$aMetaFields = array(
-			array(
+		$aMetaFields = [
+			[
 				'name' => 'id',
 				'type' => 'int',
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'numeric'
-				),
+				'filter' => [ 'type' => 'numeric' ],
 				'label' => wfMessage( 'bs-namespacemanager-label-id' )->plain()
-			),
-			array(
+			],
+			[
 				'name' => 'name',
 				'type' => 'string',
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'string'
-				),
+				'filter' => [ 'type' => 'string' ],
 				'label' => wfMessage( 'bs-namespacemanager-label-namespaces' )->plain()
-			),
-			array(
+			],
+			[
 				'name' => 'pageCount',
 				'type' => 'int',
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'numeric'
-				),
+				'filter' => [ 'type' => 'numeric' ],
 				'label' => wfMessage( 'bs-namespacemanager-label-pagecount' )->plain()
-			),
-			array(
+			],
+			[
 				'name' => 'isSystemNS',
 				'type' => 'boolean',
 				'label' => wfMessage( 'bs-namespacemanager-label-editable' )->plain(),
 				'hidden' => true,
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'boolean'
-				),
-			),
-			array(
+				'filter' => [ 'type' => 'boolean' ],
+			],
+			[
 				'name' => 'isTalkNS',
 				'type' => 'boolean',
 				'label' => wfMessage( 'bs-namespacemanager-label-istalk' )->plain(),
 				'hidden' => true,
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'boolean'
-				),
-			),
-			array(
+				'filter' => [ 'type' => 'boolean' ],
+			],
+			[
 				'name' => 'subpages',
 				'type' => 'boolean',
 				'label' => wfMessage( 'bs-namespacemanager-label-subpages' )->plain(),
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'boolean'
-				),
-			),
-			array(
-				'name' => 'searched',
-				'type' => 'boolean',
-				'label' => wfMessage( 'bs-namespacemanager-label-searchable' )->plain(),
-				'sortable' => true,
-				'filter' => array(
-					'type' => 'boolean'
-				),
-			),
-			array(
+				'filter' => [ 'type' => 'boolean' ],
+			],
+			[
 				'name' => 'content',
 				'type' => 'boolean',
 				'label' => wfMessage( 'bs-namespacemanager-label-content' )->plain(),
 				'sortable' => true,
-				'filter' => array(
-					'type' => 'boolean'
-				),
-			)
-		);
+				'filter' => [ 'type' => 'boolean' ],
+			]
+		];
 
-		Hooks::run( 'NamespaceManager::getMetaFields', array( &$aMetaFields ) );
+		Hooks::run( 'NamespaceManager::getMetaFields', [ &$aMetaFields ] );
 		$this->getOutput()->addJsConfigVars( 'bsNamespaceManagerMetaFields', $aMetaFields );
 
 		$this->getOutput()->addHTML( '<div id="bs-namespacemanager-grid" class="bs-manager-container"></div>' );

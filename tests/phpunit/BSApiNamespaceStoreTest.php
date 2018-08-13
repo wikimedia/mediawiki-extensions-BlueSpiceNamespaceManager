@@ -39,9 +39,6 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 			'subpages' => [
 				'type' => 'boolean'
 			],
-			'searched' => [
-				'type' => 'boolean'
-			],
 		];
 	}
 
@@ -50,9 +47,6 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		parent::setUp();
 		$this->setMwGlobals( [
 			'wgNamespacesWithSubpages' => [
-				99990 => true
-			],
-			'wgNamespacesToBeSearchedDefault' => [
 				99990 => true
 			]
 		] );
@@ -105,18 +99,12 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 
 	public function provideMultipleFilterData () {
 		return [
-			'Filter by subpages and searched' => [
+			'Filter by subpages' => [
 				[
 					[
 						'type' => 'boolean',
 						'comparison' => 'eq',
 						'field' => 'subpages',
-						'value' => true
-					],
-					[
-						'type' => 'boolean',
-						'comparison' => 'eq',
-						'field' => 'searched',
 						'value' => true
 					]
 				],

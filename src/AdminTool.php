@@ -20,10 +20,7 @@ class AdminTool implements IAdminTool {
 	}
 
 	public function getClasses() {
-		$classes = array(
-			'bs-icon-register-box'
-		);
-
+		$classes = [ 'bs-icon-register-box' ];
 		return $classes;
 	}
 
@@ -32,9 +29,7 @@ class AdminTool implements IAdminTool {
 	}
 
 	public function getPermissions() {
-		$permissions = array(
-			'namespacemanager-viewspecialpage'
-		);
+		$permissions = [ 'namespacemanager-viewspecialpage' ];
 		return $permissions;
 	}
 
