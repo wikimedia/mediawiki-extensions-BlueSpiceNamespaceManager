@@ -5,7 +5,8 @@
 			"SkyDaisy9",
 			"2nd-player",
 			"Sujiniku",
-			"Otokoume"
+			"Otokoume",
+			"Suyama"
 		]
 	},
 	"bs-namespacemanager-desc": "名前空間を追加/編集/削除する管理インターフェイス",
@@ -41,5 +42,6 @@
 	"logentry-bs-namespace-manager-create": "$1 は名前空間 $4 を{{GENDER:$2|作成しました}}",
 	"logentry-bs-namespace-manager-modify": "$1 は名前空間 $4 の設定を{{GENDER:$2|変更しました}}",
 	"logentry-bs-namespace-manager-rename": "$1 は名前空間 $4 を $5 に{{GENDER:$2|改名しました}}",
-	"logentry-bs-namespace-manager-remove": "$1 は名前空間 $4 を{{GENDER:$2|除去しました}}"
+	"logentry-bs-namespace-manager-remove": "$1 は名前空間 $4 を{{GENDER:$2|除去しました}}",
+	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] の利用を許可します。"
 }
