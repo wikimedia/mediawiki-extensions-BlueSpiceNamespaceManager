@@ -36,5 +36,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} nazwę przestrzeni nazw $4 na $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|usunął|usunęła}} przestrzeń nazw $4",
 	"bs-namespacemanager-ns-config-saved": "Konfiguracja przestrzeni nazw została zapisana.",
+	"namespacemanager": "Menedżer przestrzeni nazw",
 	"bs-namespacemanager-label-istalk": "Dyskusja"
 }
