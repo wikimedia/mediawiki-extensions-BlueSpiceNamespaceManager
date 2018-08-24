@@ -69,7 +69,7 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 	}
 
 	/**
-	 * Convinience function - most of the extension will do the same thing here
+	 * Convenience function - most of the extension will do the same thing here
 	 *
 	 * @param string $configVar - name of the global (bsg) variable
 	 * @param string $nsManagerOptionName - name of the option as registered with NSManager

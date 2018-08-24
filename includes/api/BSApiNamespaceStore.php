@@ -10,9 +10,9 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	 */
 	protected function makeData($sQuery = '') {
 		global $wgContLang, $bsgSystemNamespaces, $wgContentNamespaces,
-			$wgNamespacesWithSubpages, $wgNamespacesToBeSearchedDefault;
+			$wgNamespacesWithSubpages;
 
-		$aResult = array();
+		$aResult = [];
 		$aNamespaces = $wgContLang->getNamespaces();
 		foreach ( $aNamespaces as $iNs => $sNamespace ) {
 			if ( $sNamespace === '' ) {
@@ -24,32 +24,29 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 			$res = $this->getDB()->select(
 				'page',
 				'page_id',
-				array(
-					'page_namespace' => $iNs
-				)
+				[ 'page_namespace' => $iNs ]
 			);
 
-			$aResult[] = array(
+			$aResult[] = [
 				'id' => $iNs,
 				'name' => $sNamespace,
 				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, //formerly 'editable'
 				'isTalkNS' => MWNamespace::isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
 				'content' => in_array( $iNs, $wgContentNamespaces ),
-				'subpages' => ( isset( $wgNamespacesWithSubpages[$iNs] ) && $wgNamespacesWithSubpages[$iNs] ),
-				'searched' => ( isset( $wgNamespacesToBeSearchedDefault[$iNs] ) && $wgNamespacesToBeSearchedDefault[$iNs] )
-			);
+				'subpages' => ( isset( $wgNamespacesWithSubpages[$iNs] ) && $wgNamespacesWithSubpages[$iNs] )
+			];
 		}
 
-		Hooks::run( 'NamespaceManager::getNamespaceData', array( &$aResult ), '1.23.2' );
-		Hooks::run( 'BSApiNamespaceStoreMakeData', array( &$aResult ) );
+		Hooks::run( 'NamespaceManager::getNamespaceData', [ &$aResult ], '1.23.2' );
+		Hooks::run( 'BSApiNamespaceStoreMakeData', [ &$aResult ] );
 
 		/**
 		 * To be downwards compatible we need to have the dataset be arrays.
 		 * BSApiExtJSStoreBase expects an array of objects to be returned from
 		 * this method. Therefore we need to convert them.
 		 */
-		$aResultObjects = array();
+		$aResultObjects = [];
 		foreach( $aResult as $aDataSet ) {
 			$aResultObjects[] = (object) $aDataSet;
 		}
@@ -57,9 +54,4 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 		return $aResultObjects;
 	}
 
-	public function sortCallback($oA, $oB) {
-		//TODO: Check if this hook from the old implementation was used somewhere...
-		//Hooks::run( 'NamespaceManager::namespaceManagerRemoteSort', array( $value1, $value2, self::$aSortConditions ) );
-		parent::sortCallback($oA, $oB);
-	}
 }

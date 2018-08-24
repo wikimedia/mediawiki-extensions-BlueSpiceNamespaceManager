@@ -2,14 +2,13 @@
 
 class BSApiNamespaceTasks extends BSApiTasksBase {
 
-	protected $aTasks = array(
+	protected $aTasks = [
 		'add' => [
 			'examples' => [
 				[
 					'name' => 'My namespace',
 					'settings' => [
-						'content' => true,
-						'searched' => true
+						'content' => true
 					]
 				]
 			],
@@ -32,8 +31,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 					'id' => 123,
 					'name' => 'My namespace',
 					'settings' => [
-						'content' => true,
-						'searched' => false
+						'content' => true
 					]
 				]
 			],
@@ -79,14 +77,14 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				]
 			]
 		]
-	);
+	];
 
 	protected function getRequiredTaskPermissions() {
-		return array(
-			'add' => array( 'wikiadmin' ),
-			'edit' => array( 'wikiadmin' ),
-			'remove' => array( 'wikiadmin' )
-		);
+		return [
+			'add' => [ 'wikiadmin' ],
+			'edit' => [ 'wikiadmin' ],
+			'remove' => [ 'wikiadmin' ]
+		];
 	}
 
 	/**
@@ -133,17 +131,17 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-name' )->plain();
 			return $oResult;
 		} else {
-			$aUserNamespaces[$iNS] = array( 'name' => $sNamespace );
+			$aUserNamespaces[$iNS] = [ 'name' => $sNamespace ];
 
-			Hooks::run( 'NamespaceManager::editNamespace', array( &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ) );
+			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
 
 			++$iNS;
-			$aUserNamespaces[ ( $iNS ) ] = array(
+			$aUserNamespaces[ ( $iNS ) ] = [
 				'name' => $sNamespace . '_' . $wgContLang->getNsText( NS_TALK ),
 				'alias' => $sNamespace . '_talk'
-			);
+			];
 
-			Hooks::run( 'NamespaceManager::editNamespace', array( &$aUserNamespaces, &$iNS, $aAdditionalSettings, true ) );
+			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, true ] );
 
 			$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
 
@@ -151,7 +149,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				// Create a log entry for the creation of the namespace
 				$this->logTaskAction(
 					'create',
-					array( '4::namespace' => $sNamespace )
+					[ '4::namespace' => $sNamespace ]
 				);
 				$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
 			}
@@ -185,7 +183,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			\MediaWiki\MediaWikiServices::getInstance()
 			->getService( 'BSExtensionFactory' )
 			->getExtension( 'BlueSpiceNamespaceManager' );
-		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', array( $oNamespaceManager, &$bsSystemNamespaces ) );
+		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 
 		if ( $iNS !== NS_MAIN && !$iNS ) {
@@ -209,35 +207,35 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		if ( !isset( $bsSystemNamespaces[($iNS)] ) && strstr( $sNamespace, '_' . $wgContLang->getNsText( NS_TALK ) ) ) {
-				$aUserNamespaces[ $iNS ] = array(
+				$aUserNamespaces[ $iNS ] = [
 					'name' => $aUserNamespaces[ $iNS ][ 'name' ],
 					'alias' => str_replace( '_' . $wgContLang->getNsText( NS_TALK ), '_talk', $sNamespace ),
-				);
-			Hooks::run( 'NamespaceManager::editNamespace', array( &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ) );
+				];
+			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
 		} else {
-			$aUserNamespaces[$iNS] = array(
+			$aUserNamespaces[$iNS] = [
 				'name' => $sNamespace,
-			);
+			];
 
 			if ( !isset( $bsSystemNamespaces[($iNS)] ) ) {
 				$aUserNamespaces[($iNS + 1)]['name'] = $sNamespace . '_' . $wgContLang->getNsText( NS_TALK );
 				$aUserNamespaces[($iNS + 1)]['alias'] = $sNamespace . '_talk';
 			}
-			Hooks::run( 'NamespaceManager::editNamespace', array( &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ) );
+			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
 		}
 
 		$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
 		if( $aResult[ 'success' ] === true ) {
 			// Create a log entry for the modification of the namespace
 			if( $sOriginalNamespaceName == $sNamespace ) {
-				$this->logTaskAction( 'modify', array(
+				$this->logTaskAction( 'modify', [
 					'4::namespaceName' => $sOriginalNamespaceName
-				) );
+				] );
 			} else {
-				$this->logTaskAction( 'rename', array(
+				$this->logTaskAction( 'rename', [
 					'4::namespaceName' => $sOriginalNamespaceName,
 					'5::newNamespaceName' => $sNamespace
-				) );
+				] );
 			}
 
 			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsedited' )->plain();
@@ -274,7 +272,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$aNamespacesToRemove = array( array( $iNS, 0 ) );
+		$aNamespacesToRemove = [ [ $iNS, 0 ] ];
 		$aNamespacesToRemoveNames = [];
 		$sOriginalNamespace = $sNamespace = $aUserNamespaces[ $iNS ][ 'name' ];
 		$aNamespacesToRemoveNames[] = $sNamespace;
@@ -286,7 +284,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		if ( isset( $aUserNamespaces[ ($iNS + 1) ] ) && strstr( $aUserNamespaces[ ($iNS + 1) ][ 'name' ], '_'.$wgContLang->getNsText( NS_TALK ) ) ) {
-			$aNamespacesToRemove[] = array( ($iNS + 1), 1 );
+			$aNamespacesToRemove[] = [ ($iNS + 1), 1 ];
 			$sNamespace = $aUserNamespaces[ ($iNS + 1) ][ 'name' ];
 			$aNamespacesToRemoveNames[] = $sNamespace;
 		}
@@ -338,7 +336,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				foreach ($aNamespacesToRemoveNames as $nameSpace) {
 					$this->logTaskAction(
 						'remove',
-						array( '4::namespace' => $nameSpace )
+						[ '4::namespace' => $nameSpace ]
 					);
 				}
 
@@ -352,8 +350,15 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		return $oResult;
 	}
-
-	public function logTaskAction( $sAction, $aParams, $aOptions = array(), $bDoPublish = false ) {
+	/**
+	 * Logs NamespaceManager actions
+	 *
+	 * @param string $sAction
+	 * @param array $aParams
+	 * @param array $aOptions not used
+	 * @param bool $bDoPublish
+	 */
+	public function logTaskAction( $sAction, $aParams, $aOptions = [], $bDoPublish = false) {
 		$oTitle = SpecialPage::getTitleFor( 'WikiAdmin' );
 		$oUser = RequestContext::getMain()->getUser();
 		$oLogger = new ManualLogEntry( 'bs-namespace-manager', $sAction );
@@ -363,7 +368,4 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oLogger->insert();
 	}
 
-	public function needsToken() {
-		return parent::needsToken();
-	}
 }
