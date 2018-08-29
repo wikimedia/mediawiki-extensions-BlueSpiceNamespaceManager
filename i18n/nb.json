@@ -38,6 +38,7 @@
 	"log-name-bs-namespace-manager": "Navneromsbehandlingslogg",
 	"log-description-bs-namespace-manager": "Dette er en logg over endringer i navnerom.",
 	"log-show-hide-bs-namespace-manager": "$1 navneromsbehandlingslogg",
+	"logeventslist-bs-namespace-manager-log": "Logg for navneromsbehandling",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|har}} opprettet navnerommet $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|har}} endret innstillingene for navnerommet $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|har}} endret navn på navnerommet $4 til $5",
