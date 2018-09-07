@@ -35,6 +35,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 				dataIndex: fieldDef.name,
 				header: fieldDef.label,
 				tooltip: fieldDef.label,
+				tooltipType: 'title',
 				sortable: fieldDef.sortable || true,
 				filter: fieldDef.filter || true,
 				hidden: fieldDef.hidden || false
