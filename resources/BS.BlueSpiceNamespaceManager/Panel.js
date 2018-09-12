@@ -136,12 +136,10 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		}
 	},
 	onBtnAddClick: function( oButton, oEvent ) {
-		if ( !this.dlgNamespaceAdd ) {
-			this.dlgNamespaceAdd = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
-				id:"bs-namespacemanager-add-dlg"
-			} );
-			this.dlgNamespaceAdd.on( 'ok', this.onDlgNamespaceAddOk, this );
-		}
+		this.dlgNamespaceAdd = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
+			id:"bs-namespacemanager-add-dlg"
+		} );
+		this.dlgNamespaceAdd.on( 'ok', this.onDlgNamespaceAddOk, this );
 
 		//TODO: not nice. Decision on wether is "add" or "edit" shold be made
 		//by the dialog depending on the provided ID. I.e. -1 for "add"
@@ -152,12 +150,11 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 	},
 	onBtnEditClick: function( oButton, oEvent ) {
 		var selectedRow = this.grdMain.getSelectionModel().getSelection();
-		if ( !this.dlgNamespaceEdit ) {
-			this.dlgNamespaceEdit = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
-				id:"bs-namespacemanager-edit-dlg"
-			} );
-			this.dlgNamespaceEdit.on( 'ok', this.onDlgNamespaceEditOk, this );
-		}
+
+		this.dlgNamespaceEdit = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
+			id:"bs-namespacemanager-edit-dlg"
+		} );
+		this.dlgNamespaceEdit.on( 'ok', this.onDlgNamespaceEditOk, this );
 
 		this.active = 'edit';
 		this.dlgNamespaceEdit.setTitle( mw.message( 'bs-namespacemanager-tipedit' ).plain() );
