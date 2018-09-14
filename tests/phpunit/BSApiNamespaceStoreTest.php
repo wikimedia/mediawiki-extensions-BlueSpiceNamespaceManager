@@ -32,13 +32,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 			],
 			'pageCount' => [
 				'type' => 'integer'
-			],
-			'content' => [
-				'type' => 'boolean'
-			],
-			'subpages' => [
-				'type' => 'boolean'
-			],
+			]
 		];
 	}
 

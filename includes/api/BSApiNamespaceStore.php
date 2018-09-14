@@ -33,8 +33,11 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, //formerly 'editable'
 				'isTalkNS' => MWNamespace::isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
-				'content' => in_array( $iNs, $wgContentNamespaces ),
-				'subpages' => ( isset( $wgNamespacesWithSubpages[$iNs] ) && $wgNamespacesWithSubpages[$iNs] )
+				'content' => [
+					'value' => ( $wgContentNamespaces && in_array( $iNs, $wgContentNamespaces ) ),
+					'read_only' => ( $iNs === NS_MAIN )
+				],
+				'subpages' => ( isset( $wgNamespacesWithSubpages[ $iNs ] ) && $wgNamespacesWithSubpages[ $iNs ] === true )
 			];
 		}
 

@@ -121,8 +121,9 @@ class NamespaceManager extends BsExtensionMW {
 		if ( isset( $aDefinition[ 'content' ] ) && $aDefinition['content'] === true ) {
 			$sSaveContent .= "\$GLOBALS['wgContentNamespaces'][] = {$sConstName};\n";
 		}
-		if ( isset( $aDefinition[ 'subpages' ] ) && $aDefinition['subpages'] === true ) {
-			$sSaveContent .= "\$GLOBALS['wgNamespacesWithSubpages'][{$sConstName}] = true;\n";
+		if ( isset( $aDefinition[ 'subpages' ] ) ) {
+			$stringVal = $aDefinition['subpages'] ? "true" : "false";
+			$sSaveContent .= "\$GLOBALS['wgNamespacesWithSubpages'][{$sConstName}] = $stringVal;\n";
 		}
 		return true;
 	}
