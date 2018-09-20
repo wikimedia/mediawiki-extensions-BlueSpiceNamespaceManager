@@ -25,7 +25,10 @@
 				"namespacemanager-viewspecialpage": {
 					"type": "namespace",
 					"roles": [
-						"admin", "demo"
+						"admin",
+						"editor",
+						"maintenanceadmin",
+						"structuremanager"
 					]
 				}
 			}
