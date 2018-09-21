@@ -14,6 +14,7 @@ class SpecialNamespaceManager extends BsSpecialPage {
 	 */
 	public function execute( $sParameter ) {
 		parent::execute( $sParameter );
+		$this->getOutput()->addModuleStyles( 'ext.bluespice.namespaceManager.styles' );
 		$this->getOutput()->addModules( 'ext.bluespice.namespaceManager' );
 		$aMetaFields = [
 			[

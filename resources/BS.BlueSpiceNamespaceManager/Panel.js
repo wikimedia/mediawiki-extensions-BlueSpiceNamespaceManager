@@ -41,16 +41,23 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 				hidden: fieldDef.hidden || false
 			};
 			if( fieldDef.type === 'boolean' ) {
+				column.width = 40;
+				column.cls = 'ns-manager-option-column';
+				column.flex = 0;
+
 				if ( fieldDef.name === 'isSystemNS' ) {
 					column.renderer = this.renderInvertedIcon;
 				} else {
 					column.renderer = this.renderIcon;
 				}
-				column.flex = 0.5;
 			}
-			if( i === 0 ){ //Typically the ID column
+			if( i === 0 ){ // Typically the ID column
 				column.flex = 0;
 				column.width = 70;
+			}
+			if( i === 2 ) { // Number of pages
+				column.width = 70;
+				column.flex = 0;
 			}
 			columns.push( column );
 		}
@@ -152,7 +159,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		var selectedRow = this.grdMain.getSelectionModel().getSelection();
 
 		this.dlgNamespaceEdit = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
-			id:"bs-namespacemanager-edit-dlg"
+			id: "bs-namespacemanager-edit-dlg"
 		} );
 		this.dlgNamespaceEdit.on( 'ok', this.onDlgNamespaceEditOk, this );
 

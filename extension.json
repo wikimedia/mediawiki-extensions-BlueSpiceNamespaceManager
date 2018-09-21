@@ -103,6 +103,9 @@
 				"bs-namespacemanager-label-istalk",
 				"bs-namespacemanager-nodeletetalk"
 			]
+		},
+		"ext.bluespice.namespaceManager.styles": {
+			"styles": "resources/bluespice.namespaceManager.css"
 		}
 	},
 	"ResourceFileModulePaths": {

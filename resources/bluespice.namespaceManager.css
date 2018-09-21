@@ -1,0 +1,35 @@
+.ns-manager-option-column .x-column-header-inner {
+	height: 85px;
+	padding: 0;
+}
+
+.bs-extjs-action-column .x-column-header-inner {
+	padding: 5px;
+}
+
+.ns-manager-option-column .x-column-header-text {
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	position: absolute;
+	top: 22px;
+	right: -20px;
+	height: 40px;
+}
+
+.ns-manager-option-column .x-column-header-text span {
+	display:block;
+	width: 80px;
+	text-align: center;
+	word-wrap: break-word;
+	white-space: normal ;
+	vertical-align: middle;
+	display: block;
+}
+
+.ns-manager-option-column .x-column-header-text-wrapper {
+	display: relative;
+	height: 80px;
+}

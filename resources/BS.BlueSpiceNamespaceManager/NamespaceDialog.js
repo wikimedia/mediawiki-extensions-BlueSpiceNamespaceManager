@@ -80,7 +80,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 				}
 
 				if( value.read_only && value.read_only === true ) {
-					//If field is applicable, but should not be changed
+					//If field is applicable, but should not be changed,
 					//show the value but disable it
 					this.checkboxControls[name].disable();
 				}
