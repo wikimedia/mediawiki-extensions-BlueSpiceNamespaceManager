@@ -275,5 +275,84 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		} else if( this.active === 'remove' ) {
 			this.dlgNamespaceRemove.show();
 		}
+	},
+	getHTMLTable: function() {
+		var dfd = $.Deferred();
+		var lastRequest = this.strMain.getProxy().getLastRequest();
+		var params = lastRequest.getParams();
+
+		params.page = 1;
+		params.limit = 9999999;
+		params.start = 0;
+
+		var url = lastRequest.getUrl();
+
+		Ext.Ajax.request({
+			url:url,
+			params: params,
+			success: function( response ){
+				var resp = Ext.decode( response.responseText );
+				var proxy = this.strMain.getProxy();
+				var reader = proxy.getReader();
+				var rows = resp[reader._rootProperty];
+				var columns = this.grdMain.getColumns();
+				var row = null;
+				var col = null;
+				var value = '';
+				var $table = $('<table>');
+				var $row = null;
+				var $cell = null;
+				var record = null;
+
+				$row = $('<tr>');
+				$table.append($row);
+				for( var i = 0; i < columns.length; i++ ) {
+					col = columns[i];
+					if( col instanceof Ext.grid.ActionColumn )
+						continue;
+
+					if( col.hidden === true )
+						continue;
+
+					$cell = $('<td>');
+					$row.append( $cell );
+					$cell.append( col.header || col.text );
+				}
+
+				for( var i = 0; i < rows.length; i++ ) {
+					row = rows[i];
+					$row = $('<tr>');
+					record = new this.strMain.model( row );
+					$table.append($row);
+
+					for( var j = 0; j < columns.length; j++ ) {
+						col = columns[j];
+						if( col instanceof Ext.grid.ActionColumn )
+							continue;
+
+						if( col.hidden === true )
+							continue;
+
+						$cell = $('<td>');
+						$row.append( $cell );
+
+						if( col.renderer && Ext.isFunction( col.renderer ) ) {
+							value = row[col.dataIndex];
+							if( typeof( value ) == 'object' ) {
+								value = value.value;
+							}
+							value = value ? 'X' : '';
+						}
+						else {
+							value = row[col.dataIndex];
+						}
+						$cell.append( value );
+					}
+				}
+
+				dfd.resolve( '<table>' + $table.html() + '</table>' );
+			}.bind( this )
+		});
+		return dfd;
 	}
 } );
