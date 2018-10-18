@@ -36,6 +36,7 @@
 	},
 	"callback": "NamespaceManager::onRegistration",
 	"requires": {
+		"MediaWiki": ">= 1.29.0",
 		"extensions": {
 			"BlueSpiceFoundation": "*"
 		}
