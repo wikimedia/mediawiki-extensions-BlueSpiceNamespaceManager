@@ -1,6 +1,6 @@
 <?php
 
-class SpecialNamespaceManager extends BsSpecialPage {
+class SpecialNamespaceManager extends \BlueSpice\SpecialPage {
 
 	public function __construct() {
 		parent::__construct( 'NamespaceManager', 'namespacemanager-viewspecialpage' );
