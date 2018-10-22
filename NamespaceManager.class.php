@@ -91,6 +91,22 @@ class NamespaceManager extends BsExtensionMW {
 			$dir . 'bs_namespacemanager_backup_text.sql'
 		);
 
+		$updater->addExtensionField(
+			'bs_namespacemanager_backup_page',
+			'page_content_model',
+			$dir . 'bs_namespacemanager_backup_page.patch.sql'
+		);
+		$updater->addExtensionField(
+			'bs_namespacemanager_backup_revision',
+			'rev_sha1',
+			$dir . 'bs_namespacemanager_backup_revision.patch.rev_sha1.sql'
+		);
+		$updater->addExtensionField(
+			'bs_namespacemanager_backup_revision',
+			'rev_content_model',
+			$dir . 'bs_namespacemanager_backup_revision.patch2.sql'
+		);
+
 		return true;
 	}
 
