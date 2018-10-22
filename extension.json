@@ -79,7 +79,11 @@
 		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php"
 	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": "NamespaceManager::onLoadExtensionSchemaUpdates",
+		"LoadExtensionSchemaUpdates": [
+			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupPageTable::callback",
+			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupRevisionTable::callback",
+			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupTextTable::callback"
+		],
 		"NamespaceManager::editNamespace": "NamespaceManager::onEditNamespace",
 		"NamespaceManager::writeNamespaceConfiguration": "NamespaceManager::onWriteNamespaceConfiguration"
 	},

@@ -69,48 +69,6 @@ class NamespaceManager extends BsExtensionMW {
 	}
 
 	/**
-	* Add the sql file to database by executing the update.php
-	* @global type $wgDBtype
-	* @global array $wgExtNewTables
-	* @param DatabaseUpdater $du
-	* @return boolean
-	*/
-	public static function onLoadExtensionSchemaUpdates( $updater ) {
-		$dir = __DIR__ . '/' . 'db' . '/';
-
-		$updater->addExtensionTable(
-			'bs_namespacemanager_backup_page',
-			$dir . 'bs_namespacemanager_backup_page.sql'
-		);
-		$updater->addExtensionTable(
-			'bs_namespacemanager_backup_revision',
-			$dir . 'bs_namespacemanager_backup_revision.sql'
-		);
-		$updater->addExtensionTable(
-			'bs_namespacemanager_backup_text',
-			$dir . 'bs_namespacemanager_backup_text.sql'
-		);
-
-		$updater->addExtensionField(
-			'bs_namespacemanager_backup_page',
-			'page_content_model',
-			$dir . 'bs_namespacemanager_backup_page.patch.sql'
-		);
-		$updater->addExtensionField(
-			'bs_namespacemanager_backup_revision',
-			'rev_sha1',
-			$dir . 'bs_namespacemanager_backup_revision.patch.rev_sha1.sql'
-		);
-		$updater->addExtensionField(
-			'bs_namespacemanager_backup_revision',
-			'rev_content_model',
-			$dir . 'bs_namespacemanager_backup_revision.patch2.sql'
-		);
-
-		return true;
-	}
-
-	/**
 	 * Hook-Handler for NamespaceManager::editNamespace
 	 * @return boolean Always true to keep hook alive
 	 */
