@@ -7,6 +7,8 @@
 	"bs-namespacemanager-desc": "Administration interface for adding, editing and deleting namespaces",
 	"bs-namespacemanager-label": "Namespace manager",
 	"bs-namespacemanager-wrong-name": "The namespace contains invalid characters.",
+	"bs-namespacemanager-wrong-alias": "The namespace alias contains invalid characters.",
+	"bs-namespacemanager-alias-exists": "The namespace alias is already set for namespace $1",
 	"bs-namespacemanager-ns-exists": "The namespace already exists.",
 	"bs-namespacemanager-ns-length": "The namespace must have a minimum length of two characters.",
 	"bs-namespacemanager-invalid-id": "No valid namespace ID",
@@ -53,5 +55,7 @@
 	"namespacemanager": "Namespace manager",
 	"bs-namespacemanager-nodeletetalk": "Talk namespace cannot be deleted",
 	"bs-namespacemanager-label-istalk": "Talk",
-	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].",
+	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }

@@ -67,11 +67,35 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		this.strMain = new BS.store.BSApi({
 			apiAction: 'bs-namespace-store',
 			fields: fields,
-			pageSize: this.pageSize
+			pageSize: this.pageSize,
+			remoteFilter: false,
 		});
 
 		this.colMainConf.columns = columns;
 		this.callParent( arguments );
+	},
+	makeTbarItems: function() {
+		var items = this.callParent( arguments );
+		items.push(
+			new Ext.form.field.Checkbox( {
+				boxLabel: mw.message( 'bs-namespacemanager-hide-talk-label' ).text(),
+				checked: false,
+				listeners: {
+					change: function( chk, newValue, oldValue ) {
+						this.hideTalkNamespace( newValue );
+					}.bind( this )
+				}
+			} )
+		);
+		return items;
+	},
+	hideTalkNamespace: function( hide ) {
+		this.grdMain.getStore().clearFilter();
+		if( hide ) {
+			this.strMain.filterBy( function( rec ) {
+				return rec.data.isTalkNS === false;
+			} );
+		}
 	},
 	makeRowActions: function() {
 		if( this.opPermitted( 'delete' ) ) {

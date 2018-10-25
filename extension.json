@@ -102,7 +102,9 @@
 				"bs-ns_main",
 				"bs-from-something",
 				"bs-namespacemanager-label-istalk",
-				"bs-namespacemanager-nodeletetalk"
+				"bs-namespacemanager-nodeletetalk",
+				"bs-namespacemanager-hide-talk-label",
+				"bs-namespacemanager-labelnsalias"
 			]
 		},
 		"ext.bluespice.namespaceManager.styles": {

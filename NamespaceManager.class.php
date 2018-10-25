@@ -210,7 +210,7 @@ class NamespaceManager extends BsExtensionMW {
 				}
 
 				Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [ &$sSaveContent, $sConstName, $iNS, $aDefinition ] );
-				if ( !$bIsSystemNs && isset( $aDefinition['alias'] ) && $aDefinition['alias'] ) {
+				if ( isset( $aDefinition['alias'] ) && !empty( $aDefinition['alias'] ) ) {
 					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
 				}
 				$sSaveContent .= "// END Namespace {$sConstName}\n\n";
