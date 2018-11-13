@@ -32,6 +32,11 @@
 					]
 				}
 			}
+		},
+		"BlueSpicePrivacy": {
+			"Handlers": [
+				"\\BlueSpice\\NamespaceManager\\Privacy\\Handler"
+			]
 		}
 	},
 	"callback": "NamespaceManager::onRegistration",
