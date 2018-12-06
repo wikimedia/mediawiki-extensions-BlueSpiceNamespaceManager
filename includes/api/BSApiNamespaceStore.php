@@ -9,7 +9,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	 * Calculate the data for the NamespaceManager store and put them to the ajax output.
 	 */
 	protected function makeData($sQuery = '') {
-		global $wgContLang, $bsgSystemNamespaces, $wgContentNamespaces,
+		global $wgContLang, $bsgSystemNamespaces, $wgContentNamespaces, $wgNamespaceAliases,
 			$wgNamespacesWithSubpages;
 
 		$aResult = [];
@@ -27,9 +27,17 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				[ 'page_namespace' => $iNs ]
 			);
 
+			$nsAlias = '';
+			foreach( $wgNamespaceAliases as $alias => $nsId ) {
+				if ( $nsId === $iNs ) {
+					$nsAlias = $alias;
+				}
+			}
+
 			$aResult[] = [
 				'id' => $iNs,
 				'name' => $sNamespace,
+				'alias' => $nsAlias,
 				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, //formerly 'editable'
 				'isTalkNS' => MWNamespace::isTalk( $iNs ),
 				'pageCount' => $res->numRows(),

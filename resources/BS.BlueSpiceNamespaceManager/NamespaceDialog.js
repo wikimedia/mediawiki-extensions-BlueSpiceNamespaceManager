@@ -25,8 +25,18 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 			allowBlank: false
 		});
 
+		this.tfNamespaceAlias = Ext.create( 'Ext.form.TextField', {
+			fieldLabel: mw.message( 'bs-namespacemanager-labelnsalias' ).plain(),
+			labelWidth: 130,
+			labelAlign: 'right',
+			name: 'namespacealias',
+			allowBlank: true
+		});
+
+
 		var items = [
-			this.tfNamespaceName
+			this.tfNamespaceName,
+			this.tfNamespaceAlias
 		];
 		this.checkboxControls = {};
 
@@ -54,6 +64,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 	},
 	resetData: function() {
 		this.tfNamespaceName.reset();
+		this.tfNamespaceAlias.reset();
 		for( var name in this.checkboxControls ) {
 			this.checkboxControls[name].reset();
 		}
@@ -69,7 +80,12 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 			this.tfNamespaceName.enable();
 		}
 
+		if( this.currentData.isTalkNS ) {
+			this.tfNamespaceAlias.disable();
+		}
+
 		this.tfNamespaceName.setValue( this.currentData.name );
+		this.tfNamespaceAlias.setValue( this.currentData.alias );
 		for( var name in this.checkboxControls ) {
 			var value = this.currentData[name];
 			if( typeof( value ) === 'object' ) {
@@ -92,6 +108,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 	getData: function() {
 		this.selectedData.id = this.currentData.id;
 		this.selectedData.name = this.tfNamespaceName.getValue();
+		this.selectedData.alias = this.tfNamespaceAlias.getValue();
 		for( var name in this.checkboxControls ) {
 			this.selectedData[name] = this.checkboxControls[name].getValue();
 		}

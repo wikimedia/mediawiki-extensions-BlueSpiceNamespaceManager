@@ -10,7 +10,9 @@
 	},
 	"bs-namespacemanager-desc": "Used in [{{canonicalurl:Special:WikiAdmin|mode=ExtensionInfo}} Special:WikiAdmin?mode=ExtensionInfo], description of namespace manager extension",
 	"bs-namespacemanager-label": "Used in Sidebar, Anchor text for namespace manager",
-	"bs-namespacemanager-wrong-name": "Error message for the namespace contains invalid characters.",
+	"bs-namespacemanager-wrong-name": "Error message when namespace contains invalid characters.",
+	"bs-namespacemanager-wrong-alias": "Error message when namespace alias contains invalid characters.",
+	"bs-namespacemanager-alias-exists": "Error message when namespace alias is already set for another namespace. $1 - name of the namespace that already has this alias",
 	"bs-namespacemanager-ns-exists": "Error message for the namespace already exists.",
 	"bs-namespacemanager-ns-length": "Error message for the namespace must have a minumum length of two characters.",
 	"bs-namespacemanager-invalid-id": "Error message for no valid namespace ID",
@@ -57,5 +59,7 @@
 	"namespacemanager": "name of special page",
 	"bs-namespacemanager-nodeletetalk": "Error message shown when a user tries to delete a talk namespace",
 	"bs-namespacemanager-label-istalk": "Label for column in the grid that shows if namespace is a talk namespace\n{{Identical|Talk}}",
-	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].\n{{doc-right|namespacemanager-viewspecialpage}}"
+	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].\n{{doc-right|namespacemanager-viewspecialpage}}",
+	"bs-namespacemanager-hide-talk-label": "Checkbox label to hide talk namespages from the grid",
+	"bs-namespacemanager-labelnsalias": "label for input field for namespace alias"
 }
