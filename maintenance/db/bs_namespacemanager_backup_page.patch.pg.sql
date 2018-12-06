@@ -1,1 +1,0 @@
-ALTER TABLE /*$wgDBprefix*/bs_namespacemanager_backup_page ADD page_content_model text;
