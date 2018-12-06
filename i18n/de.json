@@ -13,6 +13,8 @@
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",
 	"bs-namespacemanager-label": "Namensraumverwaltung",
 	"bs-namespacemanager-wrong-name": "Der Namensraum enthält unzulässige Zeichen.",
+	"bs-namespacemanager-wrong-alias": "Der Namensraum-Alias enthält ungültige Zeichen.",
+	"bs-namespacemanager-alias-exists": "Der Namensraum-Alias ist bereits für den Namensraum $1 festgelegt",
 	"bs-namespacemanager-ns-exists": "Der Namensraum existiert bereits.",
 	"bs-namespacemanager-ns-length": "Der Namensraum muss mindestens zwei Zeichen lang sein.",
 	"bs-namespacemanager-invalid-id": "Keine zulässige Namensraum ID übertragen.",
@@ -59,5 +61,7 @@
 	"namespacemanager": "Namensraumverwaltung",
 	"bs-namespacemanager-nodeletetalk": "Es ist nicht möglich, einen Diskussionsnamensraum zu löschen.",
 	"bs-namespacemanager-label-istalk": "Diskussion",
-	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]] gewähren."
+	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]] gewähren.",
+	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }
