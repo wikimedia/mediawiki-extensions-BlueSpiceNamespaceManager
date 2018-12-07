@@ -5,6 +5,8 @@
 			"V6rg"
 		]
 	},
+	"bs-namespacemanager-wrong-alias": "L'alias di namespace contiene caratteri non validi.",
+	"bs-namespacemanager-alias-exists": "L'alias di namespace è già impostato per il namespace $1",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Namespace",
 	"bs-namespacemanager-label-subpages": "Sottopagine",
@@ -22,5 +24,7 @@
 	"apihelp-bs-namespace-store-description": "Elenca tutti i namespace e configurazione arbitraria. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Elenca tutti i namespace e configurazione arbitraria. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Permette di modificare la configurazione del namespace.",
-	"apihelp-bs-namespace-tasks-summary": "Permette di modificare la configurazione del namespace."
+	"apihelp-bs-namespace-tasks-summary": "Permette di modificare la configurazione del namespace.",
+	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }

@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Milicevic01"
+			"Milicevic01",
+			"BadDog"
 		]
 	},
+	"bs-namespacemanager-alias-exists": "Псеудоним је већ постављен за именски простор $1",
 	"bs-namespacemanager-label-pagecount": "Странице",
 	"bs-namespacemanager-label-system": "Систем",
-	"bs-namespacemanager-deletens-deletepages": "Ова страница је обрисана зато што је именски простор „$1“ обрисан."
+	"bs-namespacemanager-deletens-deletepages": "Ова страница је обрисана зато што је именски простор „$1“ обрисан.",
+	"bs-namespacemanager-hide-talk-label": "Сакриј именске просторе разговора",
+	"bs-namespacemanager-labelnsalias": "Псеудоним"
 }

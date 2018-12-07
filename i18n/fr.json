@@ -10,6 +10,8 @@
 	"bs-namespacemanager-desc": "Interface d’administration pour ajouter, modifier et supprimer des espaces de noms",
 	"bs-namespacemanager-label": "Gestionnaire d’espaces de noms",
 	"bs-namespacemanager-wrong-name": "L’espace de noms contient des caractères non valides.",
+	"bs-namespacemanager-wrong-alias": "L’alias de l’espace de noms contient des caractères non valides.",
+	"bs-namespacemanager-alias-exists": "L’alias de l’espace de noms est déjà défini pour l’espace de noms $1",
 	"bs-namespacemanager-ns-exists": "L’espace de noms existe déjà.",
 	"bs-namespacemanager-ns-length": "L’espace de noms doit avoir une longueur minimale de deux caractères.",
 	"bs-namespacemanager-invalid-id": "ID d’espace de noms non valide",
@@ -56,5 +58,7 @@
 	"namespacemanager": "Gestionnaire de l'espace de noms",
 	"bs-namespacemanager-nodeletetalk": "L’espace de noms de discussion ne peut pas être supprimé",
 	"bs-namespacemanager-label-istalk": "Discussion",
-	"right-namespacemanager-viewspecialpage": "Donne les droits d'accès à la page spéciale [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "Donne les droits d'accès à la page spéciale [[Special:NamespaceManager]].",
+	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de nom de discussion",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }

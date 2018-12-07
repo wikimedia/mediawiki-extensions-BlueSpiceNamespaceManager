@@ -4,11 +4,15 @@
 			"Joetaras"
 		]
 	},
+	"bs-namespacemanager-wrong-alias": "L'alias d'u namespace tène carattere invalide.",
+	"bs-namespacemanager-alias-exists": "L'alias d'u namespace ha state ggià 'mbostate pe namespace $1",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Namespace",
 	"bs-namespacemanager-label-editable": "Renomenabbele",
 	"bs-namespacemanager-label-content": "Namespace de condenute",
 	"bs-namespacemanager-label-pagecount": "Pàggene",
 	"bs-namespacemanager-label-system": "Sisteme",
-	"bs-namespacemanager-label-istalk": "'Ngazzamende"
+	"bs-namespacemanager-label-istalk": "'Ngazzamende",
+	"bs-namespacemanager-hide-talk-label": "Scunne le namespace de le 'ngazzaminde",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }
