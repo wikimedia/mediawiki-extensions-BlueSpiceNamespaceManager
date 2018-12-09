@@ -9,6 +9,8 @@
 	"bs-namespacemanager-desc": "用於新增、編輯，以及刪除命名空間的管理介面",
 	"bs-namespacemanager-label": "命名空間管理",
 	"bs-namespacemanager-wrong-name": "命名空間包含無效字元。",
+	"bs-namespacemanager-wrong-alias": "命名空間別名包含無效字元。",
+	"bs-namespacemanager-alias-exists": "該命名空間別名已設定給命名空間$1",
 	"bs-namespacemanager-ns-exists": "命名空間已存在。",
 	"bs-namespacemanager-ns-length": "命名空間最少要有兩個字元長度。",
 	"bs-namespacemanager-invalid-id": "無效命名空間 ID",
@@ -55,5 +57,7 @@
 	"namespacemanager": "命名空間管理",
 	"bs-namespacemanager-nodeletetalk": "討論命名空間無法刪除",
 	"bs-namespacemanager-label-istalk": "討論",
-	"right-namespacemanager-viewspecialpage": "授予存取特殊頁面 [[Special:NamespaceManager]] 的權限。"
+	"right-namespacemanager-viewspecialpage": "授予存取特殊頁面 [[Special:NamespaceManager]] 的權限。",
+	"bs-namespacemanager-hide-talk-label": "隱藏討論命名空間",
+	"bs-namespacemanager-labelnsalias": "別名"
 }

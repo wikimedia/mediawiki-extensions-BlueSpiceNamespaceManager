@@ -38,5 +38,6 @@
 	"bs-namespacemanager-ns-config-saved": "Konfiguracja przestrzeni nazw została zapisana.",
 	"namespacemanager": "Menedżer przestrzeni nazw",
 	"bs-namespacemanager-label-istalk": "Dyskusja",
-	"right-namespacemanager-viewspecialpage": "Przyznawanie dostępu do strony specjalnej [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "Przyznawanie dostępu do strony specjalnej [[Special:NamespaceManager]].",
+	"bs-namespacemanager-hide-talk-label": "Ukryj przestrzenie nazw dyskusji"
 }

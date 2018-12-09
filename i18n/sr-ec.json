@@ -5,6 +5,7 @@
 			"BadDog"
 		]
 	},
+	"bs-namespacemanager-wrong-alias": "Псеудоним именског простора садржи неважеће знакове.",
 	"bs-namespacemanager-alias-exists": "Псеудоним је већ постављен за именски простор $1",
 	"bs-namespacemanager-label-pagecount": "Странице",
 	"bs-namespacemanager-label-system": "Систем",
