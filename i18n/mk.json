@@ -49,5 +49,6 @@
 	"apihelp-bs-namespace-store-description": "Ги наведува сите именски простори и произволната поставка. Овозможува подредување, филтрирање и страничење. Применува параметри за ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Ги наведува сите именски простори и произволната поставка. Овозможува подредување, филтрирање и страничење. Применува параметри за ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Овозможува измена на поставката на именскиот простор.",
-	"apihelp-bs-namespace-tasks-summary": "Овозможува измена на поставката на именскиот простор."
+	"apihelp-bs-namespace-tasks-summary": "Овозможува измена на поставката на именскиот простор.",
+	"bs-namespacemanager-hide-talk-label": "Сокриј разговорни именски простори"
 }
