@@ -30,5 +30,7 @@
 	"logeventslist-bs-namespace-manager-log": "Μητρώο διαχειριστή ονοματοχώρων",
 	"namespacemanager": "Διαχειριστής ονοματοχώρων",
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
-	"bs-namespacemanager-label-istalk": "Συζήτηση"
+	"bs-namespacemanager-label-istalk": "Συζήτηση",
+	"bs-namespacemanager-hide-talk-label": "Απόκρυψη ονοματοχώρων συζήτησης",
+	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο"
 }

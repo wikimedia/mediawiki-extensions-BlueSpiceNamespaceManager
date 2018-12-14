@@ -8,6 +8,8 @@
 	"bs-namespacemanager-desc": "Interface de administração para criar, editar e eliminar domínios/espaços nominais",
 	"bs-namespacemanager-label": "Administração de domínios/espaços nominais",
 	"bs-namespacemanager-wrong-name": "O domínio contém caracteres inválidos.",
+	"bs-namespacemanager-wrong-alias": "O nome alternativo do espaço nominal contém caracteres inválidos.",
+	"bs-namespacemanager-alias-exists": "O nome alternativo do espaço nominal já foi definido para $1",
 	"bs-namespacemanager-ns-exists": "O domínio já existe.",
 	"bs-namespacemanager-ns-length": "O nome do domínio tem de ter um mínimo de dois caracteres.",
 	"bs-namespacemanager-invalid-id": "Não é um identificador de domínio válido",
@@ -54,5 +56,7 @@
 	"namespacemanager": "Administração de domínios/espaços nominais",
 	"bs-namespacemanager-nodeletetalk": "O espaço nominal de discussão não pode ser eliminado",
 	"bs-namespacemanager-label-istalk": "Discussão",
-	"right-namespacemanager-viewspecialpage": "Concede acesso à página especial [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "Concede acesso à página especial [[Special:NamespaceManager]].",
+	"bs-namespacemanager-hide-talk-label": "Ocultar os espaços nominais de discussão",
+	"bs-namespacemanager-labelnsalias": "Nome alternativo"
 }

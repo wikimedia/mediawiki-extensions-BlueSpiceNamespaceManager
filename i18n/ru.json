@@ -54,5 +54,6 @@
 	"apihelp-bs-namespace-tasks-summary": "Позволяет изменить настройки пространства имён.",
 	"namespacemanager": "Диспетчер пространств имён",
 	"bs-namespacemanager-label-istalk": "Обсуждение",
-	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]].",
+	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения"
 }
