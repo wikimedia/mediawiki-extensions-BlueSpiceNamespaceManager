@@ -90,7 +90,8 @@
 			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupTextTable::callback"
 		],
 		"NamespaceManager::editNamespace": "NamespaceManager::onEditNamespace",
-		"NamespaceManager::writeNamespaceConfiguration": "NamespaceManager::onWriteNamespaceConfiguration"
+		"NamespaceManager::writeNamespaceConfiguration": "NamespaceManager::onWriteNamespaceConfiguration",
+		"BSMigrateSettingsSaveNewSettings": "\\BlueSpice\\NamespaceManager\\Hook\\BSMigrateSettingsSaveNewSettings\\WriteConfiguration::callback"
 	},
 	"ResourceModules": {
 		"ext.bluespice.namespaceManager": {
