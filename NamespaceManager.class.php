@@ -223,4 +223,64 @@ class NamespaceManager extends BsExtensionMW {
 		return $sConstName;
 	}
 
+	public static function getMetaFields() {
+		$aMetaFields = [
+			[
+				'name' => 'id',
+				'type' => 'int',
+				'sortable' => true,
+				'filter' => [ 'type' => 'numeric' ],
+				'label' => wfMessage( 'bs-namespacemanager-label-id' )->plain()
+			],
+			[
+				'name' => 'name',
+				'type' => 'string',
+				'sortable' => true,
+				'filter' => [ 'type' => 'string' ],
+				'label' => wfMessage( 'bs-namespacemanager-label-namespaces' )->plain()
+			],
+			[
+				'name' => 'pageCount',
+				'type' => 'int',
+				'sortable' => true,
+				'filter' => [ 'type' => 'numeric' ],
+				'label' => wfMessage( 'bs-namespacemanager-label-pagecount' )->plain()
+			],
+			[
+				'name' => 'isSystemNS',
+				'type' => 'boolean',
+				'label' => wfMessage( 'bs-namespacemanager-label-editable' )->plain(),
+				'hidden' => true,
+				'sortable' => true,
+				'filter' => [ 'type' => 'boolean' ],
+			],
+			[
+				'name' => 'isTalkNS',
+				'type' => 'boolean',
+				'label' => wfMessage( 'bs-namespacemanager-label-istalk' )->plain(),
+				'hidden' => true,
+				'sortable' => true,
+				'filter' => [ 'type' => 'boolean' ],
+			],
+			[
+				'name' => 'subpages',
+				'type' => 'boolean',
+				'label' => wfMessage( 'bs-namespacemanager-label-subpages' )->plain(),
+				'sortable' => true,
+				'filter' => [ 'type' => 'boolean' ],
+			],
+			[
+				'name' => 'content',
+				'type' => 'boolean',
+				'label' => wfMessage( 'bs-namespacemanager-label-content' )->plain(),
+				'sortable' => true,
+				'filter' => [ 'type' => 'boolean' ],
+			]
+		];
+
+		Hooks::run( 'NamespaceManager::getMetaFields', [ &$aMetaFields ] );
+
+		return $aMetaFields;
+	}
+
 }
