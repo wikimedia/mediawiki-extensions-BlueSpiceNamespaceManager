@@ -5,6 +5,18 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	protected function getRequiredPermissions() {
 		return 'wikiadmin';
 	}
+
+	/**
+	 *
+	 * @param int $nsId
+	 * @param int $linkcontent
+	 * @return string
+	 */
+	protected function renderNsLink( $nsId, $linkcontent ) {
+		$href = SpecialPage::getTitleFor( 'Allpages' )->getLinkURL( [ 'namespace' => $nsId ] );
+		return \Html::element( 'a', [ 'title' => $linkcontent, 'href' => $href ], $linkcontent );
+	}
+
 	/**
 	 * Calculate the data for the NamespaceManager store and put them to the ajax output.
 	 */
@@ -41,6 +53,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, //formerly 'editable'
 				'isTalkNS' => MWNamespace::isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
+				'allPagesLink' => $this->renderNsLink( $iNs, $res->numRows() ),
 				'content' => [
 					'value' => ( $wgContentNamespaces && in_array( $iNs, $wgContentNamespaces ) ),
 					'read_only' => ( $iNs === NS_MAIN )
