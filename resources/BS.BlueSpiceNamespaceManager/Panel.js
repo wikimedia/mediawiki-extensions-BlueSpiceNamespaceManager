@@ -58,6 +58,9 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			if( i === 2 ) { // Number of pages
 				column.width = 70;
 				column.flex = 0;
+				column.renderer = function ( value, metaData, record ) {
+					return record.get( 'allPagesLink' );
+				};
 			}
 			columns.push( column );
 		}
