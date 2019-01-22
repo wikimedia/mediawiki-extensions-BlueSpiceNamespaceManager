@@ -185,7 +185,9 @@ class NamespaceManager extends BsExtensionMW {
 		}
 		return [
 			'success' => false,
-			'message' => wfMessage( 'bs-namespacemanager-error-ns-config-not-saved' , $bsgConfigFiles['NamespaceManager'] )->plain()
+			'message' => wfMessage(
+				'bs-namespacemanager-error-ns-config-not-saved', basename( $bsgConfigFiles['NamespaceManager'] )
+			) ->plain()
 		];
 	}
 
