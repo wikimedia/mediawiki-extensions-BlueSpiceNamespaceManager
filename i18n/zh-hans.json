@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Ff98sha"
 		]
 	},
 	"bs-namespacemanager-desc": "用于添加、编辑和删除名字空间的管理界面",
@@ -51,5 +52,6 @@
 	"action-namespacemanager-viewspecialpage": "查看名字空间管理器的特殊页面",
 	"namespacemanager": "名字空间管理器",
 	"bs-namespacemanager-nodeletetalk": "讨论名字空间不能删除",
-	"bs-namespacemanager-label-istalk": "讨论"
+	"bs-namespacemanager-label-istalk": "讨论",
+	"bs-namespacemanager-labelnsalias": "别名"
 }
