@@ -5,5 +5,10 @@
 		]
 	},
 	"bs-namespacemanager-wrong-alias": "Aliaset for dette navnerum indeholder ugyldige tegn.",
+	"bs-namespacemanager-label-id": "ID",
+	"bs-namespacemanager-label-namespaces": "Navnerum",
+	"bs-namespacemanager-label-editable": "Kan omdøbes",
+	"bs-namespacemanager-label-subpages": "Undersider",
+	"bs-namespacemanager-label-pagecount": "Sider",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }
