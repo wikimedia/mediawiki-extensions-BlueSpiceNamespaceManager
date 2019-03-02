@@ -4,7 +4,8 @@
 			"Okras",
 			"Striking Blue",
 			"Kaganer",
-			"Vlad5250"
+			"Vlad5250",
+			"Romanko Mikhail"
 		]
 	},
 	"bs-namespacemanager-desc": "Административный интерфейс для добавления, правки и удаления пространств имён",
@@ -55,5 +56,6 @@
 	"namespacemanager": "Диспетчер пространств имён",
 	"bs-namespacemanager-label-istalk": "Обсуждение",
 	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]].",
-	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения"
+	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения",
+	"bs-namespacemanager-labelnsalias": "Псевдоним"
 }
