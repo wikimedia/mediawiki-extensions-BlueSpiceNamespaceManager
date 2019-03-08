@@ -158,21 +158,22 @@ class NamespaceManager extends BsExtensionMW {
 				$bIsSystemNs = true;
 			}
 
-			if ( $aDefinition ) {
-				$sConstName = NamespaceManager::getNamespaceConstName( $iNS, $aDefinition );
-
-				$sSaveContent .= "// START Namespace {$sConstName}\n";
-				$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
-				if ( $iNS >= 100 ) {
-					$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '" . $aDefinition['name'] . "';\n";
-				}
-
-				Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [ &$sSaveContent, $sConstName, $iNS, $aDefinition ] );
-				if ( isset( $aDefinition['alias'] ) && !empty( $aDefinition['alias'] ) ) {
-					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
-				}
-				$sSaveContent .= "// END Namespace {$sConstName}\n\n";
+			if ( empty( $aDefinition ) ) {
+				continue;
 			}
+			$sConstName = NamespaceManager::getNamespaceConstName( $iNS, $aDefinition );
+
+			$sSaveContent .= "// START Namespace {$sConstName}\n";
+			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
+			if ( $iNS >= 100 ) {
+				$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '" . $aDefinition['name'] . "';\n";
+			}
+
+			Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [ &$sSaveContent, $sConstName, $iNS, $aDefinition ] );
+			if ( isset( $aDefinition['alias'] ) && !empty( $aDefinition['alias'] ) ) {
+				$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
+			}
+			$sSaveContent .= "// END Namespace {$sConstName}\n\n";
 		}
 
 		$res = file_put_contents( $bsgConfigFiles['NamespaceManager'], $sSaveContent );
