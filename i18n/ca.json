@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Alvaro Vidal-Abarca"
+			"Alvaro Vidal-Abarca",
+			"Fitoschido"
 		]
 	},
-	"bs-namespacemanager-label-content": "Espai de noms de contingut"
+	"bs-namespacemanager-label-content": "Espai de noms de contingut",
+	"action-namespacemanager-viewspecialpage": "mostra la pàgina especial del gestor d’espais de noms"
 }
