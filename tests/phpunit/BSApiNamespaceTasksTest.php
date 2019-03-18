@@ -116,7 +116,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 			//Is removed from nm-settings.php
 			$this->assertFalse(
 				$this->isNSSaved( $iID ),
-				"Namespace is still present settings file."
+				"Namespace is still present in settings file."
 			);
 		}
 	}
