@@ -10,5 +10,7 @@
 	"bs-namespacemanager-label-editable": "Kan omdøbes",
 	"bs-namespacemanager-label-subpages": "Undersider",
 	"bs-namespacemanager-label-pagecount": "Sider",
+	"bs-namespacemanager-label-system": "System",
+	"bs-namespacemanager-willdelete": "Vil blive slettet",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }
