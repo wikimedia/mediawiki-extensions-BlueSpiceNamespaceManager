@@ -19,7 +19,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	];
 
 	protected function setUp() {
-		if( !defined( BSCONFIGDIR ) ) {
+		if ( !defined( BSCONFIGDIR ) ) {
 			define( BSCONFIGDIR, wfTempDir() );
 		}
 		$time = time();
@@ -32,7 +32,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		return parent::setUp();
 	}
 
-	protected function getModuleName () {
+	protected function getModuleName() {
 		return 'bs-namespace-tasks';
 	}
 
@@ -41,8 +41,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	public function testAdd() {
-		global $wgContentNamespaces, $wgNamespacesWithSubpages;
-
 		$oData = $this->executeTask(
 			'add',
 			[
@@ -57,7 +55,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 			$oData->success,
 			"Namespace could not be added via API"
 		);
-		//Is saved to nm-settings.php
+		// Is saved to nm-settings.php
 		$this->assertTrue(
 			$this->isNSSaved( $iInsertedID ),
 			"Namespace cannot be found in settings file."
@@ -69,7 +67,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	public function testEdit() {
-		global $wgExtraNamespaces, $wgContLang;
+		global $wgExtraNamespaces;
 
 		$iNS = $this->getLastNS();
 
@@ -97,9 +95,9 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	public function testRemove() {
 		$iNS = $this->getLastNS();
 
-		$aToRemove = [ $iNS, $iNS +1 ];
+		$aToRemove = [ $iNS, $iNS + 1 ];
 
-		foreach( $aToRemove as $iID ) {
+		foreach ( $aToRemove as $iID ) {
 			$oData = $this->executeTask(
 				'remove',
 				[
@@ -113,7 +111,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 				"Namespace could not be deleted via API"
 			);
 
-			//Is removed from nm-settings.php
+			// Is removed from nm-settings.php
 			$this->assertFalse(
 				$this->isNSSaved( $iID ),
 				"Namespace is still present in settings file."
@@ -145,11 +143,10 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 			$aUserNamespaces = $aMatches[ 2 ];
 		}
 
-		if( in_array ( $iID, $aUserNamespaces ) ) {
+		if ( in_array( $iID, $aUserNamespaces ) ) {
 			return true;
 		}
 
 		return false;
 	}
 }
-

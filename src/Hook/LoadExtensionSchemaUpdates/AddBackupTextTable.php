@@ -13,7 +13,6 @@ class AddBackupTextTable extends LoadExtensionSchemaUpdates {
 			'bs_namespacemanager_backup_text',
 			"$dir/maintenance/db/bs_namespacemanager_backup_text.sql"
 		);
-
 	}
 
 	protected function getExtensionPath() {

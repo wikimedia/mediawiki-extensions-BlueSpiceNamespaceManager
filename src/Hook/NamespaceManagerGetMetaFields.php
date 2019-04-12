@@ -14,8 +14,8 @@ abstract class NamespaceManagerGetMetaFields extends Hook {
 	/**
 	 * Fired in SpecialNamespaceManager::execute
 	 *
-	 * @param array $metaFields
-	 * @return boolean
+	 * @param array &$metaFields
+	 * @return bool
 	 */
 	public static function callback( &$metaFields ) {
 		$className = static::class;
@@ -31,7 +31,7 @@ abstract class NamespaceManagerGetMetaFields extends Hook {
 	 *
 	 * @param \IContextSource $context
 	 * @param \Config $config
-	 * @param array $metaFields
+	 * @param array &$metaFields
 	 */
 	public function __construct( $context, $config, &$metaFields ) {
 		parent::__construct( $context, $config );

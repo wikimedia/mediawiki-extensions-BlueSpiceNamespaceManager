@@ -14,8 +14,8 @@ abstract class BSApiNamespaceStoreMakeData extends Hook {
 	/**
 	 * Fired in BSApiNamespaceStore::makeData
 	 *
-	 * @param array $results
-	 * @return boolean
+	 * @param array &$results
+	 * @return bool
 	 */
 	public static function callback( &$results ) {
 		$className = static::class;
@@ -31,7 +31,7 @@ abstract class BSApiNamespaceStoreMakeData extends Hook {
 	 *
 	 * @param \IContextSource $context
 	 * @param \Config $config
-	 * @param array $results
+	 * @param array &$results
 	 */
 	public function __construct( $context, $config, &$results ) {
 		parent::__construct( $context, $config );

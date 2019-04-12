@@ -1,12 +1,12 @@
 <?php
-$specialPageAliases = array();
+$specialPageAliases = [];
 
 /** English */
-$specialPageAliases['en'] = array(
-	'NamespaceManager' => array( 'NamespaceManager', 'Namespace Manager' ),
-);
+$specialPageAliases['en'] = [
+	'NamespaceManager' => [ 'NamespaceManager', 'Namespace Manager' ],
+];
 
 /** German (Deutsch) */
-$specialPageAliases['de'] = array(
-	'NamespaceManager' => array( 'NamespaceManager', 'Namespace Manager', 'Namensraumverwaltung', 'Namensraum Verwaltung' ),
-);
+$specialPageAliases['de'] = [
+	'NamespaceManager' => [ 'NamespaceManager', 'Namespace Manager', 'Namensraumverwaltung', 'Namensraum Verwaltung' ],
+];

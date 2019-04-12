@@ -16,7 +16,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 	protected $iFixtureTotal = 18;
 	protected $hookStore;
 
-	protected function getStoreSchema () {
+	protected function getStoreSchema() {
 		return [
 			'id' => [
 				'type' => 'integer'
@@ -81,7 +81,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		return true;
 	}
 
-	protected function getModuleName () {
+	protected function getModuleName() {
 		return 'bs-namespace-store';
 	}
 
@@ -91,7 +91,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		];
 	}
 
-	public function provideMultipleFilterData () {
+	public function provideMultipleFilterData() {
 		return [
 			'Filter by subpages' => [
 				[
