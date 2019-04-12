@@ -19,8 +19,10 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
 	/**
 	 * Calculate the data for the NamespaceManager store and put them to the ajax output.
+	 * @param string $sQuery
+	 * @return array
 	 */
-	protected function makeData($sQuery = '') {
+	protected function makeData( $sQuery = '' ) {
 		global $wgContLang, $bsgSystemNamespaces, $wgContentNamespaces, $wgNamespaceAliases,
 			$wgNamespacesWithSubpages;
 
@@ -40,7 +42,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 			);
 
 			$nsAlias = '';
-			foreach( $wgNamespaceAliases as $alias => $nsId ) {
+			foreach ( $wgNamespaceAliases as $alias => $nsId ) {
 				if ( $nsId === $iNs ) {
 					$nsAlias = $alias;
 				}
@@ -50,7 +52,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				'id' => $iNs,
 				'name' => $sNamespace,
 				'alias' => $nsAlias,
-				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, //formerly 'editable'
+				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, // formerly 'editable'
 				'isTalkNS' => MWNamespace::isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
 				'allPagesLink' => $this->renderNsLink( $iNs, $res->numRows() ),
@@ -71,8 +73,8 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 		 * this method. Therefore we need to convert them.
 		 */
 		$aResultObjects = [];
-		foreach( $aResult as $aDataSet ) {
-			$aResultObjects[] = (object) $aDataSet;
+		foreach ( $aResult as $aDataSet ) {
+			$aResultObjects[] = (object)$aDataSet;
 		}
 
 		return $aResultObjects;

@@ -31,11 +31,11 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 
 	/**
 	 *
-	 * @param string $saveContent
+	 * @param string &$saveContent
 	 * @param string $constName
-	 * @param integer $ns
+	 * @param int $ns
 	 * @param array $definition
-	 * @return boolean
+	 * @return bool
 	 */
 	public static function callback( &$saveContent, $constName, $ns, $definition ) {
 		$className = static::class;
@@ -54,9 +54,9 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 	 *
 	 * @param \IContextSource $context
 	 * @param \Config $config
-	 * @param string $saveContent
+	 * @param string &$saveContent
 	 * @param string $constName
-	 * @param integer $ns
+	 * @param int $ns
 	 * @param array $definition
 	 */
 	public function __construct( $context, $config, &$saveContent, $constName, $ns, $definition ) {
@@ -89,7 +89,7 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 			$explicitlyActivated = true;
 		}
 
-		if( ( $currentlyActivated && !$explicitlyDeactivated ) || $explicitlyActivated ) {
+		if ( ( $currentlyActivated && !$explicitlyDeactivated ) || $explicitlyActivated ) {
 			$this->saveContent .= "\$GLOBALS['bsg$configVar'][] = {$this->constName};\n";
 		}
 	}

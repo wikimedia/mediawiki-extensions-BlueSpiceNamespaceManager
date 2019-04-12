@@ -20,8 +20,8 @@ abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 	/**
 	 *
 	 * @param \BlueSpice\Extension $namespaceManager
-	 * @param array $bsSystemNamespaces
-	 * @return boolean
+	 * @param array &$bsSystemNamespaces
+	 * @return bool
 	 */
 	public static function callback( $namespaceManager, &$bsSystemNamespaces ) {
 		$className = static::class;
@@ -39,7 +39,7 @@ abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 	 * @param \IContextSource $context
 	 * @param \Config $config
 	 * @param \BlueSpice\Extension $namespaceManager
-	 * @param array $bsSystemNamespaces
+	 * @param array &$bsSystemNamespaces
 	 */
 	public function __construct( $context, $config, $namespaceManager, &$bsSystemNamespaces ) {
 		parent::__construct( $context, $config );
