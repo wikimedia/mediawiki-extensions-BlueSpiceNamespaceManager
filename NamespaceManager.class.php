@@ -27,7 +27,7 @@
  * @package    Bluespice_Extensions
  * @subpackage NamespaceManager
  * @copyright  Copyright (C) 2016 Hallo Welt! GmbH, All rights reserved.
- * @license    http://www.gnu.org/copyleft/gpl.html GNU Public License v3
+ * @license    http://www.gnu.org/copyleft/gpl.html GPL-3.0-only
  * @filesource
  */
 
@@ -52,9 +52,9 @@ class NamespaceManager extends BsExtensionMW {
 	 * Initialization of NamespaceManager extension
 	 */
 	public function initExt() {
-		//CR, RBV: This is suposed to return all constants! Not just system NS.
-		//At the moment the implementation relies on an hardcoded mapping,
-		//which is bad. We need to change this and make it more generic!
+		// CR, RBV: This is suposed to return all constants! Not just system NS.
+		// At the moment the implementation relies on an hardcoded mapping,
+		// which is bad. We need to change this and make it more generic!
 		$GLOBALS['bsSystemNamespaces'] = BsNamespaceHelper::getMwNamespaceConstants();
 	}
 
@@ -70,7 +70,11 @@ class NamespaceManager extends BsExtensionMW {
 
 	/**
 	 * Hook-Handler for NamespaceManager::editNamespace
-	 * @return boolean Always true to keep hook alive
+	 * @param array &$aNamespaceDefinition
+	 * @param int &$iNs
+	 * @param array $aAdditionalSettings
+	 * @param bool $bUseInternalDefaults
+	 * @return bool Always true to keep hook alive
 	 */
 	public static function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings, $bUseInternalDefaults ) {
 		if ( !$bUseInternalDefaults ) {
@@ -89,7 +93,11 @@ class NamespaceManager extends BsExtensionMW {
 
 	/**
 	 * Hook-Handler for NamespaceManager::writeNamespaceConfiguration
-	 * @return boolean Always true to keep hook alive
+	 * @param string &$sSaveContent
+	 * @param string $sConstName
+	 * @param int $iNs
+	 * @param array $aDefinition
+	 * @return bool Always true to keep hook alive
 	 */
 	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNs, $aDefinition ) {
 		if ( isset( $aDefinition[ 'content' ] ) && $aDefinition['content'] === true ) {
@@ -104,7 +112,7 @@ class NamespaceManager extends BsExtensionMW {
 
 	/**
 	 * Get all namespaces, which are created with the NamespaceManager.
-	 * @param boolean $bFullDetails should the complete configuration of the namespaces be loaded
+	 * @param bool $bFullDetails should the complete configuration of the namespaces be loaded
 	 * @return array the namespace data
 	 */
 	public static function getUserNamespaces( $bFullDetails = false ) {
@@ -141,6 +149,7 @@ class NamespaceManager extends BsExtensionMW {
 	/**
 	 * Saves a given namespace configuration to bluespice-core/config/nm-settings.php
 	 * @param array $aUserNamespaceDefinition the namespace configuration
+	 * @return array
 	 */
 	public static function setUserNamespaces( $aUserNamespaceDefinition ) {
 		global $bsSystemNamespaces, $bsgConfigFiles;
@@ -161,7 +170,7 @@ class NamespaceManager extends BsExtensionMW {
 			if ( empty( $aDefinition ) ) {
 				continue;
 			}
-			$sConstName = NamespaceManager::getNamespaceConstName( $iNS, $aDefinition );
+			$sConstName = self::getNamespaceConstName( $iNS, $aDefinition );
 
 			$sSaveContent .= "// START Namespace {$sConstName}\n";
 			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
@@ -188,12 +197,11 @@ class NamespaceManager extends BsExtensionMW {
 			'success' => false,
 			'message' => wfMessage(
 				'bs-namespacemanager-error-ns-config-not-saved', basename( $bsgConfigFiles['NamespaceManager'] )
-			) ->plain()
+			)->plain()
 		];
 	}
 
 	public static function getNamespaceConstName( $iNS, $aDefinition ) {
-
 		$sConstName = '';
 
 		// find existing NS_ definitions
@@ -215,7 +223,7 @@ class NamespaceManager extends BsExtensionMW {
 			$sConstName = $aNSConstants[$iNS];
 		} else {
 			// If compatible, use namespace name as const name
-			if ( preg_match(  "/^[a-zA-Z0-9_]{3,}$/", $aDefinition['name'] ) ) {
+			if ( preg_match( "/^[a-zA-Z0-9_]{3,}$/", $aDefinition['name'] ) ) {
 				$sConstName = 'NS_' . strtoupper( $aDefinition['name'] );
 			} else {
 				// Otherwise use namespace number

@@ -15,15 +15,15 @@ class NamespaceNuker {
 		$dbw = wfgetDB( DB_MASTER );
 		$res = $dbw->select(
 			'page',
-			array(
+			[
 				'page_id',
 				'page_title',
 				'page_len',
 				'page_latest'
-			),
-			array(
+			],
+			[
 				'page_namespace' => $idNS
-			)
+			]
 		);
 
 		$sToken = RequestContext::getMain()->getUser()->getEditToken();
@@ -34,7 +34,7 @@ class NamespaceNuker {
 
 			$oParams = new DerivativeRequest(
 				RequestContext::getMain()->getRequest(),
-				array(
+				[
 					'action' => 'move',
 					'fromid' => $row->page_id,
 					'to' => $sTitle,
@@ -43,7 +43,7 @@ class NamespaceNuker {
 					'movesubpages' => 1,
 					'noredirect' => 1,
 					'token' => $sToken
-				),
+				],
 				true
 			);
 
@@ -58,27 +58,27 @@ class NamespaceNuker {
 		$dbw = wfgetDB( DB_MASTER );
 		$res = $dbw->select(
 			'page',
-			array(
+			[
 				'page_id',
 				'page_title',
 				'page_len',
 				'page_latest'
-			),
-			array(
+			],
+			[
 				'page_namespace' => $idNS
-			)
+			]
 		);
 
 		$sToken = RequestContext::getMain()->getUser()->getEditToken();
 		foreach ( $res as $row ) {
 			$oParams = new DerivativeRequest(
 				RequestContext::getMain()->getRequest(),
-				array(
+				[
 					'action' => 'delete',
 					'pageid' => $row->page_id,
 					'reason' => wfMessage( 'bs-namespacemanager-deletens-deletepages', $nameNS )->text(),
 					'token' => $sToken
-				),
+				],
 				true
 			);
 
