@@ -71,7 +71,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			apiAction: 'bs-namespace-store',
 			fields: fields,
 			pageSize: this.pageSize,
-			remoteFilter: false,
+			remoteFilter: false
 		});
 
 		this.colMainConf.columns = columns;
@@ -189,7 +189,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			id: "bs-namespacemanager-edit-dlg"
 		} );
 		this.dlgNamespaceEdit.on( 'ok', this.onDlgNamespaceEditOk, this );
-
+		this.dlgNamespaceEdit.on( 'cancel', this.onDlgNamespaceEditCancel, this );
 		this.active = 'edit';
 		this.dlgNamespaceEdit.setTitle( mw.message( 'bs-namespacemanager-tipedit' ).plain() );
 		this.dlgNamespaceEdit.setData( selectedRow[0].getData() );
@@ -261,9 +261,12 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 				settings: additionalSettings
 			}
 		).done( function( response ) {
-			me.dlgNamespaceEdit.resetData();
+			me.dlgNamespaceEdit.destroy();
 			me.reloadStore();
 		});
+	},
+	onDlgNamespaceEditCancel: function( sender, namespace ) {
+		this.dlgNamespaceEdit.destroy();
 	},
 	getAdditionalSettings: function( data ) {
 		var filteredData = {};
