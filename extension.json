@@ -1,7 +1,7 @@
 {
 	"name": "BlueSpiceNamespaceManager",
 	"license-name":"GPL-3.0-only",
-	"version": "3.1.0-alpha",
+	"version": "3.2.0-alpha",
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:NamespaceManager",
 	"author": [
 		"Sebastian Ulbricht",
@@ -41,9 +41,9 @@
 	},
 	"callback": "NamespaceManager::onRegistration",
 	"requires": {
-		"MediaWiki": ">= 1.29.0",
+		"MediaWiki": ">= 1.34.0",
 		"extensions": {
-			"BlueSpiceFoundation": "*"
+			"BlueSpiceFoundation": ">= 3.2"
 		}
 	},
 	"LogTypes": [
