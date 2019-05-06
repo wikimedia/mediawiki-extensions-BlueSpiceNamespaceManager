@@ -91,7 +91,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	 * Build the configuration for a new namespace and give it to the save method.
 	 *
 	 * @global string $wgReadOnly
-	 * @global Language $wgContLang
 	 * @param stdClass $oData
 	 * @param stdClass $aParams
 	 * @return BSStandardAPIResponse
@@ -105,8 +104,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		$oResult = $this->makeStandardReturn();
 
-		global $wgContLang, $wgNamespaceAliases;
-		$aNamespaces = $wgContLang->getNamespaces();
+		global $wgNamespaceAliases;
+		$contLang = $this->getServices()->getContentLanguage();
+		$aNamespaces = $contLang->getNamespaces();
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 		end( $aNamespaces );
 		$iNS = key( $aNamespaces ) + 1;
@@ -147,7 +147,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 			++$iNS;
 			$aUserNamespaces[ ( $iNS ) ] = [
-				'name' => $sNamespace . '_' . $wgContLang->getNsText( NS_TALK ),
+				'name' => $sNamespace . '_' . $contLang->getNsText( NS_TALK ),
 				'alias' => $sAlias . '_talk'
 			];
 
@@ -175,7 +175,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	 *
 	 * @global string $wgReadOnly
 	 * @global array $bsSystemNamespaces
-	 * @global Language $wgContLang
 	 * @param stdClass $oData
 	 * @param stdClass $aParams
 	 * @return BSStandardAPIResponse
@@ -189,7 +188,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		$oResult = $this->makeStandardReturn();
 
-		global $bsSystemNamespaces, $wgContLang, $wgNamespaceAliases;
+		global $bsSystemNamespaces, $wgNamespaceAliases;
+
+		$contLang = $this->getServices()->getContentLanguage();
 
 		$oNamespaceManager =
 			\MediaWiki\MediaWikiServices::getInstance()
@@ -217,7 +218,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		if ( $this->isAliasInUse( $iNS, $sAlias ) ) {
-			$nsName = $wgContLang->getNamespaces()[$wgNamespaceAliases[$sAlias]];
+			$nsName = $contLang->getNamespaces()[$wgNamespaceAliases[$sAlias]];
 			$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists', $nsName )->plain();
 			return $oResult;
 		}
@@ -228,10 +229,10 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$sOriginalNamespaceName = $aUserNamespaces[ $iNS ][ 'name' ];
 		}
 
-		if ( !isset( $bsSystemNamespaces[( $iNS )] ) && strstr( $sAlias, '_' . $wgContLang->getNsText( NS_TALK ) ) ) {
+		if ( !isset( $bsSystemNamespaces[( $iNS )] ) && strstr( $sAlias, '_' . $contLang->getNsText( NS_TALK ) ) ) {
 				$aUserNamespaces[ $iNS ] = [
 					'name' => $aUserNamespaces[ $iNS ][ 'name' ],
-					'alias' => str_replace( '_' . $wgContLang->getNsText( NS_TALK ), '_talk', $sAlias ),
+					'alias' => str_replace( '_' . $contLang->getNsText( NS_TALK ), '_talk', $sAlias ),
 				];
 			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
 		} else {
@@ -241,7 +242,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			];
 
 			if ( !isset( $bsSystemNamespaces[( $iNS )] ) ) {
-				$aUserNamespaces[( $iNS + 1 )]['name'] = $sNamespace . '_' . $wgContLang->getNsText( NS_TALK );
+				$aUserNamespaces[( $iNS + 1 )]['name'] = $sNamespace . '_' . $contLang->getNsText( NS_TALK );
 				$aUserNamespaces[( $iNS + 1 )]['alias'] = $sAlias . '_talk';
 			}
 			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
@@ -274,7 +275,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	 * Delete a given namespace.
 	 *
 	 * @global string $wgReadOnly
-	 * @global Language $wgContLang
 	 * @param stdClass $oData
 	 * @param stdClass $aParams
 	 * @return BSStandardAPIResponse
@@ -288,7 +288,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		global $wgContLang;
+		$contLang = $this->getServices()->getContentLanguage();
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
@@ -299,14 +299,14 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$aNamespacesToRemoveNames = [];
 		$sOriginalNamespace = $sNamespace = $aUserNamespaces[ $iNS ][ 'name' ];
 		$aNamespacesToRemoveNames[] = $sNamespace;
-		if ( strstr( $sNamespace, '_' . $wgContLang->getNsText( NS_TALK ) ) ) {
+		if ( strstr( $sNamespace, '_' . $contLang->getNsText( NS_TALK ) ) ) {
 			if ( isset( $aUserNamespaces[ ( $iNS - 1 ) ] ) ) {
 				$oResult->message = wfMessage( 'bs-namespacemanager-nodeletetalk' )->plain();
 				return $oResult;
 			}
 		}
 
-		if ( isset( $aUserNamespaces[ ( $iNS + 1 ) ] ) && strstr( $aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ], '_' . $wgContLang->getNsText( NS_TALK ) ) ) {
+		if ( isset( $aUserNamespaces[ ( $iNS + 1 ) ] ) && strstr( $aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ], '_' . $contLang->getNsText( NS_TALK ) ) ) {
 			$aNamespacesToRemove[] = [ ( $iNS + 1 ), 1 ];
 			$sNamespace = $aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ];
 			$aNamespacesToRemoveNames[] = $sNamespace;

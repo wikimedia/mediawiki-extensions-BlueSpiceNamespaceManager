@@ -2,6 +2,7 @@
 
 namespace BlueSpice\NamespaceManager\Tests;
 
+use BlueSpice\Services;
 use BlueSpice\Tests\BSApiExtJSStoreTestBase;
 
 /**
@@ -37,7 +38,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 	}
 
 	protected function setUp() {
-		global $wgContLang;
+		$contLang = Services::getInstance()->getContentLanguage();
 		parent::setUp();
 		$this->setMwGlobals( [
 			'wgNamespacesWithSubpages' => [
@@ -66,14 +67,14 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 				99990 => 'Test',
 				99991 => 'Test_talk'
 			];
-		$wgContLang->setNamespaces( $namespaces );
+		$contLang->setNamespaces( $namespaces );
 	}
 
 	protected function tearDown() {
-		global $wgContLang;
+		$contLang = Services::getInstance()->getContentLanguage();
 		// reset custom namespace settings
-		$wgContLang->resetNamespaces();
-		$wgContLang->getNamespaces();
+		$contLang->resetNamespaces();
+		$contLang->getNamespaces();
 		parent::tearDown();
 	}
 

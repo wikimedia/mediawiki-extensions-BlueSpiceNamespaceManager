@@ -23,11 +23,12 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	 * @return array
 	 */
 	protected function makeData( $sQuery = '' ) {
-		global $wgContLang, $bsgSystemNamespaces, $wgContentNamespaces, $wgNamespaceAliases,
+		global $bsgSystemNamespaces, $wgContentNamespaces, $wgNamespaceAliases,
 			$wgNamespacesWithSubpages;
 
+		$contLang = $this->getServices()->getContentLanguage();
 		$aResult = [];
-		$aNamespaces = $wgContLang->getNamespaces();
+		$aNamespaces = $contLang->getNamespaces();
 		foreach ( $aNamespaces as $iNs => $sNamespace ) {
 			if ( $sNamespace === '' ) {
 				$sNamespace = BsNamespaceHelper::getNamespaceName( $iNs );

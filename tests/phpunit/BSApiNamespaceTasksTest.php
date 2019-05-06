@@ -2,6 +2,7 @@
 
 namespace BlueSpice\NamespaceManager\Tests;
 
+use BlueSpice\Services;
 use BlueSpice\Tests\BSApiTasksTestBase;
 
 /**
@@ -120,9 +121,9 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	protected function getLastNS() {
-		global $wgContLang;
+		$contLang = Services::getInstance()->getContentLanguage();
 
-		$aNamespaces = $wgContLang->getNamespaces();
+		$aNamespaces = $contLang->getNamespaces();
 		end( $aNamespaces );
 		$iNS = key( $aNamespaces ) + 1;
 		reset( $aNamespaces );
