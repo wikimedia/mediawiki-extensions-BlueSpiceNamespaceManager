@@ -55,7 +55,7 @@
 	"namespacemanager": "Namespace manager",
 	"bs-namespacemanager-nodeletetalk": "Talk namespace cannot be deleted",
 	"bs-namespacemanager-label-istalk": "Talk",
-	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Access to the special page [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }
