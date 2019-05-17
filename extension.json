@@ -76,6 +76,10 @@
 			"value": 2999
 		}
 	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\NamespaceManager\\": "src/",
+		"BlueSpice\\NamespaceManager\\Tests": "tests/phpunit/"
+	},
 	"AutoloadClasses": {
 		"NamespaceManager": "NamespaceManager.class.php",
 		"NamespaceNuker": "includes/NamespaceNuker.php",
