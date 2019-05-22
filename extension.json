@@ -78,7 +78,7 @@
 	},
 	"AutoloadNamespaces": {
 		"BlueSpice\\NamespaceManager\\": "src/",
-		"BlueSpice\\NamespaceManager\\Tests": "tests/phpunit/"
+		"BlueSpice\\NamespaceManager\\Tests\\": "tests/phpunit/"
 	},
 	"AutoloadClasses": {
 		"NamespaceManager": "NamespaceManager.class.php",
