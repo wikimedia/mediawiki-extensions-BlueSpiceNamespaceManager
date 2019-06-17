@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Alirezaaa",
-			"Huji"
+			"Huji",
+			"FarsiNevis"
 		]
 	},
 	"bs-namespacemanager-desc": "رابط مدیریتی برای افزودن، ویرایش یا حذف فضاهای نام",
@@ -17,6 +18,7 @@
 	"bs-namespacemanager-label-content": "فضای نام محتوا",
 	"bs-namespacemanager-label-searchable": "جستجوی پیش‌فرض",
 	"bs-namespacemanager-label-subpages": "زیرصفحه‌ها",
+	"bs-namespacemanager-label-pagecount": "صفحه‌ها",
 	"bs-namespacemanager-nsadded": "فضای نام اضافه شد.",
 	"bs-namespacemanager-nsremoved": "فضای نام حذف شد.",
 	"bs-namespacemanager-nsedited": "فضای نام ویرایش شد.",
