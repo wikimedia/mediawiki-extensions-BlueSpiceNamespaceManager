@@ -1,12 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Steeve815"
 		]
 	},
 	"bs-namespacemanager-desc": "ממשק ניהולי עבור הוספה, עריכה ומחיקה של מרחבי שם",
 	"bs-namespacemanager-label": "ניהול מרחבי שם",
 	"bs-namespacemanager-wrong-name": "השם של מרחב השם מכיל תווים בלתי־חוקיים.",
+	"bs-namespacemanager-alias-exists": "הכינוי למרחב השם כבר נקבע עבור המרחב $1",
 	"bs-namespacemanager-ns-exists": "מרחב השם כבר קיים.",
 	"bs-namespacemanager-ns-length": "מרחב השם צריך להיות באורך של שני תווים לפחות.",
 	"bs-namespacemanager-invalid-id": "לא צוין מזהה מרחב שם תקין",
@@ -38,6 +40,7 @@
 	"log-name-bs-namespace-manager": "יומן ניהול מרחבי שם",
 	"log-description-bs-namespace-manager": "יומן זה מציג את השינויים במרחבי השם.",
 	"log-show-hide-bs-namespace-manager": "$1 יומן ניהול מרחבי שם",
+	"logeventslist-bs-namespace-manager-log": "יומן ניהול מרחבי שם",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|יצר|יצרה}} את מרחב השם \"$4\"",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|שינה|שינתה}} את ההגדרות של מרחב השם \"$4\"",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|שינה|שינתה}} את השם של מרחב השם \"$4\" לשם \"$5\"",
@@ -49,5 +52,7 @@
 	"action-namespacemanager-viewspecialpage": "לצפות בדף המיוחד \"ניהול מרחבי שם\"",
 	"namespacemanager": "ניהול מרחבי שם",
 	"bs-namespacemanager-nodeletetalk": "לא ניתן למחוק מרחב שיחה.",
-	"bs-namespacemanager-label-istalk": "שיחה"
+	"bs-namespacemanager-label-istalk": "שיחה",
+	"bs-namespacemanager-hide-talk-label": "הסתרת מרחבי שיחה",
+	"bs-namespacemanager-labelnsalias": "כינוי"
 }

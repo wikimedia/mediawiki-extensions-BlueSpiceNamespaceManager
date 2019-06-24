@@ -50,5 +50,8 @@
 	"apihelp-bs-namespace-store-summary": "Ги наведува сите именски простори и произволната поставка. Овозможува подредување, филтрирање и страничење. Применува параметри за ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Овозможува измена на поставката на именскиот простор.",
 	"apihelp-bs-namespace-tasks-summary": "Овозможува измена на поставката на именскиот простор.",
+	"namespacemanager": "Раководител со именски простори",
+	"bs-namespacemanager-label-istalk": "Разговор",
+	"right-namespacemanager-viewspecialpage": "Пристап до службената страница [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Сокриј разговорни именски простори"
 }
