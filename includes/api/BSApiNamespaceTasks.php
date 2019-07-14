@@ -373,6 +373,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		return $oResult;
 	}
+
 	/**
 	 * Logs NamespaceManager actions
 	 *
