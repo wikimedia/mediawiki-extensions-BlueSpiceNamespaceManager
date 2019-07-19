@@ -67,12 +67,12 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 
 		$(document).trigger('BSNamespaceManagerInitCompontent', [this, fields, columns]);
 
-		this.strMain = new BS.store.BSApi({
+		this.strMain = new BS.store.BSApi( {
 			apiAction: 'bs-namespace-store',
 			fields: fields,
 			pageSize: this.pageSize,
-			remoteFilter: false
-		});
+			remoteFilter: true
+		} );
 
 		this.colMainConf.columns = columns;
 		this.callParent( arguments );
@@ -95,8 +95,11 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 	hideTalkNamespace: function( hide ) {
 		this.grdMain.getStore().clearFilter();
 		if( hide ) {
-			this.strMain.filterBy( function( rec ) {
-				return rec.data.isTalkNS === false;
+			this.strMain.addFilter( {
+				operator: "==",
+				value: false,
+				property: 'isTalkNS',
+				type: 'boolean'
 			} );
 		}
 	},
