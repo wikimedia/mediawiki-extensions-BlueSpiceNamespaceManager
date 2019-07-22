@@ -56,7 +56,7 @@
 	"namespacemanager": "Administração de domínios/espaços nominais",
 	"bs-namespacemanager-nodeletetalk": "O espaço nominal de discussão não pode ser eliminado",
 	"bs-namespacemanager-label-istalk": "Discussão",
-	"right-namespacemanager-viewspecialpage": "Concede acesso à página especial [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Acesso à página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar os espaços nominais de discussão",
 	"bs-namespacemanager-labelnsalias": "Nome alternativo"
 }
