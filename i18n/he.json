@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Steeve815"
 		]
 	},
 	"bs-namespacemanager-desc": "ממשק ניהולי עבור הוספה, עריכה ומחיקה של מרחבי שם",
@@ -49,5 +50,9 @@
 	"action-namespacemanager-viewspecialpage": "לצפות בדף המיוחד \"ניהול מרחבי שם\"",
 	"namespacemanager": "ניהול מרחבי שם",
 	"bs-namespacemanager-nodeletetalk": "לא ניתן למחוק מרחב שיחה.",
-	"bs-namespacemanager-label-istalk": "שיחה"
+	"bs-namespacemanager-label-istalk": "שיחה",
+	"bs-namespacemanager-alias-exists": "הכינוי למרחב השם כבר נקבע עבור המרחב $1",
+	"logeventslist-bs-namespace-manager-log": "יומן ניהול מרחבי שם",
+	"bs-namespacemanager-hide-talk-label": "הסתרת מרחבי שיחה",
+	"bs-namespacemanager-labelnsalias": "כינוי"
 }

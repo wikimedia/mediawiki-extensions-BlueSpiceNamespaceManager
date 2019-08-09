@@ -4,7 +4,8 @@
 			"Liuxinyu970226",
 			"Ff98sha",
 			"WQL",
-			"佛壁灯"
+			"佛壁灯",
+			"科劳"
 		]
 	},
 	"bs-namespacemanager-desc": "用于添加、编辑和删除名字空间的管理界面",
@@ -58,7 +59,7 @@
 	"namespacemanager": "名字空间管理器",
 	"bs-namespacemanager-nodeletetalk": "讨论名字空间不能删除",
 	"bs-namespacemanager-label-istalk": "讨论",
-	"right-namespacemanager-viewspecialpage": "授予访问特殊页面 [[Special:NamespaceManager]] 的权限。",
+	"right-namespacemanager-viewspecialpage": "访问页面 [[Special:NamespaceManager]] 的权限。",
 	"bs-namespacemanager-hide-talk-label": "隐藏讨论名字空间",
 	"bs-namespacemanager-labelnsalias": "别名"
 }
