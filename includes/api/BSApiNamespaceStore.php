@@ -38,7 +38,8 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 			$res = $this->getDB()->select(
 				'page',
 				'page_id',
-				[ 'page_namespace' => $iNs ]
+				[ 'page_namespace' => $iNs ],
+				__METHOD__
 			);
 
 			$nsAlias = '';
