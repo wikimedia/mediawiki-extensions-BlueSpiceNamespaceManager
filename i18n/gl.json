@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Elisardojm",
-			"Banjo"
+			"Banjo",
+			"Navhy"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfaz administrativa para engadir, editar e eliminar espazos de nomes",
@@ -52,5 +53,6 @@
 	"action-namespacemanager-viewspecialpage": "ver a páxina especial do xestor de espazos de nomes",
 	"namespacemanager": "Xestor de espazos de nomes",
 	"bs-namespacemanager-nodeletetalk": "O espazo de nomes de conversa non pode eliminarse",
-	"bs-namespacemanager-label-istalk": "Conversa"
+	"bs-namespacemanager-label-istalk": "Conversa",
+	"bs-namespacemanager-labelnsalias": "Alcume"
 }
