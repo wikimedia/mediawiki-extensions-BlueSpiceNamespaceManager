@@ -1,26 +1,34 @@
 <?php
 
-class SpecialNamespaceManager extends \BlueSpice\SpecialPage {
+use BlueSpice\Special\ManagerBase;
+
+class SpecialNamespaceManager extends ManagerBase {
 
 	public function __construct() {
 		parent::__construct( 'NamespaceManager', 'namespacemanager-viewspecialpage' );
 	}
 
 	/**
-	 *
-	 * @global OutputPage $this->getOutput()
-	 * @param type $sParameter
-	 * @return type
+	 * @return string ID of the HTML element being added
 	 */
-	public function execute( $sParameter ) {
-		parent::execute( $sParameter );
-		$this->getOutput()->addModuleStyles( 'ext.bluespice.namespaceManager.styles' );
-		$this->getOutput()->addModules( 'ext.bluespice.namespaceManager' );
-
-		$aMetaFields = NamespaceManager::getMetaFields();
-		$this->getOutput()->addJsConfigVars( 'bsNamespaceManagerMetaFields', $aMetaFields );
-
-		$this->getOutput()->addHTML( '<div id="bs-namespacemanager-grid" class="bs-manager-container"></div>' );
+	protected function getId() {
+		return "bs-namespacemanager-grid";
 	}
 
+	/**
+	 * @return array
+	 */
+	protected function getModules() {
+		return [
+			'ext.bluespice.namespaceManager.styles',
+			'ext.bluespice.namespaceManager'
+		];
+	}
+
+	protected function getJSVars() {
+		$aMetaFields = NamespaceManager::getMetaFields();
+		return [
+			'bsNamespaceManagerMetaFields' => $aMetaFields
+		];
+	}
 }

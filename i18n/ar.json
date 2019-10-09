@@ -57,7 +57,7 @@
 	"namespacemanager": "مدير النطاق",
 	"bs-namespacemanager-nodeletetalk": "لا يمكن حذف نطاق النقاش",
 	"bs-namespacemanager-label-istalk": "نقاش",
-	"right-namespacemanager-viewspecialpage": "يمنح الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
 	"bs-namespacemanager-labelnsalias": "الاسم المستعار"
 }

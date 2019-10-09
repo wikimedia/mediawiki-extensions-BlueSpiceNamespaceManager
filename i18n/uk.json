@@ -11,6 +11,8 @@
 	"bs-namespacemanager-desc": "Адміністративний інтерфейс для додавання, редагування та видалення просторів назв",
 	"bs-namespacemanager-label": "Керівник просторами назв",
 	"bs-namespacemanager-wrong-name": "Простір назв містить неприпустимі символи.",
+	"bs-namespacemanager-wrong-alias": "Псевдонім простору назв містить недійсні символи.",
+	"bs-namespacemanager-alias-exists": "Псевдонім простору назв уже встановлено для простору $1",
 	"bs-namespacemanager-ns-exists": "Простір назв уже існує.",
 	"bs-namespacemanager-ns-length": "Простір назв повинен мати мінімальну довжину два символи.",
 	"bs-namespacemanager-invalid-id": "Неприпустимий ідентифікатор простору назв",
@@ -42,6 +44,7 @@
 	"log-name-bs-namespace-manager": "Журнал керування просторами назв",
 	"log-description-bs-namespace-manager": "Це журнал змін у просторах назв.",
 	"log-show-hide-bs-namespace-manager": "$1 журнал керування просторами назв",
+	"logeventslist-bs-namespace-manager-log": "Журнал менеджера просторів назв",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|створив|створила}} простір назв $4",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|змінив|змінила}} налаштування простору назв $4",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|перейменував|перейменувала}} простір назв $4 на $5",
@@ -56,5 +59,7 @@
 	"namespacemanager": "Менеджер просторів назв",
 	"bs-namespacemanager-nodeletetalk": "Простір назв Обговорення вилучити неможливо",
 	"bs-namespacemanager-label-istalk": "Обговорення",
-	"right-namespacemanager-viewspecialpage": "доступ до спеціальної сторінки [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "доступ до спеціальної сторінки [[Special:NamespaceManager]]",
+	"bs-namespacemanager-hide-talk-label": "Приховати простори назв обговорень",
+	"bs-namespacemanager-labelnsalias": "Псевдонім"
 }

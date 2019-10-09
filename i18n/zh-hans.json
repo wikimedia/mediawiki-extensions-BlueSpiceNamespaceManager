@@ -1,12 +1,18 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"Ff98sha",
+			"WQL",
+			"佛壁灯",
+			"科劳"
 		]
 	},
 	"bs-namespacemanager-desc": "用于添加、编辑和删除名字空间的管理界面",
 	"bs-namespacemanager-label": "名字空间管理器",
 	"bs-namespacemanager-wrong-name": "名字空间包含无效字符。",
+	"bs-namespacemanager-wrong-alias": "名字空间别名包含非法字符。",
+	"bs-namespacemanager-alias-exists": "此名字空间别名已经被设为名字空间 $1 的别名",
 	"bs-namespacemanager-ns-exists": "名字空间已存在。",
 	"bs-namespacemanager-ns-length": "名字空间必须最少2字符。",
 	"bs-namespacemanager-invalid-id": "没有有效的名字空间ID",
@@ -38,6 +44,7 @@
 	"log-name-bs-namespace-manager": "名字空间管理器日志",
 	"log-description-bs-namespace-manager": "这是名字空间上的更改日志。",
 	"log-show-hide-bs-namespace-manager": "$1名字空间管理器日志",
+	"logeventslist-bs-namespace-manager-log": "名字空间管理器日志",
 	"logentry-bs-namespace-manager-create": "$1{{GENDER:$2|创建了}}名字空间$4",
 	"logentry-bs-namespace-manager-modify": "$1{{GENDER:$2|更改了}}名字空间$4的设置",
 	"logentry-bs-namespace-manager-rename": "$1{{GENDER:$2|已更名}}名字空间$4至$5",
@@ -51,5 +58,8 @@
 	"action-namespacemanager-viewspecialpage": "查看名字空间管理器的特殊页面",
 	"namespacemanager": "名字空间管理器",
 	"bs-namespacemanager-nodeletetalk": "讨论名字空间不能删除",
-	"bs-namespacemanager-label-istalk": "讨论"
+	"bs-namespacemanager-label-istalk": "讨论",
+	"right-namespacemanager-viewspecialpage": "访问页面 [[Special:NamespaceManager]] 的权限。",
+	"bs-namespacemanager-hide-talk-label": "隐藏讨论名字空间",
+	"bs-namespacemanager-labelnsalias": "别名"
 }

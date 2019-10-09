@@ -4,7 +4,8 @@
 			"WikiPhoenix",
 			"Lokal Profil",
 			"Warrakkk",
-			"Umeaboy"
+			"Umeaboy",
+			"Mjälten"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsgränssnittet för att redigera och radera namnrymder",
@@ -52,5 +53,6 @@
 	"namespacemanager": "Namnrymdshanterare",
 	"bs-namespacemanager-nodeletetalk": "Diskussionsnamnrymden kan inte raderas",
 	"bs-namespacemanager-label-istalk": "Diskussion",
-	"right-namespacemanager-viewspecialpage": "Ger åtkomst till specialsidan [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "Ger åtkomst till specialsidan [[Special:NamespaceManager]].",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }

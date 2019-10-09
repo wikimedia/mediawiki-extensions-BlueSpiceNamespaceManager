@@ -4,7 +4,8 @@
 			"Gomoko",
 			"Ltrlg",
 			"Macofe",
-			"Wladek92"
+			"Wladek92",
+			"Thibaut120094"
 		]
 	},
 	"bs-namespacemanager-desc": "Interface d’administration pour ajouter, modifier et supprimer des espaces de noms",
@@ -34,12 +35,12 @@
 	"bs-namespacemanager-msgnoteditabledelete": "Cet espace de noms est un espace de noms système, qui ne peut pas être supprimé.",
 	"bs-namespacemanager-labelnsname": "Nom de l’espace de noms",
 	"bs-namespacemanager-willdelete": "Sera supprimé",
-	"bs-namespacemanager-willmove": "Sera déplacé dans « {{int:bs-ns_main}} »",
-	"bs-namespacemanager-willmovesuffix": "Sera déplacé dans « {{int:bs-ns_main}} » avec le suffixe « $1 »",
+	"bs-namespacemanager-willmove": "Sera déplacé dans « {{int:bs-ns_main}} »",
+	"bs-namespacemanager-willmovesuffix": "Sera déplacé dans « {{int:bs-ns_main}} » avec le suffixe « $1 »",
 	"bs-namespacemanager-deletewarning": "Êtes-vous sûr de vouloir supprimer cet espace de noms ? La suppression d’un espace de noms ne peut pas être annulée.",
 	"bs-namespacemanager-pagepresent": "Pages dans cet espace de noms :",
-	"bs-namespacemanager-deletens-movepages": "Cette page a été déplacée de l’espace de noms « $1 » vers l’espace de noms « {{int:bs-ns_main}} », car l’espace de noms « $1 » a été supprimé.",
-	"bs-namespacemanager-deletens-deletepages": "Cette page a été supprimée, car l’espace de noms « $1 » a été supprimé.",
+	"bs-namespacemanager-deletens-movepages": "Cette page a été déplacée de l’espace de noms « $1 » vers l’espace de noms « {{int:bs-ns_main}} », car l’espace de noms « $1 » a été supprimé.",
+	"bs-namespacemanager-deletens-deletepages": "Cette page a été supprimée, car l’espace de noms « $1 » a été supprimé.",
 	"log-name-bs-namespace-manager": "Journal du gestionnaire de l'espace de nom",
 	"log-description-bs-namespace-manager": "Ceci est un journal des changements dans l'espace des noms.",
 	"log-show-hide-bs-namespace-manager": "Journal du gestionnaire de l'espace des noms $1",
@@ -58,7 +59,7 @@
 	"namespacemanager": "Gestionnaire de l'espace de noms",
 	"bs-namespacemanager-nodeletetalk": "L’espace de noms de discussion ne peut pas être supprimé",
 	"bs-namespacemanager-label-istalk": "Discussion",
-	"right-namespacemanager-viewspecialpage": "Donne les droits d'accès à la page spéciale [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Accéder à la page spéciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de nom de discussion",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }

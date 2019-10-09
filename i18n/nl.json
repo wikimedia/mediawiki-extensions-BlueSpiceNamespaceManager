@@ -50,5 +50,9 @@
 	"bs-namespacemanager-ns-config-saved": "De instellingen voor naamruimten zijn opgeslagen.",
 	"bs-namespacemanager-error-ns-config-not-saved": "De naamruimte configuratie kan niet worden opgeslagen in $1.",
 	"apihelp-bs-namespace-tasks-description": "Maakt het mogelijk de instellingen voor de naamruimten aan te passen.",
-	"namespacemanager": "Naamruimtebeheer"
+	"namespacemanager": "Naamruimtebeheer",
+	"bs-namespacemanager-label-istalk": "Overleg",
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
+	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen"
 }

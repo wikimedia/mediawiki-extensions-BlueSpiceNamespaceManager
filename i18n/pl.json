@@ -2,7 +2,9 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
-			"Pio387"
+			"Pio387",
+			"Railfail536",
+			"Rail"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfejs administracyjny do dodawania, edytowania i usuwania przestrzeni nazw",
@@ -38,6 +40,6 @@
 	"bs-namespacemanager-ns-config-saved": "Konfiguracja przestrzeni nazw została zapisana.",
 	"namespacemanager": "Menedżer przestrzeni nazw",
 	"bs-namespacemanager-label-istalk": "Dyskusja",
-	"right-namespacemanager-viewspecialpage": "Przyznawanie dostępu do strony specjalnej [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Dostęp do strony specjalnej [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "Ukryj przestrzenie nazw dyskusji"
 }

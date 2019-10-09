@@ -27,7 +27,7 @@
 	"bs-namespacemanager-nsremoved": "O domínio foi removido.",
 	"bs-namespacemanager-nsedited": "O domínio foi editado.",
 	"bs-namespacemanager-tipadd": "Adicionar domínio",
-	"bs-namespacemanager-tipedit": "Editar domínio",
+	"bs-namespacemanager-tipedit": "Editar espaço nominal/domínio",
 	"bs-namespacemanager-tipremove": "Remover domínio",
 	"bs-namespacemanager-msgnoteditabledelete": "Este domínio é um domínio do sistema e não pode ser eliminado.",
 	"bs-namespacemanager-labelnsname": "Nome do domínio",
@@ -35,7 +35,7 @@
 	"bs-namespacemanager-willmove": "Será movido para \"{{int:bs-ns_main}}\"",
 	"bs-namespacemanager-willmovesuffix": "Será movido para  \"{{int:bs-ns_main}}\" com o sufixo \"$1\"",
 	"bs-namespacemanager-deletewarning": "Tem a certeza de que deseja eliminar este domínio? A eliminação de um domínio não pode ser desfeita.",
-	"bs-namespacemanager-pagepresent": "Páginas neste domínio:",
+	"bs-namespacemanager-pagepresent": "Páginas neste espaço nominal/domínio:",
 	"bs-namespacemanager-deletens-movepages": "Esta página foi movida do espaço nominal \"$1\" para \"{{int:bs-ns_main}}\", porque o espaço nominal \"$1\" foi eliminado.",
 	"bs-namespacemanager-deletens-deletepages": "Esta página foi eliminada, porque o domínio \"$1\" foi eliminado.",
 	"log-name-bs-namespace-manager": "Registo de administração de domínios/espaços nominais",
@@ -56,7 +56,7 @@
 	"namespacemanager": "Administração de domínios/espaços nominais",
 	"bs-namespacemanager-nodeletetalk": "O espaço nominal de discussão não pode ser eliminado",
 	"bs-namespacemanager-label-istalk": "Discussão",
-	"right-namespacemanager-viewspecialpage": "Concede acesso à página especial [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Acesso à página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar os espaços nominais de discussão",
 	"bs-namespacemanager-labelnsalias": "Nome alternativo"
 }

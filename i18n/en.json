@@ -51,11 +51,11 @@
 	"apihelp-bs-namespace-store-summary": "Lists all namespaces and arbitrary configuration. Allows sorting, filtering and pagination. Implements ExtJS Store parameters.",
 	"apihelp-bs-namespace-tasks-description": "Allows modification of the namespace configuration.",
 	"apihelp-bs-namespace-tasks-summary": "Allows modification of the namespace configuration.",
-	"action-namespacemanager-viewspecialpage": "view specialpage of namespace manager",
+	"action-namespacemanager-viewspecialpage": "view special page of namespace manager",
 	"namespacemanager": "Namespace manager",
 	"bs-namespacemanager-nodeletetalk": "Talk namespace cannot be deleted",
 	"bs-namespacemanager-label-istalk": "Talk",
-	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Access to the special page [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }

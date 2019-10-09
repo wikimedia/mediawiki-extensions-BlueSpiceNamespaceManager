@@ -7,7 +7,8 @@
 			"Osnard",
 			"Purodha",
 			"Jkonrad",
-			"Hwboehm"
+			"Hwboehm",
+			"MarkusRost"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",
@@ -47,10 +48,10 @@
 	"log-description-bs-namespace-manager": "Logbuch von Änderungen an den Namensräumen.",
 	"log-show-hide-bs-namespace-manager": "$1 Namensraumverwaltung-Logbuch",
 	"logeventslist-bs-namespace-manager-log": "Namensraumverwaltungs-Logbuch",
-	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|hat}} den Namespace $4 angelegt",
-	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|hat}} die Einstellungen für den Namespace $4 geändert",
-	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|hat}} den Namespace $4 in $5 umbenannt",
-	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|hat}} den Namespace $4 gelöscht",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|hat}} den Namensraum $4 angelegt",
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|hat}} die Einstellungen für den Namensraum $4 geändert",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|hat}} den Namensraum $4 in $5 umbenannt",
+	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|hat}} den Namensraum $4 gelöscht",
 	"bs-namespacemanager-ns-config-saved": "Die Namensraumkonfiguration wurde erfolgreich gespeichert.",
 	"bs-namespacemanager-error-ns-config-not-saved": "Die Namensraumkonfiguration konnte nicht unter $1 gespeichert werden.",
 	"apihelp-bs-namespace-store-description": "Listet alle Namensräume und deren zusätzliche Konfiguration auf. Erlaubt Sortierung, Filterung und seitenweise Anzeige. Implementiert ExtJS Store Parameter.",
@@ -61,7 +62,7 @@
 	"namespacemanager": "Namensraumverwaltung",
 	"bs-namespacemanager-nodeletetalk": "Es ist nicht möglich, einen Diskussionsnamensraum zu löschen.",
 	"bs-namespacemanager-label-istalk": "Diskussion",
-	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]] gewähren.",
+	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }

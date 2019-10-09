@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mirin"
+		]
+	},
+	"bs-namespacemanager-label-namespaces": "Nomspaco",
+	"bs-namespacemanager-label-content": "Nomspaco de enhavo",
+	"bs-namespacemanager-label-subpages": "Subpaĝoj",
+	"bs-namespacemanager-label-pagecount": "Paĝoj",
+	"bs-namespacemanager-label-system": "Sistemo",
+	"bs-namespacemanager-tipadd": "Aldoni nomspacon",
+	"bs-namespacemanager-tipedit": "Redakti nomspacon",
+	"bs-namespacemanager-tipremove": "Forigi nomspacon",
+	"bs-namespacemanager-labelnsname": "Nomo de nomspaco"
+}
