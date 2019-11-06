@@ -53,5 +53,9 @@
 	"namespacemanager": "Navneromsbehandling",
 	"bs-namespacemanager-nodeletetalk": "Diskusjonsnavnerom kan ikke slettes",
 	"bs-namespacemanager-label-istalk": "Diskusjon",
-	"right-namespacemanager-viewspecialpage": "Gir tilgang til spesialsiden [[Special:NamespaceManager]]."
+	"right-namespacemanager-viewspecialpage": "Tilgang til spesialsiden [[Special:NamespaceManager]].",
+	"bs-namespacemanager-wrong-alias": "Navneromsaliaset inneholder ugyldige tegn.",
+	"bs-namespacemanager-alias-exists": "Navneromsaliaset er allerede brukt for navnerommet $1",
+	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }
