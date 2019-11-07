@@ -6,5 +6,9 @@
 	},
 	"bs-namespacemanager-label-pagecount": "Stranice",
 	"bs-namespacemanager-label-system": "Sistem",
-	"bs-namespacemanager-deletens-deletepages": "Ova stranica je obrisana zato što je imenski prostor „$1“ obrisan."
+	"bs-namespacemanager-deletens-deletepages": "Ova stranica je obrisana zato što je imenski prostor „$1“ obrisan.",
+	"bs-namespacemanager-wrong-alias": "Pseudonim imenskog prostora sadrži nevažeće znakove.",
+	"bs-namespacemanager-alias-exists": "Pseudonim je već postavljen za imenski prostor $1",
+	"bs-namespacemanager-hide-talk-label": "Sakrij imenske prostore razgovora",
+	"bs-namespacemanager-labelnsalias": "Pseudonim"
 }
