@@ -6,6 +6,7 @@ use BlueSpice\Services;
 use BlueSpice\Tests\BSApiTasksTestBase;
 
 /**
+ * @group Broken
  * @group medium
  * @group API
  * @group BlueSpice
