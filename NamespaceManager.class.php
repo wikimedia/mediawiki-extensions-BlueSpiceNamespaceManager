@@ -31,6 +31,8 @@
  * @filesource
  */
 
+use BlueSpice\Services;
+
 /**
  * Class for namespace management assistent
  * @package BlueSpice_Extensions
@@ -154,10 +156,9 @@ class NamespaceManager extends BsExtensionMW {
 	public static function setUserNamespaces( $aUserNamespaceDefinition ) {
 		global $bsSystemNamespaces, $bsgConfigFiles;
 
-		$oNamespaceManager =
-			\MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'BSExtensionFactory' )
-			->getExtension( 'BlueSpiceNamespaceManager' );
+		$oNamespaceManager = Services::getInstance()->getBSExtensionFactory()->getExtension(
+			'BlueSpiceNamespaceManager'
+		);
 		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
 
 		$sSaveContent = "<?php\n\n";

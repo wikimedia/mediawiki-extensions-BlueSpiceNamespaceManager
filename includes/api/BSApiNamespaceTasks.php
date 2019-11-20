@@ -112,7 +112,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$iNS = key( $aNamespaces ) + 1;
 		reset( $aNamespaces );
 
-		$config = \MediaWiki\MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		$config = $this->getConfig();
 
 		if ( $iNS < $config->get( 'NamespaceManagerNsOffset' ) ) {
 			$iNS = $config->get( 'NamespaceManagerNsOffset' ) + 1;
@@ -191,10 +191,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		global $bsSystemNamespaces, $wgContLang, $wgNamespaceAliases;
 
-		$oNamespaceManager =
-			\MediaWiki\MediaWikiServices::getInstance()
-			->getService( 'BSExtensionFactory' )
-			->getExtension( 'BlueSpiceNamespaceManager' );
+		$oNamespaceManager = $this->getServices()->getBSExtensionFactory()->getExtension(
+			'BlueSpiceNamespaceManager'
+		);
 		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 
