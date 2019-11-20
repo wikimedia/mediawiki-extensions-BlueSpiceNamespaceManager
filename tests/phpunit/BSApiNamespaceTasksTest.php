@@ -5,6 +5,7 @@ namespace BlueSpice\NamespaceManager\Tests;
 use BlueSpice\Tests\BSApiTasksTestBase;
 
 /**
+ * @group Broken
  * @group medium
  * @group API
  * @group BlueSpice

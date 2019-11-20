@@ -5,6 +5,7 @@ namespace BlueSpice\NamespaceManager\Tests;
 use BlueSpice\Tests\BSApiExtJSStoreTestBase;
 
 /**
+ * @group Broken
  * @group medium
  * @group API
  * @group Database
