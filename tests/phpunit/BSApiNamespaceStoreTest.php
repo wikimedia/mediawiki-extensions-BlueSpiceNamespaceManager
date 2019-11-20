@@ -37,7 +37,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		];
 	}
 
-	protected function setUp() {
+	protected function setUp() : void {
 		$contLang = Services::getInstance()->getContentLanguage();
 		parent::setUp();
 		$this->setMwGlobals( [
@@ -70,7 +70,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		$contLang->setNamespaces( $namespaces );
 	}
 
-	protected function tearDown() {
+	protected function tearDown() : void {
 		$contLang = Services::getInstance()->getContentLanguage();
 		// reset custom namespace settings
 		$contLang->resetNamespaces();

@@ -19,7 +19,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		'content' => false
 	];
 
-	protected function setUp() {
+	protected function setUp() : void {
 		if ( !defined( BSCONFIGDIR ) ) {
 			define( BSCONFIGDIR, wfTempDir() );
 		}
@@ -30,7 +30,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 			]
 		] );
 
-		return parent::setUp();
+		parent::setUp();
 	}
 
 	protected function getModuleName() {
