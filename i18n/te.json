@@ -4,5 +4,8 @@
 			"Veeven"
 		]
 	},
-	"bs-namespacemanager-label-pagecount": "పేజీలు"
+	"bs-namespacemanager-label-namespaces": "పేరుబరి",
+	"bs-namespacemanager-label-pagecount": "పేజీలు",
+	"bs-namespacemanager-labelnsname": "పేరుబరి పేరు",
+	"bs-namespacemanager-pagepresent": "ఈ పేరుబరి లోని పేజీలు"
 }
