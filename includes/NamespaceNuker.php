@@ -7,6 +7,13 @@
  */
 class NamespaceNuker {
 
+	/**
+	 *
+	 * @param int $idNS
+	 * @param string $nameNS
+	 * @param bool $bWithSuffix
+	 * @return bool
+	 */
 	public static function moveAllPagesIntoMain( $idNS, $nameNS, $bWithSuffix = false ) {
 		if ( !$idNS ) {
 			return false;
@@ -54,6 +61,12 @@ class NamespaceNuker {
 		return true;
 	}
 
+	/**
+	 *
+	 * @param int $idNS
+	 * @param string $nameNS
+	 * @return bool
+	 */
 	public static function removeAllNamespacePages( $idNS, $nameNS ) {
 		$dbw = wfgetDB( DB_MASTER );
 		$res = $dbw->select(

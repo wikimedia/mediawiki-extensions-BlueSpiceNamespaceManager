@@ -8,5 +8,10 @@ $specialPageAliases['en'] = [
 
 /** German (Deutsch) */
 $specialPageAliases['de'] = [
-	'NamespaceManager' => [ 'NamespaceManager', 'Namespace Manager', 'Namensraumverwaltung', 'Namensraum Verwaltung' ],
+	'NamespaceManager' => [
+		'NamespaceManager',
+		'Namespace Manager',
+		'Namensraumverwaltung',
+		'Namensraum Verwaltung'
+	],
 ];

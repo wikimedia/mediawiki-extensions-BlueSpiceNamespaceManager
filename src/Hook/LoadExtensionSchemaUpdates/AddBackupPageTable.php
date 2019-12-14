@@ -21,6 +21,10 @@ class AddBackupPageTable extends LoadExtensionSchemaUpdates {
 		);
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	protected function getExtensionPath() {
 		return dirname( dirname( dirname( __DIR__ ) ) );
 	}

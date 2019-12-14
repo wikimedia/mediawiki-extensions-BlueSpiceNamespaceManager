@@ -25,6 +25,10 @@ class SpecialNamespaceManager extends ManagerBase {
 		];
 	}
 
+	/**
+	 *
+	 * @return array
+	 */
 	protected function getJSVars() {
 		$aMetaFields = NamespaceManager::getMetaFields();
 		return [

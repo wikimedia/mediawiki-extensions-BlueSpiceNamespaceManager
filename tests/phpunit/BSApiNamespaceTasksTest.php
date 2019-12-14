@@ -15,6 +15,10 @@ use BlueSpice\Tests\BSApiTasksTestBase;
  */
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
+	/**
+	 *
+	 * @var array
+	 */
 	protected $aSettings = [
 		'subpages' => true,
 		'content' => false
@@ -34,14 +38,25 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		parent::setUp();
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	protected function getModuleName() {
 		return 'bs-namespace-tasks';
 	}
 
-	function getTokens() {
+	/**
+	 *
+	 * @return array
+	 */
+	public function getTokens() {
 		return $this->getTokenList( self::$users[ 'sysop' ] );
 	}
 
+	/**
+	 * @covers \BSApiNamespaceTasks::task_add
+	 */
 	public function testAdd() {
 		$oData = $this->executeTask(
 			'add',
@@ -58,16 +73,21 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 			"Namespace could not be added via API"
 		);
 		// Is saved to nm-settings.php
+		// main NS
 		$this->assertTrue(
 			$this->isNSSaved( $iInsertedID ),
 			"Namespace cannot be found in settings file."
-		); // main NS
+		);
+		// talk page
 		$this->assertTrue(
 			$this->isNSSaved( $iInsertedID + 1 ),
 			"Talk namespace cannot be found in settings file."
-		); // talk page
+		);
 	}
 
+	/**
+	 * @covers \BSApiNamespaceTasks::task_edit
+	 */
 	public function testEdit() {
 		global $wgExtraNamespaces;
 
@@ -94,6 +114,9 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		);
 	}
 
+	/**
+	 * @covers \BSApiNamespaceTasks::task_remove
+	 */
 	public function testRemove() {
 		$iNS = $this->getLastNS();
 
@@ -121,6 +144,10 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		}
 	}
 
+	/**
+	 *
+	 * @return int
+	 */
 	protected function getLastNS() {
 		$contLang = Services::getInstance()->getContentLanguage();
 
@@ -136,12 +163,23 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		return $iNS;
 	}
 
+	/**
+	 *
+	 * @param int $iID
+	 * @return bool
+	 */
 	protected function isNSSaved( $iID ) {
-		global $bsgConfigFiles;
-		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
+		$config = Services::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+		$sConfigContent = file_get_contents( $config->get( 'ConfigFiles' )['NamespaceManager'] );
 		$aUserNamespaces = [];
 		$aMatches = [];
-		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
+		$match = preg_match_all(
+			'%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s',
+			$sConfigContent,
+			$aMatches,
+			PREG_PATTERN_ORDER
+		);
+		if ( $match ) {
 			$aUserNamespaces = $aMatches[ 2 ];
 		}
 

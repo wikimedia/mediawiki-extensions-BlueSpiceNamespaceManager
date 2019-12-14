@@ -37,7 +37,8 @@ abstract class NamespaceManagerEditNamespace extends Hook {
 	 * @param bool $useInternalDefaults
 	 * @return bool
 	 */
-	public static function callback( &$namespaceDefinition, &$nsId, $additionalSettings, $useInternalDefaults ) {
+	public static function callback( &$namespaceDefinition, &$nsId, $additionalSettings,
+		$useInternalDefaults ) {
 		$className = static::class;
 		$hookHandler = new $className(
 			null,
@@ -59,7 +60,8 @@ abstract class NamespaceManagerEditNamespace extends Hook {
 	 * @param array $additionalSettings
 	 * @param bool $useInternalDefaults
 	 */
-	public function __construct( $context, $config, &$namespaceDefinition, &$nsId, $additionalSettings, $useInternalDefaults ) {
+	public function __construct( $context, $config, &$namespaceDefinition, &$nsId,
+		$additionalSettings, $useInternalDefaults ) {
 		parent::__construct( $context, $config );
 
 		$this->namespaceDefinition = &$namespaceDefinition;

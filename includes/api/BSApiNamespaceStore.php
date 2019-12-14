@@ -2,6 +2,10 @@
 
 class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
+	/**
+	 *
+	 * @return string
+	 */
 	protected function getRequiredPermissions() {
 		return 'wikiadmin';
 	}
@@ -23,8 +27,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	 * @return array
 	 */
 	protected function makeData( $sQuery = '' ) {
-		global $bsgSystemNamespaces, $wgContentNamespaces, $wgNamespaceAliases,
-			$wgNamespacesWithSubpages;
+		global $wgContentNamespaces, $wgNamespaceAliases, $wgNamespacesWithSubpages;
 
 		$contLang = $this->getServices()->getContentLanguage();
 		$aResult = [];
@@ -54,7 +57,8 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				'id' => $iNs,
 				'name' => $sNamespace,
 				'alias' => $nsAlias,
-				'isSystemNS' => isset( $bsgSystemNamespaces[$iNs] ) || $iNs < 3000, // formerly 'editable'
+				// formerly 'editable'
+				'isSystemNS' => isset( $GLOBALS['bsSystemNamespaces'][$iNs] ) || $iNs < 3000,
 				'isTalkNS' => MWNamespace::isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
 				'allPagesLink' => $this->renderNsLink( $iNs, $res->numRows() ),
@@ -62,7 +66,8 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 					'value' => ( $wgContentNamespaces && in_array( $iNs, $wgContentNamespaces ) ),
 					'read_only' => ( $iNs === NS_MAIN )
 				],
-				'subpages' => ( isset( $wgNamespacesWithSubpages[ $iNs ] ) && $wgNamespacesWithSubpages[ $iNs ] === true )
+				'subpages' => isset( $wgNamespacesWithSubpages[ $iNs ] )
+					&& $wgNamespacesWithSubpages[ $iNs ] === true
 			];
 		}
 

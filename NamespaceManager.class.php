@@ -40,11 +40,19 @@ use BlueSpice\Services;
  */
 class NamespaceManager extends BsExtensionMW {
 
-	private static $_aDefaultNamespaceSettings = [
+	/**
+	 *
+	 * @var array
+	 */
+	private static $defaultNamespaceSettings = [
 		'content' => false,
 		'subpages' => true
 	];
 
+	/**
+	 *
+	 * @var array
+	 */
 	public static $aSortConditions = [
 		'sort' => '',
 		'dir' => ''
@@ -62,12 +70,9 @@ class NamespaceManager extends BsExtensionMW {
 
 	/**
 	 * extension.json callback
-	 * @global array $bsgConfigFiles
 	 */
 	public static function onRegistration() {
-		global $bsgConfigFiles;
-		$bsgConfigFiles['NamespaceManager']
-			= BSCONFIGDIR . '/nm-settings.php';
+		$GLOBALS['bsgConfigFiles']['NamespaceManager'] = BSCONFIGDIR . '/nm-settings.php';
 	}
 
 	/**
@@ -78,7 +83,8 @@ class NamespaceManager extends BsExtensionMW {
 	 * @param bool $bUseInternalDefaults
 	 * @return bool Always true to keep hook alive
 	 */
-	public static function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings, $bUseInternalDefaults ) {
+	public static function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings,
+		$bUseInternalDefaults ) {
 		if ( !$bUseInternalDefaults ) {
 			if ( empty( $aNamespaceDefinition[$iNs] ) ) {
 				$aNamespaceDefinition[$iNs] = [];
@@ -88,7 +94,7 @@ class NamespaceManager extends BsExtensionMW {
 				'subpages' => $aAdditionalSettings['subpages']
 			];
 		} else {
-			$aNamespaceDefinition[$iNs] += static::$_aDefaultNamespaceSettings;
+			$aNamespaceDefinition[$iNs] += static::$defaultNamespaceSettings;
 		}
 		return true;
 	}
@@ -101,7 +107,8 @@ class NamespaceManager extends BsExtensionMW {
 	 * @param array $aDefinition
 	 * @return bool Always true to keep hook alive
 	 */
-	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNs, $aDefinition ) {
+	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName,
+		$iNs, $aDefinition ) {
 		if ( isset( $aDefinition[ 'content' ] ) && $aDefinition['content'] === true ) {
 			$sSaveContent .= "\$GLOBALS['wgContentNamespaces'][] = {$sConstName};\n";
 		}
@@ -119,15 +126,25 @@ class NamespaceManager extends BsExtensionMW {
 	 */
 	public static function getUserNamespaces( $bFullDetails = false ) {
 		global $wgExtraNamespaces, $wgNamespacesWithSubpages,
-			$wgContentNamespaces, $bsgConfigFiles;
+			$wgContentNamespaces;
 
-		if ( !file_exists( $bsgConfigFiles['NamespaceManager'] ) ) {
+		$files = Services::getInstance()->getConfigFactory()->makeConfig( 'bsg' )->get(
+			'ConfigFiles'
+		);
+
+		if ( !file_exists( $files['NamespaceManager'] ) ) {
 			return [];
 		}
-		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
+		$sConfigContent = file_get_contents( $files['NamespaceManager'] );
 		$aUserNamespaces = [];
 		$aMatches = [];
-		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
+		$match = preg_match_all(
+			'%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s',
+			$sConfigContent,
+			$aMatches,
+			PREG_PATTERN_ORDER
+		);
+		if ( $match ) {
 			$aUserNamespaces = $aMatches[ 2 ];
 		}
 		if ( $bFullDetails ) {
@@ -154,17 +171,22 @@ class NamespaceManager extends BsExtensionMW {
 	 * @return array
 	 */
 	public static function setUserNamespaces( $aUserNamespaceDefinition ) {
-		global $bsSystemNamespaces, $bsgConfigFiles;
+		$files = Services::getInstance()->getConfigFactory()->makeConfig( 'bsg' )->get(
+			'ConfigFiles'
+		);
 
 		$oNamespaceManager = Services::getInstance()->getBSExtensionFactory()->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
-		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
+		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [
+			$oNamespaceManager,
+			&$GLOBALS['bsSystemNamespaces']
+		] );
 
 		$sSaveContent = "<?php\n\n";
 		foreach ( $aUserNamespaceDefinition as $iNS => $aDefinition ) {
 			$bIsSystemNs = false;
-			if ( isset( $bsSystemNamespaces[$iNS] ) ) {
+			if ( isset( $GLOBALS['bsSystemNamespaces'][$iNS] ) ) {
 				$bIsSystemNs = true;
 			}
 
@@ -176,17 +198,24 @@ class NamespaceManager extends BsExtensionMW {
 			$sSaveContent .= "// START Namespace {$sConstName}\n";
 			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
 			if ( $iNS >= 100 ) {
-				$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '" . $aDefinition['name'] . "';\n";
+				$sSaveContent
+					.= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '{$aDefinition['name']}';\n";
 			}
 
-			Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [ &$sSaveContent, $sConstName, $iNS, $aDefinition ] );
+			Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [
+				&$sSaveContent,
+				$sConstName,
+				$iNS,
+				$aDefinition
+			] );
 			if ( isset( $aDefinition['alias'] ) && !empty( $aDefinition['alias'] ) ) {
-				$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
+				$sSaveContent
+					.= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
 			}
 			$sSaveContent .= "// END Namespace {$sConstName}\n\n";
 		}
 
-		$res = file_put_contents( $bsgConfigFiles['NamespaceManager'], $sSaveContent );
+		$res = file_put_contents( $files['NamespaceManager'], $sSaveContent );
 
 		if ( $res ) {
 			return [
@@ -197,11 +226,17 @@ class NamespaceManager extends BsExtensionMW {
 		return [
 			'success' => false,
 			'message' => wfMessage(
-				'bs-namespacemanager-error-ns-config-not-saved', basename( $bsgConfigFiles['NamespaceManager'] )
+				'bs-namespacemanager-error-ns-config-not-saved', basename( $files['NamespaceManager'] )
 			)->plain()
 		];
 	}
 
+	/**
+	 *
+	 * @param int $iNS
+	 * @param array $aDefinition
+	 * @return string
+	 */
 	public static function getNamespaceConstName( $iNS, $aDefinition ) {
 		$sConstName = '';
 
@@ -235,6 +270,10 @@ class NamespaceManager extends BsExtensionMW {
 		return $sConstName;
 	}
 
+	/**
+	 *
+	 * @return array
+	 */
 	public static function getMetaFields() {
 		$aMetaFields = [
 			[

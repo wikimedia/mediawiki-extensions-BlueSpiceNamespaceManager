@@ -80,12 +80,14 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 		$currentlyActivated = in_array( $this->ns, $enabledNamespaces );
 
 		$explicitlyDeactivated = false;
-		if ( isset( $this->definition[$nsManagerOptionName] ) && $this->definition[$nsManagerOptionName] === false ) {
+		if ( isset( $this->definition[$nsManagerOptionName] )
+			&& $this->definition[$nsManagerOptionName] === false ) {
 			$explicitlyDeactivated = true;
 		}
 
 		$explicitlyActivated = false;
-		if ( isset( $this->definition[$nsManagerOptionName] ) && $this->definition[$nsManagerOptionName] === true ) {
+		if ( isset( $this->definition[$nsManagerOptionName] )
+			&& $this->definition[$nsManagerOptionName] === true ) {
 			$explicitlyActivated = true;
 		}
 

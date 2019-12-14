@@ -1,7 +1,13 @@
 <?php
 
+use BlueSpice\Api\Response\Standard;
+
 class BSApiNamespaceTasks extends BSApiTasksBase {
 
+	/**
+	 *
+	 * @var array
+	 */
 	protected $aTasks = [
 		'add' => [
 			'examples' => [
@@ -79,6 +85,10 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		]
 	];
 
+	/**
+	 *
+	 * @return array
+	 */
 	protected function getRequiredTaskPermissions() {
 		return [
 			'add' => [ 'wikiadmin' ],
@@ -90,10 +100,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	/**
 	 * Build the configuration for a new namespace and give it to the save method.
 	 *
-	 * @global string $wgReadOnly
 	 * @param stdClass $oData
-	 * @param stdClass $aParams
-	 * @return BSStandardAPIResponse
+	 * @param array $aParams
+	 * @return Standard
 	 */
 	protected function task_add( $oData, $aParams ) {
 		$sNamespace = $oData->name;
@@ -130,10 +139,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$oResult->message = wfMessage( 'bs-namespacemanager-ns-length' )->plain();
 			return $oResult;
 		// TODO MRG (06.11.13 11:17): Unicodefähigkeit?
-		} elseif ( !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $sNamespace ) ) {
+		} elseif (
+			!preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $sNamespace )
+			) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-name' )->plain();
 			return $oResult;
-		} elseif ( !empty( $sAlias ) && !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $sAlias ) ) {
+		} elseif ( !empty( $sAlias )
+			&& !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $sAlias ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-alias' )->plain();
 			return $oResult;
 		} elseif ( $this->isAliasInUse( $iNS, $sAlias ) ) {
@@ -143,7 +155,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		} else {
 			$aUserNamespaces[$iNS] = [ 'name' => $sNamespace, 'alias' => $sAlias ];
 
-			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
+			Hooks::run( 'NamespaceManager::editNamespace', [
+				&$aUserNamespaces,
+				&$iNS,
+				$aAdditionalSettings,
+				false
+			] );
 
 			++$iNS;
 			$aUserNamespaces[ ( $iNS ) ] = [
@@ -151,7 +168,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				'alias' => $sAlias . '_talk'
 			];
 
-			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, true ] );
+			Hooks::run( 'NamespaceManager::editNamespace', [
+				&$aUserNamespaces,
+				&$iNS,
+				$aAdditionalSettings, true
+			] );
 
 			$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
 
@@ -173,11 +194,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	/**
 	 * Change the configuration of a given namespace and give it to the save method.
 	 *
-	 * @global string $wgReadOnly
-	 * @global array $bsSystemNamespaces
 	 * @param stdClass $oData
-	 * @param stdClass $aParams
-	 * @return BSStandardAPIResponse
+	 * @param array $aParams
+	 * @return Standard
 	 */
 	protected function task_edit( $oData, $aParams ) {
 		$iNS = (int)$oData->id;
@@ -188,14 +207,17 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		$oResult = $this->makeStandardReturn();
 
-		global $bsSystemNamespaces, $wgNamespaceAliases;
+		global $wgNamespaceAliases;
 
 		$contLang = $this->getServices()->getContentLanguage();
 
 		$oNamespaceManager = $this->getServices()->getBSExtensionFactory()->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
-		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
+		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [
+			$oNamespaceManager,
+			&$GLOBALS['bsSystemNamespaces']
+		] );
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 
 		if ( $iNS !== NS_MAIN && !$iNS ) {
@@ -211,7 +233,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-name' )->plain();
 			return $oResult;
 		}
-		if ( !empty( $sAlias ) && !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%', $sAlias ) ) {
+		if ( !empty( $sAlias )
+			&& !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%', $sAlias ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-alias' )->plain();
 			return $oResult;
 		}
@@ -222,29 +245,41 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		if ( isset( $bsSystemNamespaces[$iNS] ) ) {
-			$sOriginalNamespaceName = $bsSystemNamespaces[ $iNS ];
+		if ( isset( $GLOBALS['bsSystemNamespaces'][$iNS] ) ) {
+			$sOriginalNamespaceName = $GLOBALS['bsSystemNamespaces'][ $iNS ];
 		} else {
 			$sOriginalNamespaceName = $aUserNamespaces[ $iNS ][ 'name' ];
 		}
 
-		if ( !isset( $bsSystemNamespaces[( $iNS )] ) && strstr( $sAlias, '_' . $contLang->getNsText( NS_TALK ) ) ) {
+		if ( !isset( $GLOBALS['bsSystemNamespaces'][( $iNS )] )
+				&& strstr( $sAlias, '_' . $contLang->getNsText( NS_TALK ) ) ) {
 				$aUserNamespaces[ $iNS ] = [
 					'name' => $aUserNamespaces[ $iNS ][ 'name' ],
 					'alias' => str_replace( '_' . $contLang->getNsText( NS_TALK ), '_talk', $sAlias ),
 				];
-			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
+			Hooks::run( 'NamespaceManager::editNamespace', [
+				&$aUserNamespaces,
+				&$iNS,
+				$aAdditionalSettings,
+				false
+			] );
 		} else {
 			$aUserNamespaces[$iNS] = [
 				'name' => $sNamespace,
 				'alias' => $sAlias
 			];
 
-			if ( !isset( $bsSystemNamespaces[( $iNS )] ) ) {
-				$aUserNamespaces[( $iNS + 1 )]['name'] = $sNamespace . '_' . $contLang->getNsText( NS_TALK );
+			if ( !isset( $GLOBALS['bsSystemNamespaces'][( $iNS )] ) ) {
+				$aUserNamespaces[( $iNS + 1 )]['name']
+					= $sNamespace . '_' . $contLang->getNsText( NS_TALK );
 				$aUserNamespaces[( $iNS + 1 )]['alias'] = $sAlias . '_talk';
 			}
-			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
+			Hooks::run( 'NamespaceManager::editNamespace', [
+				&$aUserNamespaces,
+				&$iNS,
+				$aAdditionalSettings,
+				false
+			] );
 		}
 
 		$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
@@ -273,10 +308,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	/**
 	 * Delete a given namespace.
 	 *
-	 * @global string $wgReadOnly
 	 * @param stdClass $oData
-	 * @param stdClass $aParams
-	 * @return BSStandardAPIResponse
+	 * @param array $aParams
+	 * @return Standard
 	 */
 	protected function task_remove( $oData, $aParams ) {
 		$oResult = $this->makeStandardReturn();
@@ -305,7 +339,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			}
 		}
 
-		if ( isset( $aUserNamespaces[ ( $iNS + 1 ) ] ) && strstr( $aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ], '_' . $contLang->getNsText( NS_TALK ) ) ) {
+		$talk = strstr(
+			$aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ],
+			'_' . $contLang->getNsText( NS_TALK )
+		);
+		if ( isset( $aUserNamespaces[ ( $iNS + 1 ) ] ) && $talk ) {
 			$aNamespacesToRemove[] = [ ( $iNS + 1 ), 1 ];
 			$sNamespace = $aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ];
 			$aNamespacesToRemoveNames[] = $sNamespace;
@@ -321,7 +359,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			case 0:
 				foreach ( $aNamespacesToRemove as $aNamespace ) {
 					$iNs = $aNamespace[0];
-					if ( !NamespaceNuker::removeAllNamespacePages( $iNs, $aUserNamespaces[$iNs]['name'] ) ) {
+					$success = NamespaceNuker::removeAllNamespacePages(
+						$iNs,
+						$aUserNamespaces[$iNs]['name']
+					);
+					if ( !$success ) {
 						$bErrors = true;
 					} else {
 						$aUserNamespaces[ $aNamespace[ 0 ] ] = false;
@@ -331,7 +373,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			case 1:
 				foreach ( $aNamespacesToRemove as $aNamespace ) {
 					$iNs = $aNamespace[0];
-					if ( !NamespaceNuker::moveAllPagesIntoMain( $iNs, $aUserNamespaces[$iNs]['name'] ) ) {
+					$success = NamespaceNuker::moveAllPagesIntoMain(
+						$iNs,
+						$aUserNamespaces[$iNs]['name']
+					);
+					if ( !$success ) {
 						$bErrors = true;
 					} else {
 						$aUserNamespaces[ $aNamespace[ 0 ] ] = false;
@@ -342,7 +388,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			default:
 				foreach ( $aNamespacesToRemove as $aNamespace ) {
 					$iNs = $aNamespace[0];
-					if ( !NamespaceNuker::moveAllPagesIntoMain( $iNs, $aUserNamespaces[$iNs]['name'], true ) ) {
+					$success = NamespaceNuker::moveAllPagesIntoMain(
+						$iNs,
+						$aUserNamespaces[$iNs]['name'],
+						true
+					);
+					if ( !$success ) {
 						$bErrors = true;
 					} else {
 						$aUserNamespaces[ $aNamespace[ 0 ] ] = false;
@@ -391,6 +442,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oLogger->insert();
 	}
 
+	/**
+	 *
+	 * @param int $ns
+	 * @param string $alias
+	 * @return bool
+	 */
 	protected function isAliasInUse( $ns, $alias ) {
 		global $wgNamespaceAliases;
 
