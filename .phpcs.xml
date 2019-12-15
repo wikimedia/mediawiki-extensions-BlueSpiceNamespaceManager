@@ -12,7 +12,6 @@
 		<exclude name="Generic.Files.LineLength.TooLong" />
 		<exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
 		<exclude name="Squiz.Scope.MethodScope.Missing" />
-		<exclude name="MediaWiki.PHP71Features.VoidReturnType.NotAllowed" />
 	</rule>
 	<file>.</file>
 	<arg name="extensions" value="php,php5,inc"/>
