@@ -51,16 +51,6 @@ class NamespaceManager extends BsExtensionMW {
 	];
 
 	/**
-	 * Initialization of NamespaceManager extension
-	 */
-	public function initExt() {
-		// CR, RBV: This is suposed to return all constants! Not just system NS.
-		// At the moment the implementation relies on an hardcoded mapping,
-		// which is bad. We need to change this and make it more generic!
-		$GLOBALS['bsSystemNamespaces'] = BsNamespaceHelper::getMwNamespaceConstants();
-	}
-
-	/**
 	 * extension.json callback
 	 * @global array $bsgConfigFiles
 	 */
@@ -127,7 +117,12 @@ class NamespaceManager extends BsExtensionMW {
 		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
 		$aUserNamespaces = [];
 		$aMatches = [];
-		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
+		if (
+			preg_match_all(
+				'%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s',
+				$sConfigContent, $aMatches, PREG_PATTERN_ORDER
+			)
+		) {
 			$aUserNamespaces = $aMatches[ 2 ];
 		}
 		if ( $bFullDetails ) {
@@ -154,24 +149,25 @@ class NamespaceManager extends BsExtensionMW {
 	 * @return array
 	 */
 	public static function setUserNamespaces( $aUserNamespaceDefinition ) {
-		global $bsSystemNamespaces, $bsgConfigFiles;
+		global $bsgConfigFiles;
+
+		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
 
 		$oNamespaceManager = Services::getInstance()->getBSExtensionFactory()->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
-		Hooks::run( 'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$bsSystemNamespaces ] );
+		Hooks::run(
+			'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$systemNamespaces ]
+		);
 
 		$sSaveContent = "<?php\n\n";
 		foreach ( $aUserNamespaceDefinition as $iNS => $aDefinition ) {
-			$bIsSystemNs = false;
-			if ( isset( $bsSystemNamespaces[$iNS] ) ) {
-				$bIsSystemNs = true;
-			}
-
 			if ( empty( $aDefinition ) ) {
 				continue;
 			}
-			$sConstName = self::getNamespaceConstName( $iNS, $aDefinition );
+
+			$name = isset( $aDefinition['name'] ) ? $aDefinition['name'] : null;
+			$sConstName = BsNamespaceHelper::getNamespaceConstName( $iNS, $name );
 
 			$sSaveContent .= "// START Namespace {$sConstName}\n";
 			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
@@ -202,39 +198,11 @@ class NamespaceManager extends BsExtensionMW {
 		];
 	}
 
-	public static function getNamespaceConstName( $iNS, $aDefinition ) {
-		$sConstName = '';
-
-		// find existing NS_ definitions
-		$aNSConstants = [];
-		foreach ( get_defined_constants() as $key => $value ) {
-			if ( strpos( $key, "NS_" ) === 0
-				// ugly solution to identify smw namespaces as they don't adhere to the convention
-				|| strpos( $key, "SMW_NS_" ) === 0
-				|| strpos( $key, "SF_NS_" ) === 0
-				) {
-				$aNSConstants[$key] = $value;
-			}
-		}
-
-		$aNSConstants = array_flip( $aNSConstants );
-
-		// Use existing constant name if possible
-		if ( isset( $aNSConstants[$iNS] ) ) {
-			$sConstName = $aNSConstants[$iNS];
-		} else {
-			// If compatible, use namespace name as const name
-			if ( preg_match( "/^[a-zA-Z0-9_]{3,}$/", $aDefinition['name'] ) ) {
-				$sConstName = 'NS_' . strtoupper( $aDefinition['name'] );
-			} else {
-				// Otherwise use namespace number
-				$sConstName = 'NS_' . $iNS;
-			}
-		}
-
-		return $sConstName;
-	}
-
+	/**
+	 * @return array
+	 * @throws FatalError
+	 * @throws MWException
+	 */
 	public static function getMetaFields() {
 		$aMetaFields = [
 			[
