@@ -5,7 +5,8 @@
 			"Fitoschido",
 			"Macofe",
 			"Ryo567",
-			"YoViajo"
+			"YoViajo",
+			"DannyS712"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfaz administrativa para añadir, editar y eliminar espacios de nombres",
@@ -55,7 +56,7 @@
 	"namespacemanager": "Gestor de espacios de nombres",
 	"bs-namespacemanager-nodeletetalk": "No se puede borrar el espacio de nombres Discusión",
 	"bs-namespacemanager-label-istalk": "Discusión",
-	"right-namespacemanager-viewspecialpage": "Otorga acceso a la página especial [[Special:NamespaceManager]].",
+	"right-namespacemanager-viewspecialpage": "Acceso a la página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }

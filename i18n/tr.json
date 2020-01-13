@@ -59,5 +59,6 @@
 	"bs-namespacemanager-label-istalk": "Tartışma",
 	"right-namespacemanager-viewspecialpage": "[[Special:NamespaceManager]] özel sayfaya erişin",
 	"bs-namespacemanager-hide-talk-label": "Tartışma ad alanlarını gizle",
-	"bs-namespacemanager-labelnsalias": "Takma adları"
+	"bs-namespacemanager-labelnsalias": "Takma adları",
+	"bs-namespacemanager-invalid-namespace": "Düzenlenen ad alanı geçersiz"
 }
