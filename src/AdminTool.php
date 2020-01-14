@@ -2,8 +2,8 @@
 
 namespace BlueSpice\NamespaceManager;
 
-use Message;
 use BlueSpice\IAdminTool;
+use Message;
 
 class AdminTool implements IAdminTool {
 
