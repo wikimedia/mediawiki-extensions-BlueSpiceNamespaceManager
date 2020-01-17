@@ -23,7 +23,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 			labelAlign: 'right',
 			name: 'namespacename',
 			allowBlank: false
-		});
+		} );
 
 		this.tfNamespaceAlias = Ext.create( 'Ext.form.TextField', {
 			fieldLabel: mw.message( 'bs-namespacemanager-labelnsalias' ).plain(),
@@ -31,7 +31,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.NamespaceDialog', {
 			labelAlign: 'right',
 			name: 'namespacealias',
 			allowBlank: true
-		});
+		} );
 
 
 		var items = [
