@@ -177,8 +177,9 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			id:"bs-namespacemanager-add-dlg"
 		} );
 		this.dlgNamespaceAdd.on( 'ok', this.onDlgNamespaceAddOk, this );
+		this.dlgNamespaceAdd.on( 'cancel', this.onDlgNamespaceAddCancel, this );
 
-		//TODO: not nice. Decision on wether is "add" or "edit" shold be made
+		//TODO: not nice. Decision on whether is "add" or "edit" shold be made
 		//by the dialog depending on the provided ID. I.e. -1 for "add"
 		this.active = 'add';
 		this.dlgNamespaceAdd.setTitle( mw.message( 'bs-namespacemanager-tipadd' ).plain() );
@@ -248,9 +249,12 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 				settings: additionalSettings
 			}
 		).done( function( response ) {
-			me.dlgNamespaceAdd.resetData();
+			me.dlgNamespaceAdd.destroy();
 			me.reloadStore();
 		});
+	},
+	onDlgNamespaceAddCancel: function( sender, namespace ) {
+		this.dlgNamespaceAdd.destroy();
 	},
 	onDlgNamespaceEditOk: function( sender, namespace ) {
 		var additionalSettings = this.getAdditionalSettings( namespace );
