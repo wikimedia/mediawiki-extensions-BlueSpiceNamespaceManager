@@ -58,5 +58,6 @@
 	"bs-namespacemanager-label-istalk": "Discusión",
 	"right-namespacemanager-viewspecialpage": "Acceso a la página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido"
 }
