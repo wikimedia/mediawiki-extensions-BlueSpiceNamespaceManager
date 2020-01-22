@@ -57,5 +57,6 @@
 	"bs-namespacemanager-label-istalk": "Diskusjon",
 	"right-namespacemanager-viewspecialpage": "Tilgang til spesialsiden [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig"
 }
