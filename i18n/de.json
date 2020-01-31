@@ -8,7 +8,8 @@
 			"Purodha",
 			"Jkonrad",
 			"Hwboehm",
-			"MarkusRost"
+			"MarkusRost",
+			"Tiin"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",
@@ -64,5 +65,6 @@
 	"bs-namespacemanager-label-istalk": "Diskussion",
 	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-invalid-namespace": "Der bearbeitete Namensraum ist ungültig"
 }
