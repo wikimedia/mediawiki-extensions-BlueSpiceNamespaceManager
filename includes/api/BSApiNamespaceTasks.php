@@ -199,6 +199,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	 * @return StandardResponse
 	 */
 	protected function task_edit( $oData, $aParams ) {
+		$bluespiceNamespaces = $this->getConfig()->get( 'SystemNamespaces' );
 		$sNamespace = $oData->name;
 		$aAdditionalSettings = (array)$oData->settings;
 		$sAlias = isset( $aAdditionalSettings['alias'] ) ? $aAdditionalSettings['alias'] : '';
@@ -256,28 +257,26 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$sOriginalNamespaceName = $aUserNamespaces[ $iNS ][ 'name' ];
 		}
 
-		if ( !isset( $systemNamespaces[$iNS] ) ) {
+		if ( !in_array( $iNS, $bluespiceNamespaces ) && $iNS >= 3000 ) {
 			if ( strstr( $sAlias, '_' . $contLang->getNsText( NS_TALK ) ) ) {
 				$sAlias = str_replace( '_' . $contLang->getNsText( NS_TALK ), '_talk', $sAlias );
 			}
 			$aUserNamespaces[ $iNS ] = [
-				'name' => $aUserNamespaces[ $iNS ][ 'name' ],
+				'name' => $sNamespace,
 				'alias' => $sAlias,
 			];
+
+			$talkId = $iNS + 1;
+			// Make sure its an odd number
+			if ( $talkId % 2 === 1 ) {
+				$aUserNamespaces[$talkId]['name'] = $sNamespace . '_' . $contLang->getNsText( NS_TALK );
+				$aUserNamespaces[$talkId]['alias'] = $sAlias . '_talk';
+			}
 		} else {
 			$aUserNamespaces[$iNS] = [
-				'name' => $sNamespace,
+				'name' => $aUserNamespaces[ $iNS ][ 'name' ],
 				'alias' => $sAlias
 			];
-
-			if ( !isset( $systemNamespaces[$iNS] ) ) {
-				$talkId = $iNS++;
-				// Make sure its an odd number
-				if ( $talkId % 2 === 1 ) {
-					$aUserNamespaces[$talkId]['name'] = $sNamespace . '_' . $contLang->getNsText( NS_TALK );
-					$aUserNamespaces[$talkId]['alias'] = $sAlias . '_talk';
-				}
-			}
 		}
 		Hooks::run(
 			'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ]
