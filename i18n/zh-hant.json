@@ -59,5 +59,6 @@
 	"bs-namespacemanager-label-istalk": "討論",
 	"right-namespacemanager-viewspecialpage": "存取特殊頁面 [[Special:NamespaceManager]] 的權限。",
 	"bs-namespacemanager-hide-talk-label": "隱藏討論命名空間",
-	"bs-namespacemanager-labelnsalias": "別名"
+	"bs-namespacemanager-labelnsalias": "別名",
+	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效"
 }

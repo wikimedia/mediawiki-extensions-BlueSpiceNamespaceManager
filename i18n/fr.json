@@ -37,7 +37,7 @@
 	"bs-namespacemanager-willdelete": "Sera supprimé",
 	"bs-namespacemanager-willmove": "Sera déplacé dans « {{int:bs-ns_main}} »",
 	"bs-namespacemanager-willmovesuffix": "Sera déplacé dans « {{int:bs-ns_main}} » avec le suffixe « $1 »",
-	"bs-namespacemanager-deletewarning": "Êtes-vous sûr de vouloir supprimer cet espace de noms ? La suppression d’un espace de noms ne peut pas être annulée.",
+	"bs-namespacemanager-deletewarning": "Êtes-vous sûr de vouloir supprimer cet espace de noms ? La suppression d’un espace de noms ne peut pas être annulée.",
 	"bs-namespacemanager-pagepresent": "Pages dans cet espace de noms :",
 	"bs-namespacemanager-deletens-movepages": "Cette page a été déplacée de l’espace de noms « $1 » vers l’espace de noms « {{int:bs-ns_main}} », car l’espace de noms « $1 » a été supprimé.",
 	"bs-namespacemanager-deletens-deletepages": "Cette page a été supprimée, car l’espace de noms « $1 » a été supprimé.",
@@ -54,12 +54,13 @@
 	"apihelp-bs-namespace-store-description": "Liste tous les espaces de noms et la configuration arbitraire. Permet le tri, le filtrage et la pagination. Implémente les paramètres ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Liste tous les espaces de nom et la configuration arbitraire. Permet le tri, le filtrage et la pagination. Implémente les paramètres ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Permet la modification de la configuration de l’espace de noms.",
-	"apihelp-bs-namespace-tasks-summary": "Autorise la modification de la configuration de l'espace de noms.",
-	"action-namespacemanager-viewspecialpage": "voir la page spéciale du gestionnaire d'espaces de noms",
+	"apihelp-bs-namespace-tasks-summary": "Autorise la modification de la configuration de l’espace de noms.",
+	"action-namespacemanager-viewspecialpage": "voir la page spéciale du gestionnaire d’espaces de noms",
 	"namespacemanager": "Gestionnaire de l'espace de noms",
 	"bs-namespacemanager-nodeletetalk": "L’espace de noms de discussion ne peut pas être supprimé",
 	"bs-namespacemanager-label-istalk": "Discussion",
 	"right-namespacemanager-viewspecialpage": "Accéder à la page spéciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de nom de discussion",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n'est pas valide"
 }
