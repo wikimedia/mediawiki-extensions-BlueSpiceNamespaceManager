@@ -59,5 +59,6 @@
 	"bs-namespacemanager-label-istalk": "نقاش",
 	"right-namespacemanager-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
-	"bs-namespacemanager-labelnsalias": "الاسم المستعار"
+	"bs-namespacemanager-labelnsalias": "الاسم المستعار",
+	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح"
 }

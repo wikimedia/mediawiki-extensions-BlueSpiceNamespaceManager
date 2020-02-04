@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Csega",
-			"Wolf Rex"
+			"Wolf Rex",
+			"Dj"
 		]
 	},
 	"bs-namespacemanager-label": "Névtér kezelő",
@@ -29,5 +30,16 @@
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|megváltoztatta}} a(z) $4 névtér beállításait",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|átnevezte}} a(z) $4 névteret a következő névre: $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|törölte}} a(z) $4 névteret",
-	"bs-namespacemanager-ns-config-saved": "A névtér-beállítások mentésre kerültek."
+	"bs-namespacemanager-ns-config-saved": "A névtér-beállítások mentésre kerültek.",
+	"bs-namespacemanager-desc": "Adminisztratív felület névterek felvételére, szerkesztésére és törlésére",
+	"bs-namespacemanager-wrong-name": "A névtér érvénytelen karakteret tartalmaz.",
+	"bs-namespacemanager-nsadded": "Névtér hozzáadva.",
+	"bs-namespacemanager-msgnoteditabledelete": "A névtér rendszer névtér, így nem lehet törölni.",
+	"bs-namespacemanager-error-ns-config-not-saved": "A névtér konfigurációt nem lehet elmenteni a $1 fájlba.",
+	"apihelp-bs-namespace-store-description": "ExtJS Store paraméterek.",
+	"apihelp-bs-namespace-store-summary": "ExtJS Store paraméterek.",
+	"namespacemanager": "Névtér kezelő",
+	"bs-namespacemanager-nodeletetalk": "Vita névteret nem lehet törölni",
+	"bs-namespacemanager-label-istalk": "Vitalap",
+	"bs-namespacemanager-hide-talk-label": "Vitalap-névterek elrejtése"
 }

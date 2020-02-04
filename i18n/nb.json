@@ -57,5 +57,6 @@
 	"bs-namespacemanager-wrong-alias": "Navneromsaliaset inneholder ugyldige tegn.",
 	"bs-namespacemanager-alias-exists": "Navneromsaliaset er allerede brukt for navnerommet $1",
 	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig"
 }
