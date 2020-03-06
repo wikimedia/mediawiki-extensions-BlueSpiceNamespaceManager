@@ -194,7 +194,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
 
-		$oNamespaceManager = $this->getServices()->getBSExtensionFactory()->getExtension(
+		$oNamespaceManager = $this->getServices()->getService( 'BSExtensionFactory' )->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
 		Hooks::run(

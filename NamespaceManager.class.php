@@ -152,8 +152,7 @@ class NamespaceManager extends BsExtensionMW {
 		global $bsgConfigFiles;
 
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
-
-		$oNamespaceManager = Services::getInstance()->getBSExtensionFactory()->getExtension(
+		$oNamespaceManager = Services::getInstance()->getService( 'BSExtensionFactory' )->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
 		Hooks::run(
