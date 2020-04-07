@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"SPQRobin",
-			"Sjoerddebruin",
-			"Siebrand",
-			"Esketti",
 			"Edoderoo",
-			"Mainframe98"
+			"Esketti",
+			"Mainframe98",
+			"SPQRobin",
+			"Siebrand",
+			"Sjoerddebruin"
 		]
 	},
 	"bs-namespacemanager-desc": "Administratie-interface voor het toevoegen, bewerken en verwijderen van naamruimten",
