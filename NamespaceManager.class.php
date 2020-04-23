@@ -125,7 +125,7 @@ class NamespaceManager extends BsExtensionMW {
 					'content' => in_array( $iNS, $wgContentNamespaces ),
 					'subpages' => ( isset( $wgNamespacesWithSubpages[$iNS] ) && $wgNamespacesWithSubpages[$iNS] )
 				];
-				if ( $iNS >= 100 ) {
+				if ( $iNS >= 100 && isset( $wgExtraNamespaces[$iNS] ) ) {
 					$aTmp[$iNS]['name'] = $wgExtraNamespaces[$iNS];
 				}
 			}
@@ -162,7 +162,7 @@ class NamespaceManager extends BsExtensionMW {
 
 			$sSaveContent .= "// START Namespace {$sConstName}\n";
 			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
-			if ( $iNS >= 100 ) {
+			if ( $iNS >= 100 && isset( $aDefinition['name'] ) && $aDefinition['name'] !== '' ) {
 				$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '" . $aDefinition['name'] . "';\n";
 			}
 
