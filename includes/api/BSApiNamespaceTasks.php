@@ -183,6 +183,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	 */
 	protected function task_edit( $oData, $aParams ) {
 		$bluespiceNamespaces = $this->getConfig()->get( 'SystemNamespaces' );
+
 		$sNamespace = $oData->name;
 		$aAdditionalSettings = (array)$oData->settings;
 		$sAlias = isset( $aAdditionalSettings['alias'] ) ? $aAdditionalSettings['alias'] : '';
@@ -231,7 +232,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists', $nsName )->plain();
 			return $oResult;
 		}
-
 		if ( isset( $systemNamespaces[$iNS] ) ) {
 			$sOriginalNamespaceName = $systemNamespaces[ $iNS ];
 		} else {
@@ -254,10 +254,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				$aUserNamespaces[$talkId]['alias'] = $sAlias . '_talk';
 			}
 		} else {
-			$aUserNamespaces[$iNS] = [
-				'name' => $aUserNamespaces[ $iNS ][ 'name' ],
+			$namespaceConfig = [
 				'alias' => $sAlias
 			];
+			if ( isset( $aUserNamespaces[$iNS ]['name'] ) ) {
+				$namespaceConfig['name'] = $aUserNamespaces[ $iNS ][ 'name' ];
+			}
+			$aUserNamespaces[$iNS] = $namespaceConfig;
 		}
 		Hooks::run(
 			'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ]
