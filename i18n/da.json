@@ -11,6 +11,12 @@
 	"bs-namespacemanager-label-subpages": "Undersider",
 	"bs-namespacemanager-label-pagecount": "Sider",
 	"bs-namespacemanager-label-system": "System",
+	"bs-namespacemanager-tipadd": "Tilføj navnerum",
+	"bs-namespacemanager-tipedit": "Rediger navnerum",
+	"bs-namespacemanager-tipremove": "Fjern navnerum",
+	"bs-namespacemanager-labelnsname": "Navnerumsnavn",
 	"bs-namespacemanager-willdelete": "Vil blive slettet",
+	"bs-namespacemanager-pagepresent": "Sider i dette navnerum:",
+	"bs-namespacemanager-label-istalk": "Diskussion",
 	"bs-namespacemanager-labelnsalias": "Alias"
 }
