@@ -57,5 +57,6 @@
 	"action-namespacemanager-viewspecialpage": "'ndruche 'a pàgena speciale d'u gestore de namespace",
 	"namespacemanager": "Gestore de namespace",
 	"bs-namespacemanager-nodeletetalk": "'U namespace de 'ngazzamende non ge pò essere scangellate",
-	"right-namespacemanager-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:NamespaceManager]]"
+	"right-namespacemanager-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:NamespaceManager]]",
+	"bs-namespacemanager-invalid-namespace": "'U namespace ca ste cange non g'è valide"
 }

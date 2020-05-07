@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"WikiPhoenix",
 			"Lokal Profil",
-			"Warrakkk",
-			"Umeaboy",
 			"Mjälten",
-			"Technic2"
+			"Technic2",
+			"Umeaboy",
+			"Warrakkk",
+			"WikiPhoenix"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsgränssnittet för att redigera och radera namnrymder",
