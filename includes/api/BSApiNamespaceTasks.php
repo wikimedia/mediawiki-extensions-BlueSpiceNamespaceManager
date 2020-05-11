@@ -147,13 +147,18 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ] );
 
-			++$iNS;
-			$aUserNamespaces[ ( $iNS ) ] = [
+			$talkNamespaceId = $iNS + 1;
+			$aUserNamespaces[$talkNamespaceId] = [
 				'name' => $sNamespace . '_' . $wgContLang->getNsText( NS_TALK ),
 				'alias' => $sAlias . '_talk'
 			];
 
-			Hooks::run( 'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, true ] );
+			Hooks::run( 'NamespaceManager::editNamespace', [
+				&$aUserNamespaces,
+				&$talkNamespaceId,
+				$aAdditionalSettings,
+				true
+			] );
 
 			$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
 
@@ -164,6 +169,10 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 					[ '4::namespace' => $sNamespace ]
 				);
 				$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
+				Hooks::run( 'NamespaceManagerAfterAddNamespace', [
+					$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
+					$this->getNamespaceConfigWithId( $talkNamespaceId, $aUserNamespaces ),
+				] );
 			}
 
 			$oResult->success = $aResult['success'];
@@ -331,6 +340,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$aNamespacesToRemoveNames[] = $sNamespace;
 		}
 
+		$originalNamespaceConfig = [
+			$iNS => $aUserNamespaces[$iNS],
+			$iNS + 1 => $aUserNamespaces[$iNS + 1]
+		];
+
 		$bErrors = false;
 		$iDoArticle = 0;
 		if ( !empty( $oData->doArticle ) ) {
@@ -381,7 +395,10 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 						[ '4::namespace' => $nameSpace ]
 					);
 				}
-
+				Hooks::run( 'NamespaceManagerAfterRemoveNamespace', [
+					$this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ),
+					$this->getNamespaceConfigWithId( $iNS + 1, $originalNamespaceConfig )
+				] );
 				$oResult->success = $aResult[ 'success' ];
 				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
 			}
@@ -421,6 +438,17 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * @param int $id
+	 * @param array $userNamespaces
+	 * @return array
+	 */
+	private function getNamespaceConfigWithId( $id, array $userNamespaces ) {
+		return array_merge( [
+			'id' => $id,
+		], $userNamespaces[$id] );
 	}
 
 }
