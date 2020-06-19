@@ -251,7 +251,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			// Make sure its an odd number
 			if ( $talkId % 2 === 1 ) {
 				$aUserNamespaces[$talkId]['name'] = $sNamespace . '_' . $wgContLang->getNsText( NS_TALK );
-				$aUserNamespaces[$talkId]['alias'] = $sAlias . '_talk';
+				if ( $sAlias ) {
+					$aUserNamespaces[$talkId]['alias'] = $sAlias . '_talk';
+				} else {
+					$aUserNamespaces[$talkId]['alias'] = "";
+				}
 			}
 		} else {
 			$namespaceConfig = [
