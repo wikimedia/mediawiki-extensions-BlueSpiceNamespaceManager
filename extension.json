@@ -31,11 +31,6 @@
 					]
 				}
 			}
-		},
-		"BlueSpicePrivacy": {
-			"Handlers": [
-				"\\BlueSpice\\NamespaceManager\\Privacy\\Handler"
-			]
 		}
 	},
 	"callback": "NamespaceManager::onRegistration",
@@ -84,14 +79,11 @@
 		"NamespaceNuker": "includes/NamespaceNuker.php",
 		"BSApiNamespaceStore": "includes/api/BSApiNamespaceStore.php",
 		"BSApiNamespaceTasks": "includes/api/BSApiNamespaceTasks.php",
-		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php"
+		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php",
+		"BSNamespaceManagerRemoveLegacyBackupTables": "maintenance/BSNamespaceManagerRemoveLegacyBackupTables.php"
 	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": [
-			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupPageTable::callback",
-			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupRevisionTable::callback",
-			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddBackupTextTable::callback"
-		],
+		"LoadExtensionSchemaUpdates": "\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddRemoveLegacyBackupTablesMaintenanceScript::callback",
 		"NamespaceManager::editNamespace": "NamespaceManager::onEditNamespace",
 		"NamespaceManager::writeNamespaceConfiguration": "NamespaceManager::onWriteNamespaceConfiguration",
 		"BSMigrateSettingsSaveNewSettings": "\\BlueSpice\\NamespaceManager\\Hook\\BSMigrateSettingsSaveNewSettings\\WriteConfiguration::callback"
