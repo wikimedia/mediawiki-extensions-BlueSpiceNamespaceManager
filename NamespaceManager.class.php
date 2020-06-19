@@ -196,9 +196,15 @@ class NamespaceManager extends BsExtensionMW {
 				$iNS,
 				$aDefinition
 			] );
-			if ( isset( $aDefinition['alias'] ) && !empty( $aDefinition['alias'] ) ) {
-				$sSaveContent
-					.= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
+			if ( isset( $aDefinition['alias'] ) ) {
+				if ( !empty( $aDefinition['alias'] ) ) {
+					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
+				}
+			} else {
+				$aliases = BsNamespaceHelper::getNamespaceAliases( $iNS );
+				if ( !empty( $aliases ) ) {
+					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aliases[0]}'] = {$sConstName};\n";
+				}
 			}
 			$sSaveContent .= "// END Namespace {$sConstName}\n\n";
 		}
