@@ -161,16 +161,18 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		}
 		return icon.format( 'bs-tick.png ');
 	},
-	onGrdMainRowClick: function( oSender, iRowIndex, oEvent ) {
-		this.callParent( oSender, iRowIndex, oEvent );
-
-		var selectedRow = this.grdMain.getSelectionModel().getSelection();
-		var isSystemNS = selectedRow[0].get( 'isSystemNS' );
-		var isTalkNS = selectedRow[0].get( 'isTalkNS' );
-
-		if ( isSystemNS !== false || isTalkNS !== false ) {
-			this.btnRemove.disable();
+	onGrdMainSelectionChange: function( sender, records, opts ) {
+		this.callParent( arguments );
+		this.btnRemove.disable();
+		if ( records.length !== 1 ) {
+			return;
 		}
+		var isSystemNS = records[0].get( 'isSystemNS' );
+		var isTalkNS = records[0].get( 'isTalkNS' );
+		if ( isSystemNS || isTalkNS ) {
+			return;
+		}
+		this.btnRemove.enable();
 	},
 	onBtnAddClick: function( oButton, oEvent ) {
 		this.dlgNamespaceAdd = new BS.BlueSpiceNamespaceManager.NamespaceDialog( {
