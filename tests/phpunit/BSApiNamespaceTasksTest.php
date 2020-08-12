@@ -2,16 +2,9 @@
 
 namespace BlueSpice\NamespaceManager\Tests;
 
+use BlueSpice\DynamicSettingsManager;
 use BlueSpice\Tests\BSApiTasksTestBase;
 
-/**
- * @group Broken
- * @group medium
- * @group API
- * @group BlueSpice
- * @group BlueSpiceExtensions
- * @group BlueSpiceNamespaceManager
- */
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 	protected $aSettings = [
@@ -19,18 +12,12 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		'content' => false
 	];
 
-	protected function setUp() {
+	protected function setUp() : void {
 		if ( !defined( BSCONFIGDIR ) ) {
 			define( BSCONFIGDIR, wfTempDir() );
 		}
-		$time = time();
-		$this->setMwGlobals( [
-			'bsgConfigFiles' => [
-				'NamespaceManager' => wfTempDir() . "/nm-settings.$time.php"
-			]
-		] );
 
-		return parent::setUp();
+		parent::setUp();
 	}
 
 	protected function getModuleName() {
@@ -136,8 +123,8 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	protected function isNSSaved( $iID ) {
-		global $bsgConfigFiles;
-		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
+		$dynmicSettingsManager = DynamicSettingsManager::factory();
+		$sConfigContent = $dynmicSettingsManager->fetch( 'NamespaceManager' );
 		$aUserNamespaces = [];
 		$aMatches = [];
 		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {

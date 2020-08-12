@@ -432,6 +432,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oLogger->insert();
 	}
 
+	/**
+	 * @param int $ns
+	 * @param string $alias
+	 * @return bool
+	 */
 	protected function isAliasInUse( $ns, $alias ) {
 		global $wgNamespaceAliases;
 
