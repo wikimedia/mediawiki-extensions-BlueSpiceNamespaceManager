@@ -449,6 +449,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oLogger->insert();
 	}
 
+	/**
+	 * @param int $ns
+	 * @param string $alias
+	 * @return bool
+	 */
 	protected function isAliasInUse( $ns, $alias ) {
 		global $wgNamespaceAliases;
 
@@ -461,6 +466,11 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		return true;
 	}
 
+	/**
+	 * @param int $id
+	 * @param array $userNamespaces
+	 * @return array
+	 */
 	private function getNamespaceConfigWithId( $id, array $userNamespaces ) {
 		return array_merge( [
 			'id' => $id,

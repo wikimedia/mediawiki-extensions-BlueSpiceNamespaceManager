@@ -31,6 +31,8 @@
  * @filesource
  */
 
+use BlueSpice\DynamicSettingsManager;
+
 /**
  * Class for namespace management assistent
  * @package BlueSpice_Extensions
@@ -47,16 +49,6 @@ class NamespaceManager extends BsExtensionMW {
 		'sort' => '',
 		'dir' => ''
 	];
-
-	/**
-	 * extension.json callback
-	 * @global array $bsgConfigFiles
-	 */
-	public static function onRegistration() {
-		global $bsgConfigFiles;
-		$bsgConfigFiles['NamespaceManager']
-			= BSCONFIGDIR . '/nm-settings.php';
-	}
 
 	/**
 	 * Hook-Handler for NamespaceManager::editNamespace
@@ -107,12 +99,10 @@ class NamespaceManager extends BsExtensionMW {
 	 */
 	public static function getUserNamespaces( $bFullDetails = false ) {
 		global $wgExtraNamespaces, $wgNamespacesWithSubpages,
-			$wgContentNamespaces, $bsgConfigFiles;
+			$wgContentNamespaces;
 
-		if ( !file_exists( $bsgConfigFiles['NamespaceManager'] ) ) {
-			return [];
-		}
-		$sConfigContent = file_get_contents( $bsgConfigFiles['NamespaceManager'] );
+		$dynamicSettingsManager = DynamicSettingsManager::factory();
+		$sConfigContent = $dynamicSettingsManager->fetch( 'NamespaceManager' );
 		$aUserNamespaces = [];
 		$aMatches = [];
 		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
@@ -142,8 +132,6 @@ class NamespaceManager extends BsExtensionMW {
 	 * @return array
 	 */
 	public static function setUserNamespaces( $aUserNamespaceDefinition ) {
-		global $bsgConfigFiles;
-
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
 		$oNamespaceManager =
 			\MediaWiki\MediaWikiServices::getInstance()
@@ -183,8 +171,9 @@ class NamespaceManager extends BsExtensionMW {
 			$sSaveContent .= "// END Namespace {$sConstName}\n\n";
 		}
 
-		$res = file_put_contents( $bsgConfigFiles['NamespaceManager'], $sSaveContent );
-
+		$dynamicSettingsManager = DynamicSettingsManager::factory();
+		$status = $dynamicSettingsManager->persist( 'NamespaceManager', $sSaveContent );
+		$res = $status->isGood();
 		if ( $res ) {
 			return [
 				'success' => true,
@@ -194,7 +183,7 @@ class NamespaceManager extends BsExtensionMW {
 		return [
 			'success' => false,
 			'message' => wfMessage(
-				'bs-namespacemanager-error-ns-config-not-saved', basename( $bsgConfigFiles['NamespaceManager'] )
+				'bs-namespacemanager-error-ns-config-not-saved', 'nm-settings.php'
 			)->plain()
 		];
 	}

@@ -30,6 +30,9 @@
 						"structuremanager"
 					]
 				}
+			},
+			"DynamicSettingsRegistry": {
+				"NamespaceManager": "BlueSpice\\NamespaceManager\\DynamicSettings\\NmSettings::factory"
 			}
 		},
 		"BlueSpicePrivacy": {
@@ -38,7 +41,6 @@
 			]
 		}
 	},
-	"callback": "NamespaceManager::onRegistration",
 	"requires": {
 		"MediaWiki": "~1.31",
 		"extensions": {
