@@ -2,17 +2,10 @@
 
 namespace BlueSpice\NamespaceManager\Tests;
 
+use BlueSpice\DynamicSettingsManager;
 use BlueSpice\Services;
 use BlueSpice\Tests\BSApiTasksTestBase;
 
-/**
- * @group Broken
- * @group medium
- * @group API
- * @group BlueSpice
- * @group BlueSpiceExtensions
- * @group BlueSpiceNamespaceManager
- */
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 	/**
@@ -28,12 +21,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		if ( !defined( BSCONFIGDIR ) ) {
 			define( BSCONFIGDIR, wfTempDir() );
 		}
-		$time = time();
-		$this->setMwGlobals( [
-			'bsgConfigFiles' => [
-				'NamespaceManager' => wfTempDir() . "/nm-settings.$time.php"
-			]
-		] );
 
 		parent::setUp();
 	}
@@ -169,8 +156,8 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	 * @return bool
 	 */
 	protected function isNSSaved( $iID ) {
-		$config = Services::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
-		$sConfigContent = file_get_contents( $config->get( 'ConfigFiles' )['NamespaceManager'] );
+		$dynmicSettingsManager = DynamicSettingsManager::factory();
+		$sConfigContent = $dynmicSettingsManager->fetch( 'NamespaceManager' );
 		$aUserNamespaces = [];
 		$aMatches = [];
 		$match = preg_match_all(
