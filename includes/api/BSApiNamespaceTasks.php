@@ -233,13 +233,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 		if ( $iNS !== NS_MAIN && $iNS !== NS_PROJECT && $iNS !== NS_PROJECT_TALK
-				&& !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%', $sNamespace ) ) {
+				&& !preg_match( '%^[a-zA-Z_\-\\x80-\\xFF][a-zA-Z0-9_\-\\x80-\\xFF]{1,99}$%', $sNamespace ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-name' )->plain();
 			return $oResult;
 		}
 		if (
 			!empty( $sAlias ) &&
-			!preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%', $sAlias )
+			!preg_match( '%^[a-zA-Z_\-\\x80-\\xFF][a-zA-Z0-9_\-\\x80-\\xFF]{1,99}$%', $sAlias )
 		) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-alias' )->plain();
 			return $oResult;
