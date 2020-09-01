@@ -6,6 +6,13 @@ use BlueSpice\DynamicSettingsManager;
 use BlueSpice\Tests\BSApiTasksTestBase;
 use MediaWiki\MediaWikiServices;
 
+/**
+ * @group medium
+ * @group API
+ * @group Database
+ * @group BlueSpice
+ * @group BlueSpiceNamespaceManager
+ */
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 	/**
@@ -17,12 +24,14 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		'content' => false
 	];
 
-	protected function setUp() : void {
-		if ( !defined( BSCONFIGDIR ) ) {
-			define( BSCONFIGDIR, wfTempDir() );
-		}
+	/**
+	 * @inheritDoc
+	 */
+	public function addDBDataOnce() {
+		$dynamicSettingsManager = DynamicSettingsManager::factory();
+		$dynamicSettingsManager->persist( 'NamespaceManager', "<?php\n" );
 
-		parent::setUp();
+		return parent::addDBDataOnce();
 	}
 
 	/**
@@ -76,12 +85,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	 * @covers \BSApiNamespaceTasks::task_edit
 	 */
 	public function testEdit() {
-		global $wgExtraNamespaces;
-
 		$iNS = $this->getLastNS();
-
-		$wgExtraNamespaces[$iNS] = 'DummyNS';
-		$wgExtraNamespaces[$iNS + 1] = 'DummyNS_talk';
 
 		$aSettings = $this->aSettings;
 		$aSettings['subpages'] = true;
@@ -107,28 +111,24 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	public function testRemove() {
 		$iNS = $this->getLastNS();
 
-		$aToRemove = [ $iNS, $iNS + 1 ];
+		$oData = $this->executeTask(
+			'remove',
+			[
+				'id' => $iNS,
+				'doArticle' => 0
+			]
+		);
 
-		foreach ( $aToRemove as $iID ) {
-			$oData = $this->executeTask(
-				'remove',
-				[
-					'id' => $iID,
-					'doArticle' => 0
-				]
-			);
+		$this->assertTrue(
+			$oData->success,
+			"Namespace could not be deleted via API"
+		);
 
-			$this->assertTrue(
-				$oData->success,
-				"Namespace could not be deleted via API"
-			);
-
-			// Is removed from nm-settings.php
-			$this->assertFalse(
-				$this->isNSSaved( $iID ),
-				"Namespace is still present in settings file."
-			);
-		}
+		// Is removed from nm-settings.php
+		$this->assertFalse(
+			$this->isNSSaved( $iNS ),
+			"Namespace is still present in settings file."
+		);
 	}
 
 	/**
@@ -156,8 +156,8 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	 * @return bool
 	 */
 	protected function isNSSaved( $iID ) {
-		$dynmicSettingsManager = DynamicSettingsManager::factory();
-		$sConfigContent = $dynmicSettingsManager->fetch( 'NamespaceManager' );
+		$dynamicSettingsManager = DynamicSettingsManager::factory();
+		$sConfigContent = $dynamicSettingsManager->fetch( 'NamespaceManager' );
 		$aUserNamespaces = [];
 		$aMatches = [];
 		$match = preg_match_all(
