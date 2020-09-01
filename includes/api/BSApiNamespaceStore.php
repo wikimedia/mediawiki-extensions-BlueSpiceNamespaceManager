@@ -81,4 +81,17 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 		return $aResultObjects;
 	}
 
+	/**
+	 * @param stdClass $oFilter
+	 * @param stdClass $aDataSet
+	 * @return bool
+	 */
+	public function filterBoolean( $oFilter, $aDataSet ) {
+		if ( isset( $aDataSet->{$oFilter->field}['value'] ) ) {
+			return $oFilter->value == $aDataSet->{$oFilter->field}['value'];
+		}
+
+		return parent::filterBoolean( $oFilter, $aDataSet );
+	}
+
 }
