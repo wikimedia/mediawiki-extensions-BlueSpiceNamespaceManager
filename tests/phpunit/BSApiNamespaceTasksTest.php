@@ -5,6 +5,13 @@ namespace BlueSpice\NamespaceManager\Tests;
 use BlueSpice\DynamicSettingsManager;
 use BlueSpice\Tests\BSApiTasksTestBase;
 
+/**
+ * @group medium
+ * @group API
+ * @group Database
+ * @group BlueSpice
+ * @group BlueSpiceNamespaceManager
+ */
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 	protected $aSettings = [
@@ -12,12 +19,14 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		'content' => false
 	];
 
-	protected function setUp() : void {
-		if ( !defined( BSCONFIGDIR ) ) {
-			define( BSCONFIGDIR, wfTempDir() );
-		}
+	/**
+	 * @inheritDoc
+	 */
+	public function addDBDataOnce() {
+		$dynamicSettingsManager = DynamicSettingsManager::factory();
+		$dynamicSettingsManager->persist( 'NamespaceManager', "<?php\n" );
 
-		parent::setUp();
+		return parent::addDBDataOnce();
 	}
 
 	protected function getModuleName() {
@@ -83,28 +92,24 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	public function testRemove() {
 		$iNS = $this->getLastNS();
 
-		$aToRemove = [ $iNS, $iNS + 1 ];
+		$oData = $this->executeTask(
+			'remove',
+			[
+				'id' => $iNS,
+				'doArticle' => 0
+			]
+		);
 
-		foreach ( $aToRemove as $iID ) {
-			$oData = $this->executeTask(
-				'remove',
-				[
-					'id' => $iID,
-					'doArticle' => 0
-				]
-			);
+		$this->assertTrue(
+			$oData->success,
+			"Namespace could not be deleted via API"
+		);
 
-			$this->assertTrue(
-				$oData->success,
-				"Namespace could not be deleted via API"
-			);
-
-			// Is removed from nm-settings.php
-			$this->assertFalse(
-				$this->isNSSaved( $iID ),
-				"Namespace is still present in settings file."
-			);
-		}
+		// Is removed from nm-settings.php
+		$this->assertFalse(
+			$this->isNSSaved( $iNS ),
+			"Namespace is still present in settings file."
+		);
 	}
 
 	protected function getLastNS() {
@@ -123,8 +128,8 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	protected function isNSSaved( $iID ) {
-		$dynmicSettingsManager = DynamicSettingsManager::factory();
-		$sConfigContent = $dynmicSettingsManager->fetch( 'NamespaceManager' );
+		$dynamicSettingsManager = DynamicSettingsManager::factory();
+		$sConfigContent = $dynamicSettingsManager->fetch( 'NamespaceManager' );
 		$aUserNamespaces = [];
 		$aMatches = [];
 		if ( preg_match_all( '%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s', $sConfigContent, $aMatches, PREG_PATTERN_ORDER ) ) {
