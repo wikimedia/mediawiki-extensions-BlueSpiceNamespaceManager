@@ -3,8 +3,8 @@
 namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\DynamicSettingsManager;
-use BlueSpice\Services;
 use BlueSpice\Tests\BSApiTasksTestBase;
+use MediaWiki\MediaWikiServices;
 
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
@@ -136,7 +136,7 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	 * @return int
 	 */
 	protected function getLastNS() {
-		$contLang = Services::getInstance()->getContentLanguage();
+		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 
 		$aNamespaces = $contLang->getNamespaces();
 		end( $aNamespaces );
