@@ -32,7 +32,7 @@
  */
 
 use BlueSpice\DynamicSettingsManager;
-use BlueSpice\Services;
+use MediaWiki\MediaWikiServices;
 
 /**
  * Class for namespace management assistent
@@ -150,9 +150,8 @@ class NamespaceManager extends BsExtensionMW {
 	 */
 	public static function setUserNamespaces( $aUserNamespaceDefinition ) {
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
-		$oNamespaceManager = Services::getInstance()->getService( 'BSExtensionFactory' )->getExtension(
-			'BlueSpiceNamespaceManager'
-		);
+		$oNamespaceManager = MediaWikiServices::getInstance()->getService( 'BSExtensionFactory' )
+			->getExtension( 'BlueSpiceNamespaceManager' );
 		Hooks::run(
 			'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$systemNamespaces ]
 		);
