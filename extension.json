@@ -1,7 +1,7 @@
 {
 	"name": "BlueSpiceNamespaceManager",
 	"license-name":"GPL-3.0-only",
-	"version": "3.1.11",
+	"version": "3.1.12-beta",
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:NamespaceManager",
 	"author": [
 		"Sebastian Ulbricht",
