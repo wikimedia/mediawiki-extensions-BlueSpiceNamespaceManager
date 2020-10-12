@@ -39,7 +39,7 @@
 	"requires": {
 		"MediaWiki": ">= 1.36.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 3.4"
+			"BlueSpiceFoundation": ">= 4.1"
 		}
 	},
 	"LogTypes": [
