@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"2nd-player",
+			"A2y4",
 			"Otokoume",
 			"Shirayuki",
 			"SkyDaisy9",
@@ -46,5 +47,6 @@
 	"logentry-bs-namespace-manager-remove": "$1 は名前空間 $4 を{{GENDER:$2|除去しました}}",
 	"action-namespacemanager-viewspecialpage": "名前空間マネージャーの特別ページの閲覧",
 	"namespacemanager": "名前空間マネージャー",
+	"bs-namespacemanager-label-istalk": "トーク",
 	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用"
 }
