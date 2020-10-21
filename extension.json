@@ -88,8 +88,14 @@
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": "\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddRemoveLegacyBackupTablesMaintenanceScript::callback",
-		"NamespaceManager::editNamespace": "NamespaceManager::onEditNamespace",
-		"NamespaceManager::writeNamespaceConfiguration": "NamespaceManager::onWriteNamespaceConfiguration",
+		"NamespaceManager::editNamespace": [
+			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerEditNamespace\\SetContentFlag::callback",
+			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerEditNamespace\\SetSubPagesFlag::callback"
+		],
+		"NamespaceManager::writeNamespaceConfiguration": [
+			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerWriteNamespaceConfiguration\\WriteContentFlag::callback",
+			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerWriteNamespaceConfiguration\\WriteSubPagesFlag::callback"
+		],
 		"BSMigrateSettingsSaveNewSettings": "\\BlueSpice\\NamespaceManager\\Hook\\BSMigrateSettingsSaveNewSettings\\WriteConfiguration::callback"
 	},
 	"ResourceModules": {
