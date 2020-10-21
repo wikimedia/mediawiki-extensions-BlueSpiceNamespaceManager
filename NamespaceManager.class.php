@@ -45,63 +45,10 @@ class NamespaceManager extends BsExtensionMW {
 	 *
 	 * @var array
 	 */
-	private static $defaultNamespaceSettings = [
-		'content' => false,
-		'subpages' => true
-	];
-
-	/**
-	 *
-	 * @var array
-	 */
 	public static $aSortConditions = [
 		'sort' => '',
 		'dir' => ''
 	];
-
-	/**
-	 * Hook-Handler for NamespaceManager::editNamespace
-	 * @param array &$aNamespaceDefinition
-	 * @param int &$iNs
-	 * @param array $aAdditionalSettings
-	 * @param bool $bUseInternalDefaults
-	 * @return bool Always true to keep hook alive
-	 */
-	public static function onEditNamespace( &$aNamespaceDefinition, &$iNs, $aAdditionalSettings,
-		$bUseInternalDefaults ) {
-		if ( !$bUseInternalDefaults ) {
-			if ( empty( $aNamespaceDefinition[$iNs] ) ) {
-				$aNamespaceDefinition[$iNs] = [];
-			}
-			$aNamespaceDefinition[$iNs] += [
-				'content'  => $aAdditionalSettings['content'],
-				'subpages' => $aAdditionalSettings['subpages']
-			];
-		} else {
-			$aNamespaceDefinition[$iNs] += static::$defaultNamespaceSettings;
-		}
-		return true;
-	}
-
-	/**
-	 * Hook-Handler for NamespaceManager::writeNamespaceConfiguration
-	 * @param string &$sSaveContent
-	 * @param string $sConstName
-	 * @param int $iNs
-	 * @param array $aDefinition
-	 * @return bool Always true to keep hook alive
-	 */
-	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName,
-		$iNs, $aDefinition ) {
-		if ( isset( $aDefinition[ 'content' ] ) && $aDefinition['content'] === true ) {
-			$sSaveContent .= "\$GLOBALS['wgContentNamespaces'][] = {$sConstName};\n";
-		}
-		if ( isset( $aDefinition[ 'subpages' ] ) ) {
-			$stringVal = $aDefinition['subpages'] ? "true" : "false";
-			$sSaveContent .= "\$GLOBALS['wgNamespacesWithSubpages'][{$sConstName}] = $stringVal;\n";
-		}
-		return true;
-	}
 
 	/**
 	 * Get all namespaces, which are created with the NamespaceManager.
