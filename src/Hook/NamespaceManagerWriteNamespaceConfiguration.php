@@ -19,7 +19,7 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 
 	/**
 	 *
-	 * @var integer
+	 * @var int
 	 */
 	protected $ns;
 

@@ -25,7 +25,7 @@ abstract class NamespaceManagerEditNamespace extends Hook {
 
 	/**
 	 *
-	 * @var boolean
+	 * @var bool
 	 */
 	protected $useInternalDefaults;
 
