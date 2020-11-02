@@ -155,7 +155,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		} else {
 			$aUserNamespaces[$iNS] = [ 'name' => $sNamespace, 'alias' => $sAlias ];
 
-			Hooks::run( 'NamespaceManager::editNamespace', [
+			$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
 				&$aUserNamespaces,
 				&$iNS,
 				$aAdditionalSettings,
@@ -168,7 +168,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				'alias' => $sAlias . '_talk'
 			];
 
-			Hooks::run( 'NamespaceManager::editNamespace', [
+			$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
 				&$aUserNamespaces,
 				&$talkNamespaceId,
 				$aAdditionalSettings, true
@@ -183,10 +183,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 					[ '4::namespace' => $sNamespace ]
 				);
 				$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
-				Hooks::run( 'NamespaceManagerAfterAddNamespace', [
-					$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
-					$this->getNamespaceConfigWithId( $talkNamespaceId, $aUserNamespaces ),
-				] );
+				$this->getServices()->getHookContainer()->run(
+					'NamespaceManagerAfterAddNamespace',
+					[
+						$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
+						$this->getNamespaceConfigWithId( $talkNamespaceId, $aUserNamespaces ),
+					]
+				);
 			}
 
 			$oResult->success = $aResult['success'];
@@ -220,8 +223,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oNamespaceManager = $this->getServices()->getService( 'BSExtensionFactory' )->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
-		Hooks::run(
-			'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$systemNamespaces ]
+		$this->getServices()->getHookContainer()->run(
+			'BSNamespaceManagerBeforeSetUsernamespaces',
+			[
+				$oNamespaceManager,
+				&$systemNamespaces
+			]
 		);
 		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
 
@@ -292,8 +299,14 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			}
 			$aUserNamespaces[$iNS] = $namespaceConfig;
 		}
-		Hooks::run(
-			'NamespaceManager::editNamespace', [ &$aUserNamespaces, &$iNS, $aAdditionalSettings, false ]
+		$this->getServices()->getHookContainer()->run(
+			'NamespaceManager::editNamespace',
+			[
+				&$aUserNamespaces,
+				&$iNS,
+				$aAdditionalSettings,
+				false
+			]
 		);
 
 		$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
@@ -431,10 +444,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 						[ '4::namespace' => $nameSpace ]
 					);
 				}
-				Hooks::run( 'NamespaceManagerAfterRemoveNamespace', [
-					$this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ),
-					$this->getNamespaceConfigWithId( $iNS + 1, $originalNamespaceConfig )
-				] );
+				$this->getServices()->getHookContainer()->run(
+					'NamespaceManagerAfterRemoveNamespace',
+					[
+						$this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ),
+						$this->getNamespaceConfigWithId( $iNS + 1, $originalNamespaceConfig )
+					]
+				);
 				$oResult->success = $aResult[ 'success' ];
 				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
 			}

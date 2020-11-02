@@ -152,8 +152,12 @@ class NamespaceManager extends BsExtensionMW {
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
 		$oNamespaceManager = MediaWikiServices::getInstance()->getService( 'BSExtensionFactory' )
 			->getExtension( 'BlueSpiceNamespaceManager' );
-		Hooks::run(
-			'BSNamespaceManagerBeforeSetUsernamespaces', [ $oNamespaceManager, &$systemNamespaces ]
+		MediaWikiServices::getInstance()->getHookContainer()->run(
+			'BSNamespaceManagerBeforeSetUsernamespaces',
+			[
+				$oNamespaceManager,
+				&$systemNamespaces
+			]
 		);
 
 		$sSaveContent = "<?php\n\n";
@@ -176,12 +180,15 @@ class NamespaceManager extends BsExtensionMW {
 					. $GLOBALS['wgExtraNamespaces'][$iNS] . "';\n";
 			}
 
-			Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [
-				&$sSaveContent,
-				$sConstName,
-				$iNS,
-				$aDefinition
-			] );
+			MediaWikiServices::getInstance()->getHookContainer()->run(
+				'NamespaceManager::writeNamespaceConfiguration',
+				[
+					&$sSaveContent,
+					$sConstName,
+					$iNS,
+					$aDefinition
+				]
+			);
 			if ( isset( $aDefinition['alias'] ) ) {
 				if ( !empty( $aDefinition['alias'] ) ) {
 					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
@@ -272,7 +279,12 @@ class NamespaceManager extends BsExtensionMW {
 			]
 		];
 
-		Hooks::run( 'NamespaceManager::getMetaFields', [ &$aMetaFields ] );
+		MediaWikiServices::getInstance()->getHookContainer()->run(
+			'NamespaceManager::getMetaFields',
+			[
+				&$aMetaFields
+			]
+		);
 
 		return $aMetaFields;
 	}
