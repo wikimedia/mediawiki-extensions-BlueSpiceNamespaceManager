@@ -71,8 +71,9 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 			];
 		}
 
-		Hooks::run( 'NamespaceManager::getNamespaceData', [ &$aResult ], '1.23.2' );
-		Hooks::run( 'BSApiNamespaceStoreMakeData', [ &$aResult ] );
+		$this->getServices()->getHookContainer()->run( 'BSApiNamespaceStoreMakeData', [
+			&$aResult
+		] );
 
 		/**
 		 * To be downwards compatible we need to have the dataset be arrays.
