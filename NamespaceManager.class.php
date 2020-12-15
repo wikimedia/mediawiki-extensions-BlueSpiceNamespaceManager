@@ -159,6 +159,9 @@ class NamespaceManager extends BsExtensionMW {
 			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
 			if ( $iNS >= 100 && isset( $aDefinition['name'] ) && $aDefinition['name'] !== '' ) {
 				$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '" . $aDefinition['name'] . "';\n";
+			} elseif ( $iNS >= 100 && isset( $GLOBALS['wgExtraNamespaces'][$iNS] ) ) {
+				$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '"
+					. $GLOBALS['wgExtraNamespaces'][$iNS] . "';\n";
 			}
 
 			Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [ &$sSaveContent, $sConstName, $iNS, $aDefinition ] );
