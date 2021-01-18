@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alojz.tic",
+			"Eleassar",
 			"Skalcaa"
 		]
 	},
@@ -17,6 +18,7 @@
 	"bs-namespacemanager-label-content": "Vsebina imenskega prostora",
 	"bs-namespacemanager-label-searchable": "Privzeto iskanje",
 	"bs-namespacemanager-label-subpages": "Podstrani",
+	"bs-namespacemanager-label-pagecount": "Strani",
 	"bs-namespacemanager-nsadded": "Imenski prostor je bil dodan.",
 	"bs-namespacemanager-nsremoved": "Imenski prostor je bil odstranjen.",
 	"bs-namespacemanager-nsedited": "Imenski prostor je bil urejen.",
