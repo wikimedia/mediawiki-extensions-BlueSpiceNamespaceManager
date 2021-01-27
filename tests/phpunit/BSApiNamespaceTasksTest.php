@@ -7,6 +7,7 @@ use BlueSpice\Tests\BSApiTasksTestBase;
 use MediaWiki\MediaWikiServices;
 
 /**
+ * @group Broken
  * @group medium
  * @group API
  * @group Database
