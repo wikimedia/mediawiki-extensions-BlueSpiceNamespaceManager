@@ -17,6 +17,7 @@
 	"bs-namespacemanager-invalid-id": "유효하지 이름공간 ID 없음",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "이름공간",
+	"bs-namespacemanager-label-editable": "이름 변경 가능",
 	"bs-namespacemanager-label-content": "콘텐츠 이름공간",
 	"bs-namespacemanager-label-subpages": "하위 문서",
 	"bs-namespacemanager-label-pagecount": "페이지들",
@@ -53,5 +54,6 @@
 	"bs-namespacemanager-label-istalk": "토론",
 	"right-namespacemanager-viewspecialpage": "[[Special:NamespaceManager]] 특수 문서로 접근",
 	"bs-namespacemanager-hide-talk-label": "토론 이름공간 숨기기",
-	"bs-namespacemanager-labelnsalias": "다른 이름"
+	"bs-namespacemanager-labelnsalias": "다른 이름",
+	"bs-namespacemanager-invalid-namespace": "편집 중인 이름공간이 유효하지 않습니다"
 }
