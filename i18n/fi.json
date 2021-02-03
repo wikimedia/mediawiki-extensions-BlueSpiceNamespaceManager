@@ -6,7 +6,7 @@
 		]
 	},
 	"bs-namespacemanager-ns-exists": "Nimiavaruus on jo olemassa.",
-	"bs-namespacemanager-ns-length": "Nimiavaruus on oltava pituudeltaan vähintään kaksi merkkiä.",
+	"bs-namespacemanager-ns-length": "Nimiavaruuden on oltava pituudeltaan vähintään kaksi merkkiä.",
 	"bs-namespacemanager-label-namespaces": "Nimiavaruus",
 	"bs-namespacemanager-label-subpages": "Alasivut",
 	"bs-namespacemanager-label-pagecount": "Sivut",
@@ -25,5 +25,10 @@
 	"bs-namespacemanager-pagepresent": "Sivut nimiavaruudessa:",
 	"bs-namespacemanager-deletens-deletepages": "Tämä sivu on poistettu, koska nimiavaruus ”$1” on poistettu.",
 	"bs-namespacemanager-ns-config-saved": "Nimiavaruuden määritys on tallennettu.",
-	"bs-namespacemanager-error-ns-config-not-saved": "Nimiavaruuden määritystä ei voitu tallentaa $1."
+	"bs-namespacemanager-error-ns-config-not-saved": "Nimiavaruuden määritystä ei voitu tallentaa $1.",
+	"bs-namespacemanager-label-editable": "Uudelleennimettävä",
+	"bs-namespacemanager-nodeletetalk": "Keskustelunimiavaruutta ei voida poistaa",
+	"bs-namespacemanager-label-istalk": "Keskustelu",
+	"bs-namespacemanager-hide-talk-label": "Piilota keskustelunimiavaruudet",
+	"bs-namespacemanager-labelnsalias": "Alias"
 }

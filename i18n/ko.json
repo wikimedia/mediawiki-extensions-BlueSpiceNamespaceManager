@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Hwangjy9",
-			"밥풀떼기",
 			"SeoJeongHo",
-			"아라",
-			"Ykhwong"
+			"Ykhwong",
+			"밥풀떼기",
+			"아라"
 		]
 	},
 	"bs-namespacemanager-label": "이름공간 관리자",
@@ -53,5 +53,7 @@
 	"log-description-bs-namespace-manager": "이름공간을 바꾼 기록입니다.",
 	"bs-namespacemanager-ns-config-saved": "이름공간 구성이 저장되었습니다.",
 	"bs-namespacemanager-error-ns-config-not-saved": "$1에 이름공간 구성을 저장하지 못했습니다.",
-	"right-namespacemanager-viewspecialpage": "[[Special:NamespaceManager]] 특수 문서로 접근"
+	"right-namespacemanager-viewspecialpage": "[[Special:NamespaceManager]] 특수 문서로 접근",
+	"bs-namespacemanager-label-editable": "이름 변경 가능",
+	"bs-namespacemanager-invalid-namespace": "편집 중인 이름공간이 유효하지 않습니다"
 }

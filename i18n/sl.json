@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alojz.tic",
+			"Eleassar",
 			"Skalcaa"
 		]
 	},
@@ -31,5 +32,6 @@
 	"bs-namespacemanager-deletewarning": "Ste prepričani, da želite izbrisati ta imenski prostor? Brisanje imenskega prostora ne bo mogoče razveljaviti.",
 	"bs-namespacemanager-pagepresent": "Strani v tem imenskem prostoru:",
 	"bs-namespacemanager-deletens-movepages": "Ta stran je bila prestavljena iz imenskega prostora \"$1\" v imenski prostor \"{{int:bs-ns_main}}\", ker je bil imenski prostor \"$1\" izbrisan.",
-	"bs-namespacemanager-deletens-deletepages": "Ta stran je bila izbrisana, ker je bil imenski prostor \"$1\" izbrisan."
+	"bs-namespacemanager-deletens-deletepages": "Ta stran je bila izbrisana, ker je bil imenski prostor \"$1\" izbrisan.",
+	"bs-namespacemanager-label-pagecount": "Strani"
 }

@@ -1,15 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"Stephan Muggli <muggli@hallowelt.biz>",
+			"Hwboehm",
+			"Jkonrad",
+			"MarkusRost",
 			"Metalhead64",
 			"Mglaser",
 			"Osnard",
 			"Purodha",
-			"Jkonrad",
-			"Hwboehm",
-			"MarkusRost",
-			"Tiin"
+			"Stephan Muggli <muggli@hallowelt.biz>",
+			"Tiin",
+			"Umherirrender"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",
@@ -40,10 +41,10 @@
 	"bs-namespacemanager-labelnsname": "Namensraum-Name",
 	"bs-namespacemanager-willdelete": "Werden gelöscht",
 	"bs-namespacemanager-willmove": "Werden in \"{{int:bs-ns_main}}\" verschoben*",
-	"bs-namespacemanager-willmovesuffix": "Werden mit dem Suffix \"$1\" in \"{{int:bs-ns_main}}\" verschoben",
+	"bs-namespacemanager-willmovesuffix": "Werden mit dem Suffix „$1“ in „{{int:bs-ns_main}}“ verschoben",
 	"bs-namespacemanager-deletewarning": "Bist du dir sicher, dass du den Namensraum löschen willst? Das Löschen eines Namensraums kann nicht rückgängig gemacht werden.",
 	"bs-namespacemanager-pagepresent": "Seiten in diesem Namensraum:",
-	"bs-namespacemanager-deletens-movepages": "Diese Seite wurde vom dem \"$1\" Namensraum in den \"{{int:bs-ns_main}}\" Namensraum verschoben, da der \"$1\" Namensraum gelöscht wurde.",
+	"bs-namespacemanager-deletens-movepages": "Diese Seite wurde vom dem „$1“ Namensraum in den „{{int:bs-ns_main}}“ Namensraum verschoben, da der „$1“ Namensraum gelöscht wurde.",
 	"bs-namespacemanager-deletens-deletepages": "Diese Seite wurde gelöscht, da ihr Namensraum „$1“ gelöscht wurde.",
 	"log-name-bs-namespace-manager": "Namensraumverwaltungs-Logbuch",
 	"log-description-bs-namespace-manager": "Logbuch von Änderungen an den Namensräumen.",

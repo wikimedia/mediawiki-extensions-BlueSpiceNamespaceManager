@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"TheEduGobi",
+			"Eduardo Addad de Oliveira",
 			"Felipe L. Ewald",
-			"Eduardo Addad de Oliveira"
+			"TheEduGobi"
 		]
 	},
 	"bs-namespacemanager-desc": "Interface administrativa para adicionar, editar e excluir espaços nominais",

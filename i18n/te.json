@@ -7,5 +7,8 @@
 	"bs-namespacemanager-label-pagecount": "పేజీలు",
 	"bs-namespacemanager-label-namespaces": "పేరుబరి",
 	"bs-namespacemanager-labelnsname": "పేరుబరి పేరు",
-	"bs-namespacemanager-pagepresent": "ఈ పేరుబరి లోని పేజీలు"
+	"bs-namespacemanager-pagepresent": "ఈ పేరుబరి లోని పేజీలు",
+	"bs-namespacemanager-label-subpages": "ఉపపేజీలు",
+	"bs-namespacemanager-label-system": "వ్యవస్థ",
+	"bs-namespacemanager-labelnsalias": "మారుపేరు"
 }

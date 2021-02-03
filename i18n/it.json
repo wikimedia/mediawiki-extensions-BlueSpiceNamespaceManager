@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
-			"V6rg"
+			"V6rg",
+			"ValeJappo"
 		]
 	},
 	"bs-namespacemanager-wrong-alias": "L'alias di namespace contiene caratteri non validi.",
@@ -27,5 +28,6 @@
 	"apihelp-bs-namespace-tasks-summary": "Permette di modificare la configurazione del namespace.",
 	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"right-namespacemanager-viewspecialpage": "Accede alla pagina speciale [[Special:NamespaceManager]]"
+	"right-namespacemanager-viewspecialpage": "Accede alla pagina speciale [[Special:NamespaceManager]]",
+	"bs-namespacemanager-label-istalk": "Discussione"
 }
