@@ -19,9 +19,9 @@
 	"bs-namespacemanager-label-searchable": "Privzeto iskanje",
 	"bs-namespacemanager-label-subpages": "Podstrani",
 	"bs-namespacemanager-label-pagecount": "Strani",
-	"bs-namespacemanager-nsadded": "Imenski prostor je bil dodan.",
-	"bs-namespacemanager-nsremoved": "Imenski prostor je bil odstranjen.",
-	"bs-namespacemanager-nsedited": "Imenski prostor je bil urejen.",
+	"bs-namespacemanager-nsadded": "Imenski prostor je dodan.",
+	"bs-namespacemanager-nsremoved": "Imenski prostor je odstranjen.",
+	"bs-namespacemanager-nsedited": "Imenski prostor je urejen.",
 	"bs-namespacemanager-tipadd": "Dodaj imenski prostor",
 	"bs-namespacemanager-tipedit": "Uredi imenski prostor",
 	"bs-namespacemanager-tipremove": "Odstrani imenski prostor",
@@ -33,5 +33,5 @@
 	"bs-namespacemanager-deletewarning": "Ste prepričani, da želite izbrisati ta imenski prostor? Brisanje imenskega prostora ne bo mogoče razveljaviti.",
 	"bs-namespacemanager-pagepresent": "Strani v tem imenskem prostoru:",
 	"bs-namespacemanager-deletens-movepages": "Ta stran je bila prestavljena iz imenskega prostora \"$1\" v imenski prostor \"{{int:bs-ns_main}}\", ker je bil imenski prostor \"$1\" izbrisan.",
-	"bs-namespacemanager-deletens-deletepages": "Ta stran je bila izbrisana, ker je bil imenski prostor \"$1\" izbrisan."
+	"bs-namespacemanager-deletens-deletepages": "Ta stran je izbrisana, ker je bil imenski prostor \"$1\" izbrisan."
 }
