@@ -30,7 +30,7 @@
 	"bs-namespacemanager-willdelete": "Bo pobrisano",
 	"bs-namespacemanager-willmove": "Bo premaknjeno v \"{{int:bs-ns_main}}\"",
 	"bs-namespacemanager-willmovesuffix": "Bo prestavjeno v \"{{int:bs-ns_main}}\" s končnico \"$1\"",
-	"bs-namespacemanager-deletewarning": "Ste prepričani, da želite izbrisati ta imenski prostor? Brisanje imenskega prostora ne bo mogoče razveljaviti.",
+	"bs-namespacemanager-deletewarning": "Ali res želite izbrisati ta imenski prostor? Brisanja imenskega prostora ne boste več mogli razveljaviti.",
 	"bs-namespacemanager-pagepresent": "Strani v tem imenskem prostoru:",
 	"bs-namespacemanager-deletens-movepages": "Ta stran je bila prestavljena iz imenskega prostora \"$1\" v imenski prostor \"{{int:bs-ns_main}}\", ker je bil imenski prostor \"$1\" izbrisan.",
 	"bs-namespacemanager-deletens-deletepages": "Ta stran je izbrisana, ker je bil imenski prostor \"$1\" izbrisan."
