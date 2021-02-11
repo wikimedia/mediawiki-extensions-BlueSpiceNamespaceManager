@@ -131,8 +131,9 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 
 		return this.colMainConf.actions;
 	},
-	renderIcon: function( value ) {
+	renderIcon: function( value, meta ) {
 		var disabled = false;
+		meta.tdCls = "ns-manager-icon";
 
 		if( typeof( value ) == 'object' ) {
 			if( value.disabled && value.disabled === true ) {
@@ -153,7 +154,8 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 
 		return icon.format( 'bs-tick.png' );
 	},
-	renderInvertedIcon: function( value ) {
+	renderInvertedIcon: function( value, meta ) {
+		meta.tdCls = "ns-manager-icon";
 		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
 
 		if ( value === true ) {
