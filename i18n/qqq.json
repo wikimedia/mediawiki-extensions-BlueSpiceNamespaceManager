@@ -7,7 +7,8 @@
 			"Robby",
 			"Shirayuki",
 			"Stephan Muggli <muggli@hallowelt.biz>",
-			"Umherirrender"
+			"Umherirrender",
+			"Verdy p"
 		]
 	},
 	"bs-namespacemanager-desc": "Used in [{{canonicalurl:Special:WikiAdmin|mode=ExtensionInfo}} Special:WikiAdmin?mode=ExtensionInfo], description of namespace manager extension",
@@ -51,7 +52,7 @@
 	"logentry-bs-namespace-manager-modify": "Log message about changes in the settings of a namespace.\nParameters:\n* $4 - name of the namespace",
 	"logentry-bs-namespace-manager-rename": "Log message about changes of the name of a namespace.\nParameters:\n* $4 - old name of the namespace\n* $5 - new name of the namespace",
 	"logentry-bs-namespace-manager-remove": "Log message about the removal of a namespace.\nParameters:\n* $4 - name of the namespace",
-	"bs-namespacemanager-ns-config-saved": "Dialog box text that tells the user that the namespace configuaration has successfully been saved",
+	"bs-namespacemanager-ns-config-saved": "Dialog box text that tells the user that the configuration of namespaces has successfully been saved.",
 	"bs-namespacemanager-error-ns-config-not-saved": "Dialog box text that tells the user that the namespace configuaration could not be saved to file \"$1\"\n\nParameters:\n* $1 - is the path to the config file",
 	"apihelp-bs-namespace-store-description": "Describes the API endpoint that lists namespaces.\n{{doc-apihelp-description|bs-namespace-store}}",
 	"apihelp-bs-namespace-store-summary": "Describes the API endpoint that lists namespaces.\n{{doc-apihelp-summary|bs-namespace-store}}",
