@@ -16,7 +16,7 @@ class BSNamespaceManagerRemoveLegacyBackupTables extends LoggedUpdateMaintenance
 	 * @return true
 	 */
 	protected function doDBUpdates() {
-		$db = $this->getDB( DB_MASTER );
+		$db = $this->getDB( DB_PRIMARY );
 		foreach ( $this->tableNames as $table ) {
 			$this->output( "\n * delete $table... " );
 			if ( !$db->tableExists( $table ) ) {

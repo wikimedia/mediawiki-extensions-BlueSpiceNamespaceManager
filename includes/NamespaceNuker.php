@@ -19,7 +19,7 @@ class NamespaceNuker {
 			return false;
 		}
 
-		$dbw = wfgetDB( DB_MASTER );
+		$dbw = wfgetDB( DB_PRIMARY );
 		$res = $dbw->select(
 			'page',
 			[
@@ -68,7 +68,7 @@ class NamespaceNuker {
 	 * @return bool
 	 */
 	public static function removeAllNamespacePages( $idNS, $nameNS ) {
-		$dbw = wfgetDB( DB_MASTER );
+		$dbw = wfgetDB( DB_PRIMARY );
 		$res = $dbw->select(
 			'page',
 			[
