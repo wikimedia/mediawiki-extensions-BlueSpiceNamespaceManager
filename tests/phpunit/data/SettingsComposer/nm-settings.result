@@ -1,0 +1,20 @@
+<?php
+
+// START Namespace NS_MAIN
+if( !defined( "NS_MAIN" ) ) define("NS_MAIN", 0);
+$GLOBALS['wgContentNamespaces'][] = NS_MAIN;
+$GLOBALS['wgNamespacesWithSubpages'][NS_MAIN] = true;
+// END Namespace NS_MAIN
+
+// START Namespace NS_TEMPLATE
+if( !defined( "NS_TEMPLATE" ) ) define("NS_TEMPLATE", 10);
+$GLOBALS['wgNamespacesWithSubpages'][NS_TEMPLATE] = true;
+$GLOBALS['wgNamespaceAliases']['Template'] = NS_TEMPLATE;
+// END Namespace NS_TEMPLATE
+
+// START Namespace NS_IMAGE
+if( !defined( "NS_IMAGE" ) ) define("NS_IMAGE", 6);
+$GLOBALS['wgNamespacesWithSubpages'][NS_IMAGE] = false;
+$GLOBALS['wgNamespaceAliases']['Image'] = NS_IMAGE;
+// END Namespace NS_IMAGE
+

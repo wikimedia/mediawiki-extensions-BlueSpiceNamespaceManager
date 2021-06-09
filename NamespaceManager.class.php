@@ -32,6 +32,7 @@
  */
 
 use BlueSpice\DynamicSettingsManager;
+use BlueSpice\NamespaceManager\SettingsComposer;
 use MediaWiki\MediaWikiServices;
 
 /**
@@ -107,47 +108,17 @@ class NamespaceManager extends BsExtensionMW {
 			]
 		);
 
-		$sSaveContent = "<?php\n\n";
-		foreach ( $aUserNamespaceDefinition as $iNS => $aDefinition ) {
-			if ( empty( $aDefinition ) ) {
-				continue;
-			}
+		$constantsNames = [];
+		$aliasesMap = [];
+		foreach ( $aUserNamespaceDefinition as $nsId => $definition ) {
+			$aliasesMap[$nsId] = BsNamespaceHelper::getNamespaceAliases( $nsId );
 
-			$name = isset( $aDefinition['name'] ) ? $aDefinition['name'] : null;
-			$sConstName = BsNamespaceHelper::getNamespaceConstName( $iNS, $name );
-
-			$sSaveContent .= "// START Namespace {$sConstName}\n";
-			$sSaveContent .= "if( !defined( \"{$sConstName}\" ) ) define(\"{$sConstName}\", {$iNS});\n";
-
-			if ( $iNS >= 100 && isset( $aDefinition['name'] ) && $aDefinition['name'] !== '' ) {
-				$sSaveContent
-					.= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '{$aDefinition['name']}';\n";
-			} elseif ( $iNS >= 100 && isset( $GLOBALS['wgExtraNamespaces'][$iNS] ) ) {
-				$sSaveContent .= "\$GLOBALS['wgExtraNamespaces'][{$sConstName}] = '"
-					. $GLOBALS['wgExtraNamespaces'][$iNS] . "';\n";
-			}
-
-			MediaWikiServices::getInstance()->getHookContainer()->run(
-				'NamespaceManager::writeNamespaceConfiguration',
-				[
-					&$sSaveContent,
-					$sConstName,
-					$iNS,
-					$aDefinition
-				]
-			);
-			if ( isset( $aDefinition['alias'] ) ) {
-				if ( !empty( $aDefinition['alias'] ) ) {
-					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aDefinition['alias']}'] = {$sConstName};\n";
-				}
-			} else {
-				$aliases = BsNamespaceHelper::getNamespaceAliases( $iNS );
-				if ( !empty( $aliases ) ) {
-					$sSaveContent .= "\$GLOBALS['wgNamespaceAliases']['{$aliases[0]}'] = {$sConstName};\n";
-				}
-			}
-			$sSaveContent .= "// END Namespace {$sConstName}\n\n";
+			$name = isset( $definition['name'] ) ? $definition['name'] : null;
+			$constantsNames[$nsId] = BsNamespaceHelper::getNamespaceConstName( $nsId, $name );
 		}
+
+		$settingsComposer = new SettingsComposer( $constantsNames, $aliasesMap );
+		$sSaveContent = $settingsComposer->compose( $aUserNamespaceDefinition );
 
 		$dynamicSettingsManager = DynamicSettingsManager::factory();
 		$status = $dynamicSettingsManager->persist( 'NamespaceManager', $sSaveContent );
