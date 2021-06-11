@@ -3,7 +3,8 @@
 		"authors": [
 			"Alirezaaa",
 			"FarsiNevis",
-			"Huji"
+			"Huji",
+			"Jeeputer"
 		]
 	},
 	"bs-namespacemanager-desc": "رابط مدیریتی برای افزودن، ویرایش یا حذف فضاهای نام",
@@ -53,5 +54,6 @@
 	"bs-namespacemanager-label-istalk": "بحث",
 	"right-namespacemanager-viewspecialpage": "دسترسی به صفحهٔ ویژهٔ [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "پنهان‌سازی فضاهای نام بحث",
-	"bs-namespacemanager-labelnsalias": "نام مستعار"
+	"bs-namespacemanager-labelnsalias": "نام مستعار",
+	"bs-namespacemanager-invalid-namespace": "فضای نام مورد ویرایش نامعتبر است"
 }
