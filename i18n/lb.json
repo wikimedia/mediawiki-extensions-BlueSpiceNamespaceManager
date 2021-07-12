@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Les Meloures",
 			"Robby"
 		]
 	},
@@ -17,7 +18,7 @@
 	"bs-namespacemanager-nsadded": "Den Nummraum gouf dobäigesat.",
 	"bs-namespacemanager-nsremoved": "Den Nummraum gouf ewechgeholl.",
 	"bs-namespacemanager-nsedited": "Den Nummraum gouf geännert.",
-	"bs-namespacemanager-tipadd": "Nummraum dobäisetzen",
+	"bs-namespacemanager-tipadd": "Nummraum derbäisetzen",
 	"bs-namespacemanager-tipedit": "Nummraum änneren",
 	"bs-namespacemanager-tipremove": "Nummraum ewechhuelen",
 	"bs-namespacemanager-msgnoteditabledelete": "Dësen Nummraum ass ee System-Nummraum a kann net geläscht ginn.",
