@@ -4,6 +4,7 @@
 			"Edoderoo",
 			"Esketti",
 			"Mainframe98",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
 			"Sjoerddebruin"
@@ -43,6 +44,7 @@
 	"log-name-bs-namespace-manager": "Logboek naamruimtebeheer",
 	"log-description-bs-namespace-manager": "Dit is een logboek van wijzigingen van naamruimten.",
 	"log-show-hide-bs-namespace-manager": "Logboek naamruimtebeheer $1",
+	"logeventslist-bs-namespace-manager-log": "Logboek naamruimtebeheer",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|heeft}} de naamruimte $4 aangemaakt",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|heeft}} de instellingen voor de naamruimte $4 gewijzigd",
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|heeft}} de naamruimte $4 naar $5 hernoemd",
