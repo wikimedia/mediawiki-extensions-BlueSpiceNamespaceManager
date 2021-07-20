@@ -4,6 +4,7 @@
 			"Edoderoo",
 			"Esketti",
 			"Mainframe98",
+			"Romaine",
 			"SPQRobin",
 			"Siebrand",
 			"Sjoerddebruin"
@@ -54,5 +55,6 @@
 	"bs-namespacemanager-label-istalk": "Overleg",
 	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"logeventslist-bs-namespace-manager-log": "Logboek naamruimtebeheer"
 }
