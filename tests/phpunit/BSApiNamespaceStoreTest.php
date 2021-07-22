@@ -38,7 +38,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		];
 	}
 
-	protected function setUp() : void {
+	protected function setUp(): void {
 		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 		parent::setUp();
 		$this->setMwGlobals( [
@@ -71,7 +71,7 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 		$contLang->setNamespaces( $namespaces );
 	}
 
-	protected function tearDown() : void {
+	protected function tearDown(): void {
 		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 		// reset custom namespace settings
 		$contLang->resetNamespaces();
