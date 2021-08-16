@@ -34,6 +34,11 @@
 	height: 80px;
 }
 
-.ns-manager-icon{
+.ns-manager-icon {
 	padding: 10px;
+}
+
+.x-grid-td.ns-manager-icon .x-grid-cell-inner {
+	padding: 0;
+	text-overflow: unset;
 }
