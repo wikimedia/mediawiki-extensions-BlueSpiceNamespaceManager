@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Stefano",
 			"V6rg",
 			"ValeJappo"
 		]
@@ -10,6 +11,7 @@
 	"bs-namespacemanager-alias-exists": "L'alias di namespace è già impostato per il namespace $1",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Namespace",
+	"bs-namespacemanager-label-editable": "Rinominabile",
 	"bs-namespacemanager-label-subpages": "Sottopagine",
 	"bs-namespacemanager-label-pagecount": "Pagine",
 	"bs-namespacemanager-label-system": "Sistema",
@@ -19,6 +21,7 @@
 	"bs-namespacemanager-tipedit": "Modifica namespace",
 	"bs-namespacemanager-tipremove": "Rimuovi namespace",
 	"bs-namespacemanager-labelnsname": "Nome del namespace",
+	"bs-namespacemanager-willdelete": "verrà eliminato",
 	"bs-namespacemanager-pagepresent": "Pagine in questo namespace:",
 	"bs-namespacemanager-ns-config-saved": "La configurazione del namespace è stata salvata.",
 	"bs-namespacemanager-error-ns-config-not-saved": "La configurazione del namespace non può essere salvata in $1.",
