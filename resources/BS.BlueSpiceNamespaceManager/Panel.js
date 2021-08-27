@@ -141,27 +141,26 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			}
 			value = value.value;
 		}
-
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 
 		if( disabled === true ) {
-			return icon.format( 'bs-dash.png' );
+			return icon.format( 'dash' );
 		}
 
 		if ( value === false ) {
-			return icon.format( 'bs-cross.png' );
+			return icon.format( 'cross' );
 		}
 
-		return icon.format( 'bs-tick.png' );
+		return icon.format( 'tick' );
 	},
 	renderInvertedIcon: function( value, meta ) {
 		meta.tdCls = "ns-manager-icon";
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/{0}"/>';
+		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
 
 		if ( value === true ) {
-			return icon.format( 'bs-cross.png' );
+			return icon.format( 'cross' );
 		}
-		return icon.format( 'bs-tick.png ');
+		return icon.format( 'tick ');
 	},
 	onGrdMainSelectionChange: function( sender, records, opts ) {
 		this.callParent( arguments );
