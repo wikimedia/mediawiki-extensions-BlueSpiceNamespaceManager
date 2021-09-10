@@ -4,6 +4,7 @@
 			"Edoderoo",
 			"Esketti",
 			"Mainframe98",
+			"McDutchie",
 			"Romaine",
 			"SPQRobin",
 			"Siebrand",
@@ -56,5 +57,13 @@
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
-	"logeventslist-bs-namespace-manager-log": "Logboek naamruimtebeheer"
+	"logeventslist-bs-namespace-manager-log": "Logboek naamruimtebeheer",
+	"bs-namespacemanager-wrong-alias": "De naamruimte-alias bevat ongeldige tekens.",
+	"bs-namespacemanager-alias-exists": "De naamruimte-alias is al ingesteld voor naamruimte $1",
+	"apihelp-bs-namespace-store-description": "Geeft een overzicht van alle naamruimten en willekeurige configuratie. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
+	"apihelp-bs-namespace-store-summary": "Geeft een overzicht van alle naamruimten en willekeurige configuratie. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
+	"apihelp-bs-namespace-tasks-summary": "Maakt het mogelijk de instellingen voor de naamruimten aan te passen.",
+	"action-namespacemanager-viewspecialpage": "de speciale pagina voor naamruimtebeheer te bekijken",
+	"bs-namespacemanager-nodeletetalk": "De overlegnaamruimte kan niet verwijderd worden",
+	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig"
 }
