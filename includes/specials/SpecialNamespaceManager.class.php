@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Special\ManagerBase;
+use MediaWiki\MediaWikiServices;
 
 class SpecialNamespaceManager extends ManagerBase {
 
@@ -30,7 +31,8 @@ class SpecialNamespaceManager extends ManagerBase {
 	 * @return array
 	 */
 	protected function getJSVars() {
-		$aMetaFields = NamespaceManager::getMetaFields();
+		$aMetaFields = MediaWikiServices::getInstance()
+			->getService( 'BSNamespaceManager' )->getMetaFields();
 		return [
 			'bsNamespaceManagerMetaFields' => $aMetaFields
 		];

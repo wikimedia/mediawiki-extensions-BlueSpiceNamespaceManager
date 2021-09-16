@@ -116,7 +116,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		global $wgNamespaceAliases;
 		$contLang = $this->getServices()->getContentLanguage();
 		$aNamespaces = $contLang->getNamespaces();
-		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
+		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
+			->getUserNamespaces( true );
 		end( $aNamespaces );
 		$iNS = key( $aNamespaces ) + 1;
 		reset( $aNamespaces );
@@ -174,7 +175,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				$aAdditionalSettings, true
 			] );
 
-			$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
+			$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+				->setUserNamespaces( $aUserNamespaces );
 
 			if ( $aResult[ 'success' ] === true ) {
 				// Create a log entry for the creation of the namespace
@@ -230,7 +232,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				&$systemNamespaces
 			]
 		);
-		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
+		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
+			->getUserNamespaces( true );
 
 		if ( !is_numeric( $oData->id ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-invalid-id' )->plain();
@@ -309,7 +312,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			]
 		);
 
-		$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
+		$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+			->setUserNamespaces( $aUserNamespaces );
 		if ( $aResult[ 'success' ] === true ) {
 			// Create a log entry for the modification of the namespace
 			if ( $sOriginalNamespaceName == $sNamespace ) {
@@ -349,7 +353,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		$contLang = $this->getServices()->getContentLanguage();
-		$aUserNamespaces = NamespaceManager::getUserNamespaces( true );
+		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
+			->getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
 			return $oResult;
@@ -435,7 +440,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		if ( !$bErrors ) {
-			$aResult = NamespaceManager::setUserNamespaces( $aUserNamespaces );
+			$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+				->setUserNamespaces( $aUserNamespaces );
 			if ( $aResult[ 'success' ] === true ) {
 				// Create a log entry for the removal of the namespace
 				foreach ( $aNamespacesToRemoveNames as $nameSpace ) {
