@@ -14,7 +14,7 @@
 		"BlueSpiceFoundation": {
 			"Extensions": {
 				"BlueSpiceNamespaceManager": {
-					"className": "NamespaceManager",
+					"className": "\\BlueSpice\\NamespaceManager\\Extension",
 					"extPath": "/BlueSpiceNamespaceManager"
 				}
 			},
@@ -42,6 +42,9 @@
 			"BlueSpiceFoundation": ">= 4.0"
 		}
 	},
+	"ServiceWiringFiles": [
+		"includes/ServiceWiring.php"
+	],
 	"LogTypes": [
 		"bs-namespace-manager"
 	],
@@ -79,7 +82,6 @@
 		"BlueSpice\\NamespaceManager\\Tests\\": "tests/phpunit/"
 	},
 	"AutoloadClasses": {
-		"NamespaceManager": "NamespaceManager.class.php",
 		"NamespaceNuker": "includes/NamespaceNuker.php",
 		"BSApiNamespaceStore": "includes/api/BSApiNamespaceStore.php",
 		"BSApiNamespaceTasks": "includes/api/BSApiNamespaceTasks.php",

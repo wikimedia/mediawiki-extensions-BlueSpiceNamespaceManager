@@ -19,20 +19,6 @@ $this:
 'NamespaceManager::editNamespace':
 &$aUserNamespaces[ $iNS ]:
 
-'NamespaceManager::editNamespace':
-&$aUserNamespaces[ $iNS ]:
-
-'BSNamespaceManagerBeforeSetUsernamespaces':
-$this:
-&$bsgSystemNamespaces:
-
-'NamespaceManager::editNamespace':
-&$aUserNamespaces[ $iNS ]:
-
-'BSNamespaceManagerBeforeSetUsernamespaces':
- $this:
- &$bsgSystemNamespaces:
-
 'NamespaceManager::writeNamespaceConfiguration':
 &$sSaveContent:
  $sConstName:
