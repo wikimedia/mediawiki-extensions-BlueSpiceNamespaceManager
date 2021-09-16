@@ -12,7 +12,8 @@ class WriteConfiguration extends BSMigrateSettingsSaveNewSettings {
 	 *
 	 */
 	protected function doProcess() {
-		$userNamespaces = \NamespaceManager::getUserNamespaces( true );
-		\NamespaceManager::setUserNamespaces( $userNamespaces );
+		$nsManager = $this->getServices()->getService( 'BSNamespaceManager' );
+		$userNamespaces = $nsManager->getUserNamespaces( true );
+		$nsManager->setUserNamespaces( $userNamespaces );
 	}
 }
