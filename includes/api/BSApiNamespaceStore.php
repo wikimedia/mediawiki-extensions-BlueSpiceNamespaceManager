@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
 	/**
@@ -59,7 +61,9 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				'alias' => $nsAlias,
 				// formerly 'editable'
 				'isSystemNS' => isset( $GLOBALS['bsSystemNamespaces'][$iNs] ) || $iNs < 3000,
-				'isTalkNS' => MWNamespace::isTalk( $iNs ),
+				'isTalkNS' => MediaWikiServices::getInstance()
+					->getNamespaceInfo()
+					->isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
 				'allPagesLink' => $this->renderNsLink( $iNs, $res->numRows() ),
 				'content' => [
