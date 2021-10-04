@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"JSantos",
 			"Joao Xavier"
 		]
 	},
 	"bs-namespacemanager-label-id": "Identifiko-nombro (ID)",
 	"bs-namespacemanager-label-namespaces": "'Namespace'",
-	"bs-namespacemanager-label-pagecount": "Pagini"
+	"bs-namespacemanager-label-pagecount": "Pagini",
+	"bs-namespacemanager-label-istalk": "Diskutez"
 }
