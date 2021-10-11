@@ -3,12 +3,12 @@
 namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\NamespaceManager\SettingsComposer;
-use MediaWikiTestCase;
+use MediaWikiIntegrationTestCase;
 
 /**
  * @covers \BlueSpice\NamespaceManager\SettingsComposer
  */
-class SettingsComposerTest extends MediaWikiTestCase {
+class SettingsComposerTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers \BlueSpice\NamespaceManager\SettingsComposer::compose()
