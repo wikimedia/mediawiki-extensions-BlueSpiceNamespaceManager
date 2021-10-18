@@ -89,8 +89,8 @@
 		"BSNamespaceManagerRemoveLegacyBackupTables": "maintenance/BSNamespaceManagerRemoveLegacyBackupTables.php"
 	},
 	"HookHandlers": {
-		"discovery-skin": {
-			"class": "\\BlueSpice\\NamespaceManager\\HookHandler\\DiscoverySkin"
+		"common-user-interface": {
+			"class": "\\BlueSpice\\NamespaceManager\\HookHandler\\CommonUserInterface"
 		}
 	},
 	"Hooks": {
@@ -104,7 +104,7 @@
 			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerWriteNamespaceConfiguration\\WriteSubPagesFlag::callback"
 		],
 		"BSMigrateSettingsSaveNewSettings": "\\BlueSpice\\NamespaceManager\\Hook\\BSMigrateSettingsSaveNewSettings\\WriteConfiguration::callback",
-		"MWStakeCommonUIRegisterSkinSlotComponents": "discovery-skin"
+		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
 	},
 	"ResourceModules": {
 		"ext.bluespice.namespaceManager": {
