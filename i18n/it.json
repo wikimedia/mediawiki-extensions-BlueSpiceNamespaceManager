@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"Stefano",
 			"V6rg",
 			"ValeJappo"
 		]
@@ -29,5 +30,7 @@
 	"bs-namespacemanager-label-istalk": "Discussione",
 	"right-namespacemanager-viewspecialpage": "Accede alla pagina speciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-label-editable": "Rinominabile",
+	"bs-namespacemanager-willdelete": "verrà eliminato"
 }
