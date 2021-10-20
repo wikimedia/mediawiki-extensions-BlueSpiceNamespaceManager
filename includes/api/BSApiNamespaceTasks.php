@@ -153,50 +153,76 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$nsName = $aNamespaces[$wgNamespaceAliases[$sAlias]];
 			$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists', $nsName )->plain();
 			return $oResult;
-		} else {
-			$aUserNamespaces[$iNS] = [ 'name' => $sNamespace, 'alias' => $sAlias ];
-
-			$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
-				&$aUserNamespaces,
-				&$iNS,
-				$aAdditionalSettings,
-				false
-			] );
-
-			$talkNamespaceId = $iNS + 1;
-			$aUserNamespaces[$talkNamespaceId] = [
-				'name' => $sNamespace . '_' . $contLang->getNsText( NS_TALK ),
-				'alias' => $sAlias . '_talk'
-			];
-
-			$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
-				&$aUserNamespaces,
-				&$talkNamespaceId,
-				$aAdditionalSettings, true
-			] );
-
-			$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
-				->setUserNamespaces( $aUserNamespaces );
-
-			if ( $aResult[ 'success' ] === true ) {
-				// Create a log entry for the creation of the namespace
-				$this->logTaskAction(
-					'create',
-					[ '4::namespace' => $sNamespace ]
-				);
-				$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
-				$this->getServices()->getHookContainer()->run(
-					'NamespaceManagerAfterAddNamespace',
-					[
-						$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
-						$this->getNamespaceConfigWithId( $talkNamespaceId, $aUserNamespaces ),
-					]
-				);
-			}
-
-			$oResult->success = $aResult['success'];
-			$oResult->message = $aResult['message'];
 		}
+
+		$res = $this->getDB()->select(
+			[ 'page' ],
+			'page_title',
+			[
+				'page_namespace' => NS_MAIN,
+				'page_title LIKE "%:%"'
+			]
+		);
+
+		$titlesInMainBeginWithNamespaceNameOrAlias = [];
+
+		foreach ( $res as $row ) {
+			if ( str_starts_with( strtolower( $row->page_title ), strtolower( $sNamespace ) ) ) {
+				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
+			}
+			if ( !empty( $sAlias ) && str_starts_with( strtolower( $row->page_title ), strtolower( $sAlias ) ) ) {
+				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
+			}
+		}
+
+		if ( count( $titlesInMainBeginWithNamespaceNameOrAlias ) ) {
+			$oResult->message = wfMessage( 'bs-namespacemanager-pseudo-ns' )->plain();
+			return $oResult;
+		}
+
+		$aUserNamespaces[$iNS] = [ 'name' => $sNamespace, 'alias' => $sAlias ];
+
+		$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
+			&$aUserNamespaces,
+			&$iNS,
+			$aAdditionalSettings,
+			false
+		] );
+
+		$talkNamespaceId = $iNS + 1;
+		$aUserNamespaces[$talkNamespaceId] = [
+			'name' => $sNamespace . '_' . $contLang->getNsText( NS_TALK ),
+			'alias' => $sAlias . '_talk'
+		];
+
+		$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
+			&$aUserNamespaces,
+			&$talkNamespaceId,
+			$aAdditionalSettings, true
+		] );
+
+		$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+			->setUserNamespaces( $aUserNamespaces );
+
+		if ( $aResult[ 'success' ] === true ) {
+			// Create a log entry for the creation of the namespace
+			$this->logTaskAction(
+				'create',
+				[ '4::namespace' => $sNamespace ]
+			);
+			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
+			$this->getServices()->getHookContainer()->run(
+				'NamespaceManagerAfterAddNamespace',
+				[
+					$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
+					$this->getNamespaceConfigWithId( $talkNamespaceId, $aUserNamespaces ),
+				]
+			);
+		}
+
+		$oResult->success = $aResult['success'];
+		$oResult->message = $aResult['message'];
+
 		return $oResult;
 	}
 
