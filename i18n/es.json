@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"AVIADOR",
+			"Avengium",
 			"DannyS712",
 			"Fitoschido",
 			"Macofe",
@@ -14,6 +15,7 @@
 	"bs-namespacemanager-wrong-name": "El espacio de nombres contiene caracteres no válidos.",
 	"bs-namespacemanager-ns-exists": "Ya existe el espacio de nombres.",
 	"bs-namespacemanager-ns-length": "El espacio de nombres debe tener dos caracteres como mínimo.",
+	"bs-namespacemanager-pseudo-ns": "Hay páginas en el espacio de nombres estándar que comienzan con el nombre o alias del espacio de nombres propuesto.",
 	"bs-namespacemanager-invalid-id": "No es un identificador válido de espacio de nombres",
 	"bs-namespacemanager-label-id": "Id.",
 	"bs-namespacemanager-label-namespaces": "Espacio de nombres",

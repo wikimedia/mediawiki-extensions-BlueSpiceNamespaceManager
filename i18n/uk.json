@@ -16,6 +16,7 @@
 	"bs-namespacemanager-alias-exists": "Псевдонім простору назв уже встановлено для простору $1",
 	"bs-namespacemanager-ns-exists": "Простір назв уже існує.",
 	"bs-namespacemanager-ns-length": "Простір назв повинен мати мінімальну довжину два символи.",
+	"bs-namespacemanager-pseudo-ns": "У стандартному просторі назв є сторінки, які починаються із запропонованого імені простору назв або псевдоніма.",
 	"bs-namespacemanager-invalid-id": "Неприпустимий ідентифікатор простору назв",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Простір назв",
