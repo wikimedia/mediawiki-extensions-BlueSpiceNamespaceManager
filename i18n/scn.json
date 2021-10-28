@@ -6,5 +6,20 @@
 	},
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-pagecount": "Pàggini",
-	"bs-namespacemanager-label-namespaces": "Namespace"
+	"bs-namespacemanager-label-namespaces": "Namespace",
+	"bs-namespacemanager-label-content": "Namespace di cuntinutu",
+	"bs-namespacemanager-label-subpages": "Suttapàggini",
+	"bs-namespacemanager-hide-talk-ns": "Ammuccia li namespace di discussioni",
+	"bs-namespacemanager-nsadded": "Lu namespace fu agghiunciutu.",
+	"bs-namespacemanager-nsedited": "Lu namespace fu criatu.",
+	"bs-namespacemanager-tipadd": "Agghiunci namespace",
+	"bs-namespacemanager-tipedit": "Cancia namespace",
+	"bs-namespacemanager-labelnsname": "Nomu dû namespace",
+	"bs-namespacemanager-willdelete": "Sarà cancillatu",
+	"bs-namespacemanager-pagepresent": "Pàggini n stu namespace:",
+	"bs-namespacemanager-deletens-deletepages": "La pàggina fu cancillata, pìcchi lu namespace \"$1\" fu cancillatu.",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criau}} lu namespace $4",
+	"bs-namespacemanager-nodeletetalk": "Lu namespace di discussioni nun pò èssiri cancillatu",
+	"bs-namespacemanager-label-istalk": "Discussioni",
+	"bs-namespacemanager-hide-talk-label": "Ammuccia li namespace di discussioni"
 }

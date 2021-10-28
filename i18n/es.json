@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"AVIADOR",
+			"Avengium",
 			"DannyS712",
 			"Fitoschido",
 			"Macofe",
@@ -59,5 +60,6 @@
 	"right-namespacemanager-viewspecialpage": "Acceso a la página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido"
+	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido",
+	"bs-namespacemanager-pseudo-ns": "Hay páginas en el espacio de nombres estándar que comienzan con el nombre o alias del espacio de nombres propuesto."
 }
