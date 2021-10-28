@@ -11,6 +11,7 @@
 	"bs-namespacemanager-alias-exists": "Le alias del spatio de nomines $1 es jam definite",
 	"bs-namespacemanager-ns-exists": "Le spatio de nomines ja existe.",
 	"bs-namespacemanager-ns-length": "Le spatio de nomines debe haber un longitude minime de duo characteres.",
+	"bs-namespacemanager-pseudo-ns": "Il ha paginas in le spatio de nomines standard que comencia con le nomine o alias del spatio de nomines proponite.",
 	"bs-namespacemanager-invalid-id": "Nulle ID valide de spatio de nomines",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Spatio de nomines",
