@@ -55,5 +55,6 @@
 	"right-namespacemanager-viewspecialpage": "دسترسی به صفحهٔ ویژهٔ [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "پنهان‌سازی فضاهای نام بحث",
 	"bs-namespacemanager-labelnsalias": "نام مستعار",
-	"bs-namespacemanager-invalid-namespace": "فضای نام مورد ویرایش نامعتبر است"
+	"bs-namespacemanager-invalid-namespace": "فضای نام مورد ویرایش نامعتبر است",
+	"bs-namespacemanager-deletens-deletepages": "صفحه حذف شده‌است، چرا که فضای نام «$1» حذف شده‌بود."
 }

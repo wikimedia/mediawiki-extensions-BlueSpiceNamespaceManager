@@ -65,5 +65,6 @@
 	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].\n{{doc-right|namespacemanager-viewspecialpage}}",
 	"bs-namespacemanager-hide-talk-label": "Checkbox label to hide talk namespages from the grid",
 	"bs-namespacemanager-labelnsalias": "label for input field for namespace alias",
-	"bs-namespacemanager-invalid-namespace": "Error message shown to the user when a namespace cannot be edited due to it being invalid."
+	"bs-namespacemanager-invalid-namespace": "Error message shown to the user when a namespace cannot be edited due to it being invalid.",
+	"bs-namespacemanager-pseudo-ns": "Error message if there are pages in the standard namespace starting with the proposed namespace name or alias."
 }

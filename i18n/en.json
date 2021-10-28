@@ -58,5 +58,6 @@
 	"right-namespacemanager-viewspecialpage": "Access to the special page [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid"
+	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid",
+	"bs-namespacemanager-pseudo-ns": "There are pages in the standard namespace starting with the proposed namespace name or alias."
 }
