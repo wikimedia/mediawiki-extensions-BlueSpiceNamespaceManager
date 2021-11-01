@@ -13,6 +13,7 @@
 	"bs-namespacemanager-alias-exists": "該命名空間別名已設定給命名空間$1",
 	"bs-namespacemanager-ns-exists": "命名空間已存在。",
 	"bs-namespacemanager-ns-length": "命名空間最少要有兩個字元長度。",
+	"bs-namespacemanager-pseudo-ns": "在標準命名空間裡有一些頁面以建議的命名空間名稱、或是別名作為開頭。",
 	"bs-namespacemanager-invalid-id": "無效命名空間 ID",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "命名空間",
