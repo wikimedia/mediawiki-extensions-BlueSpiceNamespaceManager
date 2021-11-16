@@ -9,7 +9,7 @@
 	"autoload": {
 		"psr-4": {
 			"BlueSpice\\NamespaceManager\\": "src",
-			"BlueSpice\\NamespaceManager\\Tests\\": "tests"
+			"BlueSpice\\NamespaceManager\\Tests\\": "tests/phpunit"
 		}
 	},
 	"require-dev": {
