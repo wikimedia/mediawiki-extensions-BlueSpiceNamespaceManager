@@ -15,6 +15,7 @@
 	},
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",
 	"bs-namespacemanager-label": "Namensraumverwaltung",
+	"bs-namespacemanager-text": "Namensräume",
 	"bs-namespacemanager-wrong-name": "Der Namensraum enthält unzulässige Zeichen.",
 	"bs-namespacemanager-wrong-alias": "Der Namensraum-Alias enthält ungültige Zeichen.",
 	"bs-namespacemanager-alias-exists": "Der Namensraum-Alias ist bereits für den Namensraum $1 festgelegt",
