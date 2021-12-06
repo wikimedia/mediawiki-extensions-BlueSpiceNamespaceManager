@@ -7,6 +7,7 @@
 			"ValeJappo"
 		]
 	},
+	"bs-namespacemanager-text": "Namespace",
 	"bs-namespacemanager-wrong-alias": "L'alias di namespace contiene caratteri non validi.",
 	"bs-namespacemanager-alias-exists": "L'alias di namespace è già impostato per il namespace $1",
 	"bs-namespacemanager-label-id": "ID",
