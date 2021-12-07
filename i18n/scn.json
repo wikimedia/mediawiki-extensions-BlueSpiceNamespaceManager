@@ -21,5 +21,6 @@
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criau}} lu namespace $4",
 	"bs-namespacemanager-nodeletetalk": "Lu namespace di discussioni nun pò èssiri cancillatu",
 	"bs-namespacemanager-label-istalk": "Discussioni",
-	"bs-namespacemanager-hide-talk-label": "Ammuccia li namespace di discussioni"
+	"bs-namespacemanager-hide-talk-label": "Ammuccia li namespace di discussioni",
+	"bs-namespacemanager-text": "Namespace"
 }

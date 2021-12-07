@@ -32,5 +32,6 @@
 	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-label-editable": "Rinominabile",
-	"bs-namespacemanager-willdelete": "verrà eliminato"
+	"bs-namespacemanager-willdelete": "verrà eliminato",
+	"bs-namespacemanager-text": "Namespace"
 }
