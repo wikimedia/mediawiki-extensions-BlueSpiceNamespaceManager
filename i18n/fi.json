@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"MITO",
 			"Pyscowicz",
 			"Valtlait"
 		]
 	},
+	"bs-namespacemanager-text": "Nimiavaruudet",
 	"bs-namespacemanager-ns-exists": "Nimiavaruus on jo olemassa.",
 	"bs-namespacemanager-ns-length": "Nimiavaruuden on oltava pituudeltaan vähintään kaksi merkkiä.",
 	"bs-namespacemanager-label-namespaces": "Nimiavaruus",
