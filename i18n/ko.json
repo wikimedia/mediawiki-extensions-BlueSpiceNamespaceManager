@@ -9,6 +9,7 @@
 		]
 	},
 	"bs-namespacemanager-label": "이름공간 관리자",
+	"bs-namespacemanager-text": "이름공간",
 	"bs-namespacemanager-wrong-name": "이 이름공간은 올바르지 않은 문자를 포함합니다.",
 	"bs-namespacemanager-wrong-alias": "이 이름공간의 다른 이름은 유효하지 않은 문자를 포함합니다.",
 	"bs-namespacemanager-alias-exists": "이 이름공간의 다른 이름은 $1 이름공간에 대해 이미 설정되어 있습니다",
