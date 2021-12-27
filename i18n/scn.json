@@ -4,11 +4,14 @@
 			"Ajeje Brazorf"
 		]
 	},
+	"bs-namespacemanager-text": "Namespace",
 	"bs-namespacemanager-label-id": "ID",
-	"bs-namespacemanager-label-pagecount": "Pàggini",
 	"bs-namespacemanager-label-namespaces": "Namespace",
 	"bs-namespacemanager-label-content": "Namespace di cuntinutu",
 	"bs-namespacemanager-label-subpages": "Suttapàggini",
+	"bs-namespacemanager-label-pagecount": "Pàggini",
+	"bs-namespacemanager-label-system": "Sistema",
+	"bs-namespacemanager-hide-system-ns": "Ammuccia li namespace di sistema",
 	"bs-namespacemanager-hide-talk-ns": "Ammuccia li namespace di discussioni",
 	"bs-namespacemanager-nsadded": "Lu namespace fu agghiunciutu.",
 	"bs-namespacemanager-nsedited": "Lu namespace fu criatu.",
@@ -21,6 +24,5 @@
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criau}} lu namespace $4",
 	"bs-namespacemanager-nodeletetalk": "Lu namespace di discussioni nun pò èssiri cancillatu",
 	"bs-namespacemanager-label-istalk": "Discussioni",
-	"bs-namespacemanager-hide-talk-label": "Ammuccia li namespace di discussioni",
-	"bs-namespacemanager-text": "Namespace"
+	"bs-namespacemanager-hide-talk-label": "Ammuccia li namespace di discussioni"
 }
