@@ -13,6 +13,7 @@
 	},
 	"bs-namespacemanager-desc": "Administratie-interface voor het toevoegen, bewerken en verwijderen van naamruimten",
 	"bs-namespacemanager-label": "Naamruimtebeheer",
+	"bs-namespacemanager-text": "Naamruimten",
 	"bs-namespacemanager-wrong-name": "De naamruimte bevat ongeldige tekens.",
 	"bs-namespacemanager-wrong-alias": "De naamruimte-alias bevat ongeldige tekens.",
 	"bs-namespacemanager-alias-exists": "De naamruimte-alias is al ingesteld voor naamruimte $1",
