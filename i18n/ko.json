@@ -4,6 +4,7 @@
 			"Hwangjy9",
 			"SeoJeongHo",
 			"Ykhwong",
+			"Yunbj",
 			"밥풀떼기",
 			"아라"
 		]
@@ -20,6 +21,7 @@
 	"bs-namespacemanager-label-namespaces": "이름공간",
 	"bs-namespacemanager-label-editable": "이름 변경 가능",
 	"bs-namespacemanager-label-content": "콘텐츠 이름공간",
+	"bs-namespacemanager-label-searchable": "기본 검색",
 	"bs-namespacemanager-label-subpages": "하위 문서",
 	"bs-namespacemanager-label-pagecount": "페이지들",
 	"bs-namespacemanager-label-system": "시스템",
