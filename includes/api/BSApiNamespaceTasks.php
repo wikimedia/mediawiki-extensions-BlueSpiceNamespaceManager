@@ -155,27 +155,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$res = $this->getDB()->select(
-			[ 'page' ],
-			'page_title',
-			[
-				'page_namespace' => NS_MAIN,
-				'page_title LIKE "%:%"'
-			]
-		);
-
-		$titlesInMainBeginWithNamespaceNameOrAlias = [];
-
-		foreach ( $res as $row ) {
-			if ( str_starts_with( strtolower( $row->page_title ), strtolower( $sNamespace ) ) ) {
-				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
-			}
-			if ( !empty( $sAlias ) && str_starts_with( strtolower( $row->page_title ), strtolower( $sAlias ) ) ) {
-				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
-			}
-		}
-
-		if ( count( $titlesInMainBeginWithNamespaceNameOrAlias ) ) {
+		if ( $this->titlesInMainBeginWithNamespaceNameOrAlias( $sNamespace, $sAlias ) ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-pseudo-ns' )->plain();
 			return $oResult;
 		}
@@ -294,6 +274,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists', $nsName )->plain();
 			return $oResult;
 		}
+
+		if ( $this->titlesInMainBeginWithNamespaceNameOrAlias( $sNamespace, $sAlias ) ) {
+			$oResult->message = wfMessage( 'bs-namespacemanager-pseudo-ns' )->plain();
+			return $oResult;
+		}
+
 		if ( isset( $systemNamespaces[$iNS] ) ) {
 			$sOriginalNamespaceName = $systemNamespaces[ $iNS ];
 		} else {
@@ -528,6 +514,37 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return false;
 		}
 		return true;
+	}
+
+	/**
+	 * Checks if there is a title in Main namespace which begins with
+	 * the proposed namespace name
+	 * @param string $namespaceName
+	 * @param string $alias
+	 * @return bool
+	 */
+	private function titlesInMainBeginWithNamespaceNameOrAlias( $namespaceName, $alias ) {
+		$res = $this->getDB()->select(
+			[ 'page' ],
+			'page_title',
+			[
+				'page_namespace' => NS_MAIN,
+				'page_title LIKE "%:%"'
+			]
+		);
+
+		$titlesInMainBeginWithNamespaceNameOrAlias = [];
+
+		foreach ( $res as $row ) {
+			if ( strpos( strtolower( $row->page_title ), strtolower( $namespaceName ) ) === 0 ) {
+				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
+			}
+			if ( !empty( $alias ) && strpos( strtolower( $row->page_title ), strtolower( $alias ) ) === 0 ) {
+				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
+			}
+		}
+
+		return count( $titlesInMainBeginWithNamespaceNameOrAlias ) > 0;
 	}
 
 	/**
