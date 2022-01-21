@@ -42,3 +42,7 @@
 	padding: 0;
 	text-overflow: unset;
 }
+
+.x-action-col-icon.x-hide-display {
+	display: none;
+}
