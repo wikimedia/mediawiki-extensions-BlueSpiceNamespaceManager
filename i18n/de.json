@@ -19,6 +19,7 @@
 	"bs-namespacemanager-wrong-alias": "Der Namensraum-Alias enthält ungültige Zeichen.",
 	"bs-namespacemanager-alias-exists": "Der Namensraum-Alias ist bereits für den Namensraum $1 festgelegt",
 	"bs-namespacemanager-ns-exists": "Der Namensraum existiert bereits.",
+	"bs-namespacemanager-alias-exists-as-ns": "Der Namensraum-Alias existiert bereits als Namensraum-Name.",
 	"bs-namespacemanager-ns-length": "Der Namensraum muss mindestens zwei Zeichen lang sein.",
 	"bs-namespacemanager-invalid-id": "Keine zulässige Namensraum ID übertragen.",
 	"bs-namespacemanager-label-id": "ID",

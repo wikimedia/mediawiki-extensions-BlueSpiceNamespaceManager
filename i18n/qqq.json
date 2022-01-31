@@ -17,6 +17,7 @@
 	"bs-namespacemanager-wrong-alias": "Error message when namespace alias contains invalid characters.",
 	"bs-namespacemanager-alias-exists": "Error message when namespace alias is already set for another namespace. $1 - name of the namespace that already has this alias",
 	"bs-namespacemanager-ns-exists": "Error message for the namespace already exists.",
+	"bs-namespacemanager-alias-exists-as-ns": "Error message when namespace alias is already used as namespace name.",
 	"bs-namespacemanager-ns-length": "Error message for the namespace must have a minumum length of two characters.",
 	"bs-namespacemanager-pseudo-ns": "Error message if there are pages in the standard namespace starting with the proposed namespace name or alias.",
 	"bs-namespacemanager-invalid-id": "Error message for no valid namespace ID",
