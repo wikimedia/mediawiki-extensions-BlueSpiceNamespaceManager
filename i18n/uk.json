@@ -11,6 +11,7 @@
 	},
 	"bs-namespacemanager-desc": "Адміністративний інтерфейс для додавання, редагування та видалення просторів назв",
 	"bs-namespacemanager-label": "Керівник просторами назв",
+	"bs-namespacemanager-text": "Простори назв",
 	"bs-namespacemanager-wrong-name": "Простір назв містить неприпустимі символи.",
 	"bs-namespacemanager-wrong-alias": "Псевдонім простору назв містить недійсні символи.",
 	"bs-namespacemanager-alias-exists": "Псевдонім простору назв уже встановлено для простору $1",
