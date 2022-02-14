@@ -135,6 +135,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				return $oResult;
 			}
 		}
+		foreach ( $aNamespaces as $sKey => $sNamespaceFromArray ) {
+			if ( strtolower( $sNamespaceFromArray ) == strtolower( $sAlias ) ) {
+				$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists-as-ns' )->plain();
+				return $oResult;
+			}
+		}
 
 		if ( strlen( $sNamespace ) < 2 ) {
 			$oResult->message = wfMessage( 'bs-namespacemanager-ns-length' )->plain();
@@ -226,6 +232,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		global $wgNamespaceAliases;
 
 		$contLang = $this->getServices()->getContentLanguage();
+		$aNamespaces = $contLang->getNamespaces();
 
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
 		$oNamespaceManager = $this->getServices()->getService( 'BSExtensionFactory' )->getExtension(
@@ -261,6 +268,12 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
+		foreach ( $aNamespaces as $sKey => $sNamespaceFromArray ) {
+			if ( strtolower( $sNamespaceFromArray ) == strtolower( $sAlias ) ) {
+				$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists-as-ns' )->plain();
+				return $oResult;
+			}
+		}
 		if (
 			!empty( $sAlias ) &&
 			!preg_match( '%^[a-zA-Z_\-\\x80-\\xFF][a-zA-Z0-9_\-\\x80-\\xFF]{1,99}$%', $sAlias )
