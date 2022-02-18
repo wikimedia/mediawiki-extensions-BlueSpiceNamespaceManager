@@ -3,7 +3,7 @@
 namespace BlueSpice\NamespaceManager\Utils;
 
 use BlueSpice\Api\Response\Standard;
-use Database;
+use IDatabase;
 use MessageLocalizer;
 
 class NameChecker {
@@ -36,13 +36,13 @@ class NameChecker {
 	 *
 	 * @param array $namespaceNames
 	 * @param array $namespaceAliases
-	 * @param Database|null $db
+	 * @param IDatabase|null $db
 	 * @param MessageLocalizer $messageLocalizer
 	 */
 	public function __construct(
 		$namespaceNames,
 		$namespaceAliases,
-		?Database $db,
+		?IDatabase $db,
 		MessageLocalizer $messageLocalizer
 	) {
 		$this->namespaceNames = $namespaceNames;
