@@ -1,6 +1,7 @@
 <?php
 
 use BlueSpice\Api\Response\Standard as StandardResponse;
+use BlueSpice\NamespaceManager\Utils\NameChecker;
 
 class BSApiNamespaceTasks extends BSApiTasksBase {
 
@@ -128,41 +129,20 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			$iNS = $config->get( 'NamespaceManagerNsOffset' ) + 1;
 		}
 
-		$sResult = true;
-		foreach ( $aNamespaces as $sKey => $sNamespaceFromArray ) {
-			if ( strtolower( $sNamespaceFromArray ) == strtolower( $sNamespace ) ) {
-				$oResult->message = wfMessage( 'bs-namespacemanager-ns-exists' )->plain();
-				return $oResult;
-			}
-		}
-		foreach ( $aNamespaces as $sKey => $sNamespaceFromArray ) {
-			if ( strtolower( $sNamespaceFromArray ) == strtolower( $sAlias ) ) {
-				$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists-as-ns' )->plain();
-				return $oResult;
-			}
-		}
+		$nameChecker = new NameChecker( $aNamespaces, $wgNamespaceAliases, $this->getDB(), $this );
 
-		if ( strlen( $sNamespace ) < 2 ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-ns-length' )->plain();
-			return $oResult;
-		// TODO MRG (06.11.13 11:17): Unicodefähigkeit?
-		} elseif (
-			!preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $sNamespace )
-			) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-name' )->plain();
-			return $oResult;
-		} elseif ( !empty( $sAlias )
-			&& !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $sAlias ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-alias' )->plain();
-			return $oResult;
-		} elseif ( $this->isAliasInUse( $iNS, $sAlias ) ) {
-			$nsName = $aNamespaces[$wgNamespaceAliases[$sAlias]];
-			$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists', $nsName )->plain();
+		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias );
+		if ( !$oResult->success ) {
 			return $oResult;
 		}
 
-		if ( $this->titlesInMainBeginWithNamespaceNameOrAlias( $sNamespace, $sAlias ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-pseudo-ns' )->plain();
+		$oResult = $nameChecker->checkExists( $sNamespace, $sAlias, $iNS );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		$oResult = $nameChecker->checkPseudoNamespace( $sNamespace, $sAlias );
+		if ( !$oResult->success ) {
 			return $oResult;
 		}
 
@@ -249,47 +229,36 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			->getUserNamespaces( true );
 
 		if ( !is_numeric( $oData->id ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-invalid-id' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->plain();
 			return $oResult;
 		}
 		$iNS = (int)$oData->id;
 
 		if ( !isset( $systemNamespaces[$iNS ] ) && !isset( $aUserNamespaces[$iNS] ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-invalid-namespace' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-namespace' )->plain();
 			return $oResult;
 		}
-		if ( strlen( $sNamespace ) < 2 ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-ns-length' )->plain();
-			return $oResult;
-		}
+
 		if ( $iNS !== NS_MAIN && $iNS !== NS_PROJECT && $iNS !== NS_PROJECT_TALK
 				&& !preg_match( '%^[a-zA-Z_\-\\x80-\\xFF][a-zA-Z0-9_\-\\x80-\\xFF]{1,99}$%', $sNamespace ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-name' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-wrong-name' )->plain();
 			return $oResult;
 		}
 
-		foreach ( $aNamespaces as $sKey => $sNamespaceFromArray ) {
-			if ( strtolower( $sNamespaceFromArray ) == strtolower( $sAlias ) ) {
-				$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists-as-ns' )->plain();
-				return $oResult;
-			}
-		}
-		if (
-			!empty( $sAlias ) &&
-			!preg_match( '%^[a-zA-Z_\-\\x80-\\xFF][a-zA-Z0-9_\-\\x80-\\xFF]{1,99}$%', $sAlias )
-		) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-wrong-alias' )->plain();
+		$nameChecker = new NameChecker( $aNamespaces, $wgNamespaceAliases, $this->getDB(), $this );
+
+		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias );
+		if ( !$oResult->success ) {
 			return $oResult;
 		}
 
-		if ( $this->isAliasInUse( $iNS, $sAlias ) ) {
-			$nsName = $contLang->getNamespaces()[$wgNamespaceAliases[$sAlias]];
-			$oResult->message = wfMessage( 'bs-namespacemanager-alias-exists', $nsName )->plain();
+		$oResult = $nameChecker->checkExists( $sNamespace, $sAlias, $iNS );
+		if ( !$oResult->success ) {
 			return $oResult;
 		}
 
-		if ( $this->titlesInMainBeginWithNamespaceNameOrAlias( $sNamespace, $sAlias ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-pseudo-ns' )->plain();
+		$oResult = $nameChecker->checkPseudoNamespace( $sNamespace, $sAlias );
+		if ( !$oResult->success ) {
 			return $oResult;
 		}
 
@@ -373,7 +342,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$iNS = (int)$oData->id;
 
 		if ( $iNS < 0 ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-invalid-id' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->plain();
 			return $oResult;
 		}
 
@@ -381,7 +350,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
 			->getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
-			$oResult->message = wfMessage( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
 			return $oResult;
 		}
 
@@ -391,7 +360,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$aNamespacesToRemoveNames[] = $sNamespace;
 		if ( strstr( $sNamespace, '_' . $contLang->getNsText( NS_TALK ) ) ) {
 			if ( isset( $aUserNamespaces[ ( $iNS - 1 ) ] ) ) {
-				$oResult->message = wfMessage( 'bs-namespacemanager-nodeletetalk' )->plain();
+				$oResult->message = $this->msg( 'bs-namespacemanager-nodeletetalk' )->plain();
 				return $oResult;
 			}
 		}
@@ -486,7 +455,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
 			}
 		} else {
-			$oResult->message = wfMessage( 'bs-namespacemanager-error_on_remove_namespace' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-error_on_remove_namespace' )->plain();
 			return $oResult;
 		}
 
@@ -509,55 +478,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oLogger->setTarget( $oTitle );
 		$oLogger->setParameters( $aParams );
 		$oLogger->insert();
-	}
-
-	/**
-	 *
-	 * @param int $ns
-	 * @param string $alias
-	 * @return bool
-	 */
-	protected function isAliasInUse( $ns, $alias ) {
-		global $wgNamespaceAliases;
-
-		if ( empty( $alias ) || !isset( $wgNamespaceAliases[$alias] ) ) {
-			return false;
-		}
-		if ( $wgNamespaceAliases[$alias] === $ns ) {
-			return false;
-		}
-		return true;
-	}
-
-	/**
-	 * Checks if there is a title in Main namespace which begins with
-	 * the proposed namespace name
-	 * @param string $namespaceName
-	 * @param string $alias
-	 * @return bool
-	 */
-	private function titlesInMainBeginWithNamespaceNameOrAlias( $namespaceName, $alias ) {
-		$res = $this->getDB()->select(
-			[ 'page' ],
-			'page_title',
-			[
-				'page_namespace' => NS_MAIN,
-				'page_title LIKE "%:%"'
-			]
-		);
-
-		$titlesInMainBeginWithNamespaceNameOrAlias = [];
-
-		foreach ( $res as $row ) {
-			if ( strpos( strtolower( $row->page_title ), strtolower( $namespaceName ) ) === 0 ) {
-				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
-			}
-			if ( !empty( $alias ) && strpos( strtolower( $row->page_title ), strtolower( $alias ) ) === 0 ) {
-				$titlesInMainBeginWithNamespaceNameOrAlias[] = $row->page_title;
-			}
-		}
-
-		return count( $titlesInMainBeginWithNamespaceNameOrAlias ) > 0;
 	}
 
 	/**
