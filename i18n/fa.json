@@ -4,11 +4,13 @@
 			"Alirezaaa",
 			"FarsiNevis",
 			"Huji",
-			"Jeeputer"
+			"Jeeputer",
+			"LordProfo"
 		]
 	},
 	"bs-namespacemanager-desc": "رابط مدیریتی برای افزودن، ویرایش یا حذف فضاهای نام",
 	"bs-namespacemanager-label": "مدیر فضای نام",
+	"bs-namespacemanager-text": "فضاهای نام",
 	"bs-namespacemanager-wrong-name": "این فضای نام شامل نویسه‌های نامعتبر است.",
 	"bs-namespacemanager-wrong-alias": "این نام مستعار فضای نام، شامل نویسه‌های نامعتبر است.",
 	"bs-namespacemanager-alias-exists": "این نام مستعار فضای نام، از قبل برای فضای نام $1 به کار رفته است.",
@@ -38,6 +40,7 @@
 	"bs-namespacemanager-willmovesuffix": "به «{{int:bs-ns_main}}» با پسوند «$1» منتقل خواهد شد",
 	"bs-namespacemanager-deletewarning": "آیا مطئنید می‌خواهید این فضای نام را حذف کنید؟ حذف یک فضای نام قابل بازگشت نیست.",
 	"bs-namespacemanager-pagepresent": "صفحات در این فضای نام:",
+	"bs-namespacemanager-deletens-deletepages": "صفحه حذف شده‌است، چرا که فضای نام «$1» حذف شده‌بود.",
 	"log-name-bs-namespace-manager": "سیاههٔ مدیر فضای نام",
 	"log-description-bs-namespace-manager": "این، سیاهه‌ای از تغییرات فضاهای نام است.",
 	"log-show-hide-bs-namespace-manager": "$1 سیاههٔ مدیر فضای نام",
@@ -55,6 +58,5 @@
 	"right-namespacemanager-viewspecialpage": "دسترسی به صفحهٔ ویژهٔ [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "پنهان‌سازی فضاهای نام بحث",
 	"bs-namespacemanager-labelnsalias": "نام مستعار",
-	"bs-namespacemanager-invalid-namespace": "فضای نام مورد ویرایش نامعتبر است",
-	"bs-namespacemanager-deletens-deletepages": "صفحه حذف شده‌است، چرا که فضای نام «$1» حذف شده‌بود."
+	"bs-namespacemanager-invalid-namespace": "فضای نام مورد ویرایش نامعتبر است"
 }
