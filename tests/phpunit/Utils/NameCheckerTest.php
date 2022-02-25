@@ -20,21 +20,25 @@ class NameCheckerTest extends MediaWikiTestCase {
 			3000 => 'Exists',
 			3001 => 'Exists_Talk',
 			3002 => 'SomeNS',
-			3003 => 'SomeNS_Talk'
+			3003 => 'SomeNS_Talk',
+			3004 => 'SameNameAndAlias',
+			3005 => 'SameNameAndAlias_Talk'
 		];
 
 	private $namespaceAliasList = [
 			'ExistsReally' => 3000,
 			'ExistsReally_talk' => 3001,
 			'ExistsElsewhere' => 3002,
-			'ExistsElsewhere_talk' => 3003
+			'ExistsElsewhere_talk' => 3003,
+			'SameNameAndAlias' => 3004,
+			'SameNameAndAlias_talk' => 3005
 		];
 
 	/**
 	 * @covers \BlueSpice\NamespaceManager\Utils\NameChecker::checkNamingConvention()
 	 * @dataProvider checkNameDataProvider()
 	 */
-	public function testCheckNamingConvention( $name, $alias, $expected, $expectedMessage ) {
+	public function testCheckNamingConvention( $name, $alias, $id, $expected, $expectedMessage ) {
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
 		$messageLocalizer
 			->method( 'msg' )
@@ -43,7 +47,7 @@ class NameCheckerTest extends MediaWikiTestCase {
 			} ) );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, null, $messageLocalizer );
-		$actual = $nameChecker->checkNamingConvention( $name, $alias );
+		$actual = $nameChecker->checkNamingConvention( $name, $alias, $id );
 
 		$this->assertEquals( $expected, $actual->success );
 		$this->assertEquals( $expectedMessage, $actual->message );
@@ -96,19 +100,19 @@ class NameCheckerTest extends MediaWikiTestCase {
 
 	public function checkNameDataProvider() {
 		return [
-			[ "Test", "Toast", true, null ],
-			[ "Test", "", true, null ],
-			[ "Täst", "", true, null ],
-			[ "Te_st", "", true, null ],
-			[ "Test123", "", true, null ],
-			[ "T", "Test", false, 'bs-namespacemanager-ns-length' ],
-			[ "Test", "T", false, 'bs-namespacemanager-ns-length' ],
-			[ "Te-st", "", false, 'bs-namespacemanager-wrong-name' ],
-			[ "Te st", "", false, 'bs-namespacemanager-wrong-name' ],
-			[ "123Test", "", false, 'bs-namespacemanager-wrong-name' ],
-			[ "Test", "Te-st", false, 'bs-namespacemanager-wrong-alias' ],
-			[ "Test", "Te st", false, 'bs-namespacemanager-wrong-alias' ],
-			[ "Test", "123Test", false, 'bs-namespacemanager-wrong-alias' ],
+			[ "Test", "Toast", 3200, true, null ],
+			[ "Test", "", 3200, true, null ],
+			[ "Täst", "", 3200, true, null ],
+			[ "Te_st", "", 3200, true, null ],
+			[ "Test123", "", 3200, true, null ],
+			[ "T", "Test", 3200, false, 'bs-namespacemanager-ns-length' ],
+			[ "Test", "T", 3200, false, 'bs-namespacemanager-ns-length' ],
+			[ "Te-st", "", 3200, false, 'bs-namespacemanager-wrong-name' ],
+			[ "Te st", "", 3200, false, 'bs-namespacemanager-wrong-name' ],
+			[ "123Test", "", 3200, false, 'bs-namespacemanager-wrong-name' ],
+			[ "Test", "Te-st", 3200, false, 'bs-namespacemanager-wrong-alias' ],
+			[ "Test", "Te st", 3200, false, 'bs-namespacemanager-wrong-alias' ],
+			[ "Test", "123Test", 3200, false, 'bs-namespacemanager-wrong-alias' ],
 		];
 	}
 
@@ -124,7 +128,11 @@ class NameCheckerTest extends MediaWikiTestCase {
 			[ "Test", "ExistsReally", 3200, false, 'bs-namespacemanager-alias-exists' ],
 			// These are the cases for editing namespaces
 			// No change in name and alias
+			[ "(Pages)", "", 0, true, null ],
+			[ "(Project)", "", 4, true, null ],
+			[ "(Project)_talk", "", 5, true, null ],
 			[ "Exists", "ExistsReally", 3000, true, null ],
+			[ "SameNameAndAlias", "SameNameAndAlias", 3004, true, null ],
 			 // Name changes
 			[ "Test", "ExistsReally", 3000, true, null ],
 			 // Alias changes
