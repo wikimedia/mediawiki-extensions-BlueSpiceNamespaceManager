@@ -131,7 +131,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		$nameChecker = new NameChecker( $aNamespaces, $wgNamespaceAliases, $this->getDB(), $this );
 
-		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias );
+		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias, $iNS );
 		if ( !$oResult->success ) {
 			return $oResult;
 		}
@@ -239,15 +239,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		if ( $iNS !== NS_MAIN && $iNS !== NS_PROJECT && $iNS !== NS_PROJECT_TALK
-				&& !preg_match( '%^[a-zA-Z_\-\\x80-\\xFF][a-zA-Z0-9_\-\\x80-\\xFF]{1,99}$%', $sNamespace ) ) {
-			$oResult->message = $this->msg( 'bs-namespacemanager-wrong-name' )->plain();
-			return $oResult;
-		}
-
 		$nameChecker = new NameChecker( $aNamespaces, $wgNamespaceAliases, $this->getDB(), $this );
 
-		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias );
+		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias, $iNS );
 		if ( !$oResult->success ) {
 			return $oResult;
 		}

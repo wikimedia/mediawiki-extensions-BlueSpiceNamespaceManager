@@ -55,9 +55,10 @@ class NameChecker {
 	 * Checks if a namespace or alias name passes the naming conventions
 	 * @param string $namespaceName
 	 * @param string $namespaceAlias
+	 * @param int $namespaceId
 	 * @return Standard
 	 */
-	public function checkNamingConvention( $namespaceName, $namespaceAlias ) {
+	public function checkNamingConvention( $namespaceName, $namespaceAlias, $namespaceId ) {
 		$oResult = new Standard();
 		if ( strlen( $namespaceName ) < 2 ) {
 			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-length' )->plain();
@@ -69,7 +70,7 @@ class NameChecker {
 			return $oResult;
 		}
 
-		if (
+		if ( $namespaceId !== NS_MAIN && $namespaceId !== NS_PROJECT && $namespaceId !== NS_PROJECT_TALK &&
 			!preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $namespaceName )
 			) {
 			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-wrong-name' )->plain();
@@ -106,6 +107,11 @@ class NameChecker {
 		if ( !empty( $namespaceAlias ) ) {
 			foreach ( $this->namespaceNames as $sKey => $sNamespaceFromArray ) {
 				if ( strtolower( $sNamespaceFromArray ) == strtolower( $namespaceAlias ) ) {
+					// It's ok if name and alias point to the same ID
+					if ( isset( $this->namespaceAliases[$namespaceAlias] ) &&
+						$sKey === $this->namespaceAliases[$namespaceAlias] ) {
+						continue;
+					}
 					$oResult->message = $this->messageLocalizer->msg(
 						'bs-namespacemanager-alias-exists-as-ns'
 					)->plain();
