@@ -4,16 +4,20 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
-			"TheEduGobi"
+			"TheEduGobi",
+			"Juan90264"
 		]
 	},
 	"bs-namespacemanager-desc": "Interface administrativa para adicionar, editar e excluir espaços nominais",
 	"bs-namespacemanager-label": "Gerenciador do espaço nominal",
+	"bs-namespacemanager-text": "Espaços nominais",
 	"bs-namespacemanager-wrong-name": "O espaço nominal contém caracteres inválidos.",
 	"bs-namespacemanager-wrong-alias": "O nome alternativo do espaço nominal contém caracteres inválidos.",
 	"bs-namespacemanager-alias-exists": "O nome alternativo do espaço nominal já foi definido para $1",
 	"bs-namespacemanager-ns-exists": "O espaço nominal já existe.",
+	"bs-namespacemanager-alias-exists-as-ns": "O alias do namespace já existe como o nome do namespace.",
 	"bs-namespacemanager-ns-length": "O nome do domínio tem de ter um mínimo de dois caracteres.",
+	"bs-namespacemanager-pseudo-ns": "Existem páginas no espaço nominal padrão que começam com o nome ou alias do espaço nominal proposto.",
 	"bs-namespacemanager-invalid-id": "ID do espaço nominal inválido",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Espaço nominal",
@@ -61,7 +65,5 @@
 	"right-namespacemanager-viewspecialpage": "Acesso à página especial [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espaços nominais de discussão",
 	"bs-namespacemanager-labelnsalias": "Nome alternativo",
-	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido",
-	"bs-namespacemanager-pseudo-ns": "Existem páginas no espaço nominal padrão que começam com o nome ou alias do espaço nominal proposto.",
-	"bs-namespacemanager-text": "Espaços nominais"
+	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido"
 }
