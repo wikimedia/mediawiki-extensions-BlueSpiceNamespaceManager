@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ajeje Brazorf",
 			"Amire80",
 			"BaRaN6161 TURK",
 			"Liuxinyu970226",
@@ -66,5 +67,7 @@
 	"bs-namespacemanager-hide-talk-label": "Checkbox label to hide talk namespages from the grid",
 	"bs-namespacemanager-labelnsalias": "label for input field for namespace alias",
 	"bs-namespacemanager-invalid-namespace": "Error message shown to the user when a namespace cannot be edited due to it being invalid.",
-	"bs-namespacemanager-pseudo-ns": "Error message if there are pages in the standard namespace starting with the proposed namespace name or alias."
+	"bs-namespacemanager-pseudo-ns": "Error message if there are pages in the standard namespace starting with the proposed namespace name or alias.",
+	"bs-namespacemanager-text": "Label for global actions menu entry\n\n{{Identical|Namespace}}",
+	"bs-namespacemanager-alias-exists-as-ns": "Error message when namespace alias is already used as namespace name."
 }

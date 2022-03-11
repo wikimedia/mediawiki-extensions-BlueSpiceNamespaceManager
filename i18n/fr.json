@@ -64,5 +64,7 @@
 	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de noms de discussion",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide",
-	"bs-namespacemanager-pseudo-ns": "Il y a des pages dans l’espace de noms standard qui commencent avec le nom ou l’alias de l’espace de noms proposé."
+	"bs-namespacemanager-pseudo-ns": "Il existe des pages dans l’espace de noms standard dont le nom commence par le nom ou l’alias proposé pour l’espace de noms.",
+	"bs-namespacemanager-text": "Espaces de noms",
+	"bs-namespacemanager-alias-exists-as-ns": "L’alias d’espace de noms existe déjà comme espace de noms."
 }

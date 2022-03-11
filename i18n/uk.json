@@ -3,6 +3,7 @@
 		"authors": [
 			"Andriykopanytsia",
 			"DDPAT",
+			"Ice bulldog",
 			"Piramidion",
 			"SimondR",
 			"Vlad5250",
@@ -64,5 +65,6 @@
 	"bs-namespacemanager-hide-talk-label": "Приховати простори назв обговорень",
 	"bs-namespacemanager-labelnsalias": "Псевдонім",
 	"bs-namespacemanager-invalid-namespace": "Простір назв, який редагується, є недійсним",
-	"bs-namespacemanager-pseudo-ns": "У стандартному просторі назв є сторінки, які починаються із запропонованого імені простору назв або псевдоніма."
+	"bs-namespacemanager-pseudo-ns": "У стандартному просторі назв є сторінки, які починаються із запропонованого імені простору назв або псевдоніма.",
+	"bs-namespacemanager-text": "Простори назв"
 }

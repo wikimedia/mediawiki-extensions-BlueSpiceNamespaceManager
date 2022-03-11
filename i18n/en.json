@@ -59,5 +59,7 @@
 	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid",
-	"bs-namespacemanager-pseudo-ns": "There are pages in the standard namespace starting with the proposed namespace name or alias."
+	"bs-namespacemanager-pseudo-ns": "There are pages in the standard namespace starting with the proposed namespace name or alias.",
+	"bs-namespacemanager-text": "Namespaces",
+	"bs-namespacemanager-alias-exists-as-ns": "The namespace alias already exists as namespace name."
 }

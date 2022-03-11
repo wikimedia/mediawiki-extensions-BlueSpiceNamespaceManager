@@ -3,7 +3,8 @@
 		"authors": [
 			"Cwlin0416",
 			"Kly",
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"列维劳德"
 		]
 	},
 	"bs-namespacemanager-desc": "用於新增、編輯，以及刪除命名空間的管理介面",
@@ -61,5 +62,6 @@
 	"bs-namespacemanager-hide-talk-label": "隱藏討論命名空間",
 	"bs-namespacemanager-labelnsalias": "別名",
 	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效",
-	"bs-namespacemanager-pseudo-ns": "在標準命名空間裡有一些頁面以建議的命名空間名稱、或是別名作為開頭。"
+	"bs-namespacemanager-pseudo-ns": "在標準命名空間裡有一些頁面以建議的命名空間名稱、或是別名作為開頭。",
+	"bs-namespacemanager-alias-exists-as-ns": "該命名空間別名已以命名空間名稱存在。"
 }

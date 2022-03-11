@@ -4,7 +4,8 @@
 			"Alirezaaa",
 			"FarsiNevis",
 			"Huji",
-			"Jeeputer"
+			"Jeeputer",
+			"LordProfo"
 		]
 	},
 	"bs-namespacemanager-desc": "رابط مدیریتی برای افزودن، ویرایش یا حذف فضاهای نام",
@@ -56,5 +57,6 @@
 	"bs-namespacemanager-hide-talk-label": "پنهان‌سازی فضاهای نام بحث",
 	"bs-namespacemanager-labelnsalias": "نام مستعار",
 	"bs-namespacemanager-invalid-namespace": "فضای نام مورد ویرایش نامعتبر است",
-	"bs-namespacemanager-deletens-deletepages": "صفحه حذف شده‌است، چرا که فضای نام «$1» حذف شده‌بود."
+	"bs-namespacemanager-deletens-deletepages": "صفحه حذف شده‌است، چرا که فضای نام «$1» حذف شده‌بود.",
+	"bs-namespacemanager-text": "فضاهای نام"
 }

@@ -32,5 +32,6 @@
 	"right-namespacemanager-viewspecialpage": "Accede alla pagina speciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-label-istalk": "Discussione",
 	"bs-namespacemanager-label-editable": "Rinominabile",
-	"bs-namespacemanager-willdelete": "verrà eliminato"
+	"bs-namespacemanager-willdelete": "verrà eliminato",
+	"bs-namespacemanager-text": "Namespace"
 }

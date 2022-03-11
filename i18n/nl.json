@@ -65,5 +65,6 @@
 	"apihelp-bs-namespace-tasks-summary": "Maakt het mogelijk de instellingen voor de naamruimten aan te passen.",
 	"action-namespacemanager-viewspecialpage": "de speciale pagina voor naamruimtebeheer te bekijken",
 	"bs-namespacemanager-nodeletetalk": "De overlegnaamruimte kan niet verwijderd worden",
-	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig"
+	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
+	"bs-namespacemanager-text": "Naamruimten"
 }

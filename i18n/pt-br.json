@@ -4,6 +4,7 @@
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
 			"Felipe L. Ewald",
+			"Juan90264",
 			"TheEduGobi"
 		]
 	},
@@ -62,5 +63,7 @@
 	"bs-namespacemanager-hide-talk-label": "Ocultar espaços nominais de discussão",
 	"bs-namespacemanager-labelnsalias": "Nome alternativo",
 	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido",
-	"bs-namespacemanager-pseudo-ns": "Existem páginas no espaço nominal padrão que começam com o nome ou alias do espaço nominal proposto."
+	"bs-namespacemanager-pseudo-ns": "Existem páginas no espaço nominal padrão que começam com o nome ou alias do espaço nominal proposto.",
+	"bs-namespacemanager-text": "Espaços nominais",
+	"bs-namespacemanager-alias-exists-as-ns": "O alias do namespace já existe como o nome do namespace."
 }

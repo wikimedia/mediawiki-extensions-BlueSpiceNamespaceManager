@@ -58,5 +58,7 @@
 	"bs-namespacemanager-alias-exists": "Navneromsaliaset er allerede brukt for navnerommet $1",
 	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig"
+	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig",
+	"bs-namespacemanager-text": "Navnerom",
+	"bs-namespacemanager-pseudo-ns": "Det er sider i hovednavnerommet som begynner med det foreslåtte navneromsnavnet eller et alias."
 }
