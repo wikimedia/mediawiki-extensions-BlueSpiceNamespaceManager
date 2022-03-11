@@ -65,5 +65,6 @@
 	"right-namespacemanager-viewspecialpage": "Accéder à la page spéciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de noms de discussion",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide"
+	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide",
+	"bs-namespacemanager-alias-exists-as-ns": "L’alias d’espace de noms existe déjà comme espace de noms."
 }

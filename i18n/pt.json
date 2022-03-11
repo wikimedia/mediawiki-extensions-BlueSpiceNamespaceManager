@@ -59,5 +59,8 @@
 	"right-namespacemanager-viewspecialpage": "Acesso à página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar os espaços nominais de discussão",
 	"bs-namespacemanager-labelnsalias": "Nome alternativo",
-	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido"
+	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido",
+	"bs-namespacemanager-text": "Espaços nominais",
+	"bs-namespacemanager-alias-exists-as-ns": "O nome alternativo do espaço nominal já existe como espaço nominal.",
+	"bs-namespacemanager-pseudo-ns": "Existem páginas no espaço nominal padrão que começam com o nome ou o nome alternativo do espaço nominal proposto."
 }

@@ -59,5 +59,7 @@
 	"bs-namespacemanager-hide-talk-label": "Celar spatios de nomines de discussion",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "Le spatio de nomines a modificar non es valide",
-	"bs-namespacemanager-pseudo-ns": "Il ha paginas in le spatio de nomines standard que comencia con le nomine o alias del spatio de nomines proponite."
+	"bs-namespacemanager-pseudo-ns": "Il ha paginas in le spatio de nomines standard que comencia con le nomine o alias del spatio de nomines proponite.",
+	"bs-namespacemanager-text": "Spatios de nomines",
+	"bs-namespacemanager-alias-exists-as-ns": "Le alias de spatio de nomines jam existe como nomine de spatio de nomines."
 }

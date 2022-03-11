@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Seipinne",
 			"Yupik"
 		]
 	},
-	"bs-namespacemanager-label-namespaces": "Nommâkomovuotâ"
+	"bs-namespacemanager-label-namespaces": "Nommâkomovuotâ",
+	"bs-namespacemanager-label-pagecount": "Siijđoh",
+	"bs-namespacemanager-label-istalk": "Savâstâllâm"
 }

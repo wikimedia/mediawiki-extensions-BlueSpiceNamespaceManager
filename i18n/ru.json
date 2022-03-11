@@ -6,6 +6,7 @@
 			"Okras",
 			"Romanko Mikhail",
 			"Striking Blue",
+			"Tanzun",
 			"Vlad5250"
 		]
 	},
@@ -58,5 +59,6 @@
 	"bs-namespacemanager-label-istalk": "Обсуждение",
 	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения",
-	"bs-namespacemanager-labelnsalias": "Псевдоним"
+	"bs-namespacemanager-labelnsalias": "Псевдоним",
+	"bs-namespacemanager-alias-exists-as-ns": "Псевдоним пространства имён уже существует в качестве названия пространства имён."
 }
