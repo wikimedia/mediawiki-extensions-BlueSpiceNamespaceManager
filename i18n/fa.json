@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alirezaaa",
+			"Beginneruser",
 			"FarsiNevis",
 			"Huji",
 			"Jeeputer",
@@ -33,7 +34,7 @@
 	"bs-namespacemanager-tipadd": "افزودن فضای نام",
 	"bs-namespacemanager-tipedit": "ویرایش فضای نام",
 	"bs-namespacemanager-tipremove": "حذف فضای نام",
-	"bs-namespacemanager-msgnoteditabledelete": "این فضای نام یک فضای نام سیستمی است و نمی‌تواند حذف شود.",
+	"bs-namespacemanager-msgnoteditabledelete": "این فضای نام یک فضای نام سامانه است و نمی‌تواند حذف شود.",
 	"bs-namespacemanager-labelnsname": "نام فضای نام",
 	"bs-namespacemanager-willdelete": "حذف خواهد شد",
 	"bs-namespacemanager-willmove": "به «{{int:bs-ns_main}}» منتقل خواهد شد",
