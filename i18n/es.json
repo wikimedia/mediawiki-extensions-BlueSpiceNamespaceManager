@@ -7,14 +7,19 @@
 			"Fitoschido",
 			"Macofe",
 			"Ryo567",
-			"YoViajo"
+			"YoViajo",
+			"DiegoAmbrocio"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfaz administrativa para añadir, editar y eliminar espacios de nombres",
 	"bs-namespacemanager-label": "Gestor de espacios de nombres",
+	"bs-namespacemanager-text": "Espacios de nombres",
 	"bs-namespacemanager-wrong-name": "El espacio de nombres contiene caracteres no válidos.",
+	"bs-namespacemanager-wrong-alias": "El alias del espacio de nombres contiene caracteres no válidos.",
 	"bs-namespacemanager-ns-exists": "Ya existe el espacio de nombres.",
+	"bs-namespacemanager-alias-exists-as-ns": "El alias del espacio de nombres ya existe como nombre del espacio de nombres.",
 	"bs-namespacemanager-ns-length": "El espacio de nombres debe tener dos caracteres como mínimo.",
+	"bs-namespacemanager-pseudo-ns": "Hay páginas en el espacio de nombres estándar que comienzan con el nombre o alias del espacio de nombres propuesto.",
 	"bs-namespacemanager-invalid-id": "No es un identificador válido de espacio de nombres",
 	"bs-namespacemanager-label-id": "Id.",
 	"bs-namespacemanager-label-namespaces": "Espacio de nombres",
@@ -60,6 +65,5 @@
 	"right-namespacemanager-viewspecialpage": "Acceso a la página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido",
-	"bs-namespacemanager-pseudo-ns": "Hay páginas en el espacio de nombres estándar que comienzan con el nombre o alias del espacio de nombres propuesto."
+	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido"
 }
