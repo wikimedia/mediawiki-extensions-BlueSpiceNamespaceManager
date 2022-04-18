@@ -9,6 +9,7 @@
 	},
 	"bs-namespacemanager-desc": "用於新增、編輯，以及刪除命名空間的管理介面",
 	"bs-namespacemanager-label": "命名空間管理",
+	"bs-namespacemanager-text": "命名空間",
 	"bs-namespacemanager-wrong-name": "命名空間包含無效字元。",
 	"bs-namespacemanager-wrong-alias": "命名空間別名包含無效字元。",
 	"bs-namespacemanager-alias-exists": "該命名空間別名已設定給命名空間$1",
