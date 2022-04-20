@@ -4,6 +4,7 @@
 			"AVIADOR",
 			"Avengium",
 			"DannyS712",
+			"DiegoAmbrocio",
 			"Fitoschido",
 			"Macofe",
 			"Ryo567",
@@ -61,5 +62,9 @@
 	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido",
-	"bs-namespacemanager-pseudo-ns": "Hay páginas en el espacio de nombres estándar que comienzan con el nombre o alias del espacio de nombres propuesto."
+	"bs-namespacemanager-pseudo-ns": "Hay páginas en el espacio de nombres estándar que comienzan con el nombre o alias del espacio de nombres propuesto.",
+	"bs-namespacemanager-text": "Espacios de nombres",
+	"bs-namespacemanager-wrong-alias": "El alias del espacio de nombres contiene caracteres no válidos.",
+	"bs-namespacemanager-alias-exists": "El alias del espacio de nombres ya está configurado para el espacio de nombres $1",
+	"bs-namespacemanager-alias-exists-as-ns": "El alias del espacio de nombres ya existe como nombre del espacio de nombres."
 }

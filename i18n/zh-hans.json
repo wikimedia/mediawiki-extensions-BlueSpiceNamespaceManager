@@ -3,6 +3,7 @@
 		"authors": [
 			"Ff98sha",
 			"Liuxinyu970226",
+			"StarrySky",
 			"WQL",
 			"Xiplus",
 			"佛壁灯",
@@ -62,5 +63,6 @@
 	"bs-namespacemanager-label-istalk": "讨论",
 	"right-namespacemanager-viewspecialpage": "访问页面 [[Special:NamespaceManager]] 的权限。",
 	"bs-namespacemanager-hide-talk-label": "隐藏讨论命名空间",
-	"bs-namespacemanager-labelnsalias": "别名"
+	"bs-namespacemanager-labelnsalias": "别名",
+	"bs-namespacemanager-text": "命名空间"
 }

@@ -63,5 +63,6 @@
 	"bs-namespacemanager-labelnsalias": "別名",
 	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效",
 	"bs-namespacemanager-pseudo-ns": "在標準命名空間裡有一些頁面以建議的命名空間名稱、或是別名作為開頭。",
-	"bs-namespacemanager-alias-exists-as-ns": "該命名空間別名已以命名空間名稱存在。"
+	"bs-namespacemanager-alias-exists-as-ns": "該命名空間別名已以命名空間名稱存在。",
+	"bs-namespacemanager-text": "命名空間"
 }
