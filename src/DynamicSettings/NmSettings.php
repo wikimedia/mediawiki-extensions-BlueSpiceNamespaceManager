@@ -13,4 +13,13 @@ class NmSettings extends BSConfigDirSettingsFile {
 	protected function getFilename() {
 		return 'nm-settings.php';
 	}
+
+	/**
+	 *
+	 * @param array &$globals
+	 */
+	protected function doApply( &$globals ) {
+		parent::doApply( $globals );
+		$globals['wgExtraSignatureNamespaces'] = $globals['wgContentNamespaces'];
+	}
 }
