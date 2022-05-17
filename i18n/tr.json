@@ -3,6 +3,7 @@
 		"authors": [
 			"BaRaN6161 TURK",
 			"Hedda",
+			"SaldırganSincap",
 			"Violetanka"
 		]
 	},
@@ -45,7 +46,7 @@
 	"logeventslist-bs-namespace-manager-log": "Ad alanı yöneticisi günlüğü",
 	"logentry-bs-namespace-manager-create": "$1, $4 ad alanı {{GENDER:$2|oluşturdu}}",
 	"logentry-bs-namespace-manager-modify": "$1, $4 ad alanı ayarları {{GENDER:$2|değiştirdi}}",
-	"logentry-bs-namespace-manager-rename": "$1, ad alanını $4 eski ad alanı $5 ad alanı olarak {{GENDER:$2|değiştirdi}}",
+	"logentry-bs-namespace-manager-rename": "$1, ad alanını $4 ile $5 olarak {{GENDER:$2|yeniden adlandırdı}}",
 	"logentry-bs-namespace-manager-remove": "$1, $4 ad alanını {{GENDER:$2|kaldırıldı}}",
 	"bs-namespacemanager-ns-config-saved": "Ad alanı yapılandırması kaydedildi.",
 	"bs-namespacemanager-error-ns-config-not-saved": "Ad alanı yapılandırması $1 klasörüne kaydedilemedi.",
