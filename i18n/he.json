@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Guycn2",
 			"Steeve815"
 		]
@@ -17,7 +18,7 @@
 	"bs-namespacemanager-label-editable": "השם ניתן לשינוי",
 	"bs-namespacemanager-label-content": "מרחב שם של תוכן",
 	"bs-namespacemanager-label-searchable": "חיפוש כברירת מחדל",
-	"bs-namespacemanager-label-subpages": "דפי משנה",
+	"bs-namespacemanager-label-subpages": "דפי־משנה",
 	"bs-namespacemanager-label-pagecount": "דפים",
 	"bs-namespacemanager-label-system": "מערכת",
 	"bs-namespacemanager-hide-system-ns": "הסתרת מרחבי שם של המערכת",
