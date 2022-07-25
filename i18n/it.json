@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Beta16",
+			"GpieroMW",
 			"Stefano",
 			"V6rg",
 			"ValeJappo"
@@ -33,5 +34,26 @@
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-label-editable": "Rinominabile",
 	"bs-namespacemanager-willdelete": "verrà eliminato",
-	"bs-namespacemanager-text": "Namespace"
+	"bs-namespacemanager-text": "Namespace",
+	"bs-namespacemanager-desc": "Interfaccia di amministrazione per l'aggiunta, la modifica e l'eliminazione di namespace",
+	"bs-namespacemanager-wrong-name": "Il namespace contiene caratteri non validi.",
+	"bs-namespacemanager-ns-exists": "Il namespace già esiste.",
+	"bs-namespacemanager-alias-exists-as-ns": "L'alias del namespace esiste già come nome namespace.",
+	"bs-namespacemanager-ns-length": "Il namespace deve avere una lunghezza minima di due caratteri.",
+	"bs-namespacemanager-pseudo-ns": "Ci sono pagine nel namespace standard che cominciano con il nome o alias del namespace proposto.",
+	"bs-namespacemanager-invalid-id": "ID namespace non valido",
+	"bs-namespacemanager-label-content": "Contenuto del namespace",
+	"bs-namespacemanager-label-searchable": "Cerca per impostazione predefinita",
+	"bs-namespacemanager-nsadded": "Il namespace è stato aggiunto.",
+	"bs-namespacemanager-nsremoved": "Il namespace è stato rimosso.",
+	"bs-namespacemanager-nsedited": "Il namespace è stato modificato.",
+	"bs-namespacemanager-msgnoteditabledelete": "Questo namespace è un namespace di sistema e non può essere cancellato.",
+	"bs-namespacemanager-willmove": "Verrà spostato in \"{{int:bs-ns_main}}\"",
+	"bs-namespacemanager-willmovesuffix": "Verrà spostato in \"{{int:bs-ns_main}}\" con il suffisso \" $1 \"",
+	"bs-namespacemanager-deletewarning": "Sei sicuro di voler eliminare questo namespace? L'eliminazione di un namespace non può essere annullata.",
+	"bs-namespacemanager-deletens-movepages": "Questa pagina è stata spostata dal namespace \" $1 \" al namespace \"{{int:bs-ns_main}}\", perché il namespace \" $1 \" è stato eliminato.",
+	"bs-namespacemanager-deletens-deletepages": "Questa pagina è stata cancellata perché il namespace \" $1 \" è stato cancellato.",
+	"log-description-bs-namespace-manager": "Questo è un registro delle modifiche dei namespace.",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|ha creato}} il namespace $4",
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|ha modificato}} le impostazioni per il namespace $4"
 }
