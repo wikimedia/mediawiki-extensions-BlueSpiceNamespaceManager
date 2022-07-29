@@ -55,5 +55,13 @@
 	"bs-namespacemanager-deletens-deletepages": "Questa pagina è stata cancellata perché il namespace \" $1 \" è stato cancellato.",
 	"log-description-bs-namespace-manager": "Questo è un registro delle modifiche dei namespace.",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|ha creato}} il namespace $4",
-	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|ha modificato}} le impostazioni per il namespace $4"
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|ha modificato}} le impostazioni per il namespace $4",
+	"bs-namespacemanager-label": "Gestore namespace",
+	"log-name-bs-namespace-manager": "Registro del gestore namespace",
+	"log-show-hide-bs-namespace-manager": "Registro del gestore namespace $1",
+	"logeventslist-bs-namespace-manager-log": "Registro del gestore namespace",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|ha rinominato}} il namespace $4 in $5",
+	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|ha rimosso}} il namespace $4",
+	"namespacemanager": "Gestore namespace",
+	"bs-namespacemanager-nodeletetalk": "Il namespace Discussione non può essere cancellato"
 }
