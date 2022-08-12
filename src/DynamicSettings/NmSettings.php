@@ -20,6 +20,6 @@ class NmSettings extends BSConfigDirSettingsFile {
 	 */
 	protected function doApply( &$globals ) {
 		parent::doApply( $globals );
-		$globals['wgExtraSignatureNamespaces'] = $globals['wgContentNamespaces'];
+		$GLOBALS['wgExtraSignatureNamespaces'] = $GLOBALS['wgContentNamespaces'];
 	}
 }
