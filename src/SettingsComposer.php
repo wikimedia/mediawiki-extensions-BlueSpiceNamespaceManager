@@ -3,7 +3,7 @@
 namespace BlueSpice\NamespaceManager;
 
 use FatalError;
-use Hooks;
+use MediaWiki\MediaWikiServices;
 use MWException;
 
 class SettingsComposer {
@@ -63,7 +63,8 @@ class SettingsComposer {
 					. $GLOBALS['wgExtraNamespaces'][$nsId] . "';\n";
 			}
 
-			Hooks::run( 'NamespaceManager::writeNamespaceConfiguration', [
+			$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+			$hookContainer->run( 'NamespaceManager::writeNamespaceConfiguration', [
 				&$saveContent,
 				$constName,
 				$nsId,
