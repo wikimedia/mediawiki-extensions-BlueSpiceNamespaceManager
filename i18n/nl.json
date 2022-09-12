@@ -66,5 +66,7 @@
 	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig"
+	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
+	"bs-namespacemanager-alias-exists-as-ns": "De naamruimte-alias bestaat al als naamruimtenaam.",
+	"bs-namespacemanager-pseudo-ns": "Er zijn pagina's in de standaardnaamruimte die beginnen met de voorgestelde naamruimtenaam of -alias."
 }
