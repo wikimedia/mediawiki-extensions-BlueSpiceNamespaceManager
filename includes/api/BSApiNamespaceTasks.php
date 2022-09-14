@@ -115,9 +115,9 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$oResult = $this->makeStandardReturn();
 
 		global $wgNamespaceAliases;
-		$contLang = $this->getServices()->getContentLanguage();
+		$contLang = $this->services->getContentLanguage();
 		$aNamespaces = $contLang->getNamespaces();
-		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
+		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
 			->getUserNamespaces( true );
 		end( $aNamespaces );
 		$iNS = key( $aNamespaces ) + 1;
@@ -148,7 +148,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		$aUserNamespaces[$iNS] = [ 'name' => $sNamespace, 'alias' => $sAlias ];
 
-		$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
+		$this->services->getHookContainer()->run( 'NamespaceManager::editNamespace', [
 			&$aUserNamespaces,
 			&$iNS,
 			$aAdditionalSettings,
@@ -161,13 +161,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			'alias' => $sAlias . '_talk'
 		];
 
-		$this->getServices()->getHookContainer()->run( 'NamespaceManager::editNamespace', [
+		$this->services->getHookContainer()->run( 'NamespaceManager::editNamespace', [
 			&$aUserNamespaces,
 			&$talkNamespaceId,
 			$aAdditionalSettings, true
 		] );
 
-		$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+		$aResult = $this->services->getService( 'BSNamespaceManager' )
 			->setUserNamespaces( $aUserNamespaces );
 
 		if ( $aResult[ 'success' ] === true ) {
@@ -177,7 +177,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 				[ '4::namespace' => $sNamespace ]
 			);
 			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
-			$this->getServices()->getHookContainer()->run(
+			$this->services->getHookContainer()->run(
 				'NamespaceManagerAfterAddNamespace',
 				[
 					$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
@@ -211,21 +211,21 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 
 		global $wgNamespaceAliases;
 
-		$contLang = $this->getServices()->getContentLanguage();
+		$contLang = $this->services->getContentLanguage();
 		$aNamespaces = $contLang->getNamespaces();
 
 		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
-		$oNamespaceManager = $this->getServices()->getService( 'BSExtensionFactory' )->getExtension(
+		$oNamespaceManager = $this->services->getService( 'BSExtensionFactory' )->getExtension(
 			'BlueSpiceNamespaceManager'
 		);
-		$this->getServices()->getHookContainer()->run(
+		$this->services->getHookContainer()->run(
 			'BSNamespaceManagerBeforeSetUsernamespaces',
 			[
 				$oNamespaceManager,
 				&$systemNamespaces
 			]
 		);
-		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
+		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
 			->getUserNamespaces( true );
 
 		if ( !is_numeric( $oData->id ) ) {
@@ -290,7 +290,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			}
 			$aUserNamespaces[$iNS] = $namespaceConfig;
 		}
-		$this->getServices()->getHookContainer()->run(
+		$this->services->getHookContainer()->run(
 			'NamespaceManager::editNamespace',
 			[
 				&$aUserNamespaces,
@@ -300,7 +300,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			]
 		);
 
-		$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+		$aResult = $this->services->getService( 'BSNamespaceManager' )
 			->setUserNamespaces( $aUserNamespaces );
 		if ( $aResult[ 'success' ] === true ) {
 			// Create a log entry for the modification of the namespace
@@ -340,8 +340,8 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$contLang = $this->getServices()->getContentLanguage();
-		$aUserNamespaces = $this->getServices()->getService( 'BSNamespaceManager' )
+		$contLang = $this->services->getContentLanguage();
+		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
 			->getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
 			$oResult->message = $this->msg( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
@@ -428,7 +428,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		}
 
 		if ( !$bErrors ) {
-			$aResult = $this->getServices()->getService( 'BSNamespaceManager' )
+			$aResult = $this->services->getService( 'BSNamespaceManager' )
 				->setUserNamespaces( $aUserNamespaces );
 			if ( $aResult[ 'success' ] === true ) {
 				// Create a log entry for the removal of the namespace
@@ -438,7 +438,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 						[ '4::namespace' => $nameSpace ]
 					);
 				}
-				$this->getServices()->getHookContainer()->run(
+				$this->services->getHookContainer()->run(
 					'NamespaceManagerAfterRemoveNamespace',
 					[
 						$this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ),
