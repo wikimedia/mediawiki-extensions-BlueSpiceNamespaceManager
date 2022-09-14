@@ -1,7 +1,5 @@
 <?php
 
-use MediaWiki\MediaWikiServices;
-
 class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
 	/**
@@ -31,7 +29,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	protected function makeData( $sQuery = '' ) {
 		global $wgContentNamespaces, $wgNamespaceAliases, $wgNamespacesWithSubpages;
 
-		$contLang = $this->getServices()->getContentLanguage();
+		$contLang = $this->services->getContentLanguage();
 		$aResult = [];
 		$aNamespaces = $contLang->getNamespaces();
 		foreach ( $aNamespaces as $iNs => $sNamespace ) {
@@ -61,9 +59,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 				'alias' => $nsAlias,
 				// formerly 'editable'
 				'isSystemNS' => isset( $GLOBALS['bsSystemNamespaces'][$iNs] ) || $iNs < 3000,
-				'isTalkNS' => MediaWikiServices::getInstance()
-					->getNamespaceInfo()
-					->isTalk( $iNs ),
+				'isTalkNS' => $this->services->getNamespaceInfo()->isTalk( $iNs ),
 				'pageCount' => $res->numRows(),
 				'allPagesLink' => $this->renderNsLink( $iNs, $res->numRows() ),
 				'content' => [
@@ -75,7 +71,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 			];
 		}
 
-		$this->getServices()->getHookContainer()->run( 'BSApiNamespaceStoreMakeData', [
+		$this->services->getHookContainer()->run( 'BSApiNamespaceStoreMakeData', [
 			&$aResult
 		] );
 
