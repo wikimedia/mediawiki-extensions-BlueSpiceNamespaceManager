@@ -33,7 +33,7 @@ class NamespaceNuker {
 			]
 		);
 
-		$sToken = RequestContext::getMain()->getUser()->getEditToken();
+		$sToken = RequestContext::getMain()->getCsrfTokenSet()->getToken()->toString();
 		foreach ( $res as $row ) {
 			$sTitle = ( $bWithSuffix )
 				? $row->page_title . ' ' . wfMessage( 'bs-from-something', $nameNS )->text()
@@ -82,7 +82,7 @@ class NamespaceNuker {
 			]
 		);
 
-		$sToken = RequestContext::getMain()->getUser()->getEditToken();
+		$sToken = RequestContext::getMain()->getCsrfTokenSet()->getToken()->toString();
 		foreach ( $res as $row ) {
 			$oParams = new DerivativeRequest(
 				RequestContext::getMain()->getRequest(),
