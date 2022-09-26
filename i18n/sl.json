@@ -34,5 +34,6 @@
 	"bs-namespacemanager-deletens-movepages": "Ta stran je bila prestavljena iz imenskega prostora \"$1\" v imenski prostor \"{{int:bs-ns_main}}\", ker je bil imenski prostor \"$1\" izbrisan.",
 	"bs-namespacemanager-deletens-deletepages": "Ta stran je izbrisana, ker je bil imenski prostor \"$1\" izbrisan.",
 	"bs-namespacemanager-label-pagecount": "Strani",
-	"bs-namespacemanager-text": "Imenski prostori"
+	"bs-namespacemanager-text": "Imenski prostori",
+	"bs-namespacemanager-label-istalk": "Pogovor"
 }
