@@ -8,7 +8,7 @@
 	},
 	"bs-namespacemanager-desc": "ממשק ניהולי עבור הוספה, עריכה ומחיקה של מרחבי שם",
 	"bs-namespacemanager-label": "ניהול מרחבי שם",
-	"bs-namespacemanager-wrong-name": "השם של מרחב השם מכיל תווים בלתי־חוקיים.",
+	"bs-namespacemanager-wrong-name": "השם של מרחב השם מכיל תווים בלתי־תקינים.",
 	"bs-namespacemanager-alias-exists": "הכינוי למרחב השם כבר נקבע עבור המרחב $1",
 	"bs-namespacemanager-ns-exists": "מרחב השם כבר קיים.",
 	"bs-namespacemanager-ns-length": "מרחב השם צריך להיות באורך של שני תווים לפחות.",
@@ -55,5 +55,13 @@
 	"bs-namespacemanager-nodeletetalk": "לא ניתן למחוק מרחב שיחה.",
 	"bs-namespacemanager-label-istalk": "שיחה",
 	"bs-namespacemanager-hide-talk-label": "הסתרת מרחבי שיחה",
-	"bs-namespacemanager-labelnsalias": "כינוי"
+	"bs-namespacemanager-labelnsalias": "כינוי",
+	"bs-namespacemanager-text": "מרחבי שם",
+	"bs-namespacemanager-wrong-alias": "כינוי מרחב השם מכיל תווים בלתי־תקינים.",
+	"bs-namespacemanager-alias-exists-as-ns": "כינוי מרחב השם כבר קיים כשם מרחב שם.",
+	"bs-namespacemanager-pseudo-ns": "יש דפים במרחב השם הסטנדרטי שמתחילים בשם או בכינוי המוצע של מרחב השם.",
+	"apihelp-bs-namespace-store-description": "רושמת את כל מרחבי השם והתצורה השרירותית. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
+	"apihelp-bs-namespace-store-summary": "רושמת את כל מרחבי השם והתצורה השרירותית. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
+	"right-namespacemanager-viewspecialpage": "גישה לדף המיוחד [[Special:NamespaceManager]]",
+	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין"
 }
