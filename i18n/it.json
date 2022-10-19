@@ -63,5 +63,7 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|ha rinominato}} il namespace $4 in $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|ha rimosso}} il namespace $4",
 	"namespacemanager": "Gestore namespace",
-	"bs-namespacemanager-nodeletetalk": "Il namespace Discussione non può essere cancellato"
+	"bs-namespacemanager-nodeletetalk": "Il namespace Discussione non può essere cancellato",
+	"action-namespacemanager-viewspecialpage": "visualizza la pagina speciale di gestione namespace",
+	"bs-namespacemanager-invalid-namespace": "Il namespace in fase di modifica non è valido"
 }
