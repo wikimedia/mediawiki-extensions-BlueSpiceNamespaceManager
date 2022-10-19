@@ -58,10 +58,12 @@
 	"apihelp-bs-namespace-store-summary": "Elenca tutti i namespace e configurazione arbitraria. Consente ordinamento, filtraggio e impaginazione. Implementa parametri ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Permette di modificare la configurazione del namespace.",
 	"apihelp-bs-namespace-tasks-summary": "Permette di modificare la configurazione del namespace.",
+	"action-namespacemanager-viewspecialpage": "visualizza la pagina speciale di gestione namespace",
 	"namespacemanager": "Gestore namespace",
 	"bs-namespacemanager-nodeletetalk": "Il namespace Discussione non può essere cancellato",
 	"bs-namespacemanager-label-istalk": "Discussione",
 	"right-namespacemanager-viewspecialpage": "Accede alla pagina speciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-invalid-namespace": "Il namespace in fase di modifica non è valido"
 }
