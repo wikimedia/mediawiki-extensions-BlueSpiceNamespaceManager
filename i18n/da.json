@@ -4,7 +4,9 @@
 			"Saederup92"
 		]
 	},
+	"bs-namespacemanager-text": "Navnerum",
 	"bs-namespacemanager-wrong-alias": "Aliaset for dette navnerum indeholder ugyldige tegn.",
+	"bs-namespacemanager-ns-exists": "Navnerummet findes allerede.",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Navnerum",
 	"bs-namespacemanager-label-editable": "Kan omdøbes",
