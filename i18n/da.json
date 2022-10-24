@@ -19,5 +19,7 @@
 	"bs-namespacemanager-willdelete": "Vil blive slettet",
 	"bs-namespacemanager-pagepresent": "Sider i dette navnerum:",
 	"bs-namespacemanager-label-istalk": "Diskussion",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-text": "Navnerum",
+	"bs-namespacemanager-ns-exists": "Navnerummet findes allerede."
 }
