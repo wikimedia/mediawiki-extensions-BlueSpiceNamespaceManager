@@ -1,6 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
+			"FShbib",
+			"Meno25",
 			"Shbib Al-Subaie",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
@@ -60,5 +62,8 @@
 	"right-namespacemanager-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
 	"bs-namespacemanager-labelnsalias": "الاسم المستعار",
-	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح"
+	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
+	"bs-namespacemanager-text": "نطاقات",
+	"bs-namespacemanager-alias-exists-as-ns": "الاسم المستعار لمساحة الاسم موجود بالفعل كاسم مساحة الاسم.",
+	"bs-namespacemanager-pseudo-ns": "توجد صفحات في مساحة الاسم القياسية تبدأ باسم مساحة الاسم أو الاسم المستعار المقترح."
 }
