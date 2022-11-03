@@ -3,16 +3,21 @@
 		"authors": [
 			"Shbib Al-Subaie",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"FShbib",
+			"Meno25"
 		]
 	},
 	"bs-namespacemanager-desc": "واجهة الإدارة لإضافة وتحرير وحذف النطاقات",
 	"bs-namespacemanager-label": "مدير النطاق",
+	"bs-namespacemanager-text": "نطاقات",
 	"bs-namespacemanager-wrong-name": "يحتوي النطاق على أحرف غير صالحة.",
 	"bs-namespacemanager-wrong-alias": "يحتوي اسم النطاق المستعار على أحرف غير صالحة.",
 	"bs-namespacemanager-alias-exists": "تم بالفعل تعيين اسم النطاق المستعار لنطاق $1",
 	"bs-namespacemanager-ns-exists": "النطاق موجود بالفعل.",
+	"bs-namespacemanager-alias-exists-as-ns": "الاسم المستعار لمساحة الاسم موجود بالفعل كاسم مساحة الاسم.",
 	"bs-namespacemanager-ns-length": "يجب أن يكون الحد الأدنى لطول النطاق حرفين.",
+	"bs-namespacemanager-pseudo-ns": "توجد صفحات في مساحة الاسم القياسية تبدأ باسم مساحة الاسم أو الاسم المستعار المقترح.",
 	"bs-namespacemanager-invalid-id": "لا يوجد معرف صالح للنطاق",
 	"bs-namespacemanager-label-id": "المعرف",
 	"bs-namespacemanager-label-namespaces": "النطاق",
