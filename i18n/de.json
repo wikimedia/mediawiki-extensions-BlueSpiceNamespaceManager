@@ -3,6 +3,7 @@
 		"authors": [
 			"Hwboehm",
 			"Jkonrad",
+			"Kghbln",
 			"MarkusRost",
 			"Metalhead64",
 			"Mglaser",
@@ -23,7 +24,7 @@
 	"bs-namespacemanager-alias-exists-as-ns": "Der Namensraum-Alias existiert bereits als Namensraum-Name.",
 	"bs-namespacemanager-ns-length": "Der Namensraum muss mindestens zwei Zeichen lang sein.",
 	"bs-namespacemanager-pseudo-ns": "Es gibt Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
-	"bs-namespacemanager-invalid-id": "Keine zulässige Namensraum ID übertragen.",
+	"bs-namespacemanager-invalid-id": "Keine zulässige Namensraumkennnummer übertragen.",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Namensraum",
 	"bs-namespacemanager-label-editable": "Umbenennbar",
