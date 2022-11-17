@@ -13,6 +13,7 @@
 	},
 	"bs-namespacemanager-desc": "Административный интерфейс для добавления, правки и удаления пространств имён",
 	"bs-namespacemanager-label": "Диспетчер пространств имён",
+	"bs-namespacemanager-text": "Пространства имён",
 	"bs-namespacemanager-wrong-name": "Пространство имён содержит недопустимые символы.",
 	"bs-namespacemanager-ns-exists": "Пространство имён уже существует.",
 	"bs-namespacemanager-alias-exists-as-ns": "Псевдоним пространства имён уже существует в качестве названия пространства имён.",
