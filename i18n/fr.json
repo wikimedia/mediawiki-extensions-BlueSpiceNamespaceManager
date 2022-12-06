@@ -19,7 +19,7 @@
 	"bs-namespacemanager-alias-exists-as-ns": "L’alias d’espace de noms existe déjà comme espace de noms.",
 	"bs-namespacemanager-ns-length": "L’espace de noms doit avoir une longueur minimale de deux caractères.",
 	"bs-namespacemanager-pseudo-ns": "Il existe des pages dans l’espace de noms standard dont le nom commence par le nom ou l’alias proposé pour l’espace de noms.",
-	"bs-namespacemanager-invalid-id": "Aucun ID valide d’espace de noms",
+	"bs-namespacemanager-invalid-id": "Aucun identifiant valide d’espace de noms",
 	"bs-namespacemanager-label-id": "Identifiant",
 	"bs-namespacemanager-label-namespaces": "Espace de noms",
 	"bs-namespacemanager-label-editable": "Renommable",
