@@ -5,7 +5,8 @@
 			"Kly",
 			"Liuxinyu970226",
 			"Winston Sung",
-			"列维劳德"
+			"列维劳德",
+			"捍粵者"
 		]
 	},
 	"bs-namespacemanager-desc": "用於新增、編輯，以及刪除命名空間的管理介面",
@@ -37,7 +38,7 @@
 	"bs-namespacemanager-tipremove": "移除命名空間",
 	"bs-namespacemanager-msgnoteditabledelete": "此命名空間是系統命名空間，因此不能被刪除。",
 	"bs-namespacemanager-labelnsname": "命名空間名稱",
-	"bs-namespacemanager-willdelete": "將會被刪除",
+	"bs-namespacemanager-willdelete": "會刪除",
 	"bs-namespacemanager-willmove": "將移動至 \"{{int:bs-ns_main}}\"",
 	"bs-namespacemanager-willmovesuffix": "將移動至 \"{{int:bs-ns_main}}\" 帶字尾 \"$1\"",
 	"bs-namespacemanager-deletewarning": "您確定要刪除此命名空間？刪除掉的命名空間會無法回復。",
