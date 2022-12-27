@@ -9,6 +9,8 @@
 	"bs-namespacemanager-label-pagecount": "Stranice",
 	"bs-namespacemanager-label-system": "Sistem",
 	"bs-namespacemanager-deletens-deletepages": "Ova stranica je obrisana zato što je imenski prostor „$1“ obrisan.",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|preimenovao|preimenovala}} je imenski prostor $4 na $5",
+	"logentry-bs-namespace-manager-remove": "$1 je {{GENDER:$2|uklonio|uklonila}} imenski prostor $4",
 	"bs-namespacemanager-hide-talk-label": "Sakrij imenske prostore razgovora",
 	"bs-namespacemanager-labelnsalias": "Pseudonim"
 }
