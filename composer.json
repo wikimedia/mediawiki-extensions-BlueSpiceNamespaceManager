@@ -26,5 +26,10 @@
 	},
 	"extra": {
 		"installer-name": "BlueSpiceNamespaceManager"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }
