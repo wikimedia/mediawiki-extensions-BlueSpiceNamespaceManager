@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Yupik"
+			"Yupik",
+			"Kimberli Mäkäräinen (WMNO)"
 		]
 	},
 	"bs-namespacemanager-text": "Nammagomuvuođat",
-	"bs-namespacemanager-label-namespaces": "Nammagomuvuohta"
+	"bs-namespacemanager-label-namespaces": "Nammagomuvuohta",
+	"bs-namespacemanager-label-subpages": "Oalgesiiddut"
 }
