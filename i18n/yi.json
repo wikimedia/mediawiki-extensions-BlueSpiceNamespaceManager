@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"פוילישער"
+			"פוילישער",
+			"Pacha Tchernof"
 		]
 	},
+	"bs-namespacemanager-text": "נאָמענטיילן",
+	"bs-namespacemanager-label-namespaces": "נאָמענטייל",
 	"bs-namespacemanager-label-pagecount": "בלעטער",
 	"bs-namespacemanager-label-system": "סיסטעם",
-	"bs-namespacemanager-hide-system-ns": "באהאלטן סיסטעם־נאמענטיילן"
+	"bs-namespacemanager-hide-system-ns": "באהאלטן סיסטעם־נאמענטיילן",
+	"bs-namespacemanager-label-istalk": "שמועס"
 }
