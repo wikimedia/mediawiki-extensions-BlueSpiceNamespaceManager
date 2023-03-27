@@ -33,5 +33,6 @@
 	"bs-namespacemanager-label-istalk": "Keskustelu",
 	"bs-namespacemanager-hide-talk-label": "Piilota keskustelunimiavaruudet",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-text": "Nimiavaruudet"
+	"bs-namespacemanager-text": "Nimiavaruudet",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|on luonut}} nimiavaruuden $4"
 }
