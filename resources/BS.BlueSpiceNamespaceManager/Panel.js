@@ -141,26 +141,31 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			}
 			value = value.value;
 		}
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
+		var icon = '<span class="bs-namespacemanager-column-tristate-{0}" aria-label="{1}"></span>';
 
 		if( disabled === true ) {
-			return icon.format( 'dash' );
+			var iconAriaLabel = mw.message( 'bs-namespacemanager-icon-tristate-disabled-aria-label' ).text()
+			return icon.format( 'disabled', iconAriaLabel );
 		}
 
 		if ( value === false ) {
-			return icon.format( 'cross' );
+			var iconAriaLabel = mw.message( 'bs-namespacemanager-icon-tristate-false-aria-label' ).text()
+			return icon.format( 'false', iconAriaLabel );
 		}
 
-		return icon.format( 'tick' );
+		var iconAriaLabel = mw.message( 'bs-namespacemanager-icon-tristate-true-aria-label' ).text()
+		return icon.format( 'true', iconAriaLabel );
 	},
 	renderInvertedIcon: function( value, meta ) {
 		meta.tdCls = "ns-manager-icon";
-		var icon = '<img src="' + mw.config.get( "wgScriptPath" ) + '/extensions/BlueSpiceFoundation/resources/bluespice/images/bs-{0}.png" alt="Icon {0}"/>';
+		var icon = '<span class="bs-namespace-manager-column-tristate-{0}" aria-label="{1}"></span>'
 
 		if ( value === true ) {
-			return icon.format( 'cross' );
+			var iconAriaLabel = mw.message( 'bs-namespacemanager-icon-tristate-false-aria-label' ).text()
+			return icon.format( 'false', iconAriaLabel );
 		}
-		return icon.format( 'tick ');
+		var iconAriaLabel = mw.message( 'bs-namespacemanager-icon-tristate-true-aria-label' ).text()
+		return icon.format( 'true', iconAriaLabel );
 	},
 	onGrdMainSelectionChange: function( sender, records, opts ) {
 		this.callParent( arguments );
