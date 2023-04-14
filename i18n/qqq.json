@@ -69,5 +69,8 @@
 	"right-namespacemanager-viewspecialpage": "Grants access to the special page [[Special:NamespaceManager]].\n{{doc-right|namespacemanager-viewspecialpage}}",
 	"bs-namespacemanager-hide-talk-label": "Checkbox label to hide talk namespages from the grid",
 	"bs-namespacemanager-labelnsalias": "label for input field for namespace alias",
-	"bs-namespacemanager-invalid-namespace": "Error message shown to the user when a namespace cannot be edited due to it being invalid."
+	"bs-namespacemanager-invalid-namespace": "Error message shown to the user when a namespace cannot be edited due to it being invalid.",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "Aria label for a icon that indicates a disabled state of a tristate option",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "Aria label for a icon that indicates a checked state of a tristate option",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "Aria label for a icon that indicates a unchecked state of a tristate option"
 }

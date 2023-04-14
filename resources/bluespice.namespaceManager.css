@@ -46,3 +46,19 @@
 .x-action-col-icon.x-hide-display {
 	display: none;
 }
+
+.bs-namespacemanager-column-tristate-true,
+.bs-namespacemanager-column-tristate-false {
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+}
+
+.bs-namespacemanager-column-tristate-true {
+	background-image: url('../../BlueSpiceFoundation/resources/bluespice/images/bs-tick.png');
+}
+
+.bs-namespacemanager-column-tristate-false {
+	background-image: url('../../BlueSpiceFoundation/resources/bluespice/images/bs-cross.png');
+}
