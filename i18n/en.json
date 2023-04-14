@@ -61,5 +61,8 @@
 	"right-namespacemanager-viewspecialpage": "Access to the special page [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid"
+	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabled",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "checked",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "unchecked"
 }
