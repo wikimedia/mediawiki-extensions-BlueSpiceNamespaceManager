@@ -127,7 +127,10 @@
 				"bs-namespacemanager-label-istalk",
 				"bs-namespacemanager-nodeletetalk",
 				"bs-namespacemanager-hide-talk-label",
-				"bs-namespacemanager-labelnsalias"
+				"bs-namespacemanager-labelnsalias",
+				"bs-namespacemanager-icon-tristate-disabled-aria-label",
+				"bs-namespacemanager-icon-tristate-true-aria-label",
+				"bs-namespacemanager-icon-tristate-false-aria-label"
 			]
 		},
 		"ext.bluespice.namespaceManager.styles": {
