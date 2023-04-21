@@ -66,5 +66,8 @@
 	"right-namespacemanager-viewspecialpage": "Accéder à la page spéciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de noms de discussion",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide"
+	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "désactivé",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "coché",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "décoché"
 }
