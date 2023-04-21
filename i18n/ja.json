@@ -3,6 +3,7 @@
 		"authors": [
 			"2nd-player",
 			"A2y4",
+			"MathXplore",
 			"Otokoume",
 			"Shirayuki",
 			"SkyDaisy9",
@@ -48,5 +49,6 @@
 	"action-namespacemanager-viewspecialpage": "名前空間マネージャーの特別ページの閲覧",
 	"namespacemanager": "名前空間マネージャー",
 	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用",
-	"bs-namespacemanager-label-istalk": "トーク"
+	"bs-namespacemanager-label-istalk": "トーク",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み"
 }
