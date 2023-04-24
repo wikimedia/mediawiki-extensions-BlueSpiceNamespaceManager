@@ -65,5 +65,8 @@
 	"namespacemanager": "Gestore namespace",
 	"bs-namespacemanager-nodeletetalk": "Il namespace Discussione non può essere cancellato",
 	"action-namespacemanager-viewspecialpage": "visualizza la pagina speciale di gestione namespace",
-	"bs-namespacemanager-invalid-namespace": "Il namespace in fase di modifica non è valido"
+	"bs-namespacemanager-invalid-namespace": "Il namespace in fase di modifica non è valido",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabilitato",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "selezionato",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "deselezionato"
 }
