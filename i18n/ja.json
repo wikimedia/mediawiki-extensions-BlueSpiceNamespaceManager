@@ -7,7 +7,8 @@
 			"Shirayuki",
 			"SkyDaisy9",
 			"Sujiniku",
-			"Suyama"
+			"Suyama",
+			"MathXplore"
 		]
 	},
 	"bs-namespacemanager-desc": "名前空間を追加/編集/削除する管理インターフェイス",
@@ -48,5 +49,6 @@
 	"action-namespacemanager-viewspecialpage": "名前空間マネージャーの特別ページの閲覧",
 	"namespacemanager": "名前空間マネージャー",
 	"bs-namespacemanager-label-istalk": "トーク",
-	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用"
+	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み"
 }
