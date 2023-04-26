@@ -4,6 +4,7 @@
 			"Hwboehm",
 			"Jkonrad",
 			"Kghbln",
+			"Lukasaiko",
 			"MarkusRost",
 			"Metalhead64",
 			"Mglaser",
@@ -71,5 +72,8 @@
 	"right-namespacemanager-viewspecialpage": "Zugriff auf die Spezialseite [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "Der bearbeitete Namensraum ist ungültig"
+	"bs-namespacemanager-invalid-namespace": "Der bearbeitete Namensraum ist ungültig",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktiviert",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "ausgewählt",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt"
 }

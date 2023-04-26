@@ -63,5 +63,8 @@
 	"right-namespacemanager-viewspecialpage": "גישה לדף המיוחד [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "הסתרת מרחבי שיחה",
 	"bs-namespacemanager-labelnsalias": "כינוי",
-	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין"
+	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "כבוי",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "מסומן",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "לא מסומן"
 }
