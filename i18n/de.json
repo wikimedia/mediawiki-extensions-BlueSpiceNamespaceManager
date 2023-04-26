@@ -4,6 +4,7 @@
 			"Hwboehm",
 			"Jkonrad",
 			"Kghbln",
+			"Lukasaiko",
 			"MarkusRost",
 			"Metalhead64",
 			"Mglaser",
@@ -71,5 +72,8 @@
 	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "Der bearbeitete Namensraum ist ungültig",
-	"bs-namespacemanager-pseudo-ns": "Es gibt Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen."
+	"bs-namespacemanager-pseudo-ns": "Es gibt Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktiviert",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "ausgewählt",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt"
 }

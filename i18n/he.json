@@ -63,5 +63,8 @@
 	"apihelp-bs-namespace-store-description": "רושמת את כל מרחבי השם והתצורה השרירותית. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
 	"apihelp-bs-namespace-store-summary": "רושמת את כל מרחבי השם והתצורה השרירותית. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
 	"right-namespacemanager-viewspecialpage": "גישה לדף המיוחד [[Special:NamespaceManager]]",
-	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין"
+	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "כבוי",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "מסומן",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "לא מסומן"
 }
