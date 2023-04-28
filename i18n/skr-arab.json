@@ -6,5 +6,6 @@
 	},
 	"bs-namespacemanager-label-istalk": "ڳالھ مہاڑ",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "غیر فعال تھی ڳیا",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "پڑتال کائنی تھئے"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "پڑتال کائنی تھئے",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "پڑتال تھئے"
 }
