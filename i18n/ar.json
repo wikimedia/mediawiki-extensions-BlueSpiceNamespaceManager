@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"FShbib",
 			"Meno25",
 			"Shbib Al-Subaie",
@@ -65,5 +66,8 @@
 	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
 	"bs-namespacemanager-text": "نطاقات",
 	"bs-namespacemanager-alias-exists-as-ns": "الاسم المستعار لمساحة الاسم موجود بالفعل كاسم مساحة الاسم.",
-	"bs-namespacemanager-pseudo-ns": "توجد صفحات في مساحة الاسم القياسية تبدأ باسم مساحة الاسم أو الاسم المستعار المقترح."
+	"bs-namespacemanager-pseudo-ns": "توجد صفحات في مساحة الاسم القياسية تبدأ باسم مساحة الاسم أو الاسم المستعار المقترح.",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "مفحوص",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة"
 }
