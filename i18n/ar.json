@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"FShbib",
 			"Meno25",
 			"Shbib Al-Subaie",
@@ -65,5 +66,8 @@
 	"right-namespacemanager-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
 	"bs-namespacemanager-labelnsalias": "الاسم المستعار",
-	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح"
+	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "مفحوص",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة"
 }
