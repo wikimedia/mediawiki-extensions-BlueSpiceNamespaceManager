@@ -81,6 +81,15 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		var items = this.callParent( arguments );
 		items.push(
 			new Ext.form.field.Checkbox( {
+				boxLabel:  mw.message( 'bs-namespacemanager-hide-non-content-ns-label' ).text(),
+				checked: true,
+				listeners: {
+					change: function( chk, newValue, oldValue ) {
+						this.hideEmptyNamespace( newValue );
+					}.bind( this )
+				}
+			} ),
+			new Ext.form.field.Checkbox( {
 				boxLabel: mw.message( 'bs-namespacemanager-hide-talk-label' ).text(),
 				checked: false,
 				listeners: {
@@ -100,6 +109,17 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 				value: false,
 				property: 'isTalkNS',
 				type: 'boolean'
+			} );
+		}
+	},
+	hideEmptyNamespace: function( hide ) {
+		this.grdMain.getStore().clearFilter();
+		if( hide ) {
+			this.strMain.addFilter( {
+				operator: "neq",
+				value: 0,
+				property: 'pageCount',
+				type: 'numeric'
 			} );
 		}
 	},
