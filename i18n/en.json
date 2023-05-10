@@ -60,6 +60,7 @@
 	"bs-namespacemanager-label-istalk": "Talk",
 	"right-namespacemanager-viewspecialpage": "Access to the special page [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
+	"bs-namespacemanager-hide-non-content-ns-label": "Hide empty namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabled",
