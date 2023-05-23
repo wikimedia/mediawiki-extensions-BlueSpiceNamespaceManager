@@ -19,6 +19,7 @@ $this:
 'NamespaceManager::editNamespace':
 &$aUserNamespaces[ $iNS ]:
 
+''' Removed in 4.3 - Replaced with NamespaceManagerBeforePersistSettings (see interface) '''
 'NamespaceManager::writeNamespaceConfiguration':
 &$sSaveContent:
  $sConstName:

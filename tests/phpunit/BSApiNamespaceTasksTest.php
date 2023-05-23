@@ -2,9 +2,9 @@
 
 namespace BlueSpice\NamespaceManager\Tests;
 
-use BlueSpice\DynamicSettingsManager;
 use BlueSpice\Tests\BSApiTasksTestBase;
 use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 
 /**
  * @group Broken
@@ -24,16 +24,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		'subpages' => true,
 		'content' => false
 	];
-
-	/**
-	 * @inheritDoc
-	 */
-	public function addDBDataOnce() {
-		$dynamicSettingsManager = DynamicSettingsManager::factory();
-		$dynamicSettingsManager->persist( 'NamespaceManager', "<?php\n" );
-
-		return parent::addDBDataOnce();
-	}
 
 	/**
 	 *
@@ -73,12 +63,12 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 		// main NS
 		$this->assertTrue(
 			$this->isNSSaved( $iInsertedID ),
-			"Namespace cannot be found in settings file."
+			"Namespace cannot be found in config."
 		);
 		// talk page
 		$this->assertTrue(
 			$this->isNSSaved( $iInsertedID + 1 ),
-			"Talk namespace cannot be found in settings file."
+			"Talk namespace cannot be found in config."
 		);
 	}
 
@@ -157,24 +147,10 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	 * @return bool
 	 */
 	protected function isNSSaved( $iID ) {
-		$dynamicSettingsManager = DynamicSettingsManager::factory();
-		$sConfigContent = $dynamicSettingsManager->fetch( 'NamespaceManager' );
-		$aUserNamespaces = [];
-		$aMatches = [];
-		$match = preg_match_all(
-			'%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s',
-			$sConfigContent,
-			$aMatches,
-			PREG_PATTERN_ORDER
-		);
-		if ( $match ) {
-			$aUserNamespaces = $aMatches[ 2 ];
-		}
-
-		if ( in_array( $iID, $aUserNamespaces ) ) {
-			return true;
-		}
-
-		return false;
+		/** @var DynamicConfigManager $manager */
+		$manager = $this->getServiceContainer()->get( 'MWStakeDynamicConfigManager' );
+		$raw = $manager->retrieveRaw( $manager->getConfigObject( 'bs-namespacemanager-namespaces' ) );
+		$data = unserialize( $raw );
+		return isset( $data['constants'][$iID] );
 	}
 }

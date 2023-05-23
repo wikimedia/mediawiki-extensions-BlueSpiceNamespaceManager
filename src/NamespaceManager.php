@@ -2,13 +2,15 @@
 
 namespace BlueSpice\NamespaceManager;
 
-use BlueSpice\DynamicSettingsManager;
 use BsNamespaceHelper;
 use Config;
+use Exception;
 use IContextSource;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 use RequestContext;
+use Status;
 
 class NamespaceManager {
 	/**
@@ -22,20 +24,19 @@ class NamespaceManager {
 	protected $hookContainer = null;
 
 	/**
-	 * @var DynamicSettingsManager
+	 * @var DynamicConfigManager
 	 */
-	protected $settingsManager = null;
+	protected $configManager = null;
 
 	/**
 	 * @param Config $config
 	 * @param HookContainer $hookContainer
-	 * @param DynamicSettingsManager $settingsManager
+	 * @param DynamicConfigManager $configManager
 	 */
-	public function __construct( Config $config, HookContainer $hookContainer,
-		DynamicSettingsManager $settingsManager ) {
+	public function __construct( Config $config, HookContainer $hookContainer, DynamicConfigManager $configManager ) {
 		$this->config = $config;
 		$this->hookContainer = $hookContainer;
-		$this->settingsManager = $settingsManager;
+		$this->configManager = $configManager;
 	}
 
 	/**
@@ -44,18 +45,17 @@ class NamespaceManager {
 	 * @return array the namespace data
 	 */
 	public function getUserNamespaces( $fullDetails = false ) {
-		$configContent = $this->settingsManager->fetch( 'NamespaceManager' );
-		$userNamespaces = [];
-		$matches = [];
-		$match = preg_match_all(
-			'%define\("NS_([a-zA-Z0-9_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*)", ([0-9]*)\)%s',
-			$configContent,
-			$matches,
-			PREG_PATTERN_ORDER
-		);
-		if ( $match ) {
-			$userNamespaces = $matches[ 2 ];
+		$configObject = $this->configManager->getConfigObject( 'bs-namespacemanager-namespaces' );
+		if ( !$configObject ) {
+			return [];
 		}
+		$raw = $this->configManager->retrieveRaw( $configObject );
+		if ( !$raw ) {
+			return [];
+		}
+		$data = unserialize( $raw );
+		$userNamespaces = array_values( $data['constants'] );
+
 		if ( $fullDetails ) {
 			$tmp = [];
 			foreach ( $userNamespaces as $ns ) {
@@ -105,7 +105,8 @@ class NamespaceManager {
 	}
 
 	/**
-	 * Saves a given namespace configuration to bluespice-core/config/nm-settings.php
+	 * Persists namespace settings
+	 *
 	 * @param array $userNSDefinition the namespace configuration
 	 * @return Status
 	 */
@@ -127,10 +128,18 @@ class NamespaceManager {
 			$constantsNames[$nsId] = BsNamespaceHelper::getNamespaceConstName( $nsId, $name );
 		}
 
-		$settingsComposer = new SettingsComposer( $constantsNames, $aliasesMap );
-		$saveContent = $settingsComposer->compose( $userNSDefinition );
-
-		return $this->settingsManager->persist( 'NamespaceManager', $saveContent );
+		$data = [
+			'constantsNames' => $constantsNames,
+			'aliasesMap' => $aliasesMap,
+			'userNSDefinition' => $userNSDefinition
+		];
+		try {
+			$config = $this->configManager->getConfigObject( 'bs-namespacemanager-namespaces' );
+			$this->configManager->storeConfig( $config, $data );
+		} catch ( Exception $e ) {
+			return Status::newFatal( $e->getMessage() );
+		}
+		return Status::newGood();
 	}
 
 	/**
