@@ -1,6 +1,5 @@
 <?php
 
-use BlueSpice\DynamicSettingsManager;
 use BlueSpice\NamespaceManager\NamespaceManager;
 use MediaWiki\MediaWikiServices;
 
@@ -10,7 +9,7 @@ return [
 		return new NamespaceManager(
 			$services->getConfigFactory()->makeConfig( 'bsg' ),
 			$services->getHookContainer(),
-			DynamicSettingsManager::factory()
+			$services->getService( 'MWStakeDynamicConfigManager' )
 		);
 	},
 

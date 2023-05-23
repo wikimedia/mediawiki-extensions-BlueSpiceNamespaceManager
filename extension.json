@@ -30,9 +30,6 @@
 						"structuremanager"
 					]
 				}
-			},
-			"DynamicSettingsRegistry": {
-				"NamespaceManager": "BlueSpice\\NamespaceManager\\DynamicSettings\\NmSettings::factory"
 			}
 		}
 	},
@@ -91,20 +88,26 @@
 	"HookHandlers": {
 		"common-user-interface": {
 			"class": "\\BlueSpice\\NamespaceManager\\HookHandler\\CommonUserInterface"
+		},
+		"registerDynamicConfig": {
+			"class": "\\BlueSpice\\NamespaceManager\\Hook\\RegisterDynamicConfig",
+			"services": [ "HookContainer" ]
+		},
+		"persistNamespaceFlags": {
+			"class": "BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerBeforePersistSettings\\PersistNamespaceFlags"
 		}
 	},
 	"Hooks": {
-		"LoadExtensionSchemaUpdates": "\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\AddRemoveLegacyBackupTablesMaintenanceScript::callback",
+		"LoadExtensionSchemaUpdates": [
+			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\MigrateLegacySettings::callback"
+		],
 		"NamespaceManager::editNamespace": [
 			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerEditNamespace\\SetContentFlag::callback",
 			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerEditNamespace\\SetSubPagesFlag::callback"
 		],
-		"NamespaceManager::writeNamespaceConfiguration": [
-			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerWriteNamespaceConfiguration\\WriteContentFlag::callback",
-			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerWriteNamespaceConfiguration\\WriteSubPagesFlag::callback"
-		],
-		"BSMigrateSettingsSaveNewSettings": "\\BlueSpice\\NamespaceManager\\Hook\\BSMigrateSettingsSaveNewSettings\\WriteConfiguration::callback",
-		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface"
+		"NamespaceManagerBeforePersistSettings": "persistNamespaceFlags",
+		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
+		"MWStakeDynamicConfigRegisterConfigs": "registerDynamicConfig"
 	},
 	"ResourceModules": {
 		"ext.bluespice.namespaceManager": {
@@ -149,6 +152,7 @@
 	"AvailableRights": [
 		"namespacemanager-viewspecialpage"
 	],
+	"callback": "mwsInitComponents",
 	"load_composer_autoloader": true,
 	"manifest_version": 2
 }
