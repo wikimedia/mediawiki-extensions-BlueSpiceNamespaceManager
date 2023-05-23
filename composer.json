@@ -4,7 +4,8 @@
 	"description": "BlueSpiceNamespaceManager Administration interface for adding, editing and deleting namespaces",
 	"license": "GPL-3.0-only",
 	"require": {
-		"composer/installers": "~1.0|~2"
+		"composer/installers": "~1.0|~2",
+		"mwstake/mediawiki-component-dynamicconfig": "~1"
 	},
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "41.0.0",
