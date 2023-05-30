@@ -23,21 +23,18 @@ class NamespaceSettingsTest extends TestCase {
 			]
 		] ] );
 
-		// "base" represents default values of globals, before applying
-		$baseGlobals = [
-			'X' => [
-				'foo' => NS_MAIN,
-				'bar' => NS_TEMPLATE
-			],
-			'G1' => [
-				'foo' => NS_MAIN,
-				'dummy' => NS_MEDIAWIKI
-			],
-			'G2' => [ 'foo', 'test' ],
-			'G3' => [
-				NS_FILE => 'bar',
-				NS_MAIN => true
-			],
+		$GLOBALS['X'] = [
+			'foo' => NS_MAIN,
+			'bar' => NS_TEMPLATE
+		];
+		$GLOBALS['G1'] = [
+			'foo' => NS_MAIN,
+			'dummy' => NS_MEDIAWIKI
+		];
+		$GLOBALS['G2'] = [ 'foo', 'test' ];
+		$GLOBALS['G3'] = [
+			NS_FILE => 'bar',
+			NS_MAIN => true
 		];
 
 		$expected = [
@@ -59,8 +56,14 @@ class NamespaceSettingsTest extends TestCase {
 		];
 
 		$config = new NamespaceSettings( $this->createMock( HookContainer::class ) );
-		$GLOBALS = $baseGlobals;
 		$config->apply( $serialized );
-		$this->assertSame( $expected, $baseGlobals );
+		$subsetGlobals = [
+			'X' => $GLOBALS['X'],
+			'G1' => $GLOBALS['G1'],
+			'G2' => $GLOBALS['G2'],
+			'G3' => $GLOBALS['G3'],
+			'wgExtraSignatureNamespaces' => []
+		];
+		$this->assertSame( $expected, $subsetGlobals );
 	}
 }
