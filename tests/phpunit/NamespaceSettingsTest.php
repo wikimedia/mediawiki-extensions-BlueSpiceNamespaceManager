@@ -59,7 +59,7 @@ class NamespaceSettingsTest extends TestCase {
 		];
 
 		$config = new NamespaceSettings( $this->createMock( HookContainer::class ) );
-		$config->setMwGlobals( $baseGlobals );
+		$GLOBALS = $baseGlobals;
 		$config->apply( $serialized );
 		$this->assertSame( $expected, $baseGlobals );
 	}

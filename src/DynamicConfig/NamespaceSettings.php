@@ -3,12 +3,9 @@
 namespace BlueSpice\NamespaceManager\DynamicConfig;
 
 use MediaWiki\HookContainer\HookContainer;
-use MWStake\MediaWiki\Component\DynamicConfig\GlobalsAwareDynamicConfig;
 use MWStake\MediaWiki\Component\DynamicConfig\IDynamicConfig;
 
-class NamespaceSettings implements IDynamicConfig, GlobalsAwareDynamicConfig {
-	/** @var array */
-	private $mwGlobals;
+class NamespaceSettings implements IDynamicConfig {
 
 	/** @var HookContainer */
 	private $hookContainer;
@@ -43,7 +40,7 @@ class NamespaceSettings implements IDynamicConfig, GlobalsAwareDynamicConfig {
 			}
 		}
 		foreach ( $unserialized['globals'] ?? [] as $global => $value ) {
-			$baseValue = $this->mwGlobals[$global] ?? [];
+			$baseValue = $GLOBALS[$global] ?? [];
 			if ( $this->isAssoc( $baseValue, $value ) ) {
 				// Use new value as the first array, so that it overrides defaults
 				$value = $value + $baseValue;
@@ -51,10 +48,10 @@ class NamespaceSettings implements IDynamicConfig, GlobalsAwareDynamicConfig {
 			} elseif ( is_array( $value ) && is_array( $baseValue ) ) {
 				$value = array_values( array_unique( array_merge( $baseValue, $value ) ) );
 			}
-			$this->mwGlobals[$global] = $value;
+			$GLOBALS[$global] = $value;
 		}
 
-		$this->mwGlobals['wgExtraSignatureNamespaces'] = $this->mwGlobals['wgContentNamespaces'] ?? [];
+		$GLOBALS['wgExtraSignatureNamespaces'] = $GLOBALS['wgContentNamespaces'] ?? [];
 		return true;
 	}
 
@@ -81,12 +78,12 @@ class NamespaceSettings implements IDynamicConfig, GlobalsAwareDynamicConfig {
 
 			if ( $nsId >= 100 && isset( $definition['name'] ) && $definition['name'] !== '' ) {
 				$globals['wgExtraNamespaces'][$nsId] = $definition['name'];
-			} elseif ( $nsId >= 100 && isset( $this->mwGlobals['wgExtraNamespaces'][$nsId] ) ) {
-				$globals['wgExtraNamespaces'][$nsId] = $this->mwGlobals['wgExtraNamespaces'][$nsId];
+			} elseif ( $nsId >= 100 && isset( $GLOBALS['wgExtraNamespaces'][$nsId] ) ) {
+				$globals['wgExtraNamespaces'][$nsId] = $GLOBALS['wgExtraNamespaces'][$nsId];
 			}
 
 			$this->hookContainer->run( 'NamespaceManagerBeforePersistSettings', [
-				&$globals, $nsId, $definition, $this->mwGlobals
+				&$globals, $nsId, $definition, $GLOBALS
 			] );
 			if ( isset( $definition['alias'] ) ) {
 				if ( !empty( $definition['alias'] ) ) {
@@ -114,15 +111,6 @@ class NamespaceSettings implements IDynamicConfig, GlobalsAwareDynamicConfig {
 	 */
 	public function shouldAutoApply(): bool {
 		return true;
-	}
-
-	/**
-	 * @param array &$globals
-	 *
-	 * @return mixed|void
-	 */
-	public function setMwGlobals( array &$globals ) {
-		$this->mwGlobals = &$globals;
 	}
 
 	/**
