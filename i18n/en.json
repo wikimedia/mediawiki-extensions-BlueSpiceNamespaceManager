@@ -49,7 +49,7 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|has renamed}} the namespace $4 to $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|has removed}} the namespace $4",
 	"bs-namespacemanager-ns-config-saved": "The namespace configuration has been saved.",
-	"bs-namespacemanager-error-ns-config-not-saved": "The namespace configuration could not be saved to $1.",
+	"bs-namespacemanager-error-save-fail": "The namespace configuration could not be saved",
 	"apihelp-bs-namespace-store-description": "Lists all namespaces and arbitrary configuration. Allows sorting, filtering and pagination. Implements ExtJS Store parameters.",
 	"apihelp-bs-namespace-store-summary": "Lists all namespaces and arbitrary configuration. Allows sorting, filtering and pagination. Implements ExtJS Store parameters.",
 	"apihelp-bs-namespace-tasks-description": "Allows modification of the namespace configuration.",
