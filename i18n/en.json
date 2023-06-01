@@ -64,5 +64,6 @@
 	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabled",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "checked",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "unchecked"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "unchecked",
+	"bs-namespacemanager-hide-non-content-ns-label": "Hide empty namespaces"
 }

@@ -72,5 +72,6 @@
 	"bs-namespacemanager-invalid-namespace": "Error message shown to the user when a namespace cannot be edited due to it being invalid.",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "Aria label for a icon that indicates a disabled state of a tristate option",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "Aria label for a icon that indicates a checked state of a tristate option",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "Aria label for a icon that indicates a unchecked state of a tristate option"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "Aria label for a icon that indicates a unchecked state of a tristate option",
+	"bs-namespacemanager-hide-non-content-ns-label": "Checkbox label to hide namespages without pages"
 }
