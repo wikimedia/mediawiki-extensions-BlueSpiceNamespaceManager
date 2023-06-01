@@ -98,9 +98,7 @@ class NamespaceManager {
 		}
 		return [
 			'success' => false,
-			'message' => $context->msg(
-				'bs-namespacemanager-error-ns-config-not-saved', 'nm-settings.php'
-			)->plain()
+			'message' => $context->msg( 'bs-namespacemanager-error-save-fail' )->plain()
 		];
 	}
 
