@@ -64,5 +64,7 @@
 	"bs-namespacemanager-invalid-namespace": "Le spatio de nomines a modificar non es valide",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disactivate",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "marcate",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "non marcate"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "non marcate",
+	"bs-namespacemanager-error-save-fail": "Le configuration del spatios de nomines non poteva esser salveguardate",
+	"bs-namespacemanager-hide-non-content-ns-label": "Celar spatios de nomines vacue"
 }
