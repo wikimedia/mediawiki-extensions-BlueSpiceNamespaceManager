@@ -35,7 +35,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|átnevezte}} a(z) $4 névteret a következő névre: $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|törölte}} a(z) $4 névteret",
 	"bs-namespacemanager-ns-config-saved": "A névtér-beállítások mentésre kerültek.",
-	"bs-namespacemanager-error-ns-config-not-saved": "A névtér konfigurációt nem lehet elmenteni a $1 fájlba.",
 	"apihelp-bs-namespace-store-description": "ExtJS Store paraméterek.",
 	"apihelp-bs-namespace-store-summary": "ExtJS Store paraméterek.",
 	"namespacemanager": "Névtér kezelő",

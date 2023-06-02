@@ -53,7 +53,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|переименовал|переименовала}} пространство имён $4 в $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|удалил|удалила}} пространство имён $4",
 	"bs-namespacemanager-ns-config-saved": "Настройка пространства имён была сохранена.",
-	"bs-namespacemanager-error-ns-config-not-saved": "Невозможно сохранить настройки пространства имён в $1.",
 	"apihelp-bs-namespace-store-description": "Перечисляет все пространства имён и произвольную настройку. Разрешает сортировку, фильтр и разбиение на страницы. Реализовывает параметры ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Перечисляет все пространства имён и произвольную настройку. Разрешает сортировку, фильтр и разбиение на страницы. Реализовывает параметры ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Позволяет изменить настройки пространства имён.",

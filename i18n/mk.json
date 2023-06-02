@@ -46,7 +46,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|го преименуваше}} именскиот простор $4 во $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|го отстрани}} именскиот простор $4",
 	"bs-namespacemanager-ns-config-saved": "Поставката на именскиот простор е зачувана.",
-	"bs-namespacemanager-error-ns-config-not-saved": "Не можев да ја зачувам поставката на именскиот простор во $1.",
 	"apihelp-bs-namespace-store-description": "Ги наведува сите именски простори и произволната поставка. Овозможува подредување, филтрирање и страничење. Применува параметри за ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Ги наведува сите именски простори и произволната поставка. Овозможува подредување, филтрирање и страничење. Применува параметри за ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Овозможува измена на поставката на именскиот простор.",

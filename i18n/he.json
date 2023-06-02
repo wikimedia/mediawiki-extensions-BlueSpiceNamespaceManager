@@ -51,7 +51,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|שינה|שינתה}} את השם של מרחב השם \"$4\" לשם \"$5\"",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|הסיר|הסירה}} את מרחב השם \"$4\"",
 	"bs-namespacemanager-ns-config-saved": "הגדרות התצורה של מרחב השם נשמרו.",
-	"bs-namespacemanager-error-ns-config-not-saved": "לא ניתן היה לשמור את הגדרות התצורה של מרחב השם בקובץ $1.",
 	"apihelp-bs-namespace-store-description": "רושמת את כל מרחבי השם והתצורה השרירותית. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
 	"apihelp-bs-namespace-store-summary": "רושמת את כל מרחבי השם והתצורה השרירותית. מאפשרת מיון, סינון, וחלוקה לדפים. מיישמת פרמטרים של שרת ExtJS.",
 	"apihelp-bs-namespace-tasks-description": "אפשרות לעריכת הגדרות התצורה של מרחב שם.",

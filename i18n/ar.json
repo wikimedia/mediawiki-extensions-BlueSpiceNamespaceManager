@@ -54,7 +54,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|غير|غيرت}} اسم النطاق $4 إلى $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|أزال|أزالت}} النطاق $4",
 	"bs-namespacemanager-ns-config-saved": "تم حفظ تهيئة النطاق.",
-	"bs-namespacemanager-error-ns-config-not-saved": "تعذر حفظ تهيئة النطاق إلى $1.",
 	"apihelp-bs-namespace-store-description": "يسرد كافة النطاقات والتكوين العشوائي، يتيح الفرز والتصفية وترقيم الصفحات، ينفذ وسائط مخزن ExtJS.",
 	"apihelp-bs-namespace-store-summary": "يسرد كافة النطاقات والتكوين العشوائي، يتيح الفرز والتصفية وترقيم الصفحات، ينفذ وسائط مخزن ExtJS.",
 	"apihelp-bs-namespace-tasks-description": "يسمح بتعديل تكوين النطاق.",

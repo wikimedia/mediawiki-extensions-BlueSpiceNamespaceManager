@@ -45,7 +45,6 @@
 	"logentry-bs-namespace-manager-rename": "$1ने नामविश्व $4 चे $5 असे {{GENDER:$2|पुनर्नामाभिधान केले आहे}}",
 	"logentry-bs-namespace-manager-remove": "$1 ने नामविश्व $4 {{GENDER:$2|हटविले आहे}}",
 	"bs-namespacemanager-ns-config-saved": "नामविश्व संरुपण जतन केल्या गेले आहे.",
-	"bs-namespacemanager-error-ns-config-not-saved": "नामविश्व संरुपण $1ला  जतन केल्या जाऊ शकले नाही.",
 	"apihelp-bs-namespace-tasks-description": "नामविश्वाचे संरुपण बदलण्यास अनुमती देते.",
 	"apihelp-bs-namespace-tasks-summary": "नामविश्वाचे संरुपण बदलण्यास अनुमती देते.",
 	"action-namespacemanager-viewspecialpage": "नामविश्व व्यवस्थापकाचे विशेषपान बघा",

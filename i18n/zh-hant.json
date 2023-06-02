@@ -54,7 +54,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|已重新命名}}命名空間 $4 為 $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|已移除}}命名空間 $4",
 	"bs-namespacemanager-ns-config-saved": "命名空間設置已儲存。",
-	"bs-namespacemanager-error-ns-config-not-saved": "命名空間設置無法儲存至 $1。",
 	"apihelp-bs-namespace-store-description": "列出所有命名空間與任意設置。允許排序、篩選，以及分頁。執行 ExtJS 所儲存的變數。",
 	"apihelp-bs-namespace-store-summary": "列出所有命名空間與任意設置。允許排序、篩選，以及分頁。執行 ExtJS 所儲存的變數。",
 	"apihelp-bs-namespace-tasks-description": "允許對命名空間設置的變動。",
