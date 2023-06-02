@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ellentilav",
 			"NikosLikomitros",
 			"Nikosgranturismogt"
 		]
@@ -33,5 +34,6 @@
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
 	"bs-namespacemanager-label-istalk": "Συζήτηση",
 	"bs-namespacemanager-hide-talk-label": "Απόκρυψη ονοματοχώρων συζήτησης",
-	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο"
+	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο",
+	"bs-namespacemanager-hide-non-content-ns-label": "Απόκρυψη κενών χωρών ονομάτων"
 }
