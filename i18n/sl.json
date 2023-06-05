@@ -67,5 +67,6 @@
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "onemogočeno",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "obkljukano",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano",
-	"bs-namespacemanager-hide-non-content-ns-label": "Skrij prazne imenske prostore"
+	"bs-namespacemanager-hide-non-content-ns-label": "Skrij prazne imenske prostore",
+	"bs-namespacemanager-error-save-fail": "Konfiguracije imenskega prostora ni bilo mogoče shraniti"
 }
