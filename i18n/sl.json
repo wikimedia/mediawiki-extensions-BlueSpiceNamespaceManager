@@ -51,6 +51,7 @@
 	"logentry-bs-namespace-manager-rename": "$1 je {{GENDER:$2|preimenoval|preimenovala|preimenoval_a}} imenski prostor $4 v $5",
 	"logentry-bs-namespace-manager-remove": "$1 je {{GENDER:$2|odstranil|odstranila|odstranil_a}} imenski prostor $4",
 	"bs-namespacemanager-ns-config-saved": "Konfiguracija imenskega prostora je shranjena.",
+	"bs-namespacemanager-error-save-fail": "Konfiguracije imenskega prostora ni bilo mogoče shraniti",
 	"apihelp-bs-namespace-store-description": "Navede vse imenske prostore in poljubno konfiguracijo. Omogoča razvrščanje, filtriranje in paginacijo. Uvede parametre ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Navede vsa imenske prostore in poljubno konfiguracijo. Omogoča razvrščanje, filtriranje in paginacijo. Uvede parametre ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Omogoča spreminjanje konfiguracije imenskih prostorov.",

@@ -54,6 +54,7 @@
 	"logentry-bs-namespace-manager-rename": "$1{{GENDER:$2|}} a renommé l’espace de noms $4 en $5",
 	"logentry-bs-namespace-manager-remove": "$1{{GENDER:$2|}} a supprimé l’espace de noms $4",
 	"bs-namespacemanager-ns-config-saved": "La configuration des espaces de noms a été enregistrée.",
+	"bs-namespacemanager-error-save-fail": "La configuration de l’espace de noms n’a pas pu être enregistrée",
 	"apihelp-bs-namespace-store-description": "Liste tous les espaces de noms et la configuration arbitraire. Permet le tri, le filtrage et la pagination. Met en œuvre les paramètres pour ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Liste tous les espaces de nom et la configuration arbitraire. Permet le tri, le filtrage et la pagination. Met en œuvre les paramètres pour ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Permet la modification de la configuration des espaces de noms.",
