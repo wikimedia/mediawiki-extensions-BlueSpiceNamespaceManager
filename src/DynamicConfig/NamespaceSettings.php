@@ -90,7 +90,7 @@ class NamespaceSettings implements IDynamicConfig {
 					$globals['wgNamespaceAliases'][$definition['alias']] = $constName;
 				}
 			} else {
-				$aliases = $aliases[$nsId];
+				$aliases = $aliases[$nsId] ?? [];
 
 				// Thing which will always be presented in aliases array - namespace title.
 				// So if there is only 1 item in array, then it is namespace title.
