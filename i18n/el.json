@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"NikosLikomitros",
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Ellentilav"
 		]
 	},
 	"bs-namespacemanager-invalid-id": "Μη έγκυρο αναγνωριστικό ονοματοχώρου",
@@ -33,5 +34,6 @@
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
 	"bs-namespacemanager-label-istalk": "Συζήτηση",
 	"bs-namespacemanager-hide-talk-label": "Απόκρυψη ονοματοχώρων συζήτησης",
+	"bs-namespacemanager-hide-non-content-ns-label": "Απόκρυψη κενών χωρών ονομάτων",
 	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο"
 }

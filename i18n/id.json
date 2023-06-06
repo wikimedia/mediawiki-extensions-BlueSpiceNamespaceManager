@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Joseagush"
+			"Joseagush",
+			"Agam Riyandana"
 		]
 	},
+	"bs-namespacemanager-error-save-fail": "Konfigurasi namespace tidak dapat disimpan",
 	"action-namespacemanager-viewspecialpage": "lihat halaman khusus dari manajer namespace"
 }
