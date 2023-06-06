@@ -77,6 +77,9 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		this.colMainConf.columns = columns;
 		this.callParent( arguments );
 	},
+	afterInitComponent: function ( arguments ) {
+		this.hideNonContentNamespace( true );
+	},
 	makeTbarItems: function() {
 		var items = this.callParent( arguments );
 		items.push(
@@ -85,7 +88,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 				checked: true,
 				listeners: {
 					change: function( chk, newValue, oldValue ) {
-						this.hideEmptyNamespace( newValue );
+						this.hideNonContentNamespace( newValue );
 					}.bind( this )
 				}
 			} ),
@@ -102,9 +105,10 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 		return items;
 	},
 	hideTalkNamespace: function( hide ) {
-		this.grdMain.getStore().clearFilter();
+		this.grdMain.getStore().removeFilter( 'hideTalkNamespace' );
 		if( hide ) {
 			this.strMain.addFilter( {
+				id: "hideTalkNamespace",
 				operator: "==",
 				value: false,
 				property: 'isTalkNS',
@@ -112,14 +116,15 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			} );
 		}
 	},
-	hideEmptyNamespace: function( hide ) {
-		this.grdMain.getStore().clearFilter();
+	hideNonContentNamespace: function( hide ) {
+		this.grdMain.getStore().removeFilter( 'hideNonContentNamespace' );
 		if( hide ) {
 			this.strMain.addFilter( {
-				operator: "neq",
-				value: 0,
-				property: 'pageCount',
-				type: 'numeric'
+				id: "hideNonContentNamespace",
+				operator: "==",
+				value: true,
+				property: 'content',
+				type: 'boolean'
 			} );
 		}
 	},
