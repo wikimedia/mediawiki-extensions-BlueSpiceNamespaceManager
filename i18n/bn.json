@@ -7,6 +7,7 @@
 		]
 	},
 	"bs-namespacemanager-label-content": "বিষয়বস্তুর নামস্থান",
+	"bs-namespacemanager-error-save-fail": "নামস্থান কনফিগারেশন সংরক্ষণ করা যায়নি",
 	"namespacemanager": "নামস্থান পরিচালক",
 	"bs-namespacemanager-label-istalk": "আলাপ"
 }
