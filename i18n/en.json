@@ -65,6 +65,6 @@
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabled",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "checked",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "unchecked",
-	"bs-namespacemanager-hide-non-content-ns-label": "Hide empty namespaces",
+	"bs-namespacemanager-hide-non-content-ns-label": "Hide non-content namespaces",
 	"bs-namespacemanager-error-save-fail": "The namespace configuration could not be saved"
 }
