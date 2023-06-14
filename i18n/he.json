@@ -68,5 +68,5 @@
 	"bs-namespacemanager-icon-tristate-true-aria-label": "מסומן",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "לא מסומן",
 	"bs-namespacemanager-error-save-fail": "לא היה אפשר לשמור את התצורה של מרחבי השם",
-	"bs-namespacemanager-hide-non-content-ns-label": "הסתר מרחבי שם ריקים"
+	"bs-namespacemanager-hide-non-content-ns-label": "הסתר מרחבי שם שאינם מרחבי תוכן"
 }
