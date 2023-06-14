@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"Asma",
 			"FShbib",
 			"Meno25",
 			"Shbib Al-Subaie",
@@ -69,5 +70,7 @@
 	"bs-namespacemanager-pseudo-ns": "توجد صفحات في مساحة الاسم القياسية تبدأ باسم مساحة الاسم أو الاسم المستعار المقترح.",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "مفحوص",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة",
+	"bs-namespacemanager-error-save-fail": "لا يمكن حفظ تهيئة مساحة الاسم",
+	"bs-namespacemanager-hide-non-content-ns-label": "إخفاء مساحات الأسماء التي لا تحتوي على المحتوى"
 }

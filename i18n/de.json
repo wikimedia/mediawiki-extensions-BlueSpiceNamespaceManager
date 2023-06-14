@@ -75,5 +75,7 @@
 	"bs-namespacemanager-pseudo-ns": "Es gibt Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktiviert",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "ausgewählt",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt",
+	"bs-namespacemanager-error-save-fail": "Die Namensraum-Konfiguration konnte nicht gespeichert werden",
+	"bs-namespacemanager-hide-non-content-ns-label": "Ausblenden von Nicht-Inhalts-Namensräumen"
 }
