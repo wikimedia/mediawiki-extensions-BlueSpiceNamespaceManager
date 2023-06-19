@@ -66,5 +66,7 @@
 	"right-namespacemanager-viewspecialpage": "存取特殊頁面 [[Special:NamespaceManager]] 的權限。",
 	"bs-namespacemanager-hide-talk-label": "隱藏討論命名空間",
 	"bs-namespacemanager-labelnsalias": "別名",
-	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效"
+	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效",
+	"bs-namespacemanager-error-save-fail": "無法儲存命名空間組態",
+	"bs-namespacemanager-hide-non-content-ns-label": "隱藏非內容命名空間"
 }
