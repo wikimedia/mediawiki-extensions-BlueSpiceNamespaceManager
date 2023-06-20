@@ -60,7 +60,7 @@
 	"bs-namespacemanager-label-istalk": "Discussion",
 	"right-namespacemanager-viewspecialpage": "Accesso al pagina special [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Celar spatios de nomines de discussion",
-	"bs-namespacemanager-hide-non-content-ns-label": "Celar spatios de nomines vacue",
+	"bs-namespacemanager-hide-non-content-ns-label": "Celar spatios de nomines non de contento",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "Le spatio de nomines a modificar non es valide",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disactivate",

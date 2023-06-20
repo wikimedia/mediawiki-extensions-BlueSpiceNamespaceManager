@@ -6,7 +6,8 @@
 			"محمد أحمد عبد الفتاح",
 			"FShbib",
 			"Meno25",
-			"Alshamiri1"
+			"Alshamiri1",
+			"Asma"
 		]
 	},
 	"bs-namespacemanager-desc": "واجهة الإدارة لإضافة وتحرير وحذف النطاقات",
@@ -54,7 +55,7 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|غير|غيرت}} اسم النطاق $4 إلى $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|أزال|أزالت}} النطاق $4",
 	"bs-namespacemanager-ns-config-saved": "تم حفظ تهيئة النطاق.",
-	"bs-namespacemanager-error-ns-config-not-saved": "تعذر حفظ تهيئة النطاق إلى $1.",
+	"bs-namespacemanager-error-save-fail": "لا يمكن حفظ تهيئة مساحة الاسم",
 	"apihelp-bs-namespace-store-description": "يسرد كافة النطاقات والتكوين العشوائي، يتيح الفرز والتصفية وترقيم الصفحات، ينفذ وسائط مخزن ExtJS.",
 	"apihelp-bs-namespace-store-summary": "يسرد كافة النطاقات والتكوين العشوائي، يتيح الفرز والتصفية وترقيم الصفحات، ينفذ وسائط مخزن ExtJS.",
 	"apihelp-bs-namespace-tasks-description": "يسمح بتعديل تكوين النطاق.",
@@ -65,6 +66,7 @@
 	"bs-namespacemanager-label-istalk": "نقاش",
 	"right-namespacemanager-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
+	"bs-namespacemanager-hide-non-content-ns-label": "إخفاء مساحات الأسماء التي لا تحتوي على المحتوى",
 	"bs-namespacemanager-labelnsalias": "الاسم المستعار",
 	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",

@@ -3,7 +3,9 @@
 		"authors": [
 			"NikosLikomitros",
 			"Nikosgranturismogt",
-			"Ellentilav"
+			"Ellentilav",
+			"MnLsVt",
+			"Spyridon Eftychios Kokotos"
 		]
 	},
 	"bs-namespacemanager-invalid-id": "Μη έγκυρο αναγνωριστικό ονοματοχώρου",
@@ -30,10 +32,11 @@
 	"bs-namespacemanager-deletens-deletepages": "Αυτή η σελίδα έχει διαγραφεί, επειδή ο ονοματοχώρος \"$1\" διεγράφη.",
 	"log-name-bs-namespace-manager": "Μητρώο διαχειριστή ονοματοχώρων",
 	"logeventslist-bs-namespace-manager-log": "Μητρώο διαχειριστή ονοματοχώρων",
+	"bs-namespacemanager-error-save-fail": "Η ρύθμιση του ονοματοχώρου δεν μπόρεσε να αποθηκευτεί.",
 	"namespacemanager": "Διαχειριστής ονοματοχώρων",
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
 	"bs-namespacemanager-label-istalk": "Συζήτηση",
 	"bs-namespacemanager-hide-talk-label": "Απόκρυψη ονοματοχώρων συζήτησης",
-	"bs-namespacemanager-hide-non-content-ns-label": "Απόκρυψη κενών χωρών ονομάτων",
+	"bs-namespacemanager-hide-non-content-ns-label": "Απόκρυψη χωρών ονομάτων χωρίς περιεχόμενο",
 	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο"
 }
