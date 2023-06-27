@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"EdoAug"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrasjonsgrensesnitt for å legge til, redigere og slette navnerom",
@@ -49,7 +50,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|har}} endret navn på navnerommet $4 til $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|har}} fjernet navnerommet $4",
 	"bs-namespacemanager-ns-config-saved": "Navneromskonfigurasjonen har blitt lagret.",
-	"bs-namespacemanager-error-ns-config-not-saved": "Navneromskonfigurasjonen kunne ikke lagres i $1.",
 	"apihelp-bs-namespace-store-description": "Lister opp alle navnerom og vilkårlig konfigurasjon. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
 	"apihelp-bs-namespace-store-summary": "Lister opp alle navnerom og vilkårlig konfigurasjon. Tillater sortering, filtrering og sideinndeling. Implementerer ExtJS Store-parametre.",
 	"apihelp-bs-namespace-tasks-description": "Tillater endring av navneromskonfigurasjonen.",
@@ -61,5 +61,6 @@
 	"right-namespacemanager-viewspecialpage": "Tilgang til spesialsiden [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig"
+	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktivert"
 }
