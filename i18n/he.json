@@ -3,7 +3,8 @@
 		"authors": [
 			"Amire80",
 			"Guycn2",
-			"Steeve815"
+			"Steeve815",
+			"Neriah"
 		]
 	},
 	"bs-namespacemanager-desc": "ממשק ניהולי עבור הוספה, עריכה ומחיקה של מרחבי שם",
@@ -29,7 +30,7 @@
 	"bs-namespacemanager-hide-talk-ns": "הסתרת מרחבי שיחה",
 	"bs-namespacemanager-nsadded": "מרחב השם נוסף.",
 	"bs-namespacemanager-nsremoved": "מרחב השם הוסר.",
-	"bs-namespacemanager-nsedited": "מרחב השם שוּנה.",
+	"bs-namespacemanager-nsedited": "מרחב השם שונה.",
 	"bs-namespacemanager-tipadd": "הוספת מרחב שם",
 	"bs-namespacemanager-tipedit": "עריכת מרחב שם",
 	"bs-namespacemanager-tipremove": "הסרת מרחב שם",
