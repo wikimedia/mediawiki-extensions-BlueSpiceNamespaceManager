@@ -56,6 +56,7 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|heeft}} de naamruimte $4 naar $5 hernoemd",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|heeft}} de naamruimte $4 verwijderd",
 	"bs-namespacemanager-ns-config-saved": "De instellingen voor naamruimten zijn opgeslagen.",
+	"bs-namespacemanager-error-save-fail": "De configuratie van de naamruimte kon niet worden opgeslagen",
 	"apihelp-bs-namespace-store-summary": "Geeft een overzicht van alle naamruimten en willekeurige configuratie. Maakt sorteren, filteren en pagineren mogelijk. Implementeert ExtJS Store-parameters.",
 	"apihelp-bs-namespace-tasks-summary": "Maakt het mogelijk de instellingen voor de naamruimten aan te passen.",
 	"action-namespacemanager-viewspecialpage": "de speciale pagina voor naamruimtebeheer te bekijken",
@@ -64,7 +65,10 @@
 	"bs-namespacemanager-label-istalk": "Overleg",
 	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
+	"bs-namespacemanager-hide-non-content-ns-label": "Niet-inhoudsnaamruimten verbergen",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
-	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld"
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "aangevinkt",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "niet aangevinkt"
 }
