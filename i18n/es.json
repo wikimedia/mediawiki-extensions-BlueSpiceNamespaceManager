@@ -8,7 +8,8 @@
 			"Fitoschido",
 			"Macofe",
 			"Ryo567",
-			"YoViajo"
+			"YoViajo",
+			"AnupamM"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfaz administrativa para añadir, editar y eliminar espacios de nombres",
@@ -56,7 +57,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|cambió el nombre}} del espacio de nombres $4 a $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|ha eliminado}} el espacio de nombres $4",
 	"bs-namespacemanager-ns-config-saved": "La configuración de los espacios de nombres ha sido guardada.",
-	"bs-namespacemanager-error-ns-config-not-saved": "La configuración de los espacios de nombres no se pudo guardar en $1.",
 	"apihelp-bs-namespace-tasks-description": "Permite la modificación de la configuración de los espacios de nombres.",
 	"apihelp-bs-namespace-tasks-summary": "Permite modificar la configuración del espacio de nombres.",
 	"action-namespacemanager-viewspecialpage": "ver la página especial del gestor de espacios de nombres",
@@ -66,5 +66,8 @@
 	"right-namespacemanager-viewspecialpage": "Acceso a la página especial [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido"
+	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "desactivado",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "marcada",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "sin marcar"
 }
