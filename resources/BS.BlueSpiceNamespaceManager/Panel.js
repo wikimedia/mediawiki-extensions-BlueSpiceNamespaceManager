@@ -65,7 +65,7 @@ Ext.define( 'BS.BlueSpiceNamespaceManager.Panel', {
 			columns.push( column );
 		}
 
-		$(document).trigger('BSNamespaceManagerInitCompontent', [this, fields, columns]);
+		$(document).trigger('BSNamespaceManagerInitComponent', [this, fields, columns]);
 
 		this.strMain = new BS.store.BSApi( {
 			apiAction: 'bs-namespace-store',
