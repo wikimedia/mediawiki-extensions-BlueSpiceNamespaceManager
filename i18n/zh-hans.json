@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"CrownedWharf566",
 			"Ff98sha",
 			"Liuxinyu970226",
 			"StarrySky",
@@ -61,5 +62,9 @@
 	"bs-namespacemanager-label-istalk": "讨论",
 	"right-namespacemanager-viewspecialpage": "访问页面 [[Special:NamespaceManager]] 的权限。",
 	"bs-namespacemanager-hide-talk-label": "隐藏讨论命名空间",
-	"bs-namespacemanager-labelnsalias": "别名"
+	"bs-namespacemanager-hide-non-content-ns-label": "隐藏非内容命名空间",
+	"bs-namespacemanager-labelnsalias": "别名",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已禁用",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "已勾选",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选"
 }
