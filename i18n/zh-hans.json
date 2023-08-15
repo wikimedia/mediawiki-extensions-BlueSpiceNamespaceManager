@@ -7,7 +7,8 @@
 			"WQL",
 			"Xiplus",
 			"佛壁灯",
-			"科劳"
+			"科劳",
+			"CrownedWharf566"
 		]
 	},
 	"bs-namespacemanager-desc": "用于添加、编辑和删除命名空间的管理界面",
@@ -53,7 +54,6 @@
 	"logentry-bs-namespace-manager-rename": "$1{{GENDER:$2|已更名}}命名空间$4至$5",
 	"logentry-bs-namespace-manager-remove": "$1{{GENDER:$2|移除了}}命名空间$4",
 	"bs-namespacemanager-ns-config-saved": "命名空间配置已保存。",
-	"bs-namespacemanager-error-ns-config-not-saved": "命名空间配置不能保存至$1。",
 	"apihelp-bs-namespace-store-description": "列举所有命名空间和任意配置。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-namespace-store-summary": "列举所有命名空间和任意配置。允许排序、过滤和分页。执行ExtJS存储的参数。",
 	"apihelp-bs-namespace-tasks-description": "允许修改命名空间配置。",
@@ -64,5 +64,9 @@
 	"bs-namespacemanager-label-istalk": "讨论",
 	"right-namespacemanager-viewspecialpage": "访问页面 [[Special:NamespaceManager]] 的权限。",
 	"bs-namespacemanager-hide-talk-label": "隐藏讨论命名空间",
-	"bs-namespacemanager-labelnsalias": "别名"
+	"bs-namespacemanager-hide-non-content-ns-label": "隐藏非内容命名空间",
+	"bs-namespacemanager-labelnsalias": "别名",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已禁用",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "已勾选",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选"
 }

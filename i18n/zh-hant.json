@@ -67,5 +67,6 @@
 	"bs-namespacemanager-hide-talk-label": "隱藏討論命名空間",
 	"bs-namespacemanager-hide-non-content-ns-label": "隱藏非內容命名空間",
 	"bs-namespacemanager-labelnsalias": "別名",
-	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效"
+	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已停用"
 }
