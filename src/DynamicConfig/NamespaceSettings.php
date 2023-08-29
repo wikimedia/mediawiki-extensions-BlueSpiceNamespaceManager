@@ -87,11 +87,13 @@ class NamespaceSettings implements IDynamicConfig {
 			] );
 			if ( isset( $definition['alias'] ) ) {
 				if ( !empty( $definition['alias'] ) ) {
-					$globals['wgNamespaceAliases'][$definition['alias']] = $constName;
+					$globals['wgNamespaceAliases'][$definition['alias']] = $nsId;
 				}
 			} else {
 				$aliases = $aliases[$nsId] ?? [];
-
+				if ( is_string( $aliases ) ) {
+					$aliases = [ $aliases ];
+				}
 				// Thing which will always be presented in aliases array - namespace title.
 				// So if there is only 1 item in array, then it is namespace title.
 				// We should not use namespace title as alias, so just skip such cases
