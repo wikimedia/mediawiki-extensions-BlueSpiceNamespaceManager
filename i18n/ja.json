@@ -3,6 +3,7 @@
 		"authors": [
 			"2nd-player",
 			"A2y4",
+			"Kokage si",
 			"MathXplore",
 			"Otokoume",
 			"Shirayuki",
@@ -50,5 +51,7 @@
 	"namespacemanager": "名前空間マネージャー",
 	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用",
 	"bs-namespacemanager-label-istalk": "トーク",
-	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み"
+	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",
+	"bs-namespacemanager-text": "名前空間",
+	"bs-namespacemanager-label-editable": "名前変更可能"
 }
