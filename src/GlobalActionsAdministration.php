@@ -6,7 +6,7 @@ use Message;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
 use SpecialPage;
 
-class GlobalActionsManager extends RestrictedTextLink {
+class GlobalActionsAdministration extends RestrictedTextLink {
 
 	/**
 	 *
