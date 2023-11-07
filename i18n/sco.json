@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"John Reid"
+			"John Reid",
+			"CiphriusKane"
 		]
 	},
 	"bs-namespacemanager-desc": "Admeenistration interface fer eikin, eeditin n delytin namespaces",
@@ -20,6 +21,6 @@
 	"bs-namespacemanager-labelnsname": "Namespace name",
 	"bs-namespacemanager-willdelete": "Will be delytit",
 	"bs-namespacemanager-willmovesuffix": "Will be muived intae \"{{int:bs-ns_main}}\" wi the suffeex \"$1\"",
-	"bs-namespacemanager-deletewarning": "Ar ye siccar that ye want tae delyte this namespace? Delytin ae namespace canna be onduin.",
+	"bs-namespacemanager-deletewarning": "Are ye shuir that ye want tae delete this namespace? Deletin ae namespace cannae be unduin.",
 	"bs-namespacemanager-pagepresent": "Pages in this namespace:"
 }
