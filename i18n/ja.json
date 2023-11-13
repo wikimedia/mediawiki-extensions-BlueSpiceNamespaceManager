@@ -9,7 +9,8 @@
 			"Shirayuki",
 			"SkyDaisy9",
 			"Sujiniku",
-			"Suyama"
+			"Suyama",
+			"もなー(偽物)"
 		]
 	},
 	"bs-namespacemanager-desc": "名前空間を追加/編集/削除する管理インターフェイス",
@@ -53,5 +54,16 @@
 	"bs-namespacemanager-label-istalk": "トーク",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",
 	"bs-namespacemanager-text": "名前空間",
-	"bs-namespacemanager-label-editable": "名前変更可能"
+	"bs-namespacemanager-label-editable": "名前変更可能",
+	"bs-namespacemanager-wrong-alias": "名前空間のエイリアスが無効な文字を含んでいます。",
+	"bs-namespacemanager-alias-exists": "名前空間のエイリアスははすでに名前空間「$1」に設定されています",
+	"bs-namespacemanager-alias-exists-as-ns": "名前空間のエイリアスは名前空間の名称としてすでに存在します。",
+	"bs-namespacemanager-pseudo-ns": "標準の名前空間には、提案された名前空間の名称またはエイリアスで始まるページがあります。",
+	"bs-namespacemanager-willdelete": "削除されます",
+	"bs-namespacemanager-pagepresent": "この名前空間に属するページ:",
+	"bs-namespacemanager-ns-config-saved": "名前空間の設定が保存されました.",
+	"bs-namespacemanager-error-save-fail": "名前空間の設定を保存できませんでした",
+	"bs-namespacemanager-labelnsalias": "エイリアス(別名)",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック"
 }
