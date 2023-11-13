@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Adriendelucca",
 			"Fohanno",
 			"Fulup",
 			"Huñvreüs",
@@ -22,5 +23,7 @@
 	"bs-namespacemanager-willdelete": "A vo dilamet",
 	"bs-namespacemanager-willmove": "A vo dilec'hiet e-barzh \"{{int:bs-ns_main}}\"",
 	"bs-namespacemanager-willmovesuffix": "A vo dilec'hiet e-barzh \"{{int:bs-ns_main}}\" gant an dibenn-ger \"$1\"",
-	"apihelp-bs-namespace-tasks-description": "Aotren kemmañ kefluniadur an esaouenn-anv."
+	"apihelp-bs-namespace-tasks-description": "Aotren kemmañ kefluniadur an esaouenn-anv.",
+	"bs-namespacemanager-label-istalk": "Kaozeal",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "diweredekaet"
 }
