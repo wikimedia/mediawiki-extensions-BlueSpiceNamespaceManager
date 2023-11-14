@@ -9,15 +9,20 @@
 			"Sujiniku",
 			"Suyama",
 			"MathXplore",
-			"Kokage si"
+			"Kokage si",
+			"もなー(偽物)"
 		]
 	},
 	"bs-namespacemanager-desc": "名前空間を追加/編集/削除する管理インターフェイス",
 	"bs-namespacemanager-label": "名前空間マネージャー",
 	"bs-namespacemanager-text": "名前空間",
 	"bs-namespacemanager-wrong-name": "名前空間名が無効な文字を含んでいます。",
+	"bs-namespacemanager-wrong-alias": "名前空間のエイリアスが無効な文字を含んでいます。",
+	"bs-namespacemanager-alias-exists": "名前空間のエイリアスははすでに名前空間「$1」に設定されています",
 	"bs-namespacemanager-ns-exists": "既に存在する名前空間です。",
+	"bs-namespacemanager-alias-exists-as-ns": "名前空間のエイリアスは名前空間の名称としてすでに存在します。",
 	"bs-namespacemanager-ns-length": "名前空間名は2文字以上でなければなりません。",
+	"bs-namespacemanager-pseudo-ns": "標準の名前空間には、提案された名前空間の名称またはエイリアスで始まるページがあります。",
 	"bs-namespacemanager-invalid-id": "有効な名前空間 ID がありません",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "名前空間",
@@ -37,8 +42,10 @@
 	"bs-namespacemanager-tipremove": "名前空間の除去",
 	"bs-namespacemanager-msgnoteditabledelete": "この名前空間はシステム名前空間であるため削除できません。",
 	"bs-namespacemanager-labelnsname": "名前空間名",
+	"bs-namespacemanager-willdelete": "削除されます",
 	"bs-namespacemanager-willmovesuffix": "接尾語$1と\"{{int:bs-ns_main}}\"の中に移動させる",
 	"bs-namespacemanager-deletewarning": "この名前空間を本当に削除しますか? 名前空間の削除は取り消せません。",
+	"bs-namespacemanager-pagepresent": "この名前空間に属するページ:",
 	"bs-namespacemanager-deletens-movepages": "名前空間「$1」が消去されたため、このページは名前空間「$1」から名前空間「{{int:bs-ns_main}}」へ移動しました。",
 	"bs-namespacemanager-deletens-deletepages": "名前空間「$1」が消去されたため、このページも消去されました。",
 	"log-name-bs-namespace-manager": "名前空間マネージャー記録",
@@ -49,9 +56,14 @@
 	"logentry-bs-namespace-manager-modify": "$1 は名前空間 $4 の設定を{{GENDER:$2|変更しました}}",
 	"logentry-bs-namespace-manager-rename": "$1 は名前空間 $4 を $5 に{{GENDER:$2|改名しました}}",
 	"logentry-bs-namespace-manager-remove": "$1 は名前空間 $4 を{{GENDER:$2|除去しました}}",
+	"bs-namespacemanager-ns-config-saved": "名前空間の設定が保存されました.",
+	"bs-namespacemanager-error-save-fail": "名前空間の設定を保存できませんでした",
 	"action-namespacemanager-viewspecialpage": "名前空間マネージャーの特別ページの閲覧",
 	"namespacemanager": "名前空間マネージャー",
 	"bs-namespacemanager-label-istalk": "トーク",
 	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用",
-	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み"
+	"bs-namespacemanager-labelnsalias": "エイリアス(別名)",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック"
 }
