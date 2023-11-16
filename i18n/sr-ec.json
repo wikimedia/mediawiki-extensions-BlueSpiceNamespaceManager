@@ -17,5 +17,22 @@
 	"logentry-bs-namespace-manager-remove": "$1 је {{GENDER:$2|уклонио|уклонила}} именски простор $4",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "онемогућено",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "проверено",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "непроверено"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "непроверено",
+	"bs-namespacemanager-text": "Именски простори",
+	"bs-namespacemanager-wrong-name": "Именски простор садржи неважеће знакове.",
+	"bs-namespacemanager-ns-exists": "Именски простор већ постоји.",
+	"bs-namespacemanager-ns-length": "Именски простор мора садржати најмање два карактера.",
+	"bs-namespacemanager-invalid-id": "Неважећи ID именског простора",
+	"bs-namespacemanager-label-namespaces": "Именски простор",
+	"bs-namespacemanager-label-content": "Именски простор садржаја",
+	"bs-namespacemanager-label-subpages": "Подстранице",
+	"bs-namespacemanager-hide-system-ns": "Сакриј системске именске просторе",
+	"bs-namespacemanager-hide-talk-ns": "Сакриј именске просторе разговора",
+	"bs-namespacemanager-nsadded": "Именски простор је додат.",
+	"bs-namespacemanager-nsremoved": "Именски простор је уклоњен.",
+	"bs-namespacemanager-nsedited": "Именски простор је измењен.",
+	"bs-namespacemanager-tipadd": "Додај именски простор",
+	"bs-namespacemanager-tipedit": "Измени именски простор",
+	"bs-namespacemanager-tipremove": "Уклони именски простор",
+	"bs-namespacemanager-msgnoteditabledelete": "Овај именски простор је систенмски и није могуће уклонити га."
 }
