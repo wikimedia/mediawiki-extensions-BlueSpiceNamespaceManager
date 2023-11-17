@@ -34,5 +34,13 @@
 	"bs-namespacemanager-tipadd": "Додај именски простор",
 	"bs-namespacemanager-tipedit": "Измени именски простор",
 	"bs-namespacemanager-tipremove": "Уклони именски простор",
-	"bs-namespacemanager-msgnoteditabledelete": "Овај именски простор је систенмски и није могуће уклонити га."
+	"bs-namespacemanager-msgnoteditabledelete": "Овај именски простор је систенмски и није могуће уклонити га.",
+	"bs-namespacemanager-labelnsname": "Име именског простора",
+	"bs-namespacemanager-willdelete": "Биће обрисан",
+	"bs-namespacemanager-willmove": "Биће премештен на \"{{int:bs-ns_main}}\"",
+	"bs-namespacemanager-willmovesuffix": "Биће премештен на \"{{int:bs-ns_main}}\" са суфиксом \"$1\"",
+	"bs-namespacemanager-deletewarning": "Да ли сте сигурни да желите да обришете овај именски простор? Брисање именског простора не може бити отказано.",
+	"bs-namespacemanager-pagepresent": "Странице у овом именском простору:",
+	"bs-namespacemanager-deletens-movepages": "Ова страница је премештена из именског простора \"$1\" на \"{{int:bs-ns_main}}\", зато што је именски простор \"$1\" обрисан.",
+	"bs-namespacemanager-label-istalk": "Разговор"
 }
