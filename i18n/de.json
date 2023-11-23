@@ -3,6 +3,8 @@
 		"authors": [
 			"Hwboehm",
 			"Jkonrad",
+			"Kghbln",
+			"Lukasaiko",
 			"MarkusRost",
 			"Metalhead64",
 			"Mglaser",
@@ -10,9 +12,7 @@
 			"Purodha",
 			"Stephan Muggli <muggli@hallowelt.biz>",
 			"Tiin",
-			"Umherirrender",
-			"Kghbln",
-			"Lukasaiko"
+			"Umherirrender"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",

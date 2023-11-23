@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"CiphriusKane",
 			"John Reid"
 		]
 	},
@@ -18,8 +19,8 @@
 	"bs-namespacemanager-tipedit": "Eedit namespace",
 	"bs-namespacemanager-tipremove": "Remuiv namespace",
 	"bs-namespacemanager-labelnsname": "Namespace name",
-	"bs-namespacemanager-willdelete": "Will be delytit",
+	"bs-namespacemanager-willdelete": "Will be deletit",
 	"bs-namespacemanager-willmovesuffix": "Will be muived intae \"{{int:bs-ns_main}}\" wi the suffeex \"$1\"",
-	"bs-namespacemanager-deletewarning": "Ar ye siccar that ye want tae delyte this namespace? Delytin ae namespace canna be onduin.",
+	"bs-namespacemanager-deletewarning": "Are ye shuir that ye want tae delete this namespace? Deletin ae namespace cannae be unduin.",
 	"bs-namespacemanager-pagepresent": "Pages in this namespace:"
 }
