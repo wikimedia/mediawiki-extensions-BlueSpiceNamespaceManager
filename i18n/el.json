@@ -1,8 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ellentilav",
+			"MnLsVt",
 			"NikosLikomitros",
-			"Nikosgranturismogt"
+			"Nikosgranturismogt",
+			"Spyridon Eftychios Kokotos"
 		]
 	},
 	"bs-namespacemanager-invalid-id": "Μη έγκυρο αναγνωριστικό ονοματοχώρου",
@@ -33,5 +36,7 @@
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
 	"bs-namespacemanager-label-istalk": "Συζήτηση",
 	"bs-namespacemanager-hide-talk-label": "Απόκρυψη ονοματοχώρων συζήτησης",
-	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο"
+	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο",
+	"bs-namespacemanager-error-save-fail": "Η ρύθμιση του ονοματοχώρου δεν μπόρεσε να αποθηκευτεί.",
+	"bs-namespacemanager-hide-non-content-ns-label": "Απόκρυψη χωρών ονομάτων χωρίς περιεχόμενο"
 }

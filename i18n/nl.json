@@ -69,5 +69,9 @@
 	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
-	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld"
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld",
+	"bs-namespacemanager-error-save-fail": "De configuratie van de naamruimte kon niet worden opgeslagen",
+	"bs-namespacemanager-hide-non-content-ns-label": "Niet-inhoudsnaamruimten verbergen",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "aangevinkt",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "niet aangevinkt"
 }

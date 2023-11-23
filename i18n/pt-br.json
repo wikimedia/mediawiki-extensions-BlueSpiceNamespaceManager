@@ -5,7 +5,8 @@
 			"Eduardoaddad",
 			"Felipe L. Ewald",
 			"Juan90264",
-			"TheEduGobi"
+			"TheEduGobi",
+			"VasbXBR"
 		]
 	},
 	"bs-namespacemanager-desc": "Interface administrativa para adicionar, editar e excluir espaços nominais",
@@ -65,5 +66,6 @@
 	"right-namespacemanager-viewspecialpage": "Acesso à página especial [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "Ocultar espaços nominais de discussão",
 	"bs-namespacemanager-labelnsalias": "Nome alternativo",
-	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido"
+	"bs-namespacemanager-invalid-namespace": "O espaço nominal que está a ser editado é inválido",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "desabilitado"
 }

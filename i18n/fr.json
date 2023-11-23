@@ -69,5 +69,7 @@
 	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "désactivé",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "coché",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "décoché"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "décoché",
+	"bs-namespacemanager-error-save-fail": "La configuration de l’espace de noms n’a pas pu être enregistrée",
+	"bs-namespacemanager-hide-non-content-ns-label": "Masquer les espaces de noms vides"
 }

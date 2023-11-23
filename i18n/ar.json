@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shbib Al-Subaie",
-			"ديفيد",
-			"محمد أحمد عبد الفتاح",
+			"Alshamiri1",
+			"Asma",
 			"FShbib",
 			"Meno25",
-			"Alshamiri1"
+			"Shbib Al-Subaie",
+			"ديفيد",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-namespacemanager-desc": "واجهة الإدارة لإضافة وتحرير وحذف النطاقات",
@@ -69,5 +70,7 @@
 	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "مفحوص",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة",
+	"bs-namespacemanager-error-save-fail": "لا يمكن حفظ تهيئة مساحة الاسم",
+	"bs-namespacemanager-hide-non-content-ns-label": "إخفاء مساحات الأسماء التي لا تحتوي على المحتوى"
 }
