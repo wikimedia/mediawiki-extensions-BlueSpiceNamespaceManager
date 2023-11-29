@@ -65,5 +65,7 @@
 	"bs-namespacemanager-labelnsalias": "エイリアス(別名)",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック",
+	"bs-namespacemanager-willmove": "「{{int:bs-ns_main}}」に移動されます",
+	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない"
 }
