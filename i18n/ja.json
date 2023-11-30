@@ -3,6 +3,7 @@
 		"authors": [
 			"2nd-player",
 			"A2y4",
+			"Chqaz",
 			"Kokage si",
 			"MathXplore",
 			"Otokoume",
@@ -67,5 +68,7 @@
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック",
 	"bs-namespacemanager-willmove": "「{{int:bs-ns_main}}」に移動されます",
-	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない"
+	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない",
+	"bs-namespacemanager-nodeletetalk": "会話名前空間は削除できません",
+	"bs-namespacemanager-hide-non-content-ns-label": "コンテンツでない名前空間を隠す"
 }
