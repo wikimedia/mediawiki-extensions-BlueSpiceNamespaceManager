@@ -48,7 +48,7 @@
 	"log-show-hide-bs-namespace-manager": "$1 dnevnik upravitelja imenskih prostorov",
 	"logeventslist-bs-namespace-manager-log": "Dnevnik upravitelja imenskih prostorov",
 	"logentry-bs-namespace-manager-create": "$1 je {{GENDER:$2|ustvaril|ustvarila|ustvaril_a}} imenski prostor $4",
-	"logentry-bs-namespace-manager-modify": "$1 je {{GENDER:$2|spremenil|spremenila|spremenil/a}} nastavitve imenskega prostora $4",
+	"logentry-bs-namespace-manager-modify": "$1 je {{GENDER:$2|spremenil|spremenila|spremenil_a}} nastavitve imenskega prostora $4",
 	"logentry-bs-namespace-manager-rename": "$1 je {{GENDER:$2|preimenoval|preimenovala|preimenoval_a}} imenski prostor $4 v $5",
 	"logentry-bs-namespace-manager-remove": "$1 je {{GENDER:$2|odstranil|odstranila|odstranil_a}} imenski prostor $4",
 	"bs-namespacemanager-ns-config-saved": "Konfiguracija imenskega prostora je shranjena.",
