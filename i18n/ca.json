@@ -2,9 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Alvaro Vidal-Abarca",
-			"Fitoschido"
+			"Fitoschido",
+			"SMP"
 		]
 	},
 	"bs-namespacemanager-label-content": "Espai de noms de contingut",
-	"action-namespacemanager-viewspecialpage": "mostra la pàgina especial del gestor d’espais de noms"
+	"action-namespacemanager-viewspecialpage": "veure la pàgina especial del gestor d'espais de noms",
+	"right-namespacemanager-viewspecialpage": "Accedir a la pàgina especial [[Special:NamespaceManager]]"
 }
