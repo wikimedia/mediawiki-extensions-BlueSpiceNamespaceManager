@@ -8,7 +8,7 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Skrbniški vmesnik za dodajanje, urejanje in odstranjevanje imenskih prostorov.",
-	"bs-namespacemanager-label": "Skrbnik imenskega prostora",
+	"bs-namespacemanager-label": "Upravitelj imenskega prostora",
 	"bs-namespacemanager-text": "Imenski prostori",
 	"bs-namespacemanager-wrong-name": "Imenski prostor vsebuje neveljavne znake.",
 	"bs-namespacemanager-wrong-alias": "Drugo ime imenskega prostora vsebuje neveljavne znake.",
