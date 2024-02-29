@@ -132,7 +132,14 @@ class MigrateNmSettings extends LoggedUpdateMaintenance {
 			if ( isset( $consts[$key] ) ) {
 				$key = $consts[$key];
 			}
-			$globals[$name][$key] = $this->parseValue( $matches[3][$i], $consts );
+			if ( $name === 'wgNamespaceAliases' ) {
+				// Special case ERM36233: make sure alias is valid (issue coming from BS3)
+				if ( preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $key ) ) {
+					$globals[$name][$key] = $this->parseValue( $matches[3][$i], $consts );
+				}
+			} else {
+				$globals[$name][$key] = $this->parseValue( $matches[3][$i], $consts );
+			}
 		}
 		return $globals;
 	}
