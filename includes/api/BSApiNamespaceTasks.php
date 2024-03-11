@@ -340,7 +340,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$contLang = $this->services->getContentLanguage();
 		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
 			->getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
@@ -348,31 +347,37 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
+		$namespceInfo = $this->services->getNamespaceInfo();
+		$isTalkNS = $namespceInfo->isTalk( $iNS );
+		try {
+			$talkNS = $namespceInfo->getTalk( $iNS );
+		} catch ( MWException $e ) {
+			// the given namespace doesn't have an associated talk namespace
+		}
+
 		$aNamespacesToRemove = [ [ $iNS, 0 ] ];
 		$aNamespacesToRemoveNames = [];
-		$sOriginalNamespace = $sNamespace = $aUserNamespaces[ $iNS ][ 'name' ];
+		$sNamespace = $aUserNamespaces[ $iNS ][ 'name' ];
 		$aNamespacesToRemoveNames[] = $sNamespace;
-		if ( strstr( $sNamespace, '_' . $contLang->getNsText( NS_TALK ) ) ) {
-			if ( isset( $aUserNamespaces[ ( $iNS - 1 ) ] ) ) {
+		if ( $isTalkNS ) {
+			if ( $talkNS && isset( $aUserNamespaces[ $talkNS ] ) ) {
 				$oResult->message = $this->msg( 'bs-namespacemanager-nodeletetalk' )->plain();
 				return $oResult;
 			}
 		}
 
-		$talk = strstr(
-			$aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ],
-			'_' . $contLang->getNsText( NS_TALK )
-		);
-		if ( isset( $aUserNamespaces[ ( $iNS + 1 ) ] ) && $talk ) {
-			$aNamespacesToRemove[] = [ ( $iNS + 1 ), 1 ];
-			$sNamespace = $aUserNamespaces[ ( $iNS + 1 ) ][ 'name' ];
+		if ( $talkNS && isset( $aUserNamespaces[ $talkNS ] ) ) {
+			$aNamespacesToRemove[] = [ $talkNS, 1 ];
+			$sNamespace = $aUserNamespaces[ $talkNS ][ 'name' ];
 			$aNamespacesToRemoveNames[] = $sNamespace;
 		}
 
 		$originalNamespaceConfig = [
-			$iNS => $aUserNamespaces[$iNS],
-			$iNS + 1 => $aUserNamespaces[$iNS + 1]
+			$iNS => $aUserNamespaces[$iNS]
 		];
+		if ( $talkNS ) {
+			$originalNamespaceConfig[$talkNS] = $aUserNamespaces[$talkNS];
+		}
 
 		$bErrors = false;
 		$iDoArticle = 0;
@@ -438,12 +443,13 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 						[ '4::namespace' => $nameSpace ]
 					);
 				}
+				$namespacesToRemove = [ $this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ) ];
+				if ( $talkNS ) {
+					$namespacesToRemove[] = $this->getNamespaceConfigWithId( $talkNS, $originalNamespaceConfig );
+				}
 				$this->services->getHookContainer()->run(
 					'NamespaceManagerAfterRemoveNamespace',
-					[
-						$this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ),
-						$this->getNamespaceConfigWithId( $iNS + 1, $originalNamespaceConfig )
-					]
+					$namespacesToRemove
 				);
 				$oResult->success = $aResult[ 'success' ];
 				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
