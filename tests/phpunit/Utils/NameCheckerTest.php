@@ -42,9 +42,9 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
 		$messageLocalizer
 			->method( 'msg' )
-			->will( $this->returnCallback( static function ( $msgKey ) {
+			->willReturnCallback( static function ( $msgKey ) {
 					return new \RawMessage( $msgKey );
-			} ) );
+			} );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, null, $messageLocalizer );
 		$actual = $nameChecker->checkNamingConvention( $name, $alias, $id );
@@ -61,9 +61,9 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
 		$messageLocalizer
 			->method( 'msg' )
-			->will( $this->returnCallback( static function ( $msgKey ) {
+			->willReturnCallback( static function ( $msgKey ) {
 					return new \RawMessage( $msgKey );
-			} ) );
+			} );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, null, $messageLocalizer );
 		$actual = $nameChecker->checkExists( $name, $alias, $id );
@@ -87,9 +87,9 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
 		$messageLocalizer
 			->method( 'msg' )
-			->will( $this->returnCallback( static function ( $msgKey ) {
+			->willReturnCallback( static function ( $msgKey ) {
 					return new \RawMessage( $msgKey );
-			} ) );
+			} );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, $db, $messageLocalizer );
 		$actual = $nameChecker->checkPseudoNamespace( $name, $alias );
