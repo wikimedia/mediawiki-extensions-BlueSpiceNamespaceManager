@@ -72,9 +72,10 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 	}
 
 	protected function tearDown(): void {
-		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
+		$services = MediaWikiServices::getInstance();
+		$contLang = $services->getContentLanguage();
 		// reset custom namespace settings
-		$contLang->resetNamespaces();
+		$services->resetServiceForTesting( 'ContentLanguage' );
 		$contLang->getNamespaces();
 		parent::tearDown();
 	}
