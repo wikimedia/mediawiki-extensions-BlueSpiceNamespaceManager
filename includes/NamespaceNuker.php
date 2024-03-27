@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * NamespacerNuker
  * @author Stephan Muggli <muggli@hallowelt.com>
@@ -19,8 +21,9 @@ class NamespaceNuker {
 			return false;
 		}
 
-		$dbw = wfgetDB( DB_PRIMARY );
-		$res = $dbw->select(
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()
+			->getConnection( DB_REPLICA );
+		$res = $dbr->select(
 			'page',
 			[
 				'page_id',
@@ -68,8 +71,9 @@ class NamespaceNuker {
 	 * @return bool
 	 */
 	public static function removeAllNamespacePages( $idNS, $nameNS ) {
-		$dbw = wfgetDB( DB_PRIMARY );
-		$res = $dbw->select(
+		$dbr = MediaWikiServices::getInstance()->getDBLoadBalancer()
+			->getConnection( DB_REPLICA );
+		$res = $dbr->select(
 			'page',
 			[
 				'page_id',
