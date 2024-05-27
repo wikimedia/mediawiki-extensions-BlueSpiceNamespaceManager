@@ -8,7 +8,8 @@
 			"Romanko Mikhail",
 			"Striking Blue",
 			"Tanzun",
-			"Vlad5250"
+			"Vlad5250",
+			"Yurina Tatiana"
 		]
 	},
 	"bs-namespacemanager-desc": "Административный интерфейс для добавления, правки и удаления пространств имён",
@@ -53,7 +54,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|переименовал|переименовала}} пространство имён $4 в $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|удалил|удалила}} пространство имён $4",
 	"bs-namespacemanager-ns-config-saved": "Настройка пространства имён была сохранена.",
-	"bs-namespacemanager-error-ns-config-not-saved": "Невозможно сохранить настройки пространства имён в $1.",
 	"apihelp-bs-namespace-store-description": "Перечисляет все пространства имён и произвольную настройку. Разрешает сортировку, фильтр и разбиение на страницы. Реализовывает параметры ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Перечисляет все пространства имён и произвольную настройку. Разрешает сортировку, фильтр и разбиение на страницы. Реализовывает параметры ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Позволяет изменить настройки пространства имён.",
@@ -62,5 +62,8 @@
 	"bs-namespacemanager-label-istalk": "Обсуждение",
 	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]]",
 	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения",
-	"bs-namespacemanager-labelnsalias": "Псевдоним"
+	"bs-namespacemanager-labelnsalias": "Псевдоним",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "отключено",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "помечено",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "не помечено"
 }
