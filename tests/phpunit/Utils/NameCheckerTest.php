@@ -12,6 +12,7 @@ use MessageLocalizer;
  */
 class NameCheckerTest extends MediaWikiIntegrationTestCase {
 
+	/** @var array */
 	private $namespaceList = [
 			-2 => 'Media',
 			-1 => 'Special',
@@ -25,6 +26,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 			3005 => 'SameNameAndAlias_Talk'
 		];
 
+	/** @var int[] */
 	private $namespaceAliasList = [
 			'ExistsReally' => 3000,
 			'ExistsReally_talk' => 3001,
