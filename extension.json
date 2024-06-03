@@ -82,7 +82,7 @@
 		"NamespaceNuker": "includes/NamespaceNuker.php",
 		"BSApiNamespaceStore": "includes/api/BSApiNamespaceStore.php",
 		"BSApiNamespaceTasks": "includes/api/BSApiNamespaceTasks.php",
-		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.class.php",
+		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.php",
 		"BSNamespaceManagerRemoveLegacyBackupTables": "maintenance/BSNamespaceManagerRemoveLegacyBackupTables.php"
 	},
 	"HookHandlers": {

@@ -4,7 +4,7 @@ $IP = dirname( dirname( dirname( __DIR__ ) ) );
 require_once "$IP/maintenance/Maintenance.php";
 
 class BSNamespaceManagerRemoveLegacyBackupTables extends LoggedUpdateMaintenance {
-
+	/** @var string[] */
 	private $tableNames = [
 		'bs_namespacemanager_backup_page',
 		'bs_namespacemanager_backup_revision',
