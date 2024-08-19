@@ -12,7 +12,8 @@
 			"Purodha",
 			"Stephan Muggli <muggli@hallowelt.biz>",
 			"Tiin",
-			"Umherirrender"
+			"Umherirrender",
+			"Justman10000"
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsoberfläche zum Hinzufügen, Bearbeiten und Löschen von Namensräumen und deren Spezifikationen",
@@ -24,7 +25,7 @@
 	"bs-namespacemanager-ns-exists": "Der Namensraum existiert bereits.",
 	"bs-namespacemanager-alias-exists-as-ns": "Der Namensraum-Alias existiert bereits als Namensraum-Name.",
 	"bs-namespacemanager-ns-length": "Der Namensraum muss mindestens zwei Zeichen lang sein.",
-	"bs-namespacemanager-pseudo-ns": "Es gibt Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
+	"bs-namespacemanager-pseudo-ns": "Es existieren Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
 	"bs-namespacemanager-invalid-id": "Keine zulässige Namensraumkennnummer übertragen.",
 	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Namensraum",
@@ -47,7 +48,7 @@
 	"bs-namespacemanager-willdelete": "Werden gelöscht",
 	"bs-namespacemanager-willmove": "Werden in \"{{int:bs-ns_main}}\" verschoben*",
 	"bs-namespacemanager-willmovesuffix": "Werden mit dem Suffix „$1“ in „{{int:bs-ns_main}}“ verschoben",
-	"bs-namespacemanager-deletewarning": "Bist du dir sicher, dass du den Namensraum löschen willst? Das Löschen eines Namensraums kann nicht rückgängig gemacht werden.",
+	"bs-namespacemanager-deletewarning": "Bist du dir sicher, dass du den Namensraum löschen willst? Das Löschen eines Namensraums kann nicht zurückgesetzt werden.",
 	"bs-namespacemanager-pagepresent": "Seiten in diesem Namensraum:",
 	"bs-namespacemanager-deletens-movepages": "Diese Seite wurde vom dem „$1“ Namensraum in den „{{int:bs-ns_main}}“ Namensraum verschoben, da der „$1“ Namensraum gelöscht wurde.",
 	"bs-namespacemanager-deletens-deletepages": "Diese Seite wurde gelöscht, da ihr Namensraum „$1“ gelöscht wurde.",
