@@ -9,6 +9,7 @@
 	},
 	"bs-namespacemanager-desc": "Interfejs administracyjny do dodawania, edytowania i usuwania przestrzeni nazw",
 	"bs-namespacemanager-label": "Menedżer przestrzeni nazw",
+	"bs-namespacemanager-text": "Przestrzenie nazw",
 	"bs-namespacemanager-wrong-name": "Przestrzeń nazw posiada nieprawidłowe znaki.",
 	"bs-namespacemanager-ns-exists": "Przestrzeń nazw już istnieje.",
 	"bs-namespacemanager-ns-length": "Przestrzeń nazw musi mieć co najmniej dwa znaki długości.",
@@ -42,6 +43,5 @@
 	"bs-namespacemanager-label-istalk": "Dyskusja",
 	"right-namespacemanager-viewspecialpage": "Dostęp do strony specjalnej [[Special:NamespaceManager]].",
 	"bs-namespacemanager-hide-talk-label": "Ukryj przestrzenie nazw dyskusji",
-	"bs-namespacemanager-text": "Przestrzenie nazw",
 	"bs-namespacemanager-invalid-namespace": "Edytowana przestrzeń nazw jest nieprawidłowa"
 }

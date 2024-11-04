@@ -54,7 +54,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|перейменував|перейменувала}} простір назв $4 на $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|вилучив|вилучила}} простір назв $4",
 	"bs-namespacemanager-ns-config-saved": "Налаштування простору назв було збережено.",
-	"bs-namespacemanager-error-ns-config-not-saved": "Налаштування простору назв не вдалося зберегти до $1.",
 	"apihelp-bs-namespace-store-description": "Виводить всі простори назв та допоміжні налаштування. Надає можливість сортування, фільтрування та пагінації. Застосовує параметри ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Виводить всі простори назв та допоміжні налаштування. Надає можливість сортування, фільтрування та пагінації. Застосовує параметри ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Дозволяє змінити налаштування простору назв.",

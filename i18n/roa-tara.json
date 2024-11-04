@@ -46,7 +46,6 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|ave renomenate}} 'u namespace $4 jndr'à $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|ave luate}} 'u namespace $4",
 	"bs-namespacemanager-ns-config-saved": "'A configurazione d'u namespace ha state reggistrate.",
-	"bs-namespacemanager-error-ns-config-not-saved": "'A configurazione d'u namespace non ge pò essere reggistrate jndr'à $1.",
 	"apihelp-bs-namespace-store-description": "Elenghe tutte le namespace e 'a configurazione arbitrarie. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"apihelp-bs-namespace-store-summary": "Elenghe tutte le namespace e 'a configurazione arbitrarie. Face fà l'ordinamende, 'u filtre e l'imbagginazzione. 'Mblemende parametre ExtJS Store.",
 	"apihelp-bs-namespace-tasks-description": "Conzende le cangiaminde sus 'a configurazione d'u namespace.",

@@ -44,6 +44,7 @@
 	"bs-namespacemanager-msgnoteditabledelete": "この名前空間はシステム名前空間であるため削除できません。",
 	"bs-namespacemanager-labelnsname": "名前空間名",
 	"bs-namespacemanager-willdelete": "削除されます",
+	"bs-namespacemanager-willmove": "「{{int:bs-ns_main}}」に移動されます",
 	"bs-namespacemanager-willmovesuffix": "接尾語$1と\"{{int:bs-ns_main}}\"の中に移動させる",
 	"bs-namespacemanager-deletewarning": "この名前空間を本当に削除しますか? 名前空間の削除は取り消せません。",
 	"bs-namespacemanager-pagepresent": "この名前空間に属するページ:",
@@ -61,14 +62,13 @@
 	"bs-namespacemanager-error-save-fail": "名前空間の設定を保存できませんでした",
 	"action-namespacemanager-viewspecialpage": "名前空間マネージャーの特別ページの閲覧",
 	"namespacemanager": "名前空間マネージャー",
+	"bs-namespacemanager-nodeletetalk": "会話名前空間は削除できません",
 	"bs-namespacemanager-label-istalk": "トーク",
 	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用",
+	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない",
+	"bs-namespacemanager-hide-non-content-ns-label": "コンテンツでない名前空間を隠す",
 	"bs-namespacemanager-labelnsalias": "エイリアス(別名)",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック",
-	"bs-namespacemanager-willmove": "「{{int:bs-ns_main}}」に移動されます",
-	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない",
-	"bs-namespacemanager-nodeletetalk": "会話名前空間は削除できません",
-	"bs-namespacemanager-hide-non-content-ns-label": "コンテンツでない名前空間を隠す"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック"
 }
