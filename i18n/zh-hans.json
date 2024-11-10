@@ -8,6 +8,7 @@
 			"WQL",
 			"Xiplus",
 			"佛壁灯",
+			"沈澄心",
 			"科劳"
 		]
 	},
@@ -68,5 +69,9 @@
 	"bs-namespacemanager-labelnsalias": "别名",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已禁用",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "已勾选",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选",
+	"bs-namespacemanager-alias-exists-as-ns": "命名空间别名已作为命名空间名称存在。",
+	"bs-namespacemanager-pseudo-ns": "标准命名空间中有一些页面以建议的命名空间名称或别名开头。",
+	"bs-namespacemanager-error-save-fail": "无法保存命名空间配置",
+	"bs-namespacemanager-invalid-namespace": "正在编辑的命名空间无效"
 }
