@@ -52,11 +52,16 @@
 		"bs-namespace-manager/*": "LogFormatter"
 	},
 	"APIModules": {
-		"bs-namespace-store": "BSApiNamespaceStore",
-		"bs-namespace-tasks": "BSApiNamespaceTasks"
+		"bs-namespace-store": "BlueSpice\\NamespaceManager\\Api\\NamespaceStore",
+		"bs-namespace-tasks": "BlueSpice\\NamespaceManager\\Api\\NamespaceTasks"
 	},
 	"SpecialPages": {
-		"NamespaceManager": "SpecialNamespaceManager"
+		"NamespaceManager": {
+			"class": "BlueSpice\\NamespaceManager\\Special\\SpecialNamespaceManager",
+			"services": [
+				"BlueSpiceNamespaceManager.Manager"
+			]
+		}
 	},
 	"MessagesDirs": {
 		"NamespaceManager": [
@@ -64,7 +69,7 @@
 		]
 	},
 	"ExtensionMessagesFiles": {
-		"NamespaceManagerAlias": "includes/specials/SpecialNamespaceManager.alias.php"
+		"NamespaceManagerAlias": "SpecialNamespaceManager.alias.php"
 	},
 	"config_prefix": "bsg",
 	"config": {
@@ -79,11 +84,7 @@
 		"BlueSpice\\NamespaceManager\\Tests\\": "tests/phpunit/"
 	},
 	"AutoloadClasses": {
-		"NamespaceNuker": "includes/NamespaceNuker.php",
-		"BSApiNamespaceStore": "includes/api/BSApiNamespaceStore.php",
-		"BSApiNamespaceTasks": "includes/api/BSApiNamespaceTasks.php",
-		"SpecialNamespaceManager": "includes/specials/SpecialNamespaceManager.php",
-		"BSNamespaceManagerRemoveLegacyBackupTables": "maintenance/BSNamespaceManagerRemoveLegacyBackupTables.php"
+		"NamespaceNuker": "includes/NamespaceNuker.php"
 	},
 	"HookHandlers": {
 		"common-user-interface": {
@@ -111,9 +112,30 @@
 	},
 	"ResourceModules": {
 		"ext.bluespice.namespaceManager": {
-			"scripts": "resources/bluespice.namespaceManager.js",
-			"dependencies": "ext.bluespice.extjs",
+			"scripts": [
+				"ui/dialog/DeleteNamespace.js",
+				"ui/dialog/EditNamespace.js",
+				"ui/column/NamespaceSettingColumn.js",
+				"ui/Panel.js",
+				"bluespice.namespaceManager.js"
+			],
+			"dependencies": [
+				"ext.oOJSPlus.managerPanel",
+				"user.options",
+				"ext.bluespice",
+				"oojs-ui.styles.icons-user",
+				"oojs-ui.styles.icons-moderation",
+				"oojs-ui.styles.icons-editing-core",
+				"ext.oOJSPlus.data"
+			],
 			"messages": [
+				"bs-namespacemanager-label-pagecount",
+				"bs-namespacemanager-label-namespaces",
+				"bs-namespacemanager-label-id",
+				"bs-namespacemanager-save",
+				"bs-namespacemanager-cancel",
+				"bs-namespacemanager-delete",
+
 				"bs-namespacemanager-tipadd",
 				"bs-namespacemanager-tipedit",
 				"bs-namespacemanager-tipremove",
@@ -129,8 +151,8 @@
 				"bs-from-something",
 				"bs-namespacemanager-label-istalk",
 				"bs-namespacemanager-nodeletetalk",
-				"bs-namespacemanager-hide-talk-label",
-				"bs-namespacemanager-hide-non-content-ns-label",
+				"bs-namespacemanager-show-talk-label",
+				"bs-namespacemanager-show-non-content-ns-label",
 				"bs-namespacemanager-labelnsalias",
 				"bs-namespacemanager-icon-tristate-disabled-aria-label",
 				"bs-namespacemanager-icon-tristate-true-aria-label",
@@ -138,12 +160,12 @@
 			]
 		},
 		"ext.bluespice.namespaceManager.styles": {
-			"styles": "resources/bluespice.namespaceManager.css"
+			"styles": "bluespice.namespaceManager.css"
 		}
 	},
 	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "BlueSpiceNamespaceManager"
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceNamespaceManager/resources"
 	},
 	"GroupPermissions": {
 		"sysop": {

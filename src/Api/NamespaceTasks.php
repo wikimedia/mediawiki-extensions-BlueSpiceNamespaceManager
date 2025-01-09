@@ -1,0 +1,501 @@
+<?php
+
+namespace BlueSpice\NamespaceManager\Api;
+
+use BlueSpice\Api\Response\Standard as StandardResponse;
+use BlueSpice\NamespaceManager\Utils\NameChecker;
+use BSApiTasksBase;
+use BsNamespaceHelper;
+use ManualLogEntry;
+use RequestContext;
+use SpecialPage;
+use stdClass;
+use Throwable;
+
+class NamespaceTasks extends BSApiTasksBase {
+
+	/**
+	 *
+	 * @var array
+	 */
+	protected $aTasks = [
+		'add' => [
+			'examples' => [
+				[
+					'name' => 'My namespace',
+					'settings' => [
+						'content' => true
+					]
+				]
+			],
+			'params' => [
+				'name' => [
+					'desc' => 'Name for namespace',
+					'type' => 'string',
+					'required' => true
+				],
+				'settings' => [
+					'desc' => 'Array of settings in key/value pairs',
+					'type' => 'array',
+					'required' => true
+				]
+			]
+		],
+		'edit' => [
+			'examples' => [
+				[
+					'id' => 123,
+					'name' => 'My namespace',
+					'settings' => [
+						'content' => true
+					]
+				]
+			],
+			'params' => [
+				'id' => [
+					'desc' => 'ID of namespace to edit',
+					'type' => 'integer',
+					'required' => true
+				],
+				'name' => [
+					'desc' => 'Name for namespace',
+					'type' => 'string',
+					'required' => true
+				],
+				'settings' => [
+					'desc' => 'Array of settings in key/value pairs',
+					'type' => 'array',
+					'required' => true
+				]
+			]
+		],
+		'remove' => [
+			'examples' => [
+				[
+					'id' => 123,
+					'pageAction' => 1
+				],
+				[
+					'id' => 123
+				]
+			],
+			'params' => [
+				'id' => [
+					'desc' => 'ID of namespace to remove',
+					'type' => 'integer',
+					'required' => true
+				],
+				'pageAction' => [
+					'desc' => 'Determines what happens to articles in this NS, can be 0,1,2',
+					'type' => 'string',
+					'required' => false,
+					'default' => 'movesuffix'
+				]
+			]
+		]
+	];
+
+	/**
+	 *
+	 * @return array
+	 */
+	protected function getRequiredTaskPermissions() {
+		return [
+			'add' => [ 'wikiadmin' ],
+			'edit' => [ 'wikiadmin' ],
+			'remove' => [ 'wikiadmin' ]
+		];
+	}
+
+	/**
+	 * Build the configuration for a new namespace and give it to the save method.
+	 *
+	 * @param stdClass $oData
+	 * @param array $aParams
+	 * @return StandardResponse
+	 */
+	protected function task_add( $oData, $aParams ) {
+		$sNamespace = $oData->name;
+
+		$aAdditionalSettings = (array)$oData->settings;
+		$sAlias = isset( $aAdditionalSettings['alias'] ) ? $aAdditionalSettings['alias'] : '';
+		$sAlias = str_replace( ' ', '_', $sAlias );
+
+		$oResult = $this->getResult();
+		$contLang = $this->services->getContentLanguage();
+		$aNamespaces = $contLang->getNamespaces();
+		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
+			->getUserNamespaces( true );
+		end( $aNamespaces );
+		$iNS = key( $aNamespaces ) + 1;
+		reset( $aNamespaces );
+
+		$config = $this->getConfig();
+
+		if ( $iNS < $config->get( 'NamespaceManagerNsOffset' ) ) {
+			$iNS = $config->get( 'NamespaceManagerNsOffset' ) + 1;
+		}
+
+		$aliases = $this->services->getMainConfig()->get( 'NamespaceAliases' );
+		$nameChecker = new NameChecker( $aNamespaces, $aliases, $this->getDB(), $this );
+
+		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias, $iNS );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		$oResult = $nameChecker->checkExists( $sNamespace, $sAlias, $iNS );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		$oResult = $nameChecker->checkPseudoNamespace( $sNamespace, $sAlias );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		$aUserNamespaces[$iNS] = [ 'name' => $sNamespace, 'alias' => $sAlias ];
+
+		$this->services->getHookContainer()->run( 'NamespaceManager::editNamespace', [
+			&$aUserNamespaces,
+			&$iNS,
+			$aAdditionalSettings,
+			false
+		] );
+
+		$talkNamespaceId = $iNS + 1;
+		$aUserNamespaces[$talkNamespaceId] = [
+			'name' => $sNamespace . '_' . $contLang->getNsText( NS_TALK ),
+			'alias' => $sAlias . '_talk'
+		];
+
+		$this->services->getHookContainer()->run( 'NamespaceManager::editNamespace', [
+			&$aUserNamespaces,
+			&$talkNamespaceId,
+			$aAdditionalSettings, true
+		] );
+
+		$aResult = $this->services->getService( 'BSNamespaceManager' )
+			->setUserNamespaces( $aUserNamespaces );
+
+		if ( $aResult['success'] === true ) {
+			// Create a log entry for the creation of the namespace
+			$this->logTaskAction(
+				'create',
+				[ '4::namespace' => $sNamespace ]
+			);
+			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
+			$this->services->getHookContainer()->run(
+				'NamespaceManagerAfterAddNamespace',
+				[
+					$this->getNamespaceConfigWithId( $iNS, $aUserNamespaces ),
+					$this->getNamespaceConfigWithId( $talkNamespaceId, $aUserNamespaces ),
+				]
+			);
+		}
+
+		$oResult->success = $aResult['success'];
+		$oResult->message = $aResult['message'];
+
+		return $oResult;
+	}
+
+	/**
+	 * Change the configuration of a given namespace and give it to the save method.
+	 *
+	 * @param stdClass $oData
+	 * @param array $aParams
+	 * @return StandardResponse
+	 */
+	protected function task_edit( $oData, $aParams ) {
+		$bluespiceNamespaces = $this->getConfig()->get( 'SystemNamespaces' );
+
+		$sNamespace = $oData->name;
+		$aAdditionalSettings = (array)$oData->settings;
+		$sAlias = isset( $aAdditionalSettings['alias'] ) ? $aAdditionalSettings['alias'] : '';
+		$sAlias = str_replace( ' ', '_', $sAlias );
+
+		$oResult = $this->getResult();
+
+		$contLang = $this->services->getContentLanguage();
+		$aNamespaces = $contLang->getNamespaces();
+
+		$systemNamespaces = BsNamespaceHelper::getMwNamespaceConstants();
+		$oNamespaceManager = $this->services->getService( 'BSExtensionFactory' )->getExtension(
+			'BlueSpiceNamespaceManager'
+		);
+		$this->services->getHookContainer()->run(
+			'BSNamespaceManagerBeforeSetUsernamespaces',
+			[
+				$oNamespaceManager,
+				&$systemNamespaces
+			]
+		);
+		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
+			->getUserNamespaces( true );
+
+		if ( !is_numeric( $oData->id ) ) {
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->plain();
+			return $oResult;
+		}
+		$iNS = (int)$oData->id;
+
+		if ( !isset( $systemNamespaces[$iNS] ) && !isset( $aUserNamespaces[$iNS] ) ) {
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-namespace' )->plain();
+			return $oResult;
+		}
+		$aliases = $this->services->getMainConfig()->get( 'NamespaceAliases' );
+		$nameChecker = new NameChecker( $aNamespaces, $aliases, $this->getDB(), $this );
+
+		$oResult = $nameChecker->checkNamingConvention( $sNamespace, $sAlias, $iNS );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		$oResult = $nameChecker->checkExists( $sNamespace, $sAlias, $iNS );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		$oResult = $nameChecker->checkPseudoNamespace( $sNamespace, $sAlias );
+		if ( !$oResult->success ) {
+			return $oResult;
+		}
+
+		if ( isset( $systemNamespaces[$iNS] ) ) {
+			$sOriginalNamespaceName = $systemNamespaces[$iNS];
+		} else {
+			$sOriginalNamespaceName = $aUserNamespaces[$iNS]['name'];
+		}
+
+		if ( !in_array( $iNS, $bluespiceNamespaces ) && $iNS >= 3000 ) {
+			if ( strstr( $sAlias, '_' . $contLang->getNsText( NS_TALK ) ) ) {
+				$sAlias = str_replace( '_' . $contLang->getNsText( NS_TALK ), '_talk', $sAlias );
+			}
+			$aUserNamespaces[$iNS] = [
+				'name' => $sNamespace,
+				'alias' => $sAlias,
+			];
+
+			$talkId = $iNS + 1;
+			// Make sure its an odd number
+			if ( $talkId % 2 === 1 ) {
+				$aUserNamespaces[$talkId]['name'] = $sNamespace . '_' . $contLang->getNsText( NS_TALK );
+				if ( $sAlias ) {
+					$aUserNamespaces[$talkId]['alias'] = $sAlias . '_talk';
+				} else {
+					$aUserNamespaces[$talkId]['alias'] = "";
+				}
+			}
+		} else {
+			$namespaceConfig = [
+				'alias' => $sAlias
+			];
+			if ( isset( $aUserNamespaces[$iNS]['name'] ) ) {
+				$namespaceConfig['name'] = $aUserNamespaces[$iNS]['name'];
+			}
+			$aUserNamespaces[$iNS] = $namespaceConfig;
+		}
+		$this->services->getHookContainer()->run(
+			'NamespaceManager::editNamespace',
+			[
+				&$aUserNamespaces,
+				&$iNS,
+				$aAdditionalSettings,
+				false
+			]
+		);
+
+		$aResult = $this->services->getService( 'BSNamespaceManager' )
+			->setUserNamespaces( $aUserNamespaces );
+		if ( $aResult['success'] === true ) {
+			// Create a log entry for the modification of the namespace
+			if ( $sOriginalNamespaceName == $sNamespace ) {
+				$this->logTaskAction( 'modify', [
+					'4::namespaceName' => $sOriginalNamespaceName
+				] );
+			} else {
+				$this->logTaskAction( 'rename', [
+					'4::namespaceName' => $sOriginalNamespaceName,
+					'5::newNamespaceName' => $sNamespace
+				] );
+			}
+
+			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsedited' )->plain();
+		}
+
+		$oResult->success = $aResult['success'];
+		$oResult->message = $aResult['message'];
+
+		return $oResult;
+	}
+
+	/**
+	 * Delete a given namespace.
+	 *
+	 * @param stdClass $oData
+	 * @param array $aParams
+	 * @return StandardResponse
+	 */
+	protected function task_remove( $oData, $aParams ) {
+		$oResult = $this->getResult();
+		$iNS = (int)$oData->id;
+
+		if ( $iNS < 0 ) {
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->plain();
+			return $oResult;
+		}
+
+		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
+			->getUserNamespaces( true );
+		if ( !isset( $aUserNamespaces[$iNS] ) ) {
+			$oResult->message = $this->msg( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
+			return $oResult;
+		}
+
+		$namespceInfo = $this->services->getNamespaceInfo();
+		$isTalkNS = $namespceInfo->isTalk( $iNS );
+		try {
+			$talkNS = $namespceInfo->getTalk( $iNS );
+		} catch ( Throwable $e ) {
+			// the given namespace doesn't have an associated talk namespace
+		}
+
+		$aNamespacesToRemove = [ [ $iNS, 0 ] ];
+		$aNamespacesToRemoveNames = [];
+		$sNamespace = $aUserNamespaces[$iNS]['name'];
+		$aNamespacesToRemoveNames[] = $sNamespace;
+		if ( $isTalkNS ) {
+			if ( $talkNS && isset( $aUserNamespaces[$talkNS] ) ) {
+				$oResult->message = $this->msg( 'bs-namespacemanager-nodeletetalk' )->plain();
+				return $oResult;
+			}
+		}
+
+		if ( $talkNS && isset( $aUserNamespaces[$talkNS] ) ) {
+			$aNamespacesToRemove[] = [ $talkNS, 1 ];
+			$sNamespace = $aUserNamespaces[$talkNS]['name'];
+			$aNamespacesToRemoveNames[] = $sNamespace;
+		}
+
+		$originalNamespaceConfig = [
+			$iNS => $aUserNamespaces[$iNS]
+		];
+		if ( $talkNS ) {
+			$originalNamespaceConfig[$talkNS] = $aUserNamespaces[$talkNS];
+		}
+
+		$bErrors = false;
+		$pageAction = 'movesuffix';
+		if ( !empty( $oData->pageAction ) ) {
+			$pageAction = $oData->pageAction;
+		}
+
+		$nuker = $this->services->getService( 'BlueSpiceNamespaceManager.Nuker' );
+		switch ( $pageAction ) {
+			case 'delete':
+				foreach ( $aNamespacesToRemove as $aNamespace ) {
+					$iNs = $aNamespace[0];
+					$status = $nuker->removeAllNamespacePages(
+						$iNs,
+						$aUserNamespaces[$iNs]['name']
+					);
+					if ( !$status->isOK() ) {
+						$bErrors = true;
+					} else {
+						$aUserNamespaces[$aNamespace[0]] = false;
+					}
+				}
+				break;
+			case 'move':
+				foreach ( $aNamespacesToRemove as $aNamespace ) {
+					$iNs = $aNamespace[0];
+					$status = $nuker->moveAllPagesIntoMain(
+						$iNs,
+						$aUserNamespaces[$iNs]['name']
+					);
+					if ( !$status->isOK() ) {
+						$bErrors = true;
+					} else {
+						$aUserNamespaces[$aNamespace[0]] = false;
+					}
+				}
+				break;
+			case 'movesuffix':
+			default:
+				foreach ( $aNamespacesToRemove as $aNamespace ) {
+					$iNs = $aNamespace[0];
+					$status = $nuker->moveAllPagesIntoMain(
+						$iNs,
+						$aUserNamespaces[$iNs]['name'],
+						true
+					);
+					if ( !$status->isOK() ) {
+						$bErrors = true;
+					} else {
+						$aUserNamespaces[$aNamespace[0]] = false;
+					}
+				}
+				break;
+		}
+
+		if ( !$bErrors ) {
+			$aResult = $this->services->getService( 'BSNamespaceManager' )
+				->setUserNamespaces( $aUserNamespaces );
+			if ( $aResult['success'] === true ) {
+				// Create a log entry for the removal of the namespace
+				foreach ( $aNamespacesToRemoveNames as $nameSpace ) {
+					$this->logTaskAction(
+						'remove',
+						[ '4::namespace' => $nameSpace ]
+					);
+				}
+				$namespacesToRemove = [ $this->getNamespaceConfigWithId( $iNS, $originalNamespaceConfig ) ];
+				if ( $talkNS ) {
+					$namespacesToRemove[] = $this->getNamespaceConfigWithId( $talkNS, $originalNamespaceConfig );
+				}
+				$this->services->getHookContainer()->run(
+					'NamespaceManagerAfterRemoveNamespace',
+					$namespacesToRemove
+				);
+				$oResult->success = $aResult['success'];
+				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
+			}
+		} else {
+			$oResult->message = $this->msg( 'bs-namespacemanager-error_on_remove_namespace' )->plain();
+			return $oResult;
+		}
+
+		return $oResult;
+	}
+
+	/**
+	 * Logs NamespaceManager actions
+	 *
+	 * @param string $sAction
+	 * @param array $aParams
+	 * @param array $aOptions not used
+	 * @param bool $bDoPublish
+	 */
+	public function logTaskAction( $sAction, $aParams, $aOptions = [], $bDoPublish = false ) {
+		$oTitle = SpecialPage::getTitleFor( 'WikiAdmin' );
+		$oUser = RequestContext::getMain()->getUser();
+		$oLogger = new ManualLogEntry( 'bs-namespace-manager', $sAction );
+		$oLogger->setPerformer( $oUser );
+		$oLogger->setTarget( $oTitle );
+		$oLogger->setParameters( $aParams );
+		$oLogger->insert();
+	}
+
+	/**
+	 * @param int $id
+	 * @param array $userNamespaces
+	 * @return array
+	 */
+	private function getNamespaceConfigWithId( $id, array $userNamespaces ) {
+		return array_merge( [
+			'id' => $id,
+		], $userNamespaces[$id] );
+	}
+
+}
