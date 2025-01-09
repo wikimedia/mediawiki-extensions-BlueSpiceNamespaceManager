@@ -57,11 +57,14 @@
 	"bs-namespacemanager-nodeletetalk": "Talk namespace cannot be deleted",
 	"bs-namespacemanager-label-istalk": "Talk",
 	"right-namespacemanager-viewspecialpage": "Access to the special page [[Special:NamespaceManager]]",
-	"bs-namespacemanager-hide-talk-label": "Hide talk namespaces",
-	"bs-namespacemanager-hide-non-content-ns-label": "Hide non-content namespaces",
+	"bs-namespacemanager-show-talk-label": "Show talk namespaces",
+	"bs-namespacemanager-show-non-content-ns-label": "Show non-content namespaces",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "The namespace being edited is invalid",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabled",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "checked",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "unchecked"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "unchecked",
+	"bs-namespacemanager-save": "Save",
+	"bs-namespacemanager-cancel": "Cancel",
+	"bs-namespacemanager-delete": "Delete"
 }

@@ -7,7 +7,6 @@ use BlueSpice\NamespaceManager\Maintenance\MigrateNmSettings;
 
 class MigrateLegacySettings extends LoadExtensionSchemaUpdates {
 	protected function doProcess() {
-		$this->updater->addPostDatabaseUpdateMaintenance( \BSNamespaceManagerRemoveLegacyBackupTables::class );
 		$this->updater->addPostDatabaseUpdateMaintenance( MigrateNmSettings::class );
 		return true;
 	}
