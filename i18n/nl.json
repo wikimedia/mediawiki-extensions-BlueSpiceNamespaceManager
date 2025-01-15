@@ -53,7 +53,7 @@
 	"logeventslist-bs-namespace-manager-log": "Logboek naamruimtebeheer",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|heeft}} de naamruimte $4 aangemaakt",
 	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|heeft}} de instellingen voor de naamruimte $4 gewijzigd",
-	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|heeft}} de naamruimte $4 naar $5 hernoemd",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|heeft}} de naamruimte $4 hernoemd tot $5",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|heeft}} de naamruimte $4 verwijderd",
 	"bs-namespacemanager-ns-config-saved": "De instellingen voor naamruimten zijn opgeslagen.",
 	"bs-namespacemanager-error-save-fail": "De configuratie van de naamruimte kon niet worden opgeslagen",
