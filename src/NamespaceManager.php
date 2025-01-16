@@ -150,43 +150,6 @@ class NamespaceManager {
 		}
 		$metaFields = [
 			[
-				'name' => 'id',
-				'type' => 'int',
-				'sortable' => true,
-				'filter' => [ 'type' => 'numeric' ],
-				'label' => $context->msg( 'bs-namespacemanager-label-id' )->plain()
-			],
-			[
-				'name' => 'name',
-				'type' => 'string',
-				'sortable' => true,
-				'filter' => [ 'type' => 'string' ],
-				'label' => $context->msg( 'bs-namespacemanager-label-namespaces' )->plain()
-			],
-			[
-				'name' => 'pageCount',
-				'type' => 'int',
-				'sortable' => true,
-				'filter' => [ 'type' => 'numeric' ],
-				'label' => $context->msg( 'bs-namespacemanager-label-pagecount' )->plain()
-			],
-			[
-				'name' => 'isSystemNS',
-				'type' => 'boolean',
-				'label' => $context->msg( 'bs-namespacemanager-label-editable' )->plain(),
-				'hidden' => true,
-				'sortable' => true,
-				'filter' => [ 'type' => 'boolean' ],
-			],
-			[
-				'name' => 'isTalkNS',
-				'type' => 'boolean',
-				'label' => $context->msg( 'bs-namespacemanager-label-istalk' )->plain(),
-				'hidden' => true,
-				'sortable' => true,
-				'filter' => [ 'type' => 'boolean' ],
-			],
-			[
 				'name' => 'subpages',
 				'type' => 'boolean',
 				'label' => $context->msg( 'bs-namespacemanager-label-subpages' )->plain(),

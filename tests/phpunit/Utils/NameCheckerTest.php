@@ -3,9 +3,9 @@
 namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\NamespaceManager\Utils\NameChecker;
-use Database;
 use MediaWikiIntegrationTestCase;
 use MessageLocalizer;
+use Wikimedia\Rdbms\IDatabase;
 
 /**
  * @covers \BlueSpice\NamespaceManager\Utils\NameChecker
@@ -83,7 +83,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 			(object)[ 'page_title' => 'Normal:Page' ],
 			(object)[ 'page_title' => 'Pseudo:Page' ],
 		];
-		$db = $this->createMock( Database::class );
+		$db = $this->createMock( IDatabase::class );
 		$db->method( 'select' )->willReturn( $mockDBData );
 
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );

@@ -1,6 +1,12 @@
 <?php
 
-class BSApiNamespaceStore extends BSApiExtJSStoreBase {
+namespace BlueSpice\NamespaceManager\Api;
+
+use BSApiExtJSStoreBase;
+use BsNamespaceHelper;
+use SpecialPage;
+
+class NamespaceStore extends BSApiExtJSStoreBase {
 
 	/**
 	 *
@@ -67,8 +73,8 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 					'value' => ( $wgContentNamespaces && in_array( $iNs, $wgContentNamespaces ) ),
 					'read_only' => ( $iNs === NS_MAIN )
 				],
-				'subpages' => isset( $wgNamespacesWithSubpages[ $iNs ] )
-					&& $wgNamespacesWithSubpages[ $iNs ] === true
+				'subpages' => isset( $wgNamespacesWithSubpages[$iNs] )
+					&& $wgNamespacesWithSubpages[$iNs] === true
 			];
 		}
 

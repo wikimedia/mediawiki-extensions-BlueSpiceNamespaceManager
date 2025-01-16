@@ -1,64 +1,36 @@
-.ns-manager-option-column .x-column-header-inner {
-	height: 85px;
-	padding: 0;
+.oojsplus-data-gridWidget-column-header {
+	vertical-align: bottom;
 }
-
-.bs-extjs-action-column .x-column-header-inner {
-	padding: 5px;
+.oojsplus-data-gridWidget-column-header .oo-ui-popupButtonWidget {
+	opacity: 0.6;
 }
-
-.ns-manager-option-column .x-column-header-text {
-	-webkit-transform: rotate(270deg);
-	-moz-transform: rotate(270deg);
-	-o-transform: rotate(270deg);
-	-ms-transform: rotate(270deg);
-	transform: rotate(270deg);
-	position: absolute;
-	top: 22px;
-	right: -20px;
-	height: 40px;
+.oojsplus-data-gridWidget-column-header .filter-button,
+.oojsplus-data-gridWidget-column-header .filter-button a {
+	top: unset !important;
+	height: unset !important;
+	bottom: 5px;
 }
-
-.ns-manager-option-column .x-column-header-text span {
-	display:block;
-	width: 80px;
-	text-align: center;
-	word-wrap: break-word;
-	white-space: normal ;
-	vertical-align: middle;
+.bs-namespace-manager-column-setting .header-text,
+.bs-namespace-manager-column-setting .header-filter {
 	display: block;
+	text-align: center;
 }
-
-.ns-manager-option-column .x-column-header-text-wrapper {
-	display: relative;
-	height: 80px;
+.bs-namespace-manager-column-setting .header-filter .filter-button {
+	position: relative !important;
 }
-
-.ns-manager-icon {
-	padding: 10px;
+.bs-namespace-manager-column-setting .header-text .header-button {
+	margin: 0 !important;
+	width: 100%;
+	text-align: center;
 }
-
-.x-grid-td.ns-manager-icon .x-grid-cell-inner {
+.bs-namespace-manager-column-setting .header-text .header-button a {
+	writing-mode: vertical-rl;
+	transform: rotate(180deg);
 	padding: 0;
-	text-overflow: unset;
+	height: 120px;
+	text-align: left;
+	white-space: break-spaces;
 }
-
-.x-action-col-icon.x-hide-display {
-	display: none;
-}
-
-.bs-namespacemanager-column-tristate-true,
-.bs-namespacemanager-column-tristate-false {
-	background-repeat: no-repeat;
-	width: 18px;
-	height: 18px;
-	display: inline-block;
-}
-
-.bs-namespacemanager-column-tristate-true {
-	background-image: url('../../BlueSpiceFoundation/resources/bluespice/images/bs-tick.png');
-}
-
-.bs-namespacemanager-column-tristate-false {
-	background-image: url('../../BlueSpiceFoundation/resources/bluespice/images/bs-cross.png');
+.bs-namespace-manager-column-setting-cell {
+	padding: 0;
 }
