@@ -3,6 +3,7 @@
 		"authors": [
 			"CrownedWharf566",
 			"Ff98sha",
+			"GuoPC",
 			"Liuxinyu970226",
 			"StarrySky",
 			"WQL",
@@ -73,5 +74,10 @@
 	"bs-namespacemanager-invalid-namespace": "正在编辑的命名空间无效",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已禁用",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "已勾选",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选",
+	"bs-namespacemanager-show-talk-label": "显示讨论命名空间",
+	"bs-namespacemanager-show-non-content-ns-label": "显示非内容命名空间",
+	"bs-namespacemanager-save": "保存",
+	"bs-namespacemanager-cancel": "取消",
+	"bs-namespacemanager-delete": "删除"
 }
