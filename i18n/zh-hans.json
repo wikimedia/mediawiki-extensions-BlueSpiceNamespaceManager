@@ -3,6 +3,7 @@
 		"authors": [
 			"CrownedWharf566",
 			"Ff98sha",
+			"GuoPC",
 			"Liuxinyu970226",
 			"StarrySky",
 			"WQL",
@@ -73,5 +74,10 @@
 	"bs-namespacemanager-alias-exists-as-ns": "命名空间别名已作为命名空间名称存在。",
 	"bs-namespacemanager-pseudo-ns": "标准命名空间中有一些页面以建议的命名空间名称或别名开头。",
 	"bs-namespacemanager-error-save-fail": "无法保存命名空间配置",
-	"bs-namespacemanager-invalid-namespace": "正在编辑的命名空间无效"
+	"bs-namespacemanager-invalid-namespace": "正在编辑的命名空间无效",
+	"bs-namespacemanager-show-talk-label": "显示讨论命名空间",
+	"bs-namespacemanager-show-non-content-ns-label": "显示非内容命名空间",
+	"bs-namespacemanager-save": "保存",
+	"bs-namespacemanager-cancel": "取消",
+	"bs-namespacemanager-delete": "删除"
 }
