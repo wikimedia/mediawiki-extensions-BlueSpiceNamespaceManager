@@ -56,8 +56,6 @@
 	"bs-namespacemanager-nodeletetalk": "토론 이름공간은 지울 수 없습니다",
 	"bs-namespacemanager-label-istalk": "토론",
 	"right-namespacemanager-viewspecialpage": "[[Special:NamespaceManager]] 특수 문서로 접근",
-	"bs-namespacemanager-hide-talk-label": "토론 이름공간 숨기기",
-	"bs-namespacemanager-hide-non-content-ns-label": "빈 이름공간 숨기기",
 	"bs-namespacemanager-labelnsalias": "다른 이름",
 	"bs-namespacemanager-invalid-namespace": "편집 중인 이름공간이 유효하지 않습니다"
 }

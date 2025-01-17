@@ -65,8 +65,6 @@
 	"bs-namespacemanager-nodeletetalk": "会話名前空間は削除できません",
 	"bs-namespacemanager-label-istalk": "トーク",
 	"right-namespacemanager-viewspecialpage": "特別ページ [[Special:NamespaceManager]] を利用",
-	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない",
-	"bs-namespacemanager-hide-non-content-ns-label": "コンテンツでない名前空間を隠す",
 	"bs-namespacemanager-labelnsalias": "エイリアス(別名)",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",

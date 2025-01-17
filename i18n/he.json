@@ -60,8 +60,6 @@
 	"bs-namespacemanager-nodeletetalk": "לא ניתן למחוק מרחב שיחה.",
 	"bs-namespacemanager-label-istalk": "שיחה",
 	"right-namespacemanager-viewspecialpage": "גישה לדף המיוחד [[Special:NamespaceManager]]",
-	"bs-namespacemanager-hide-talk-label": "הסתרת מרחבי שיחה",
-	"bs-namespacemanager-hide-non-content-ns-label": "הסתר מרחבי שם שאינם מרחבי תוכן",
 	"bs-namespacemanager-labelnsalias": "כינוי",
 	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "כבוי",
