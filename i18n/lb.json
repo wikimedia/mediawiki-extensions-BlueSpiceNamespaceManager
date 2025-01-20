@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Les Meloures",
-			"Robby"
+			"Robby",
+			"Volvox"
 		]
 	},
 	"bs-namespacemanager-text": "Nummraim",
-	"bs-namespacemanager-wrong-name": "Den Nummraum huet net valabel Zeechen.",
+	"bs-namespacemanager-wrong-name": "Den Nummraum enthält ongülteg Zeechen.",
 	"bs-namespacemanager-ns-exists": "Den Nummraum gëtt et schonn.",
 	"bs-namespacemanager-ns-length": "Den Nummraum muss mindestens zwee Zeeche laang sinn.",
 	"bs-namespacemanager-label-id": "Nummer (ID)",
@@ -30,5 +31,9 @@
 	"bs-namespacemanager-deletewarning": "Sidd Dir sécher datt Dir dësen Nummraum läsche wëllt? D'Läsche vun engem Nummraum kann net réckgängeg gemaach ginn.",
 	"bs-namespacemanager-pagepresent": "Säiten an dësem Nummraum:",
 	"bs-namespacemanager-nodeletetalk": "Den Nummraum Diskussioun däerf net geläscht ginn",
-	"bs-namespacemanager-label-istalk": "Diskussioun"
+	"bs-namespacemanager-label-istalk": "Diskussioun",
+	"bs-namespacemanager-show-talk-label": "Diskussiounsnummraim weisen",
+	"bs-namespacemanager-save": "Späicheren",
+	"bs-namespacemanager-cancel": "Ofbriechen",
+	"bs-namespacemanager-delete": "Läschen"
 }

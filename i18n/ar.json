@@ -71,5 +71,10 @@
 	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "مفحوص",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة",
+	"bs-namespacemanager-show-talk-label": "إظهار مساحات الأسماء للمحادثة",
+	"bs-namespacemanager-show-non-content-ns-label": "إظهار مساحات الأسماء غير المضمنة",
+	"bs-namespacemanager-save": "حفظ",
+	"bs-namespacemanager-cancel": "إلغاء",
+	"bs-namespacemanager-delete": "حذف"
 }
