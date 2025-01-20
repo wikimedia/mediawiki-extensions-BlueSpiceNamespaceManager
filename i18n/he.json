@@ -68,5 +68,10 @@
 	"bs-namespacemanager-invalid-namespace": "מרחב השם הנערך אינו תקין",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "כבוי",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "מסומן",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "לא מסומן"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "לא מסומן",
+	"bs-namespacemanager-show-talk-label": "הצגת מרחבי שם של שיחה",
+	"bs-namespacemanager-show-non-content-ns-label": "הצגת מרחבי שם שאינם של תוכן",
+	"bs-namespacemanager-save": "שמירה",
+	"bs-namespacemanager-cancel": "ביטול",
+	"bs-namespacemanager-delete": "מחיקה"
 }
