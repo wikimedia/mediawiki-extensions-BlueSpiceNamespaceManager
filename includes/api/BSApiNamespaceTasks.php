@@ -2,6 +2,7 @@
 
 use BlueSpice\Api\Response\Standard as StandardResponse;
 use BlueSpice\NamespaceManager\Utils\NameChecker;
+use MediaWiki\Context\RequestContext;
 
 class BSApiNamespaceTasks extends BSApiTasksBase {
 

@@ -6,10 +6,10 @@ use BsNamespaceHelper;
 use Config;
 use Exception;
 use IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
-use RequestContext;
 use Status;
 
 class NamespaceManager {

@@ -7,7 +7,7 @@ use BlueSpice\NamespaceManager\Utils\NameChecker;
 use BSApiTasksBase;
 use BsNamespaceHelper;
 use ManualLogEntry;
-use RequestContext;
+use MediaWiki\Context\RequestContext;
 use SpecialPage;
 use stdClass;
 use Throwable;
