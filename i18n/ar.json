@@ -63,11 +63,14 @@
 	"bs-namespacemanager-nodeletetalk": "لا يمكن حذف نطاق النقاش",
 	"bs-namespacemanager-label-istalk": "نقاش",
 	"right-namespacemanager-viewspecialpage": "الوصول إلى الصفحة الخاصة [[Special:NamespaceManager]].",
-	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
-	"bs-namespacemanager-hide-non-content-ns-label": "إخفاء مساحات الأسماء التي لا تحتوي على المحتوى",
+	"bs-namespacemanager-show-talk-label": "إظهار مساحات الأسماء للمحادثة",
+	"bs-namespacemanager-show-non-content-ns-label": "إظهار مساحات الأسماء غير المضمنة",
 	"bs-namespacemanager-labelnsalias": "الاسم المستعار",
 	"bs-namespacemanager-invalid-namespace": "النطاق الذي يتم تعديله غير صالح",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "معطل",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "مفحوص",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة",
+	"bs-namespacemanager-save": "حفظ",
+	"bs-namespacemanager-cancel": "إلغاء",
+	"bs-namespacemanager-delete": "حذف"
 }

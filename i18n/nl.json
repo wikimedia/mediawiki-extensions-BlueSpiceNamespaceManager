@@ -64,8 +64,6 @@
 	"bs-namespacemanager-nodeletetalk": "De overlegnaamruimte kan niet verwijderd worden",
 	"bs-namespacemanager-label-istalk": "Overleg",
 	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
-	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
-	"bs-namespacemanager-hide-non-content-ns-label": "Niet-inhoudsnaamruimten verbergen",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld",

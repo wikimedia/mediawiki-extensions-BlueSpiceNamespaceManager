@@ -60,8 +60,6 @@
 	"bs-namespacemanager-nodeletetalk": "Il namespace Discussione non può essere cancellato",
 	"bs-namespacemanager-label-istalk": "Discussione",
 	"right-namespacemanager-viewspecialpage": "Accede alla pagina speciale [[Special:NamespaceManager]]",
-	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
-	"bs-namespacemanager-hide-non-content-ns-label": "Nascondi namespace non di contenuto",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "Il namespace in fase di modifica non è valido",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabilitato",
