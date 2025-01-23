@@ -56,6 +56,30 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 		}
 	}
 
+	columns.actionEdit = {
+		type: 'action',
+		title: mw.message( 'bs-namespacemanager-tipedit' ).text(),
+		actionId: 'edit',
+		icon: 'edit',
+		headerText: mw.message( 'bs-namespacemanager-tipedit' ).text(),
+		invisibleHeader: true,
+		width: 30,
+		visibleOnHover: true
+	};
+	columns.actionDelete = {
+		type: 'action',
+		title: mw.message( 'bs-namespacemanager-tipremove' ).text(),
+		actionId: 'delete',
+		icon: 'trash',
+		headerText: mw.message( 'bs-namespacemanager-tipremove' ).text(),
+		invisibleHeader: true,
+		width: 30,
+		visibleOnHover: true,
+		shouldShow: function( row ) {
+			return !row.isSystemNS;
+		}
+	};
+
 	this.store = new OOJSPlus.ui.data.store.RemoteStore( {
 		action: 'bs-namespace-store',
 		filter: {
