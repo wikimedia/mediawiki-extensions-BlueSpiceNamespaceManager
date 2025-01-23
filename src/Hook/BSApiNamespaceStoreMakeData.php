@@ -3,6 +3,7 @@
 namespace BlueSpice\NamespaceManager\Hook;
 
 use BlueSpice\Hook;
+use MediaWiki\Config\Config;
 
 abstract class BSApiNamespaceStoreMakeData extends Hook {
 	/**
@@ -30,7 +31,7 @@ abstract class BSApiNamespaceStoreMakeData extends Hook {
 	/**
 	 *
 	 * @param \IContextSource $context
-	 * @param \Config $config
+	 * @param Config $config
 	 * @param array &$results
 	 */
 	public function __construct( $context, $config, &$results ) {

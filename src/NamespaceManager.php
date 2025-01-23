@@ -3,9 +3,9 @@
 namespace BlueSpice\NamespaceManager;
 
 use BsNamespaceHelper;
-use Config;
 use Exception;
 use IContextSource;
+use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
