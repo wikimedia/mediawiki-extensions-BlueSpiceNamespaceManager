@@ -4,6 +4,7 @@ namespace BlueSpice\NamespaceManager\Hook;
 
 use BlueSpice\Hook;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 
 abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 	/**
@@ -37,7 +38,7 @@ abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 
 	/**
 	 *
-	 * @param \IContextSource $context
+	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param \BlueSpice\Extension $namespaceManager
 	 * @param array &$systemNamespaces

@@ -3,8 +3,8 @@
 namespace BlueSpice\NamespaceManager\Hook;
 
 use BlueSpice\Hook;
-use IContextSource;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 
 abstract class NamespaceManagerAfterAction extends Hook {
 	/** @var array */
