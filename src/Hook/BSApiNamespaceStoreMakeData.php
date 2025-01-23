@@ -4,6 +4,7 @@ namespace BlueSpice\NamespaceManager\Hook;
 
 use BlueSpice\Hook;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 
 abstract class BSApiNamespaceStoreMakeData extends Hook {
 	/**
@@ -30,7 +31,7 @@ abstract class BSApiNamespaceStoreMakeData extends Hook {
 
 	/**
 	 *
-	 * @param \IContextSource $context
+	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param array &$results
 	 */
