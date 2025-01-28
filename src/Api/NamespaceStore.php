@@ -4,7 +4,7 @@ namespace BlueSpice\NamespaceManager\Api;
 
 use BSApiExtJSStoreBase;
 use BsNamespaceHelper;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class NamespaceStore extends BSApiExtJSStoreBase {
 

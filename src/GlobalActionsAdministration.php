@@ -3,8 +3,8 @@
 namespace BlueSpice\NamespaceManager;
 
 use MediaWiki\Message\Message;
+use MediaWiki\SpecialPage\SpecialPage;
 use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink;
-use SpecialPage;
 
 class GlobalActionsAdministration extends RestrictedTextLink {
 

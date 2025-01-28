@@ -4,7 +4,7 @@ namespace BlueSpice\NamespaceManager\Special;
 
 use BlueSpice\NamespaceManager\NamespaceManager;
 use Html;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class SpecialNamespaceManager extends SpecialPage {
 
