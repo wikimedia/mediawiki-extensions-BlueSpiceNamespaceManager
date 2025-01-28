@@ -3,6 +3,7 @@
 use BlueSpice\Api\Response\Standard as StandardResponse;
 use BlueSpice\NamespaceManager\Utils\NameChecker;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\SpecialPage\SpecialPage;
 
 class BSApiNamespaceTasks extends BSApiTasksBase {
 

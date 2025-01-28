@@ -8,7 +8,7 @@ use BSApiTasksBase;
 use BsNamespaceHelper;
 use ManualLogEntry;
 use MediaWiki\Context\RequestContext;
-use SpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 use stdClass;
 use Throwable;
 

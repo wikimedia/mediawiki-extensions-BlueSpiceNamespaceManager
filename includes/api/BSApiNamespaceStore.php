@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\SpecialPage\SpecialPage;
+
 class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
 	/**
