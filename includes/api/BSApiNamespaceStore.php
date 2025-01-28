@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\Html\Html;
 use MediaWiki\SpecialPage\SpecialPage;
 
 class BSApiNamespaceStore extends BSApiExtJSStoreBase {
@@ -20,7 +21,7 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	 */
 	protected function renderNsLink( $nsId, $linkcontent ) {
 		$href = SpecialPage::getTitleFor( 'Allpages' )->getLinkURL( [ 'namespace' => $nsId ] );
-		return \Html::element( 'a', [ 'title' => $linkcontent, 'href' => $href ], $linkcontent );
+		return Html::element( 'a', [ 'title' => $linkcontent, 'href' => $href ], $linkcontent );
 	}
 
 	/**

@@ -3,7 +3,7 @@
 namespace BlueSpice\NamespaceManager\Special;
 
 use BlueSpice\NamespaceManager\NamespaceManager;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\SpecialPage\SpecialPage;
 
 class SpecialNamespaceManager extends SpecialPage {
