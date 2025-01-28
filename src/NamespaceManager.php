@@ -9,8 +9,8 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Status\Status;
 use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
-use Status;
 
 class NamespaceManager {
 	/**
