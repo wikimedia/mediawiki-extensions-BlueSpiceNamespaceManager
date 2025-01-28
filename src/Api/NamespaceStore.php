@@ -4,6 +4,7 @@ namespace BlueSpice\NamespaceManager\Api;
 
 use BSApiExtJSStoreBase;
 use BsNamespaceHelper;
+use MediaWiki\Html\Html;
 use MediaWiki\SpecialPage\SpecialPage;
 
 class NamespaceStore extends BSApiExtJSStoreBase {
@@ -24,7 +25,7 @@ class NamespaceStore extends BSApiExtJSStoreBase {
 	 */
 	protected function renderNsLink( $nsId, $linkcontent ) {
 		$href = SpecialPage::getTitleFor( 'Allpages' )->getLinkURL( [ 'namespace' => $nsId ] );
-		return \Html::element( 'a', [ 'title' => $linkcontent, 'href' => $href ], $linkcontent );
+		return Html::element( 'a', [ 'title' => $linkcontent, 'href' => $href ], $linkcontent );
 	}
 
 	/**
