@@ -63,6 +63,7 @@
 	"bs-namespacemanager-label-istalk": "Discussion",
 	"right-namespacemanager-viewspecialpage": "Accéder à la page spéciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-show-talk-label": "Afficher les espaces de noms de discussion",
+	"bs-namespacemanager-show-non-content-ns-label": "Afficher les espaces de noms sans contenu",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "L’espace de noms à modifier n’est pas valide",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "désactivé",
