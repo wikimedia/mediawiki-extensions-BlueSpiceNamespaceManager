@@ -72,5 +72,10 @@
 	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "aangevinkt",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "niet aangevinkt"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "niet aangevinkt",
+	"bs-namespacemanager-show-talk-label": "Overlegnaamruimten weergeven",
+	"bs-namespacemanager-show-non-content-ns-label": "Niet-inhoudsnaamruimten weergeven",
+	"bs-namespacemanager-save": "Opslaan",
+	"bs-namespacemanager-cancel": "Annuleren",
+	"bs-namespacemanager-delete": "Verwijderen"
 }
