@@ -3,6 +3,7 @@
 namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\NamespaceManager\Utils\NameChecker;
+use MediaWiki\Language\RawMessage;
 use MediaWikiIntegrationTestCase;
 use MessageLocalizer;
 use Wikimedia\Rdbms\IDatabase;
@@ -45,7 +46,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 		$messageLocalizer
 			->method( 'msg' )
 			->willReturnCallback( static function ( $msgKey ) {
-					return new \RawMessage( $msgKey );
+					return new RawMessage( $msgKey );
 			} );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, null, $messageLocalizer );
@@ -64,7 +65,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 		$messageLocalizer
 			->method( 'msg' )
 			->willReturnCallback( static function ( $msgKey ) {
-					return new \RawMessage( $msgKey );
+					return new RawMessage( $msgKey );
 			} );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, null, $messageLocalizer );
@@ -90,7 +91,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 		$messageLocalizer
 			->method( 'msg' )
 			->willReturnCallback( static function ( $msgKey ) {
-					return new \RawMessage( $msgKey );
+					return new RawMessage( $msgKey );
 			} );
 
 		$nameChecker = new NameChecker( $this->namespaceList, $this->namespaceAliasList, $db, $messageLocalizer );
