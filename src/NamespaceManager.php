@@ -123,7 +123,7 @@ class NamespaceManager {
 			$aliasesMap[$nsId] = BsNamespaceHelper::getNamespaceAliases( $nsId );
 
 			$name = isset( $definition['name'] ) ? $definition['name'] : null;
-			$constantsNames[$nsId] = BsNamespaceHelper::getNamespaceConstName( $nsId, $name );
+			$constantsNames[$nsId] = BsNamespaceHelper::getNamespaceConstName( $nsId, $name, true );
 		}
 
 		$data = [
