@@ -2,7 +2,7 @@
 
 namespace BlueSpice\NamespaceManager\Maintenance;
 
-use LoggedUpdateMaintenance;
+use MediaWiki\Maintenance\LoggedUpdateMaintenance;
 use MediaWiki\MediaWikiServices;
 use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 
