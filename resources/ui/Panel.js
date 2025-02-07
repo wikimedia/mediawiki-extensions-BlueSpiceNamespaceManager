@@ -1,13 +1,13 @@
 bs.util.registerNamespace( 'bs.namespaceManager.ui' );
 
-bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
+bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 	cfg = cfg || {};
 	this.fields = cfg.fields || [];
 	this.showingNonContent = false;
 	this.showingTalk = true;
 	this.selectedItem = null;
 
-	let columns = {
+	const columns = {
 		id: {
 			type: 'number',
 			headerText: mw.msg( 'bs-namespacemanager-label-id' ),
@@ -26,20 +26,20 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 		},
 		pageCount: {
 			type: 'ns-manager-setting',
-			headerText: mw.msg('bs-namespacemanager-label-pagecount'),
+			headerText: mw.msg( 'bs-namespacemanager-label-pagecount' ),
 			filter: { type: 'number' },
 			sortable: true,
-			valueParser: function( value, row ) {
+			valueParser: ( value, row ) => {
 				return new OO.ui.HtmlSnippet( row.allPagesLink );
 			},
 			width: 60,
 			maxWidth: 140
 		}
 	};
-	for( let i = 0; i < this.fields.length; i++ ) {
-		const fieldDef = this.fields[i];
+	for ( let i = 0; i < this.fields.length; i++ ) {
+		const fieldDef = this.fields[ i ];
 		if ( fieldDef.type === 'boolean' ) {
-			columns[fieldDef.name] = {
+			columns[ fieldDef.name ] = {
 				type: 'ns-manager-setting',
 				headerText: fieldDef.label || fieldDef.name,
 				filter: { type: 'boolean' },
@@ -47,10 +47,10 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 				width: 60
 			};
 		} else {
-			columns[fieldDef.name] = {
+			columns[ fieldDef.name ] = {
 				type: fieldDef.type || 'text',
 				headerText: fieldDef.headerText || fieldDef.label || fieldDef.name,
-				filter: fieldDef.filter || {type: 'string'},
+				filter: fieldDef.filter || { type: 'string' },
 				sortable: fieldDef.sortable || false
 			};
 		}
@@ -75,22 +75,22 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 		invisibleHeader: true,
 		width: 30,
 		visibleOnHover: true,
-		shouldShow: function( row ) {
-			return !row.isSystemNS;
+		shouldShow: ( row ) => {
+			return !row.isSystemNS && !row.isTalkNS;
 		}
 	};
 
 	this.store = new OOJSPlus.ui.data.store.RemoteStore( {
 		action: 'bs-namespace-store',
 		filter: {
-			content_raw: {
+			content_raw: { // eslint-disable-line camelcase
 				type: 'boolean',
 				value: true
 			}
 		}
 	} );
 	this.store.connect( this, {
-		reload: function() {
+		reload: () => {
 			this.setAbilitiesOnSelection( null );
 			this.selectedItem = null;
 		}
@@ -100,7 +100,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 		columns: columns,
 		multiSelect: false,
 		exportable: true,
-		provideExportData: function () {
+		provideExportData: () => {
 			const dfd = $.Deferred(),
 				store = new OOJSPlus.ui.data.store.RemoteStore( {
 					action: 'bs-namespace-store',
@@ -111,10 +111,10 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 				const $table = $( '<table>' );
 				let $row = $( '<tr>' );
 
-				for ( let key in columns ) {
-					if ( columns.hasOwnProperty( key ) ) {
-						const column = columns[key];
-						let $cell = $( '<th>' );
+				for ( const key in columns ) {
+					if ( columns.hasOwnProperty( key ) ) { // eslint-disable-line no-prototype-builtins
+						const column = columns[ key ];
+						const $cell = $( '<th>' );
 						$cell.append( column.headerText );
 						$row.append( $cell );
 					}
@@ -122,27 +122,27 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 
 				$table.append( $row );
 				for ( const id in response ) {
-					if ( !response.hasOwnProperty( id ) ) {
+					if ( !response.hasOwnProperty( id ) ) { // eslint-disable-line no-prototype-builtins
 						continue;
 					}
 					$row = $( '<tr>' );
 					const record = response[ id ];
-					for ( let key in columns ) {
-						if ( !columns.hasOwnProperty( key ) ) {
+					for ( const key in columns ) {
+						if ( !columns.hasOwnProperty( key ) ) { // eslint-disable-line no-prototype-builtins
 							continue;
 						}
-						const column = columns[key];
-						let $cell = $( '<td>' );
+						const column = columns[ key ];
+						const $cell = $( '<td>' );
 						if ( key === 'pageCount' ) {
 							$cell.append( record.pageCount );
 						} else if ( column.type === 'ns-manager-setting' ) {
-							 if ( typeof record[key] === 'object' ) {
-								$cell.append( record[key].value ? 'x' : '' );
+							if ( typeof record[ key ] === 'object' ) {
+								$cell.append( record[ key ].value ? 'x' : '' );
 							} else {
-								$cell.append( record[key] ? 'x' : '' );
+								$cell.append( record[ key ] ? 'x' : '' );
 							}
 						} else {
-							$cell.append( record[key] );
+							$cell.append( record[ key ] );
 						}
 						$row.append( $cell );
 					}
@@ -162,13 +162,12 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function( cfg ) {
 
 OO.inheritClass( bs.namespaceManager.ui.NamespaceManagerPanel, OOJSPlus.ui.panel.ManagerGrid );
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = function() {
-	var actions = [];
-	actions.push( this.getAddAction( { icon: 'add', flags: [ 'progressive' ],  displayBothIconAndLabel: true } ) );
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = function () {
+	const actions = [];
+	actions.push( this.getAddAction( { icon: 'add', flags: [ 'progressive' ], displayBothIconAndLabel: true } ) );
 	actions.push( this.getEditAction( { displayBothIconAndLabel: true } ) );
 	actions.push( this.getDeleteAction( { displayBothIconAndLabel: true } ) );
 
-	const manager = this;
 	actions.push( new OOJSPlus.ui.toolbar.tool.ToolbarTool( {
 		name: 'showNonContent',
 		position: 'none',
@@ -176,19 +175,19 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = funct
 		displayToggleCheckbox: true,
 		active: this.showingNonContent,
 		title: mw.msg( 'bs-namespacemanager-show-non-content-ns-label' ),
-		callback: function() {
-			if ( manager.showingNonContent ) {
+		callback: ( toolInstance ) => {
+			if ( this.showingNonContent ) {
 				const filterFactory = new OOJSPlus.ui.data.FilterFactory();
-				manager.store.filter( filterFactory.makeFilter( {
+				this.store.filter( filterFactory.makeFilter( {
 					type: 'boolean',
 					value: true
 				} ), 'content_raw' );
-				this.setActive( false );
-				manager.showingNonContent = false;
+				toolInstance.setActive( false );
+				this.showingNonContent = false;
 			} else {
-				manager.store.filter( null, 'content_raw' );
-				this.setActive( true );
-				manager.showingNonContent = true;
+				this.store.filter( null, 'content_raw' );
+				toolInstance.setActive( true );
+				this.showingNonContent = true;
 			}
 		}
 	} ) );
@@ -199,19 +198,19 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = funct
 		displayToggleCheckbox: true,
 		title: mw.msg( 'bs-namespacemanager-show-talk-label' ),
 		active: this.showingTalk,
-		callback: function() {
-			if ( manager.showingTalk ) {
+		callback: ( toolInstance ) => {
+			if ( this.showingTalk ) {
 				const filterFactory = new OOJSPlus.ui.data.FilterFactory();
-				manager.store.filter( filterFactory.makeFilter( {
+				this.store.filter( filterFactory.makeFilter( {
 					type: 'boolean',
 					value: false
 				} ), 'isTalkNS' );
-				this.setActive( false );
-				manager.showingTalk = false;
+				toolInstance.setActive( false );
+				this.showingTalk = false;
 			} else {
-				manager.store.filter( null, 'isTalkNS' );
-				this.setActive( true );
-				manager.showingTalk = true;
+				this.store.filter( null, 'isTalkNS' );
+				toolInstance.setActive( true );
+				this.showingTalk = true;
 			}
 		}
 	} ) );
@@ -221,11 +220,11 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = funct
 		icon: 'menu',
 		title: 'More',
 		include: [ 'showTalk', 'showNonContent' ]
-	} ));
+	} ) );
 	return actions;
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.onAction = function( action, row ) {
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.onAction = function ( action, row ) {
 	if ( action === 'add' ) {
 		this.addNamespace();
 	}
@@ -236,12 +235,12 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.onAction = function( acti
 	if ( action === 'edit' ) {
 		this.editNamespace( row );
 	}
-	if ( action === 'delete' && !row.isSystemNS ) {
+	if ( action === 'delete' && !row.isSystemNS && !row.isTalkNS ) {
 		this.deleteNamespace( row );
 	}
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getInitialAbilities = function() {
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getInitialAbilities = function () {
 	return {
 		add: true,
 		edit: false,
@@ -249,33 +248,33 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getInitialAbilities = fun
 	};
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.onItemSelected = function ( item, selectedItems ) {
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.onItemSelected = function ( item, selectedItems ) { // eslint-disable-line no-unused-vars
 	this.setAbilitiesOnSelection( item.item );
 	this.selectedItem = item.item;
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.setAbilitiesOnSelection = function( selectedItem ) {
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.setAbilitiesOnSelection = function ( selectedItem ) {
 	this.setAbilities( { edit: false, delete: false } );
 	if ( !selectedItem ) {
 		return;
 	}
-	if ( selectedItem.isSystemNS ) {
+	if ( selectedItem.isSystemNS || selectedItem.isTalkNS ) {
 		this.setAbilities( { edit: true, delete: false } );
 	} else {
 		this.setAbilities( { edit: true, delete: true } );
 	}
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.addNamespace = function() {
-	var dialog = new bs.namespaceManager.ui.dialog.EditNamespaceDialog({
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.addNamespace = function () {
+	const dialog = new bs.namespaceManager.ui.dialog.EditNamespaceDialog( {
 		fields: this.fields,
 		isCreation: true
 	} );
 	this.openWindow( dialog );
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.editNamespace = function( row ) {
-	var dialog = new bs.namespaceManager.ui.dialog.EditNamespaceDialog({
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.editNamespace = function ( row ) {
+	const dialog = new bs.namespaceManager.ui.dialog.EditNamespaceDialog( {
 		fields: this.fields,
 		isCreation: false,
 		item: row
@@ -283,24 +282,24 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.editNamespace = function(
 	this.openWindow( dialog );
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.deleteNamespace = function( row ) {
-	var dialog = new bs.namespaceManager.ui.dialog.DeleteNamespaceDialog({
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.deleteNamespace = function ( row ) {
+	const dialog = new bs.namespaceManager.ui.dialog.DeleteNamespaceDialog( {
 		id: row.id,
 		nsName: row.name
 	} );
 	this.openWindow( dialog );
 };
 
-bs.namespaceManager.ui.NamespaceManagerPanel.prototype.openWindow = function( dialog ) {
+bs.namespaceManager.ui.NamespaceManagerPanel.prototype.openWindow = function ( dialog ) {
 	if ( !this.windowManager ) {
 		this.windowManager = new OO.ui.WindowManager();
-		$( 'body' ).append( this.windowManager.$element );
+		$( 'body' ).append( this.windowManager.$element ); // eslint-disable-line no-jquery/no-global-selector
 	}
 	this.windowManager.addWindows( [ dialog ] );
-	this.windowManager.openWindow( dialog ).closed.then( function( data ) {
+	this.windowManager.openWindow( dialog ).closed.then( ( data ) => {
 		if ( data && data.reload ) {
 			this.store.reload();
 		}
 		this.windowManager.clearWindows();
-	}.bind( this ) );
+	} );
 };
