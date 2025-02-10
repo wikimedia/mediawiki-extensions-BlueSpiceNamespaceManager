@@ -3,6 +3,7 @@
 use MediaWiki\Api\ApiMain;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\DerivativeRequest;
 
 /**
  * NamespacerNuker
