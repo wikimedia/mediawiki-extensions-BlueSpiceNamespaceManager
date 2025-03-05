@@ -65,7 +65,10 @@ class NamespaceSettings implements IDynamicConfig {
 		$aliases = $additionalData['aliasesMap'] ?? [];
 		$namespaceDefinition = $additionalData['userNSDefinition'] ?? [];
 
-		$globals = [];
+		$globals = [
+			'wgExtraNamespaces' => [],
+			'wgNamespaceAliases' => $GLOBALS['wgNamespaceAliases'] ?? [],
+		];
 		$serialized = [ 'constants' => [] ];
 
 		foreach ( $namespaceDefinition as $nsId => $definition ) {
