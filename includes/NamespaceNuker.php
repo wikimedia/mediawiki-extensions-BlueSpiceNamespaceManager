@@ -36,7 +36,8 @@ class NamespaceNuker {
 			],
 			[
 				'page_namespace' => $idNS
-			]
+			],
+			__METHOD__
 		);
 
 		$sToken = RequestContext::getMain()->getCsrfTokenSet()->getToken()->toString();
@@ -86,7 +87,8 @@ class NamespaceNuker {
 			],
 			[
 				'page_namespace' => $idNS
-			]
+			],
+			__METHOD__
 		);
 
 		$sToken = RequestContext::getMain()->getCsrfTokenSet()->getToken()->toString();
