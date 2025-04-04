@@ -84,7 +84,7 @@ class NamespaceManager {
 	 * @param IContextSource $context
 	 * @return array
 	 */
-	public function setUserNamespaces( $userNSDefinition, IContextSource $context = null ) {
+	public function setUserNamespaces( $userNSDefinition, ?IContextSource $context = null ) {
 		wfDebugLog( 'bluespice-deprecations', __METHOD__, 'private' );
 		if ( !$context ) {
 			$context = RequestContext::getMain();
@@ -144,7 +144,7 @@ class NamespaceManager {
 	 * @param IContextSource|null $context
 	 * @return array
 	 */
-	public function getMetaFields( IContextSource $context = null ) {
+	public function getMetaFields( ?IContextSource $context = null ) {
 		if ( !$context ) {
 			$context = RequestContext::getMain();
 		}
