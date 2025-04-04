@@ -15,8 +15,9 @@ use MediaWiki\MediaWikiServices;
  * @group BlueSpiceNamespaceManager
  */
 class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
+
+	/** @var int */
 	protected $iFixtureTotal = 18;
-	protected $hookStore;
 
 	protected function getStoreSchema() {
 		return [

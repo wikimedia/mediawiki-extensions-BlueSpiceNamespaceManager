@@ -114,7 +114,7 @@ class NamespaceTasks extends BSApiTasksBase {
 	 * @param array $aParams
 	 * @return StandardResponse
 	 */
-	protected function task_add( $oData, $aParams ) {
+	protected function task_add( $oData, $aParams ) { // phpcs:ignore MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName, Generic.Files.LineLength.TooLong
 		$sNamespace = $oData->name;
 
 		$aAdditionalSettings = (array)$oData->settings;
@@ -207,7 +207,7 @@ class NamespaceTasks extends BSApiTasksBase {
 	 * @param array $aParams
 	 * @return StandardResponse
 	 */
-	protected function task_edit( $oData, $aParams ) {
+	protected function task_edit( $oData, $aParams ) { // phpcs:ignore MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName, Generic.Files.LineLength.TooLong
 		$bluespiceNamespaces = $this->getConfig()->get( 'SystemNamespaces' );
 
 		$sNamespace = $oData->name;
@@ -337,7 +337,7 @@ class NamespaceTasks extends BSApiTasksBase {
 	 * @param array $aParams
 	 * @return StandardResponse
 	 */
-	protected function task_remove( $oData, $aParams ) {
+	protected function task_remove( $oData, $aParams ) { // phpcs:ignore MediaWiki.NamingConventions.LowerCamelFunctionsName.FunctionName, Generic.Files.LineLength.TooLong
 		$oResult = $this->getResult();
 		$iNS = (int)$oData->id;
 
