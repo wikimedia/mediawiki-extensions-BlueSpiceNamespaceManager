@@ -1,12 +1,12 @@
 bs.util.registerNamespace( 'bs.namespaceManager.ui.column' );
 
-bs.namespaceManager.ui.column.NamespaceSettingColumn = function( cfg ) {
+bs.namespaceManager.ui.column.NamespaceSettingColumn = function ( cfg ) {
 	bs.namespaceManager.ui.column.NamespaceSettingColumn.parent.call( this, cfg );
 };
 
 OO.inheritClass( bs.namespaceManager.ui.column.NamespaceSettingColumn, OOJSPlus.ui.data.column.Boolean );
 
-bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getHeader = function( data ) {
+bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getHeader = function ( data ) {
 	const $cell = $( '<th>' ).addClass(
 		'oojsplus-data-gridWidget-cell oojsplus-data-gridWidget-column-header bs-namespace-manager-column-setting'
 	);
@@ -18,27 +18,27 @@ bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getHeader = funct
 		invisibleLabel: this.invisibleLabel,
 		classes: [ 'header-button' ]
 	} );
-	var direction = this.sorter.getValue().direction ?  this.sorter.getValue().direction : 'other';
+	let direction = this.sorter.getValue().direction ? this.sorter.getValue().direction : 'other';
 	this.setSortValue( $cell, direction );
 
 	if ( this.sorter ) {
 		this.headerButton.connect( this, {
 			click: function () {
 				this.toggleSort();
-				direction = this.sorter.getValue().direction ?  this.sorter.getValue().direction : 'other';
+				direction = this.sorter.getValue().direction ? this.sorter.getValue().direction : 'other';
 				this.setSortValue( $cell, direction );
 				this.emit( 'sort-update', $cell, direction );
 			}
 		} );
 	}
 	this.filter.connect( this, {
-		closePopup: function() {
+		closePopup: function () {
 			if ( this.filterButton ) {
 				this.filterButton.getPopup().toggle( false );
 			}
 		}
 	} );
-	$cell.append(  );
+	$cell.append();
 	this.headerButton.$element.addClass( 'filterable' );
 
 	const $textCnt = $( '<div>' ).addClass( 'header-text' );
@@ -53,20 +53,20 @@ bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getHeader = funct
 	return $cell;
 };
 
-bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.toggleSort = function( clearOnly ) {
+bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.toggleSort = function ( clearOnly ) {
 	clearOnly = clearOnly || false;
-	var sortOptions = this.getSortOptions(),
-		directions = sortOptions.directions,
-		indicators = sortOptions.indicators,
-		index = directions.indexOf( this.sortingDirection ),
-		newIndex = index + 1 === directions.length ? 0 : index + 1,
-		indicator = indicators[newIndex];
+	const sortOptions = this.getSortOptions();
+	const directions = sortOptions.directions;
+	const indicators = sortOptions.indicators;
+	const index = directions.indexOf( this.sortingDirection );
+	let newIndex = index + 1 === directions.length ? 0 : index + 1;
+	let indicator = indicators[ newIndex ];
 
 	if ( clearOnly ) {
 		newIndex = 0;
-		indicator = indicators[0];
+		indicator = indicators[ 0 ];
 	}
-	this.sortingDirection = directions[newIndex];
+	this.sortingDirection = directions[ newIndex ];
 	this.sortIndicator.setIndicator( indicator );
 	this.sorter.setDirection( this.sortingDirection );
 
@@ -75,20 +75,20 @@ bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.toggleSort = func
 	}
 };
 
-bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getViewControls = function( value ) {
+bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getViewControls = function ( value ) {
 	let disabled = false;
 	if ( typeof value === 'object' ) {
 		disabled = value.disabled;
 		value = value.value;
 	}
-	var widget = new OO.ui.IconWidget( {
+	const widget = new OO.ui.IconWidget( {
 		icon: disabled ? 'subtract' : value ? 'color-check' : 'color-cross'
 	} );
 	widget.$element.attr( 'aria-label', disabled ? 'disabled' : value ? 'checked' : 'unchecked' );
 	return widget;
 };
 
-bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.renderCell = function( value, row ) {
+bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.renderCell = function ( value, row ) {
 	const $cell = bs.namespaceManager.ui.column.NamespaceSettingColumn.parent.prototype.renderCell.call( this, value, row );
 	$cell.addClass( 'bs-namespace-manager-column-setting-cell' );
 	return $cell;

@@ -1,6 +1,6 @@
 bs.util.registerNamespace( 'bs.namespaceManager.ui.dialog' );
 
-bs.namespaceManager.ui.dialog.DeleteNamespaceDialog = function( cfg ) {
+bs.namespaceManager.ui.dialog.DeleteNamespaceDialog = function ( cfg ) {
 	bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.parent.call( this, cfg );
 	this.id = cfg.id;
 	this.nsName = cfg.nsName;
@@ -15,7 +15,7 @@ bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.static.actions = [
 	{ action: 'cancel', label: mw.msg( 'bs-namespacemanager-cancel' ), flags: [ 'safe' ] }
 ];
 
-bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.initialize = function() {
+bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.initialize = function () {
 	bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.parent.prototype.initialize.call( this );
 	this.content = new OO.ui.PanelLayout( {
 		expanded: false,
@@ -44,22 +44,22 @@ bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.initialize = funct
 	this.$body.append( this.content.$element );
 };
 
-bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.getActionProcess = function( action ) {
+bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.getActionProcess = function ( action ) {
 	return bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.parent.prototype.getActionProcess.call( this, action ).next(
-		function() {
+		function () {
 			if ( action === 'delete' ) {
 				const dfd = $.Deferred();
 				this.pushPending();
 				const nukeAction = this.nukeOptions.getValue();
-				console.log( nukeAction );
+
 				const handlers = {
-					success: function( response ) {
+					success: () => {
 						this.close( { reload: true } );
-					}.bind( this ),
-					failure: function( e ) {
+					},
+					failure: ( e ) => {
 						this.popPending();
 						dfd.reject( new OO.ui.Error( e.message ) );
-					}.bind( this )
+					}
 				};
 
 				bs.api.tasks.exec(
@@ -81,9 +81,9 @@ bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.getActionProcess =
 
 bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.getBodyHeight = function () {
 	if ( !this.$errors.hasClass( 'oo-ui-element-hidden' ) ) {
-		return this.$element.find( '.oo-ui-processDialog-errors' )[0].scrollHeight;
+		return this.$element.find( '.oo-ui-processDialog-errors' )[ 0 ].scrollHeight;
 	}
-	return this.$body[0].scrollHeight;
+	return this.$body[ 0 ].scrollHeight;
 };
 
 bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.onDismissErrorButtonClick = function () {

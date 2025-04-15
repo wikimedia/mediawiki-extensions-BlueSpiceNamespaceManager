@@ -1,36 +1,43 @@
 .oojsplus-data-gridWidget-column-header {
 	vertical-align: bottom;
 }
+
 .oojsplus-data-gridWidget-column-header .oo-ui-popupButtonWidget {
 	opacity: 0.6;
 }
+
 .oojsplus-data-gridWidget-column-header .filter-button,
 .oojsplus-data-gridWidget-column-header .filter-button a {
 	top: unset !important;
 	height: unset !important;
 	bottom: 5px;
 }
+
 .bs-namespace-manager-column-setting .header-text,
 .bs-namespace-manager-column-setting .header-filter {
 	display: block;
 	text-align: center;
 }
+
 .bs-namespace-manager-column-setting .header-filter .filter-button {
 	position: relative !important;
 }
+
 .bs-namespace-manager-column-setting .header-text .header-button {
 	margin: 0 !important;
 	width: 100%;
 	text-align: center;
 }
+
 .bs-namespace-manager-column-setting .header-text .header-button a {
 	writing-mode: vertical-rl;
-	transform: rotate(180deg);
+	transform: rotate( 180deg );
 	padding: 0;
 	height: 120px;
 	text-align: left;
 	white-space: break-spaces;
 }
+
 .bs-namespace-manager-column-setting-cell {
 	padding: 0;
 }
