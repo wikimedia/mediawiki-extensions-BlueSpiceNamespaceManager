@@ -29,9 +29,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 			headerText: mw.msg( 'bs-namespacemanager-label-pagecount' ),
 			filter: { type: 'number' },
 			sortable: true,
-			valueParser: ( value, row ) => {
-				return new OO.ui.HtmlSnippet( row.allPagesLink );
-			},
+			valueParser: ( value, row ) => new OO.ui.HtmlSnippet( row.allPagesLink ),
 			width: 60,
 			maxWidth: 140
 		}
@@ -75,9 +73,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 		invisibleHeader: true,
 		width: 30,
 		visibleOnHover: true,
-		shouldShow: ( row ) => {
-			return !row.isSystemNS && !row.isTalkNS;
-		}
+		shouldShow: ( row ) => !row.isSystemNS && !row.isTalkNS
 	};
 
 	this.store = new OOJSPlus.ui.data.store.RemoteStore( {
@@ -112,7 +108,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 				let $row = $( '<tr>' );
 
 				for ( const key in columns ) {
-					if ( columns.hasOwnProperty( key ) ) { // eslint-disable-line no-prototype-builtins
+					if ( columns.hasOwnProperty( key ) ) {
 						const column = columns[ key ];
 						const $cell = $( '<th>' );
 						$cell.append( column.headerText );
@@ -122,13 +118,13 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 
 				$table.append( $row );
 				for ( const id in response ) {
-					if ( !response.hasOwnProperty( id ) ) { // eslint-disable-line no-prototype-builtins
+					if ( !response.hasOwnProperty( id ) ) {
 						continue;
 					}
 					$row = $( '<tr>' );
 					const record = response[ id ];
 					for ( const key in columns ) {
-						if ( !columns.hasOwnProperty( key ) ) { // eslint-disable-line no-prototype-builtins
+						if ( !columns.hasOwnProperty( key ) ) {
 							continue;
 						}
 						const column = columns[ key ];
@@ -293,7 +289,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.deleteNamespace = functio
 bs.namespaceManager.ui.NamespaceManagerPanel.prototype.openWindow = function ( dialog ) {
 	if ( !this.windowManager ) {
 		this.windowManager = new OO.ui.WindowManager();
-		$( 'body' ).append( this.windowManager.$element ); // eslint-disable-line no-jquery/no-global-selector
+		$( 'body' ).append( this.windowManager.$element );
 	}
 	this.windowManager.addWindows( [ dialog ] );
 	this.windowManager.openWindow( dialog ).closed.then( ( data ) => {

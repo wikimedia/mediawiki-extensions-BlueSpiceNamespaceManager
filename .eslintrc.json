@@ -5,11 +5,14 @@
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
-	"rules": {
-		"max-len": "off"
-	},
 	"globals": {
 		"bs": "readonly",
 		"OOJSPlus": "readonly"
+	},
+	"rules": {
+		"max-len": "off",
+		"no-jquery/no-class-state": "off",
+		"no-jquery/no-global-selector": "off",
+		"no-prototype-builtins": "off"
 	}
 }

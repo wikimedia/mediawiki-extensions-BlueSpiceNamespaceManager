@@ -1,6 +1,6 @@
 bs.util.registerNamespace( 'bs.namespaceManager.ui.dialog' );
 
-bs.namespaceManager.ui.dialog.EditNamespaceDialog = function( cfg ) {
+bs.namespaceManager.ui.dialog.EditNamespaceDialog = function ( cfg ) {
 	bs.namespaceManager.ui.dialog.EditNamespaceDialog.parent.call( this, cfg );
 	this.isCreation = cfg.isCreation || false;
 	this.fields = cfg.fields || [];
@@ -17,9 +17,9 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.static.actions = [
 	{ action: 'cancel', label: mw.msg( 'bs-namespacemanager-cancel' ), flags: [ 'safe' ] }
 ];
 
-bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getSetupProcess = function() {
+bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getSetupProcess = function () {
 	return bs.namespaceManager.ui.dialog.EditNamespaceDialog.parent.prototype.getSetupProcess.call( this ).next(
-		function() {
+		function () {
 			if ( this.isCreation ) {
 				this.title
 					.setLabel( mw.msg( 'bs-namespacemanager-tipadd' ) )
@@ -29,7 +29,7 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getSetupProcess = fu
 	);
 };
 
-bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = function() {
+bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = function () {
 	bs.namespaceManager.ui.dialog.EditNamespaceDialog.parent.prototype.initialize.call( this );
 
 	this.content = new OO.ui.PanelLayout( {
@@ -42,19 +42,19 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = functio
 		disabled: this.item.isSystemNS || this.item.isTalkNS
 	} );
 	this.nameInput.connect( this, {
-		change: function( value ) {
+		change: function () {
 			if ( this.typingTimeout ) {
 				clearTimeout( this.typingTimeout );
 			}
-			this.typingTimeout = setTimeout( function() {
-				this.nameInput.getValidity().done( function() {
+			this.typingTimeout = setTimeout( () => {
+				this.nameInput.getValidity().done( () => {
 					this.onValidityCheck( true );
 					this.nameInput.setValidityFlag( true );
-				}.bind( this ) ).fail( function() {
+				} ).fail( () => {
 					this.onValidityCheck( false );
 					this.nameInput.setValidityFlag( false );
-				}.bind( this ) );
-			}.bind( this ), 500 );
+				} );
+			}, 500 );
 		}
 	} );
 
@@ -63,14 +63,13 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = functio
 		disabled: this.item.isTalkNS
 	} );
 
-	let options = [];
-	let values = [];
-	for ( var i = 0; i < this.fields.length; i++ ) {
-		var field = this.fields[i];
+	const options = [];
+	for ( let i = 0; i < this.fields.length; i++ ) {
+		const field = this.fields[ i ];
 		if ( field.type !== 'boolean' ) {
 			continue;
 		}
-		let value = this.item[field.name] || false;
+		let value = this.item[ field.name ] || false;
 		let disabled = false;
 		if ( typeof value === 'object' ) {
 			disabled = value.disabled || value.read_only;
@@ -82,7 +81,7 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = functio
 			selected: !!value,
 			disabled: disabled
 		} ) );
-		this.checkboxValues[field.name] = false;
+		this.checkboxValues[ field.name ] = false;
 	}
 
 	this.checkboxes = new OO.ui.CheckboxMultiselectWidget( {
@@ -107,35 +106,33 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = functio
 	this.$body.append( this.content.$element );
 };
 
-bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.onValidityCheck = function( valid ) {
+bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.onValidityCheck = function ( valid ) {
 	this.actions.setAbilities( { save: valid } );
 };
 
-bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getActionProcess = function( action ) {
+bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getActionProcess = function ( action ) {
 	return bs.namespaceManager.ui.dialog.EditNamespaceDialog.parent.prototype.getActionProcess.call( this, action ).next(
-		function() {
+		function () {
 			if ( action === 'save' ) {
-				const selected = this.checkboxes.findSelectedItems().map( function( item ) {
-					return item.getData();
-				} );
-				let settings = { alias: this.aliasInput.getValue() };
-				for ( var checkboxkey in this.checkboxValues ) {
+				const selected = this.checkboxes.findSelectedItems().map( ( item ) => item.getData() );
+				const settings = { alias: this.aliasInput.getValue() };
+				for ( const checkboxkey in this.checkboxValues ) {
 					if ( !this.checkboxValues.hasOwnProperty( checkboxkey ) ) {
 						continue;
 					}
-					settings[checkboxkey] = selected.indexOf( checkboxkey ) !== -1;
+					settings[ checkboxkey ] = selected.indexOf( checkboxkey ) !== -1;
 				}
 				const dfd = $.Deferred();
 				this.pushPending();
 
 				const handlers = {
-					success: function( response ) {
+					success: () => {
 						this.close( { reload: true } );
-					}.bind( this ),
-					failure: function( e ) {
+					},
+					failure: ( e ) => {
 						this.popPending();
 						dfd.reject( new OO.ui.Error( e.message ) );
-					}.bind( this )
+					}
 				};
 
 				if ( this.isCreation ) {
@@ -170,9 +167,9 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getActionProcess = f
 
 bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getBodyHeight = function () {
 	if ( !this.$errors.hasClass( 'oo-ui-element-hidden' ) ) {
-		return this.$element.find( '.oo-ui-processDialog-errors' )[0].scrollHeight;
+		return this.$element.find( '.oo-ui-processDialog-errors' )[ 0 ].scrollHeight;
 	}
-	return this.$body[0].scrollHeight;
+	return this.$body[ 0 ].scrollHeight;
 };
 
 bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.onDismissErrorButtonClick = function () {
