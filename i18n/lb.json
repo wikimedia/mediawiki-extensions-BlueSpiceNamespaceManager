@@ -10,7 +10,7 @@
 	"bs-namespacemanager-wrong-name": "Den Nummraum enthält ongülteg Zeechen.",
 	"bs-namespacemanager-ns-exists": "Den Nummraum gëtt et schonn.",
 	"bs-namespacemanager-ns-length": "Den Nummraum muss mindestens zwee Zeeche laang sinn.",
-	"bs-namespacemanager-label-id": "Nummer (ID)",
+	"bs-namespacemanager-label-id": "ID",
 	"bs-namespacemanager-label-namespaces": "Nummraum",
 	"bs-namespacemanager-label-editable": "Ëmbenennbar",
 	"bs-namespacemanager-label-content": "Nummraum Inhalt",

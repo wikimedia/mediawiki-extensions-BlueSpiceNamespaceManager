@@ -77,5 +77,10 @@
 	"bs-namespacemanager-invalid-namespace": "Der bearbeitete Namensraum ist ungültig",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktiviert",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "ausgewählt",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt",
+	"bs-namespacemanager-show-talk-label": "Diskussionsnamensräume anzeigen",
+	"bs-namespacemanager-show-non-content-ns-label": "Nicht-Inhalts-Namensräume anzeigen",
+	"bs-namespacemanager-save": "Speichern",
+	"bs-namespacemanager-cancel": "Abbrechen",
+	"bs-namespacemanager-delete": "Löschen"
 }
