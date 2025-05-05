@@ -3,6 +3,7 @@
 namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\Tests\BSApiExtJSStoreTestBase;
+use MediaWiki\MainConfigNames;
 use MediaWiki\MediaWikiServices;
 
 /**
@@ -42,8 +43,8 @@ class BSApiNamespaceStoreTest extends BSApiExtJSStoreTestBase {
 	protected function setUp(): void {
 		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
 		parent::setUp();
-		$this->setMwGlobals( [
-			'wgNamespacesWithSubpages' => [
+		$this->overrideConfigValues( [
+			MainConfigNames::NamespacesWithSubpages => [
 				99990 => true
 			]
 		] );
