@@ -3,8 +3,8 @@ bs.util.registerNamespace( 'bs.namespaceManager.ui' );
 bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 	cfg = cfg || {};
 	this.fields = cfg.fields || [];
-	this.showingNonContent = false;
-	this.showingTalk = true;
+	this.hidingNonContent = true;
+	this.hidingTalk = false;
 	this.selectedItem = null;
 
 	const columns = {
@@ -165,48 +165,48 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = funct
 	actions.push( this.getDeleteAction( { displayBothIconAndLabel: true } ) );
 
 	actions.push( new OOJSPlus.ui.toolbar.tool.ToolbarTool( {
-		name: 'showNonContent',
+		name: 'hideNonContent',
 		position: 'none',
 		displayBothIconAndLabel: true,
 		displayToggleCheckbox: true,
-		active: this.showingNonContent,
-		title: mw.msg( 'bs-namespacemanager-show-non-content-ns-label' ),
+		active: this.hidingNonContent,
+		title: mw.msg( 'bs-namespacemanager-hide-non-content-ns-label' ),
 		callback: ( toolInstance ) => {
-			if ( this.showingNonContent ) {
+			if ( this.hidingNonContent ) {
+				this.store.filter( null, 'content_raw' );
+				toolInstance.setActive( false );
+				this.hidingNonContent = false;
+			} else {
 				const filterFactory = new OOJSPlus.ui.data.FilterFactory();
 				this.store.filter( filterFactory.makeFilter( {
 					type: 'boolean',
 					value: true
 				} ), 'content_raw' );
-				toolInstance.setActive( false );
-				this.showingNonContent = false;
-			} else {
-				this.store.filter( null, 'content_raw' );
 				toolInstance.setActive( true );
-				this.showingNonContent = true;
+				this.hidingNonContent = true;
 			}
 		}
 	} ) );
 	actions.push( new OOJSPlus.ui.toolbar.tool.ToolbarTool( {
-		name: 'showTalk',
+		name: 'hideTalk',
 		position: 'none',
 		displayBothIconAndLabel: true,
 		displayToggleCheckbox: true,
-		title: mw.msg( 'bs-namespacemanager-show-talk-label' ),
-		active: this.showingTalk,
+		title: mw.msg( 'bs-namespacemanager-hide-talk-label' ),
+		active: this.hidingTalk,
 		callback: ( toolInstance ) => {
-			if ( this.showingTalk ) {
+			if ( this.hidingTalk ) {
+				this.store.filter( null, 'isTalkNS' );
+				toolInstance.setActive( false );
+				this.hidingTalk = false;
+			} else {
 				const filterFactory = new OOJSPlus.ui.data.FilterFactory();
 				this.store.filter( filterFactory.makeFilter( {
 					type: 'boolean',
 					value: false
 				} ), 'isTalkNS' );
-				toolInstance.setActive( false );
-				this.showingTalk = false;
-			} else {
-				this.store.filter( null, 'isTalkNS' );
 				toolInstance.setActive( true );
-				this.showingTalk = true;
+				this.hidingTalk = true;
 			}
 		}
 	} ) );
@@ -215,7 +215,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = funct
 		position: 'right',
 		icon: 'menu',
 		title: 'More',
-		include: [ 'showTalk', 'showNonContent' ]
+		include: [ 'hideTalk', 'hideNonContent' ]
 	} ) );
 	return actions;
 };
