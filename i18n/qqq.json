@@ -70,8 +70,8 @@
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "Aria label for a icon that indicates a disabled state of a tristate option",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "Aria label for a icon that indicates a checked state of a tristate option",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "Aria label for a icon that indicates a unchecked state of a tristate option",
-	"bs-namespacemanager-show-talk-label": "Checkbox label to show talk namespaces in the grid",
-	"bs-namespacemanager-show-non-content-ns-label": "Checkbox label to show non-content namespages in the grid",
+	"bs-namespacemanager-hide-talk-label": "Checkbox label to hide talk namespaces in the grid",
+	"bs-namespacemanager-hide-non-content-ns-label": "Checkbox label to hide non-content namespages in the grid",
 	"bs-namespacemanager-save": "Generic save label{{Identical|Save}}",
 	"bs-namespacemanager-cancel": "Generic cancel label{{Identical|Cancel}}",
 	"bs-namespacemanager-delete": "Generic delete label{{Identical|Delete}}"
