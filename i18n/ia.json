@@ -62,8 +62,6 @@
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disactivate",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "marcate",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "non marcate",
-	"bs-namespacemanager-show-talk-label": "Monstrar spatios de nomines de discussion",
-	"bs-namespacemanager-show-non-content-ns-label": "Monstrar spatios de nomines non de contento",
 	"bs-namespacemanager-save": "Salveguardar",
 	"bs-namespacemanager-cancel": "Cancellar",
 	"bs-namespacemanager-delete": "Deler"

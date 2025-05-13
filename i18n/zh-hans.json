@@ -66,8 +66,6 @@
 	"bs-namespacemanager-nodeletetalk": "讨论命名空间不能删除",
 	"bs-namespacemanager-label-istalk": "讨论",
 	"right-namespacemanager-viewspecialpage": "访问页面 [[Special:NamespaceManager]] 的权限。",
-	"bs-namespacemanager-show-talk-label": "显示讨论命名空间",
-	"bs-namespacemanager-show-non-content-ns-label": "显示非内容命名空间",
 	"bs-namespacemanager-labelnsalias": "别名",
 	"bs-namespacemanager-invalid-namespace": "正在编辑的命名空间无效",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已禁用",
