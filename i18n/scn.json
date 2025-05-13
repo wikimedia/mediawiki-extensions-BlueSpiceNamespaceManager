@@ -23,5 +23,6 @@
 	"bs-namespacemanager-deletens-deletepages": "La pàggina fu cancillata, pìcchi lu namespace \"$1\" fu cancillatu.",
 	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|criau}} lu namespace $4",
 	"bs-namespacemanager-nodeletetalk": "Lu namespace di discussioni nun pò èssiri cancillatu",
-	"bs-namespacemanager-label-istalk": "Discussioni"
+	"bs-namespacemanager-label-istalk": "Discussioni",
+	"bs-namespacemanager-hide-talk-label": "Ammuccia li namespace di discussioni"
 }

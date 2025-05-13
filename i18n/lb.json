@@ -42,8 +42,6 @@
 	"bs-namespacemanager-nodeletetalk": "Den Nummraum Diskussioun däerf net geläscht ginn",
 	"bs-namespacemanager-label-istalk": "Diskussioun",
 	"right-namespacemanager-viewspecialpage": "Zougrëff op d'Spezialsäit [[Special:NamespaceManager]]",
-	"bs-namespacemanager-show-talk-label": "Diskussiounsnummraim weisen",
-	"bs-namespacemanager-show-non-content-ns-label": "Net-Inhalts-Nummraim weisen",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-save": "Späicheren",
 	"bs-namespacemanager-cancel": "Ofbriechen",
