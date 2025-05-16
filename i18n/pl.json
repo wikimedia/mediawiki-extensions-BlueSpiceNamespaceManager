@@ -42,5 +42,6 @@
 	"namespacemanager": "Menedżer przestrzeni nazw",
 	"bs-namespacemanager-label-istalk": "Dyskusja",
 	"right-namespacemanager-viewspecialpage": "Dostęp do strony specjalnej [[Special:NamespaceManager]].",
-	"bs-namespacemanager-invalid-namespace": "Edytowana przestrzeń nazw jest nieprawidłowa"
+	"bs-namespacemanager-invalid-namespace": "Edytowana przestrzeń nazw jest nieprawidłowa",
+	"bs-namespacemanager-hide-talk-label": "Ukryj przestrzenie nazw dyskusji"
 }

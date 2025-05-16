@@ -67,5 +67,6 @@
 	"bs-namespacemanager-invalid-namespace": "El espacio de nombres bajo edición no es válido",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "desactivado",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "marcada",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "sin marcar"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "sin marcar",
+	"bs-namespacemanager-hide-talk-label": "Ocultar espacios de nombres de discusión"
 }

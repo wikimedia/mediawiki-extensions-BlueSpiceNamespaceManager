@@ -54,5 +54,6 @@
 	"bs-namespacemanager-label-istalk": "'Ngazzamende",
 	"right-namespacemanager-viewspecialpage": "Tràse jndr'à pàgena speciale [[Special:NamespaceManager]]",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "'U namespace ca ste cange non g'è valide"
+	"bs-namespacemanager-invalid-namespace": "'U namespace ca ste cange non g'è valide",
+	"bs-namespacemanager-hide-talk-label": "Scunne le namespace de le 'ngazzaminde"
 }

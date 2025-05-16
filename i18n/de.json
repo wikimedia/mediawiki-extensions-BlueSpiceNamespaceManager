@@ -76,5 +76,7 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt",
 	"bs-namespacemanager-save": "Speichern",
 	"bs-namespacemanager-cancel": "Abbrechen",
-	"bs-namespacemanager-delete": "Löschen"
+	"bs-namespacemanager-delete": "Löschen",
+	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
+	"bs-namespacemanager-hide-non-content-ns-label": "Ausblenden von Nicht-Inhalts-Namensräumen"
 }

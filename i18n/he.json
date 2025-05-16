@@ -67,5 +67,7 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "לא מסומן",
 	"bs-namespacemanager-save": "שמירה",
 	"bs-namespacemanager-cancel": "ביטול",
-	"bs-namespacemanager-delete": "מחיקה"
+	"bs-namespacemanager-delete": "מחיקה",
+	"bs-namespacemanager-hide-talk-label": "הסתרת מרחבי שיחה",
+	"bs-namespacemanager-hide-non-content-ns-label": "הסתר מרחבי שם שאינם מרחבי תוכן"
 }

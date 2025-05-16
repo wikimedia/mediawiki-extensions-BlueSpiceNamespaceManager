@@ -38,5 +38,6 @@
 	"apihelp-bs-namespace-store-summary": "ExtJS Store paraméterek.",
 	"namespacemanager": "Névtér kezelő",
 	"bs-namespacemanager-nodeletetalk": "Vita névteret nem lehet törölni",
-	"bs-namespacemanager-label-istalk": "Vitalap"
+	"bs-namespacemanager-label-istalk": "Vitalap",
+	"bs-namespacemanager-hide-talk-label": "Vitalap-névterek elrejtése"
 }

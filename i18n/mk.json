@@ -51,5 +51,6 @@
 	"namespacemanager": "Раководител со именски простори",
 	"bs-namespacemanager-nodeletetalk": "Разговорниот именски простор не може да се избрише",
 	"bs-namespacemanager-label-istalk": "Разговор",
-	"right-namespacemanager-viewspecialpage": "Пристап до службената страница [[Special:NamespaceManager]]"
+	"right-namespacemanager-viewspecialpage": "Пристап до службената страница [[Special:NamespaceManager]]",
+	"bs-namespacemanager-hide-talk-label": "Скриј разговорни именски простори"
 }
