@@ -64,5 +64,7 @@
 	"bs-namespacemanager-invalid-namespace": "Urejani imenski prostor ni veljaven",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "onemogočeno",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "obkljukano",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano",
+	"bs-namespacemanager-hide-talk-label": "Skrij pogovorne imenske prostore",
+	"bs-namespacemanager-hide-non-content-ns-label": "Skrij nevsebinske imenske prostore"
 }

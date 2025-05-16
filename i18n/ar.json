@@ -72,5 +72,7 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة",
 	"bs-namespacemanager-save": "حفظ",
 	"bs-namespacemanager-cancel": "إلغاء",
-	"bs-namespacemanager-delete": "حذف"
+	"bs-namespacemanager-delete": "حذف",
+	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
+	"bs-namespacemanager-hide-non-content-ns-label": "إخفاء مساحات الأسماء التي لا تحتوي على المحتوى"
 }

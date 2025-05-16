@@ -64,5 +64,7 @@
 	"bs-namespacemanager-invalid-namespace": "Il namespace in fase di modifica non è valido",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "disabilitato",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "selezionato",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "deselezionato"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "deselezionato",
+	"bs-namespacemanager-hide-talk-label": "Nascondi namespace di discussione",
+	"bs-namespacemanager-hide-non-content-ns-label": "Nascondi namespace non di contenuto"
 }

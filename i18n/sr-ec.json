@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Aca",
 			"BadDog",
 			"Kizule",
 			"Milicevic01"
@@ -41,5 +42,6 @@
 	"bs-namespacemanager-labelnsalias": "Псеудоним",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "онемогућено",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "проверено",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "непроверено"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "непроверено",
+	"bs-namespacemanager-hide-talk-label": "Сакриј именске просторе разговора"
 }

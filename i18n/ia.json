@@ -66,5 +66,7 @@
 	"bs-namespacemanager-show-non-content-ns-label": "Monstrar spatios de nomines non de contento",
 	"bs-namespacemanager-save": "Salveguardar",
 	"bs-namespacemanager-cancel": "Cancellar",
-	"bs-namespacemanager-delete": "Deler"
+	"bs-namespacemanager-delete": "Deler",
+	"bs-namespacemanager-hide-talk-label": "Celar spatios de nomines de discussion",
+	"bs-namespacemanager-hide-non-content-ns-label": "Celar spatios de nomines non de contento"
 }

@@ -62,5 +62,7 @@
 	"bs-namespacemanager-invalid-namespace": "Navnerommet som redigeres er ugyldig",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktivert",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "krysset av",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "ikke krysset av"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "ikke krysset av",
+	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
+	"bs-namespacemanager-hide-non-content-ns-label": "Skjul navnerom uten innhold"
 }

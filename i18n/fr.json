@@ -71,5 +71,7 @@
 	"bs-namespacemanager-save": "Enregistrer",
 	"bs-namespacemanager-cancel": "Annuler",
 	"bs-namespacemanager-delete": "Supprimer",
-	"bs-namespacemanager-show-non-content-ns-label": "Afficher les espaces de noms sans contenu"
+	"bs-namespacemanager-show-non-content-ns-label": "Afficher les espaces de noms sans contenu",
+	"bs-namespacemanager-hide-talk-label": "Masquer les espaces de noms de discussion",
+	"bs-namespacemanager-hide-non-content-ns-label": "Masquer les espaces de noms vides"
 }
