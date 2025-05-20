@@ -39,9 +39,9 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|преименовао|преименовала}} је именски простор $4 на $5",
 	"logentry-bs-namespace-manager-remove": "$1 је {{GENDER:$2|уклонио|уклонила}} именски простор $4",
 	"bs-namespacemanager-label-istalk": "Разговор",
+	"bs-namespacemanager-hide-talk-label": "Сакриј именске просторе разговора",
 	"bs-namespacemanager-labelnsalias": "Псеудоним",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "онемогућено",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "проверено",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "непроверено",
-	"bs-namespacemanager-hide-talk-label": "Сакриј именске просторе разговора"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "непроверено"
 }

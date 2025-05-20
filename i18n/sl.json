@@ -60,11 +60,11 @@
 	"bs-namespacemanager-nodeletetalk": "Pogovornega imenskega prostora ni mogoče izbrisati",
 	"bs-namespacemanager-label-istalk": "Pogovor",
 	"right-namespacemanager-viewspecialpage": "Dostop do posebne strani [[Special:NamespaceManager]]",
+	"bs-namespacemanager-hide-talk-label": "Skrij pogovorne imenske prostore",
+	"bs-namespacemanager-hide-non-content-ns-label": "Skrij nevsebinske imenske prostore",
 	"bs-namespacemanager-labelnsalias": "Drugo ime",
 	"bs-namespacemanager-invalid-namespace": "Urejani imenski prostor ni veljaven",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "onemogočeno",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "obkljukano",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano",
-	"bs-namespacemanager-hide-talk-label": "Skrij pogovorne imenske prostore",
-	"bs-namespacemanager-hide-non-content-ns-label": "Skrij nevsebinske imenske prostore"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano"
 }

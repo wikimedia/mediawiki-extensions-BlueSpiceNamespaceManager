@@ -59,9 +59,9 @@
 	"namespacemanager": "Диспетчер пространств имён",
 	"bs-namespacemanager-label-istalk": "Обсуждение",
 	"right-namespacemanager-viewspecialpage": "доступ к служебной странице [[Special:NamespaceManager]]",
+	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения",
 	"bs-namespacemanager-labelnsalias": "Псевдоним",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "отключено",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "помечено",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "не помечено",
-	"bs-namespacemanager-hide-talk-label": "Скрыть пространства имён для обсуждения"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "не помечено"
 }

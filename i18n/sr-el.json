@@ -36,9 +36,9 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|preimenovao|preimenovala}} je imenski prostor $4 na $5",
 	"logentry-bs-namespace-manager-remove": "$1 je {{GENDER:$2|uklonio|uklonila}} imenski prostor $4",
 	"bs-namespacemanager-label-istalk": "Razgovor",
+	"bs-namespacemanager-hide-talk-label": "Sakrij imenske prostore razgovora",
 	"bs-namespacemanager-labelnsalias": "Pseudonim",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "onemogućeno",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "provereno",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "neprovereno",
-	"bs-namespacemanager-hide-talk-label": "Sakrij imenske prostore razgovora"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "neprovereno"
 }
