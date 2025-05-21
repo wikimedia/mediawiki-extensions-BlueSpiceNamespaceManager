@@ -4,7 +4,7 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 	cfg = cfg || {};
 	this.fields = cfg.fields || [];
 	this.hidingNonContent = true;
-	this.hidingTalk = false;
+	this.hidingTalk = true;
 	this.selectedItem = null;
 
 	const columns = {
@@ -82,6 +82,10 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 			content_raw: { // eslint-disable-line camelcase
 				type: 'boolean',
 				value: true
+			},
+			isTalkNS: {
+				type: 'boolean',
+				value: false
 			}
 		}
 	} );
@@ -153,7 +157,11 @@ bs.namespaceManager.ui.NamespaceManagerPanel = function ( cfg ) {
 			return dfd.promise();
 		}
 	};
+
 	bs.namespaceManager.ui.NamespaceManagerPanel.parent.call( this, cfg );
+
+	const hideTalkTool = this.toolbar.getTool( 'hideTalk' );
+	hideTalkTool.setDisabled( true );
 };
 
 OO.inheritClass( bs.namespaceManager.ui.NamespaceManagerPanel, OOJSPlus.ui.panel.ManagerGrid );
@@ -221,6 +229,20 @@ bs.namespaceManager.ui.NamespaceManagerPanel.prototype.getToolbarActions = funct
 };
 
 bs.namespaceManager.ui.NamespaceManagerPanel.prototype.onAction = function ( action, row ) {
+	if ( action === 'hideNonContent' ) {
+		// Disable hideTalkTool if hideNonContentTool is active
+		const hideTalkTool = this.toolbar.getTool( 'hideTalk' );
+		if ( this.hidingNonContent ) {
+			// force implicit active
+			hideTalkTool.setActive( true );
+		} else {
+			// restore original selection
+			hideTalkTool.setActive( this.hidingTalk );
+		}
+
+		hideTalkTool.setDisabled( this.hidingNonContent );
+	}
+
 	if ( action === 'add' ) {
 		this.addNamespace();
 	}
