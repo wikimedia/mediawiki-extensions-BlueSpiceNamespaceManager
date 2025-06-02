@@ -7,7 +7,8 @@
 			"Meno25",
 			"Shbib Al-Subaie",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Lolekek"
 		]
 	},
 	"bs-namespacemanager-desc": "واجهة الإدارة لإضافة وتحرير وحذف النطاقات",
@@ -45,7 +46,7 @@
 	"bs-namespacemanager-deletewarning": "هل أنت متأكد من أنك تريد حذف هذا النطاق؟ لا يمكن التراجع عن حذف نطاق.",
 	"bs-namespacemanager-pagepresent": "الصفحات في هذا النطاق:",
 	"bs-namespacemanager-deletens-movepages": "تم نقل هذه الصفحة من نطاق \"$1\" إلى نطاق \"{{int:bs-ns_main}}\"; لأنه تم حذف النطاق \"$1\".",
-	"bs-namespacemanager-deletens-deletepages": "تم حذف هذه الصفحة; لأنه تم حذف النطاق \"$1\".",
+	"bs-namespacemanager-deletens-deletepages": "حُذفت هذه الصفحة لأن نطاق «$1» حُذف.",
 	"log-name-bs-namespace-manager": "سجل مدير النطاق",
 	"log-description-bs-namespace-manager": "هذا سجل تغييرات النطاقات.",
 	"log-show-hide-bs-namespace-manager": "$1 سجل مدير النطاق",
