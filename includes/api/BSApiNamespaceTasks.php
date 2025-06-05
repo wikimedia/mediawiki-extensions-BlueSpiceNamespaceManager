@@ -353,7 +353,7 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 		$isTalkNS = $namespceInfo->isTalk( $iNS );
 		try {
 			$talkNS = $namespceInfo->getTalk( $iNS );
-		} catch ( MWException $e ) {
+		} catch ( Throwable $e ) {
 			// the given namespace doesn't have an associated talk namespace
 		}
 
