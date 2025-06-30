@@ -73,5 +73,7 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "未勾选",
 	"bs-namespacemanager-save": "保存",
 	"bs-namespacemanager-cancel": "取消",
-	"bs-namespacemanager-delete": "删除"
+	"bs-namespacemanager-delete": "删除",
+	"bs-namespacemanager-hide-talk-label": "隐藏讨论命名空间",
+	"bs-namespacemanager-hide-non-content-ns-label": "隐藏非内容命名空间"
 }

@@ -62,5 +62,6 @@
 	"bs-namespacemanager-label-istalk": "Обговорення",
 	"right-namespacemanager-viewspecialpage": "Доступ до спеціальної сторінки [[Special:NamespaceManager]]",
 	"bs-namespacemanager-labelnsalias": "Псевдонім",
-	"bs-namespacemanager-invalid-namespace": "Простір назв, який редагується, є недійсним"
+	"bs-namespacemanager-invalid-namespace": "Простір назв, який редагується, є недійсним",
+	"bs-namespacemanager-hide-talk-label": "Приховати простори назв обговорень"
 }

@@ -36,5 +36,7 @@
 	"namespacemanager": "Διαχειριστής ονοματοχώρων",
 	"bs-namespacemanager-nodeletetalk": "Ο ονοματοχώρος συζήτησης δεν μπορεί να διαγραφεί",
 	"bs-namespacemanager-label-istalk": "Συζήτηση",
-	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο"
+	"bs-namespacemanager-labelnsalias": "Ψευδώνυμο",
+	"bs-namespacemanager-hide-talk-label": "Απόκρυψη ονοματοχώρων συζήτησης",
+	"bs-namespacemanager-hide-non-content-ns-label": "Απόκρυψη χωρών ονομάτων χωρίς περιεχόμενο"
 }

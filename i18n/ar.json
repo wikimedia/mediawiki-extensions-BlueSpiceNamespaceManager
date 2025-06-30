@@ -4,6 +4,7 @@
 			"Alshamiri1",
 			"Asma",
 			"FShbib",
+			"Lolekek",
 			"Meno25",
 			"Shbib Al-Subaie",
 			"ديفيد",
@@ -45,7 +46,7 @@
 	"bs-namespacemanager-deletewarning": "هل أنت متأكد من أنك تريد حذف هذا النطاق؟ لا يمكن التراجع عن حذف نطاق.",
 	"bs-namespacemanager-pagepresent": "الصفحات في هذا النطاق:",
 	"bs-namespacemanager-deletens-movepages": "تم نقل هذه الصفحة من نطاق \"$1\" إلى نطاق \"{{int:bs-ns_main}}\"; لأنه تم حذف النطاق \"$1\".",
-	"bs-namespacemanager-deletens-deletepages": "تم حذف هذه الصفحة; لأنه تم حذف النطاق \"$1\".",
+	"bs-namespacemanager-deletens-deletepages": "حُذفت هذه الصفحة لأن نطاق «$1» حُذف.",
 	"log-name-bs-namespace-manager": "سجل مدير النطاق",
 	"log-description-bs-namespace-manager": "هذا سجل تغييرات النطاقات.",
 	"log-show-hide-bs-namespace-manager": "$1 سجل مدير النطاق",
@@ -70,5 +71,7 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "غير مفحوصة",
 	"bs-namespacemanager-save": "حفظ",
 	"bs-namespacemanager-cancel": "إلغاء",
-	"bs-namespacemanager-delete": "حذف"
+	"bs-namespacemanager-delete": "حذف",
+	"bs-namespacemanager-hide-talk-label": "إخفاء نطاقات النقاش",
+	"bs-namespacemanager-hide-non-content-ns-label": "إخفاء مساحات الأسماء التي لا تحتوي على المحتوى"
 }

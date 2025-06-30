@@ -3,6 +3,7 @@
 		"authors": [
 			"Csega",
 			"Dj",
+			"Krisztina",
 			"Wolf Rex"
 		]
 	},
@@ -38,5 +39,29 @@
 	"apihelp-bs-namespace-store-summary": "ExtJS Store paraméterek.",
 	"namespacemanager": "Névtér kezelő",
 	"bs-namespacemanager-nodeletetalk": "Vita névteret nem lehet törölni",
-	"bs-namespacemanager-label-istalk": "Vitalap"
+	"bs-namespacemanager-label-istalk": "Vitalap",
+	"bs-namespacemanager-text": "Névterek",
+	"bs-namespacemanager-invalid-id": "Nem érvényes névtér ID",
+	"bs-namespacemanager-label-searchable": "Keresés alapértelmezés szerint",
+	"bs-namespacemanager-willmove": "\"{{int:bs-ns_main}}\" lesz helyezve",
+	"bs-namespacemanager-deletewarning": "Biztos, hogy törlöd ezt a névteret? A névtér törlése nem vonható vissza.",
+	"bs-namespacemanager-deletens-movepages": "Ez a lap át lett helyezve a „$1” névtérből a \"{{int:bs-ns_main}}\" névtérbe, mert a „$1” névteret törölték.",
+	"bs-namespacemanager-deletens-deletepages": "Ez a lap törölve lett, mert a(z) „$1” névteret törölték.",
+	"log-name-bs-namespace-manager": "Névtér kezelő napló",
+	"log-description-bs-namespace-manager": "Névterek változtatásainak naplója",
+	"log-show-hide-bs-namespace-manager": "$1 névtér kezelő napló",
+	"logeventslist-bs-namespace-manager-log": "Névtér kezelő napló",
+	"bs-namespacemanager-error-save-fail": "A névtér konfigurációját nem sikerült menteni.",
+	"apihelp-bs-namespace-tasks-summary": "Lehetővé teszi a névtér konfigurációjának módosítását.",
+	"action-namespacemanager-viewspecialpage": "a névtér kezelő speciális lapjának megtekintése",
+	"right-namespacemanager-viewspecialpage": "Hozzáférés a [[Special:NamespaceManager]] speciális laphoz",
+	"bs-namespacemanager-hide-talk-label": "Vitalap-névterek elrejtése",
+	"bs-namespacemanager-hide-non-content-ns-label": "Nem-tartalom névterek elrejtése",
+	"bs-namespacemanager-invalid-namespace": "A szerkesztett névtér érvénytelen",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "kikapcsolva",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "bejelölt",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "nem bejelölt",
+	"bs-namespacemanager-save": "Mentés",
+	"bs-namespacemanager-cancel": "Mégse",
+	"bs-namespacemanager-delete": "Törlés"
 }

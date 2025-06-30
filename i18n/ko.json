@@ -60,5 +60,7 @@
 	"bs-namespacemanager-invalid-namespace": "편집 중인 이름공간이 유효하지 않습니다",
 	"bs-namespacemanager-save": "저장",
 	"bs-namespacemanager-cancel": "취소",
-	"bs-namespacemanager-delete": "삭제"
+	"bs-namespacemanager-delete": "삭제",
+	"bs-namespacemanager-hide-talk-label": "토론 이름공간 숨기기",
+	"bs-namespacemanager-hide-non-content-ns-label": "빈 이름공간 숨기기"
 }

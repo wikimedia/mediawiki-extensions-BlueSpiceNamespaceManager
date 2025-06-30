@@ -71,5 +71,7 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "niet aangevinkt",
 	"bs-namespacemanager-save": "Opslaan",
 	"bs-namespacemanager-cancel": "Annuleren",
-	"bs-namespacemanager-delete": "Verwijderen"
+	"bs-namespacemanager-delete": "Verwijderen",
+	"bs-namespacemanager-hide-talk-label": "Overlegnaamruimten verbergen",
+	"bs-namespacemanager-hide-non-content-ns-label": "Niet-inhoudsnaamruimten verbergen"
 }

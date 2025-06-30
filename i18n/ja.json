@@ -19,9 +19,9 @@
 	"bs-namespacemanager-text": "名前空間",
 	"bs-namespacemanager-wrong-name": "名前空間名が無効な文字を含んでいます。",
 	"bs-namespacemanager-wrong-alias": "名前空間のエイリアスが無効な文字を含んでいます。",
-	"bs-namespacemanager-alias-exists": "名前空間のエイリアスははすでに名前空間「$1」に設定されています",
+	"bs-namespacemanager-alias-exists": "名前空間のエイリアスはは既に名前空間「$1」に設定されています",
 	"bs-namespacemanager-ns-exists": "既に存在する名前空間です。",
-	"bs-namespacemanager-alias-exists-as-ns": "名前空間のエイリアスは名前空間の名称としてすでに存在します。",
+	"bs-namespacemanager-alias-exists-as-ns": "名前空間のエイリアスは名前空間の名称として既に存在します。",
 	"bs-namespacemanager-ns-length": "名前空間名は2文字以上でなければなりません。",
 	"bs-namespacemanager-pseudo-ns": "標準の名前空間には、提案された名前空間の名称またはエイリアスで始まるページがあります。",
 	"bs-namespacemanager-invalid-id": "有効な名前空間 ID がありません",
@@ -68,5 +68,7 @@
 	"bs-namespacemanager-labelnsalias": "エイリアス(別名)",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "無効",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "チェック済み",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "未チェック",
+	"bs-namespacemanager-hide-talk-label": "会話の名前空間を表示しない",
+	"bs-namespacemanager-hide-non-content-ns-label": "コンテンツでない名前空間を隠す"
 }
