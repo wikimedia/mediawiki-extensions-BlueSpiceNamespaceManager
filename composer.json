@@ -3,6 +3,13 @@
 	"type": "mediawiki-extension",
 	"description": "BlueSpiceNamespaceManager Administration interface for adding, editing and deleting namespaces",
 	"license": "GPL-3.0-only",
+	"authors": [
+		{
+			"name": "Hallo Welt! GmbH",
+			"email": "info@hallowelt.com",
+			"homepage": "https://www.hallowelt.com"
+		}
+	],
 	"require": {
 		"composer/installers": "~1.0|~2",
 		"mwstake/mediawiki-component-dynamicconfig": "~2"
