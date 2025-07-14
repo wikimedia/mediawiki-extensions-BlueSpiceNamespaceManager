@@ -44,5 +44,11 @@
 	"bs-namespacemanager-icon-tristate-false-aria-label": "билгалйаьккхина йац",
 	"bs-namespacemanager-save": "Ӏалашйан",
 	"bs-namespacemanager-cancel": "Йухайаккхар",
-	"bs-namespacemanager-delete": "ДӀайаккха"
+	"bs-namespacemanager-delete": "ДӀайаккха",
+	"bs-namespacemanager-invalid-id": "ЦӀерийн меттиган нийса идентификатор йац",
+	"bs-namespacemanager-deletens-movepages": "ХӀара агӀо цӀерийн меттигера дехьайаьккхина. «$1» «{{int:bs-ns_main}}», хӀунда аьлча цӀерийн меттиг «$1» дӀайаьккхина.",
+	"bs-namespacemanager-deletens-deletepages": "ХӀара агӀо дӀайаьккхина, хӀунда аьлча цӀерийн меттиг «$1» дӀайаьккхина.",
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|хийцина}} цӀерийн меттиган нисдаран гӀирс $4",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|цӀе хийцина}} цӀерийн меттиг $4 - $5.",
+	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|дӀайаьккхина}} $4 цӀерийн меттиг"
 }
