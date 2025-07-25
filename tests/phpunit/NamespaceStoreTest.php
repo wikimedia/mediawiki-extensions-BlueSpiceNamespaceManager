@@ -4,7 +4,6 @@ namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\Tests\BSApiExtJSStoreTestBase;
 use MediaWiki\MainConfigNames;
-use MediaWiki\MediaWikiServices;
 
 /**
  * @group Broken
@@ -41,7 +40,7 @@ class NamespaceStoreTest extends BSApiExtJSStoreTestBase {
 	}
 
 	protected function setUp(): void {
-		$contLang = MediaWikiServices::getInstance()->getContentLanguage();
+		$contLang = $this->getServiceContainer()->getContentLanguage();
 		parent::setUp();
 		$this->overrideConfigValues( [
 			MainConfigNames::NamespacesWithSubpages => [
@@ -74,7 +73,7 @@ class NamespaceStoreTest extends BSApiExtJSStoreTestBase {
 	}
 
 	protected function tearDown(): void {
-		$services = MediaWikiServices::getInstance();
+		$services = $this->getServiceContainer();
 		$contLang = $services->getContentLanguage();
 		// reset custom namespace settings
 		$services->resetServiceForTesting( 'ContentLanguage' );
