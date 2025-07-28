@@ -3,10 +3,11 @@
 		"authors": [
 			"Banjo",
 			"Elisardojm",
-			"Iváns"
+			"Iváns",
+			"Toliño"
 		]
 	},
-	"bs-namespacemanager-desc": "Interfaz administrativa para engadir, editar e eliminar espazos de nomes",
+	"bs-namespacemanager-desc": "Interface administrativa para engadir, editar e eliminar espazos de nomes",
 	"bs-namespacemanager-label": "Xestor de espazos de nomes",
 	"bs-namespacemanager-wrong-name": "O espazo de nomes contén caracteres non válidos.",
 	"bs-namespacemanager-ns-exists": "Xa existe o espazo de nomes.",
