@@ -46,7 +46,7 @@
 	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|renomeou}} o espazo de nomes «$4» a «$5»",
 	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|eliminou}} o espazo de nomes «$4»",
 	"bs-namespacemanager-ns-config-saved": "Gardouse a configuración do espazo de nomes.",
-	"apihelp-bs-namespace-store-summary": "Lista todos os espazos de nomes e a configuración arbitraria. Permite ordenar, filtrar e paxinar. Proporciona os parámetros ExtJS Store.",
+	"apihelp-bs-namespace-store-summary": "Lista todos os espazos de nomes e a configuración arbitraria. Permite ordenar, filtrar e paxinar. Proporciona os parámetros de ExtJS Store.",
 	"apihelp-bs-namespace-tasks-summary": "Permite a modificación da configuración dos espazos de nomes.",
 	"action-namespacemanager-viewspecialpage": "ver a páxina especial do xestor de espazos de nomes",
 	"namespacemanager": "Xestor de espazos de nomes",
