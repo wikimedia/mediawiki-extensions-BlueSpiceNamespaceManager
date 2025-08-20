@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Leduyquang753"
+			"Leduyquang753",
+			"Nvdtn19"
 		]
 	},
 	"bs-namespacemanager-labelnsalias": "Viết tắt",
-	"bs-namespacemanager-hide-talk-label": "Ẩn các vùng tên thảo luận"
+	"bs-namespacemanager-hide-talk-label": "Ẩn các vùng tên thảo luận",
+	"bs-namespacemanager-label-subpages": "Trang con"
 }
