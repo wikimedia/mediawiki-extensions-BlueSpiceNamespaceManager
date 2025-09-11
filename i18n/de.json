@@ -48,7 +48,7 @@
 	"bs-namespacemanager-willdelete": "Werden gelöscht",
 	"bs-namespacemanager-willmove": "Werden in \"{{int:bs-ns_main}}\" verschoben*",
 	"bs-namespacemanager-willmovesuffix": "Werden mit dem Suffix „$1“ in „{{int:bs-ns_main}}“ verschoben",
-	"bs-namespacemanager-deletewarning": "Bist du dir sicher, dass du den Namensraum löschen willst? Das Löschen eines Namensraums kann nicht zurückgesetzt werden.",
+	"bs-namespacemanager-deletewarning": "{{#FORMAL:Bist du dir|Sind Sie sich}} sicher, dass {{#FORMAL:du|Sie}} den Namensraum löschen {{#FORMAL:willst|wollen}}? Das Löschen eines Namensraums kann nicht zurückgesetzt werden.",
 	"bs-namespacemanager-pagepresent": "Seiten in diesem Namensraum:",
 	"bs-namespacemanager-deletens-movepages": "Diese Seite wurde vom dem „$1“ Namensraum in den „{{int:bs-ns_main}}“ Namensraum verschoben, da der „$1“ Namensraum gelöscht wurde.",
 	"bs-namespacemanager-deletens-deletepages": "Diese Seite wurde gelöscht, da ihr Namensraum „$1“ gelöscht wurde.",
