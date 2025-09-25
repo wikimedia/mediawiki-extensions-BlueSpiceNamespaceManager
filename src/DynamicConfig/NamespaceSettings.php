@@ -108,6 +108,7 @@ class NamespaceSettings implements IDynamicConfig {
 		}
 		$serialized['globals'] = $globals;
 
+		$this->hookContainer->run( 'NamespaceManagerBeforeSerializeSettings', [ $serialized ] );
 		return serialize( $serialized );
 	}
 
