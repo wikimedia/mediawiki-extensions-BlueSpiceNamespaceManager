@@ -31,5 +31,6 @@
 	"bs-namespacemanager-deletewarning": "के तपाईं यस नामस्थानलाई पक्का मेट्न चाहनुहुन्छ? एक नामस्थानलाई मेट्दा पूर्ववत गर्न सकिँदैन।",
 	"bs-namespacemanager-pagepresent": "यस नामपदमा रहेका पृष्ठहरू:",
 	"bs-namespacemanager-deletens-movepages": "\"$1\" नामपदबाट यो पृष्ठलाई \"{{int:bs-ns_main}}\"मा सारिएको छ, किनभने नामपद \"$1\" लाइ मेटिएको थियो ।",
-	"bs-namespacemanager-deletens-deletepages": "यो पृष्ठलाई मेटिएको छ, किनभने नामस्थान \"$1\" लाइ मेटिएको थियो।"
+	"bs-namespacemanager-deletens-deletepages": "यो पृष्ठलाई मेटिएको छ, किनभने नामस्थान \"$1\" लाइ मेटिएको थियो।",
+	"bs-namespacemanager-label-istalk": "वार्तालाप"
 }
