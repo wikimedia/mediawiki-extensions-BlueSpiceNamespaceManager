@@ -64,5 +64,8 @@
 	"bs-namespacemanager-icon-tristate-true-aria-label": "krysset av",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "ikke krysset av",
 	"bs-namespacemanager-hide-talk-label": "Skjul diskusjonsnavnerom",
-	"bs-namespacemanager-hide-non-content-ns-label": "Skjul navnerom uten innhold"
+	"bs-namespacemanager-hide-non-content-ns-label": "Skjul navnerom uten innhold",
+	"bs-namespacemanager-save": "Lagre",
+	"bs-namespacemanager-cancel": "Avbryt",
+	"bs-namespacemanager-delete": "Slett"
 }
