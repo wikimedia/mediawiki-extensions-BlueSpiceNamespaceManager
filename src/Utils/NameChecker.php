@@ -61,25 +61,25 @@ class NameChecker {
 	public function checkNamingConvention( $namespaceName, $namespaceAlias, $namespaceId ) {
 		$oResult = new Standard();
 		if ( strlen( $namespaceName ) < 2 ) {
-			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-length' )->plain();
+			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-length' )->text();
 			return $oResult;
 		}
 
 		if ( !empty( $namespaceAlias ) && strlen( $namespaceAlias ) < 2 ) {
-			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-length' )->plain();
+			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-length' )->text();
 			return $oResult;
 		}
 
 		if ( $namespaceId !== NS_MAIN && $namespaceId !== NS_PROJECT && $namespaceId !== NS_PROJECT_TALK &&
 			!preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $namespaceName )
 			) {
-			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-wrong-name' )->plain();
+			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-wrong-name' )->text();
 			return $oResult;
 		}
 
 		if ( !empty( $namespaceAlias )
 			&& !preg_match( '%^[a-zA-Z_\\x80-\\xFF][a-zA-Z0-9_\\x80-\\xFF]{1,99}$%i', $namespaceAlias ) ) {
-			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-wrong-alias' )->plain();
+			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-wrong-alias' )->text();
 			return $oResult;
 		}
 		$oResult->success = true;
@@ -100,7 +100,7 @@ class NameChecker {
 				if ( $sKey === $namespaceId ) {
 					continue;
 				}
-				$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-exists' )->plain();
+				$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-ns-exists' )->text();
 				return $oResult;
 			}
 		}
@@ -114,7 +114,7 @@ class NameChecker {
 					}
 					$oResult->message = $this->messageLocalizer->msg(
 						'bs-namespacemanager-alias-exists-as-ns'
-					)->plain();
+					)->text();
 					return $oResult;
 				}
 			}
@@ -123,7 +123,7 @@ class NameChecker {
 				$nsName = $this->namespaceNames[$this->namespaceAliases[$namespaceAlias]];
 				$oResult->message = $this->messageLocalizer->msg(
 					'bs-namespacemanager-alias-exists', $nsName
-				)->plain();
+				)->text();
 				return $oResult;
 			}
 
@@ -180,7 +180,7 @@ class NameChecker {
 		}
 
 		if ( count( $titlesInMainBeginWithNamespaceNameOrAlias ) > 0 ) {
-			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-pseudo-ns' )->plain();
+			$oResult->message = $this->messageLocalizer->msg( 'bs-namespacemanager-pseudo-ns' )->text();
 			return $oResult;
 		}
 
