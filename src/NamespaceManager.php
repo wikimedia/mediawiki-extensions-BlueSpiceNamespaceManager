@@ -93,12 +93,12 @@ class NamespaceManager {
 		if ( $status->isGood() ) {
 			return [
 				'success' => true,
-				'message' => $context->msg( 'bs-namespacemanager-ns-config-saved' )->plain()
+				'message' => $context->msg( 'bs-namespacemanager-ns-config-saved' )->text()
 			];
 		}
 		return [
 			'success' => false,
-			'message' => $context->msg( 'bs-namespacemanager-error-save-fail' )->plain()
+			'message' => $context->msg( 'bs-namespacemanager-error-save-fail' )->text()
 		];
 	}
 
@@ -152,14 +152,14 @@ class NamespaceManager {
 			[
 				'name' => 'subpages',
 				'type' => 'boolean',
-				'label' => $context->msg( 'bs-namespacemanager-label-subpages' )->plain(),
+				'label' => $context->msg( 'bs-namespacemanager-label-subpages' )->text(),
 				'sortable' => true,
 				'filter' => [ 'type' => 'boolean' ],
 			],
 			[
 				'name' => 'content',
 				'type' => 'boolean',
-				'label' => $context->msg( 'bs-namespacemanager-label-content' )->plain(),
+				'label' => $context->msg( 'bs-namespacemanager-label-content' )->text(),
 				'sortable' => true,
 				'filter' => [ 'type' => 'boolean' ],
 			]

@@ -184,7 +184,7 @@ class NamespaceTasks extends BSApiTasksBase {
 				'create',
 				[ '4::namespace' => $sNamespace ]
 			);
-			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->plain();
+			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsadded' )->text();
 			$this->services->getHookContainer()->run(
 				'NamespaceManagerAfterAddNamespace',
 				[
@@ -235,13 +235,13 @@ class NamespaceTasks extends BSApiTasksBase {
 			->getUserNamespaces( true );
 
 		if ( !is_numeric( $oData->id ) ) {
-			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->text();
 			return $oResult;
 		}
 		$iNS = (int)$oData->id;
 
 		if ( !isset( $systemNamespaces[$iNS] ) && !isset( $aUserNamespaces[$iNS] ) ) {
-			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-namespace' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-namespace' )->text();
 			return $oResult;
 		}
 		$aliases = $this->services->getMainConfig()->get( 'NamespaceAliases' );
@@ -321,7 +321,7 @@ class NamespaceTasks extends BSApiTasksBase {
 				] );
 			}
 
-			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsedited' )->plain();
+			$aResult['message'] = wfMessage( 'bs-namespacemanager-nsedited' )->text();
 		}
 
 		$oResult->success = $aResult['success'];
@@ -342,14 +342,14 @@ class NamespaceTasks extends BSApiTasksBase {
 		$iNS = (int)$oData->id;
 
 		if ( $iNS < 0 ) {
-			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->text();
 			return $oResult;
 		}
 
 		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
 			->getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
-			$oResult->message = $this->msg( 'bs-namespacemanager-msgnoteditabledelete' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-msgnoteditabledelete' )->text();
 			return $oResult;
 		}
 
@@ -367,7 +367,7 @@ class NamespaceTasks extends BSApiTasksBase {
 		$aNamespacesToRemoveNames[] = $sNamespace;
 		if ( $isTalkNS ) {
 			if ( $talkNS && isset( $aUserNamespaces[$talkNS] ) ) {
-				$oResult->message = $this->msg( 'bs-namespacemanager-nodeletetalk' )->plain();
+				$oResult->message = $this->msg( 'bs-namespacemanager-nodeletetalk' )->text();
 				return $oResult;
 			}
 		}
@@ -459,10 +459,10 @@ class NamespaceTasks extends BSApiTasksBase {
 					$namespacesToRemove
 				);
 				$oResult->success = $aResult['success'];
-				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->plain();
+				$oResult->message = wfMessage( 'bs-namespacemanager-nsremoved' )->text();
 			}
 		} else {
-			$oResult->message = $this->msg( 'bs-namespacemanager-error_on_remove_namespace' )->plain();
+			$oResult->message = $this->msg( 'bs-namespacemanager-error_on_remove_namespace' )->text();
 			return $oResult;
 		}
 
