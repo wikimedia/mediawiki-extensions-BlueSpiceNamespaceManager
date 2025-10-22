@@ -35,6 +35,7 @@
 	padding: 0;
 	height: 120px;
 	text-align: left;
+	text-orientation: sideways;
 	white-space: break-spaces;
 }
 
