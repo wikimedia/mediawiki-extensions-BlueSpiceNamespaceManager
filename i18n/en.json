@@ -5,7 +5,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Administration interface for adding, editing and deleting namespaces",
-	"bs-namespacemanager-label": "Namespace manager",
 	"bs-namespacemanager-text": "Namespaces",
 	"bs-namespacemanager-wrong-name": "The namespace contains invalid characters.",
 	"bs-namespacemanager-wrong-alias": "The namespace alias contains invalid characters.",
