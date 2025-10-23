@@ -13,7 +13,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Used in [{{canonicalurl:Special:WikiAdmin|mode=ExtensionInfo}} Special:WikiAdmin?mode=ExtensionInfo], description of namespace manager extension",
-	"bs-namespacemanager-label": "Used in Sidebar, Anchor text for namespace manager",
 	"bs-namespacemanager-text": "Label for global actions menu entry\n\n{{Identical|Namespace}}",
 	"bs-namespacemanager-wrong-name": "Error message when namespace contains invalid characters.",
 	"bs-namespacemanager-wrong-alias": "Error message when namespace alias contains invalid characters.",

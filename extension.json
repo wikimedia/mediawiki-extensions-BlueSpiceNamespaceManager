@@ -18,9 +18,6 @@
 					"extPath": "/BlueSpiceNamespaceManager"
 				}
 			},
-			"AdminToolRegistry": {
-				"bs-namespace-manager": "BlueSpice\\NamespaceManager\\AdminTool"
-			},
 			"PermissionRegistry": {
 				"namespacemanager-viewspecialpage": {
 					"type": "namespace",
