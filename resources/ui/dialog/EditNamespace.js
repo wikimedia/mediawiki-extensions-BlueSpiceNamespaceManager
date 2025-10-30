@@ -91,11 +91,11 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.initialize = functio
 
 	this.content.$element.append(
 		new OO.ui.FieldLayout( this.nameInput, {
-			label: mw.message( 'bs-namespacemanager-labelnsname' ).plain(),
+			label: mw.message( 'bs-namespacemanager-labelnsname' ).text(),
 			align: 'left'
 		} ).$element,
 		new OO.ui.FieldLayout( this.aliasInput, {
-			label: mw.message( 'bs-namespacemanager-labelnsalias' ).plain(),
+			label: mw.message( 'bs-namespacemanager-labelnsalias' ).text(),
 			align: 'left'
 		} ).$element,
 		$( '<hr>' ).css( 'margin', '10px 0' ),

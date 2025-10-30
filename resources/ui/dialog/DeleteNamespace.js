@@ -34,10 +34,10 @@ bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.initialize = funct
 	this.content.$element.append(
 		new OO.ui.MessageWidget( {
 			type: 'warning',
-			label: mw.message( 'bs-namespacemanager-deletewarning' ).plain()
+			label: mw.message( 'bs-namespacemanager-deletewarning' ).text()
 		} ).$element,
 		new OO.ui.FieldLayout( this.nukeOptions, {
-			label: mw.message( 'bs-namespacemanager-pagepresent' ).plain(),
+			label: mw.message( 'bs-namespacemanager-pagepresent' ).text(),
 			align: 'top'
 		} ).$element
 	);
