@@ -18,8 +18,6 @@ bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getHeader = funct
 		invisibleLabel: this.invisibleLabel,
 		classes: [ 'header-button' ]
 	} );
-	let direction = this.sorter.getValue().direction ? this.sorter.getValue().direction : 'other';
-	this.setSortValue( $cell, direction );
 
 	if ( this.sorter ) {
 		this.headerButton.connect( this, {
@@ -31,25 +29,11 @@ bs.namespaceManager.ui.column.NamespaceSettingColumn.prototype.getHeader = funct
 			}
 		} );
 	}
-	this.filter.connect( this, {
-		closePopup: function () {
-			if ( this.filterButton ) {
-				this.filterButton.getPopup().toggle( false );
-			}
-		}
-	} );
 	$cell.append();
-	this.headerButton.$element.addClass( 'filterable' );
 
 	const $textCnt = $( '<div>' ).addClass( 'header-text' );
 	$textCnt.append( this.headerButton.$element );
-	const $filterCnt = $( '<div>' ).addClass( 'header-filter' );
-	this.sortIndicator = new OO.ui.IndicatorWidget( {
-		indicator: null
-	} );
-	$filterCnt.append( this.sortIndicator.$element, this.createFilterLayout( data ).$element );
-	this.filterButton.$element.removeClass( 'filter-button' );
-	$cell.append( $textCnt, $filterCnt );
+	$cell.append( $textCnt );
 	return $cell;
 };
 

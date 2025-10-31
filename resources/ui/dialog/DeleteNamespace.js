@@ -12,7 +12,7 @@ bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.static.name = 'deleteNamespa
 bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.static.title = mw.msg( 'bs-namespacemanager-tipremove' );
 bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.static.actions = [
 	{ action: 'delete', label: mw.msg( 'bs-namespacemanager-delete' ), flags: [ 'primary', 'destructive' ] },
-	{ action: 'cancel', label: mw.msg( 'bs-namespacemanager-cancel' ), flags: [ 'safe' ] }
+	{ action: 'cancel', label: mw.msg( 'bs-namespacemanager-cancel' ), flags: [ 'safe', 'close' ] }
 ];
 
 bs.namespaceManager.ui.dialog.DeleteNamespaceDialog.prototype.initialize = function () {
