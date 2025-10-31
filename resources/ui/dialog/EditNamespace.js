@@ -14,7 +14,7 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.static.name = 'editNamespaceDi
 bs.namespaceManager.ui.dialog.EditNamespaceDialog.static.title = mw.msg( 'bs-namespacemanager-tipedit' );
 bs.namespaceManager.ui.dialog.EditNamespaceDialog.static.actions = [
 	{ action: 'save', label: mw.msg( 'bs-namespacemanager-save' ), flags: [ 'primary', 'progressive' ] },
-	{ action: 'cancel', label: mw.msg( 'bs-namespacemanager-cancel' ), flags: [ 'safe' ] }
+	{ action: 'cancel', label: mw.msg( 'bs-namespacemanager-cancel' ), flags: [ 'safe', 'close' ] }
 ];
 
 bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getSetupProcess = function () {
