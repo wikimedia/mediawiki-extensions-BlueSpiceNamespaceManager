@@ -5,7 +5,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Interfacie de administration pro adder, modificar e deler spatios de nomines",
-	"bs-namespacemanager-label": "Gestor de spatios de nomines",
 	"bs-namespacemanager-text": "Spatios de nomines",
 	"bs-namespacemanager-wrong-name": "Le spatio de nomines contine characteres non valide.",
 	"bs-namespacemanager-wrong-alias": "Le alias del spatio de nomines contine characteres non valide.",

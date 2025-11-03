@@ -6,7 +6,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Interfaz alministrativa p'amestar, editar y desaniciar espacios de nomes",
-	"bs-namespacemanager-label": "Xestor d'espacios de nomes",
 	"bs-namespacemanager-wrong-name": "L'espaciu de nomes contién caráuteres inválidos.",
 	"bs-namespacemanager-ns-exists": "Yá esiste l'espaciu de nomes.",
 	"bs-namespacemanager-ns-length": "L'espaciu de nomes tien de tener dos caráuteres a lo menos.",

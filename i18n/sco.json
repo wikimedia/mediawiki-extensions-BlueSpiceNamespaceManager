@@ -6,7 +6,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Admeenistration interface fer eikin, eeditin n delytin namespaces",
-	"bs-namespacemanager-label": "Namespace manager",
 	"bs-namespacemanager-wrong-name": "The namespace haes onvalit chairacters.",
 	"bs-namespacemanager-ns-length": "The namespace maun hae ae mineemum length o twa chairacters.",
 	"bs-namespacemanager-label-namespaces": "Namespace",

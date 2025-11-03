@@ -6,7 +6,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Administrasjonsgrensesnitt for å legge til, redigere og slette navnerom",
-	"bs-namespacemanager-label": "Navneromsbehandler",
 	"bs-namespacemanager-text": "Navnerom",
 	"bs-namespacemanager-wrong-name": "Navnerommet inneholder ugyldige tegn",
 	"bs-namespacemanager-wrong-alias": "Navneromsaliaset inneholder ugyldige tegn.",

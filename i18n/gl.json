@@ -8,7 +8,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Interface administrativa para engadir, editar e eliminar espazos de nomes",
-	"bs-namespacemanager-label": "Xestor de espazos de nomes",
 	"bs-namespacemanager-text": "Espazos de nomes",
 	"bs-namespacemanager-wrong-name": "O espazo de nomes contén caracteres non válidos.",
 	"bs-namespacemanager-wrong-alias": "O alcume do espazo de nomes contén caracteres non válidos.",

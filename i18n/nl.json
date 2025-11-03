@@ -12,7 +12,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Administratie-interface voor het toevoegen, bewerken en verwijderen van naamruimten",
-	"bs-namespacemanager-label": "Naamruimtebeheer",
 	"bs-namespacemanager-text": "Naamruimten",
 	"bs-namespacemanager-wrong-name": "De naamruimte bevat ongeldige tekens.",
 	"bs-namespacemanager-wrong-alias": "De naamruimte-alias bevat ongeldige tekens.",

@@ -10,7 +10,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Interface d’administration pour ajouter, modifier et supprimer des espaces de noms",
-	"bs-namespacemanager-label": "Gestionnaire d’espaces de noms",
 	"bs-namespacemanager-text": "Espaces de noms",
 	"bs-namespacemanager-wrong-name": "L’espace de noms contient des caractères non valides.",
 	"bs-namespacemanager-wrong-alias": "L’alias de l’espace de noms contient des caractères non valides.",

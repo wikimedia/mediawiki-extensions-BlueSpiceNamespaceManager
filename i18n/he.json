@@ -8,7 +8,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "ממשק ניהולי עבור הוספה, עריכה ומחיקה של מרחבי שם",
-	"bs-namespacemanager-label": "ניהול מרחבי שם",
 	"bs-namespacemanager-text": "מרחבי שם",
 	"bs-namespacemanager-wrong-name": "השם של מרחב השם מכיל תווים בלתי־תקינים.",
 	"bs-namespacemanager-wrong-alias": "כינוי מרחב השם מכיל תווים בלתי־תקינים.",

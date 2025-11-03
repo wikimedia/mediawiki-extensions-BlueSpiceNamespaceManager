@@ -9,7 +9,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Interfaccia di amministrazione per l'aggiunta, la modifica e l'eliminazione di namespace",
-	"bs-namespacemanager-label": "Gestore namespace",
 	"bs-namespacemanager-text": "Namespace",
 	"bs-namespacemanager-wrong-name": "Il namespace contiene caratteri non validi.",
 	"bs-namespacemanager-wrong-alias": "L'alias di namespace contiene caratteri non validi.",

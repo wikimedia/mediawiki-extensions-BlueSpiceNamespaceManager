@@ -13,7 +13,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "واجهة الإدارة لإضافة وتحرير وحذف النطاقات",
-	"bs-namespacemanager-label": "مدير النطاق",
 	"bs-namespacemanager-text": "نطاقات",
 	"bs-namespacemanager-wrong-name": "يحتوي النطاق على أحرف غير صالحة.",
 	"bs-namespacemanager-wrong-alias": "يحتوي اسم النطاق المستعار على أحرف غير صالحة.",

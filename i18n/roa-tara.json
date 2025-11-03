@@ -5,7 +5,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Inderfacce de amministrazione pe aggiungere 'n'inderfacce, cangià e scangellà le namespace",
-	"bs-namespacemanager-label": "Gestore de namespace",
 	"bs-namespacemanager-wrong-name": "'U namespace tène carattere invalide.",
 	"bs-namespacemanager-wrong-alias": "L'alias d'u namespace tène carattere invalide.",
 	"bs-namespacemanager-alias-exists": "L'alias d'u namespace ha state ggià 'mbostate pe namespace $1",
