@@ -6,7 +6,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "नामस्थानहरू जोड्न, सम्पादन गर्न, मेट्न प्रवन्धक अवतरण",
-	"bs-namespacemanager-label": "नामस्थान प्रवन्धक",
 	"bs-namespacemanager-wrong-name": "यो नामपदले अमान्य चरित्र बोकेको छ।",
 	"bs-namespacemanager-ns-exists": "यो नामपद पहिले देखि समावेश छ।",
 	"bs-namespacemanager-ns-length": "नामस्थान कमसेकम २ क्यारेक्टरको हुनु जरूरी छ।",

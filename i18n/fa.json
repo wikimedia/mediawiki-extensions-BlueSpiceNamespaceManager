@@ -12,7 +12,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "رابط مدیریتی برای افزودن، ویرایش یا حذف فضاهای نام",
-	"bs-namespacemanager-label": "مدیر فضای نام",
 	"bs-namespacemanager-text": "فضاهای نام",
 	"bs-namespacemanager-wrong-name": "این فضای نام شامل نویسه‌های نامعتبر است.",
 	"bs-namespacemanager-wrong-alias": "این نام مستعار فضای نام، شامل نویسه‌های نامعتبر است.",

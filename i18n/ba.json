@@ -7,7 +7,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Исемдәр арауығын өҫтәү, төҙәтеү һәм юйыу өсөн административ интерфейс",
-	"bs-namespacemanager-label": "Исемдәр арауығы диспетчеры",
 	"bs-namespacemanager-wrong-name": "Исемдәр арауығында рөхсәт ителмәгән символдар бар.",
 	"bs-namespacemanager-ns-exists": "Исемдәр тупланмаһы бар",
 	"bs-namespacemanager-ns-length": "Исемдәр тупланмаһының иң кәм оҙонлоғо - ике символ",

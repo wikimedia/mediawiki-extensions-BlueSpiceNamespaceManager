@@ -11,7 +11,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Interface administrativa para adicionar, editar e excluir espaços nominais",
-	"bs-namespacemanager-label": "Gerenciador do espaço nominal",
 	"bs-namespacemanager-text": "Espaços nominais",
 	"bs-namespacemanager-wrong-name": "O espaço nominal contém caracteres inválidos.",
 	"bs-namespacemanager-wrong-alias": "O nome alternativo do espaço nominal contém caracteres inválidos.",

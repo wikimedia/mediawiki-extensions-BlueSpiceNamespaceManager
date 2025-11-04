@@ -15,7 +15,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "名前空間を追加/編集/削除する管理インターフェイス",
-	"bs-namespacemanager-label": "名前空間マネージャー",
 	"bs-namespacemanager-text": "名前空間",
 	"bs-namespacemanager-wrong-name": "名前空間名が無効な文字を含んでいます。",
 	"bs-namespacemanager-wrong-alias": "名前空間のエイリアスが無効な文字を含んでいます。",

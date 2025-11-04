@@ -6,7 +6,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "नामविश्वे जोडण्यास, संपादण्यास व वगळण्यास असलेले प्रशासकीय आंतरपृष्ठ",
-	"bs-namespacemanager-label": "नामविश्व व्यवस्थापक",
 	"bs-namespacemanager-wrong-name": "या नामविश्वात अवैध वर्ण आहेत.",
 	"bs-namespacemanager-ns-exists": "हे नामविश्व पूर्वीच अस्तित्वात आहे.",
 	"bs-namespacemanager-ns-length": "नामविश्वाची लांबी ही किमान दोन वर्ण असावी.",

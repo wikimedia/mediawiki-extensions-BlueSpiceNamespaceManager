@@ -8,7 +8,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Adminisztratív felület névterek felvételére, szerkesztésére és törlésére",
-	"bs-namespacemanager-label": "Névtér kezelő",
 	"bs-namespacemanager-text": "Névterek",
 	"bs-namespacemanager-wrong-name": "A névtér érvénytelen karakteret tartalmaz.",
 	"bs-namespacemanager-ns-exists": "A névtér már létezik.",

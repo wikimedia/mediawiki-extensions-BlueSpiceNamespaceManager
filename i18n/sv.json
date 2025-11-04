@@ -10,7 +10,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Administrationsgränssnittet för att redigera och radera namnrymder",
-	"bs-namespacemanager-label": "Namnrymdshanterare",
 	"bs-namespacemanager-wrong-name": "Namnrymden innehåller ogiltiga tecken.",
 	"bs-namespacemanager-ns-exists": "Namnrymden finns redan.",
 	"bs-namespacemanager-ns-length": "Namnrymden måste ha en längd av minst två tecken.",

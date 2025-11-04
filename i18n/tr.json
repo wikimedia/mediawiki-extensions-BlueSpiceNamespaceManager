@@ -8,7 +8,6 @@
 		]
 	},
 	"bs-namespacemanager-desc": "Ad alanları eklemek, düzenlemek ve silmek için yönetim arayüzü",
-	"bs-namespacemanager-label": "Ad alanı yöneticisi",
 	"bs-namespacemanager-wrong-name": "Ad alanı geçersiz karakterler içeriyor.",
 	"bs-namespacemanager-wrong-alias": "Ad alanı diğer adı geçersiz karakterler içeriyor.",
 	"bs-namespacemanager-alias-exists": "Ad alanı takma adı zaten ad alanı $1 için ayarlanmış",
