@@ -9,6 +9,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Status\Status;
 use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 
@@ -49,27 +50,42 @@ class NamespaceManager {
 		if ( !$configObject ) {
 			return [];
 		}
+
 		$raw = $this->configManager->retrieveRaw( $configObject );
 		if ( !$raw ) {
 			return [];
 		}
+
 		$data = unserialize( $raw );
 		$userNamespaces = array_values( $data['constants'] );
 
 		if ( $fullDetails ) {
-			$tmp = [];
-			foreach ( $userNamespaces as $ns ) {
-				$tmp[$ns] = [
-					'content' => in_array( $ns, $this->config->get( 'ContentNamespaces' ) ),
-					'subpages' => isset( $this->config->get( 'NamespacesWithSubpages' )[$ns] )
-						&& $this->config->get( 'NamespacesWithSubpages' )[$ns]
-				];
-				if ( $ns >= 100 && isset( $this->config->get( 'ExtraNamespaces' )[$ns] ) ) {
-					$tmp[$ns]['name'] = $this->config->get( 'ExtraNamespaces' )[$ns];
-				}
-			}
+			$userNamespaces = [];
+			$globals = $data['globals'];
 
-			$userNamespaces = $tmp;
+			foreach ( $globals['wgExtraNamespaces'] as $id => $name ) {
+				$base = [
+					'name' => $name,
+					'alias' => $this->getNamespaceAlias( $id ),
+					'subpages' => !empty( $globals['wgNamespacesWithSubpages'][$id] ),
+					'content' => in_array( $id, $globals['wgContentNamespaces'] ?? [] ),
+				];
+
+				$extensionProps = [];
+				$this->hookContainer->run(
+					'NamespaceManagerCollectNamespaceProperties',
+					[ $id, $globals, &$extensionProps ]
+				);
+
+				if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
+					$extensionProps['visualeditor'] = !empty( $globals['wgVisualEditorAvailableNamespaces'][$id] );
+				}
+				if ( ExtensionRegistry::getInstance()->isLoaded( 'SemanticMediaWiki' ) ) {
+					$extensionProps['smw'] = ( $globals['smwgNamespacesWithSemanticLinks'][$id] ?? false ) === true;
+				}
+
+				$userNamespaces[$id] = $base + $extensionProps;
+			}
 		}
 
 		return $userNamespaces;
@@ -120,9 +136,15 @@ class NamespaceManager {
 		$constantsNames = [];
 		$aliasesMap = [];
 		foreach ( $userNSDefinition as $nsId => $definition ) {
-			$aliasesMap[$nsId] = BsNamespaceHelper::getNamespaceAliases( $nsId );
+			$alias = $definition['alias'] ?? '';
+			if ( $alias ) {
+				$aliasesMap[$nsId] = [ $alias ];
+				$this->setNamespaceAlias( $alias, $nsId );
+			} else {
+				$aliasesMap[$nsId] = BsNamespaceHelper::getNamespaceAliases( $nsId );
+			}
 
-			$name = isset( $definition['name'] ) ? $definition['name'] : null;
+			$name = $definition['name'] ?? null;
 			$constantsNames[$nsId] = BsNamespaceHelper::getNamespaceConstName( $nsId, $name, true );
 		}
 
@@ -137,6 +159,7 @@ class NamespaceManager {
 		} catch ( Exception $e ) {
 			return Status::newFatal( $e->getMessage() );
 		}
+
 		return Status::newGood();
 	}
 
@@ -171,4 +194,31 @@ class NamespaceManager {
 
 		return $metaFields;
 	}
+
+	/**
+	 * @param string $alias
+	 * @param int $nsId
+	 */
+	public function setNamespaceAlias( string $alias, int $nsId ): void {
+		foreach ( $GLOBALS['wgNamespaceAliases'] as $existingAlias => $id ) {
+			if ( $id === $nsId ) {
+				unset( $GLOBALS['wgNamespaceAliases'][$existingAlias] );
+			}
+		}
+		$GLOBALS['wgNamespaceAliases'][$alias] = $nsId;
+	}
+
+	/**
+	 * @param int $nsId
+	 * @return string
+	 */
+	protected function getNamespaceAlias( int $nsId ): string {
+		foreach ( $GLOBALS['wgNamespaceAliases'] as $alias => $id ) {
+			if ( $id === $nsId ) {
+				return $alias;
+			}
+		}
+		return '';
+	}
+
 }
