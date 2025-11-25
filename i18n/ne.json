@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"पर्वत सुबेदी",
+			"बडा काजी",
 			"बिप्लब आनन्द"
 		]
 	},
-	"bs-namespacemanager-desc": "नामस्थानहरू जोड्न, सम्पादन गर्न, मेट्न प्रवन्धक अवतरण",
+	"bs-namespacemanager-desc": "नामपदहरू थप्ने, सम्पादन गर्ने र मेटाउने प्रशासन इन्टरफेस",
 	"bs-namespacemanager-label": "नामस्थान प्रवन्धक",
 	"bs-namespacemanager-wrong-name": "यो नामपदले अमान्य चरित्र बोकेको छ।",
 	"bs-namespacemanager-ns-exists": "यो नामपद पहिले देखि समावेश छ।",
