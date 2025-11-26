@@ -136,10 +136,12 @@ class NamespaceManager {
 		$constantsNames = [];
 		$aliasesMap = [];
 		foreach ( $userNSDefinition as $nsId => $definition ) {
-			$alias = $definition['alias'] ?? '';
+			$alias = $definition['alias'] ?? null;
 			if ( $alias ) {
 				$aliasesMap[$nsId] = [ $alias ];
 				$this->setNamespaceAlias( $alias, $nsId );
+			} elseif ( $alias === '' ) {
+				$this->unsetNamespaceAlias( $nsId );
 			} else {
 				$aliasesMap[$nsId] = BsNamespaceHelper::getNamespaceAliases( $nsId );
 			}
@@ -200,12 +202,19 @@ class NamespaceManager {
 	 * @param int $nsId
 	 */
 	public function setNamespaceAlias( string $alias, int $nsId ): void {
+		$this->unsetNamespaceAlias( $nsId );
+		$GLOBALS['wgNamespaceAliases'][$alias] = $nsId;
+	}
+
+	/**
+	 * @param int $nsId
+	 */
+	public function unsetNamespaceAlias( int $nsId ): void {
 		foreach ( $GLOBALS['wgNamespaceAliases'] as $existingAlias => $id ) {
 			if ( $id === $nsId ) {
 				unset( $GLOBALS['wgNamespaceAliases'][$existingAlias] );
 			}
 		}
-		$GLOBALS['wgNamespaceAliases'][$alias] = $nsId;
 	}
 
 	/**
