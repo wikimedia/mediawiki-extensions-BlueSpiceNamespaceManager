@@ -70,5 +70,8 @@
 	"bs-namespacemanager-invalid-namespace": "編輯中的命名空間無效",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "已停用",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "已勾選",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "已取消勾選"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "已取消勾選",
+	"bs-namespacemanager-save": "儲存",
+	"bs-namespacemanager-cancel": "取消",
+	"bs-namespacemanager-delete": "刪除"
 }
