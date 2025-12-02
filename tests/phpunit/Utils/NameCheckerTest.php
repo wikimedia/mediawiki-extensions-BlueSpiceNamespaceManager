@@ -6,7 +6,9 @@ use BlueSpice\NamespaceManager\Utils\NameChecker;
 use MediaWiki\Language\RawMessage;
 use MediaWikiIntegrationTestCase;
 use MessageLocalizer;
+use Wikimedia\Rdbms\FakeResultWrapper;
 use Wikimedia\Rdbms\IDatabase;
+use Wikimedia\Rdbms\SelectQueryBuilder;
 
 /**
  * @covers \BlueSpice\NamespaceManager\Utils\NameChecker
@@ -80,12 +82,26 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 	 * @dataProvider checkPseudoNamespaceDataProvider()
 	 */
 	public function testCheckPseudoNamespace( $name, $alias, $expected, $expectedMessage ) {
-		$mockDBData = [
+		$dbDataMock = [
 			(object)[ 'page_title' => 'Normal:Page' ],
 			(object)[ 'page_title' => 'Pseudo:Page' ],
 		];
+
+		$fakeResultWrapperMock = new FakeResultWrapper( $dbDataMock );
+
+		$selectQueryBuilderMock = $this->getMockBuilder( SelectQueryBuilder::class )
+			->disableOriginalConstructor()
+			->onlyMethods( [ 'table', 'fields', 'where', 'caller', 'fetchResultSet' ] )
+			->getMock();
+
+		$selectQueryBuilderMock->method( 'table' )->willReturnSelf();
+		$selectQueryBuilderMock->method( 'fields' )->willReturnSelf();
+		$selectQueryBuilderMock->method( 'where' )->willReturnSelf();
+		$selectQueryBuilderMock->method( 'caller' )->willReturnSelf();
+		$selectQueryBuilderMock->method( 'fetchResultSet' )->willReturn( $fakeResultWrapperMock );
+
 		$db = $this->createMock( IDatabase::class );
-		$db->method( 'select' )->willReturn( $mockDBData );
+		$db->method( 'newSelectQueryBuilder' )->willReturn( $selectQueryBuilderMock );
 
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
 		$messageLocalizer
