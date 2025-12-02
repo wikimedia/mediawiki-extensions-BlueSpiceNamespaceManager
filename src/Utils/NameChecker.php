@@ -4,36 +4,24 @@ namespace BlueSpice\NamespaceManager\Utils;
 
 use BlueSpice\Api\Response\Standard;
 use MessageLocalizer;
+use Wikimedia\Rdbms\Database;
 use Wikimedia\Rdbms\IDatabase;
 
 class NameChecker {
 
-	/**
-	 *
-	 * @var array
-	 */
+	/** @var array */
 	private $namespaceNames = [];
 
-	/**
-	 *
-	 * @var array
-	 */
+	/** @var array */
 	private $namespaceAliases = [];
 
-	/**
-	 *
-	 * @var Database
-	 */
-	private $db = null;
+	/** @var Database */
+	private $db;
+
+	/** @var MessageLocalizer */
+	private $messageLocalizer;
 
 	/**
-	 *
-	 * @var MessageLocalizer
-	 */
-	private $messageLocalizer = null;
-
-	/**
-	 *
 	 * @param array $namespaceNames
 	 * @param array $namespaceAliases
 	 * @param IDatabase|null $db
@@ -133,7 +121,6 @@ class NameChecker {
 	}
 
 	/**
-	 *
 	 * @param int $namespaceId
 	 * @param string $namespaceAlias
 	 * @return bool
@@ -163,7 +150,8 @@ class NameChecker {
 			[
 				'page_namespace' => NS_MAIN,
 				'page_title LIKE "%:%"'
-			]
+			],
+			__METHOD__
 		);
 
 		$titlesInMainBeginWithNamespaceNameOrAlias = [];
