@@ -144,15 +144,16 @@ class NameChecker {
 	 */
 	public function checkPseudoNamespace( $namespaceName, $namespaceAlias ) {
 		$oResult = new Standard();
-		$res = $this->db->select(
-			[ 'page' ],
-			'page_title',
-			[
+
+		$res = $this->db->newSelectQueryBuilder()
+			->table( 'page' )
+			->field( 'page_title' )
+			->where( [
 				'page_namespace' => NS_MAIN,
-				'page_title LIKE "%:%"'
-			],
-			__METHOD__
-		);
+				'page_title LIKE ' . $this->db->addQuotes( '%:%' )
+			] )
+			->caller( __METHOD__ )
+			->fetchResultSet();
 
 		$titlesInMainBeginWithNamespaceNameOrAlias = [];
 
