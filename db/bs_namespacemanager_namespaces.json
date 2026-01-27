@@ -1,0 +1,40 @@
+[
+	{
+		"name": "bs_namespacemanager_namespaces",
+		"columns": [
+			{
+				"name": "ns_id",
+				"type": "integer",
+				"options": {
+					"notnull": true
+				}
+			},
+			{
+				"name": "ns_name",
+				"type": "binary",
+				"options": {
+					"length": 255,
+					"notnull": true
+				}
+			},
+			{
+				"name": "ns_is_talk",
+				"type": "mwtinyint",
+				"options": {
+					"notnull": true
+				}
+			},
+			{
+				"name": "ns_is_content",
+				"type": "mwtinyint",
+				"options": {
+					"notnull": true
+				}
+			}
+		],
+		"indexes": [],
+		"pk": [
+			"ns_id"
+		]
+	}
+]

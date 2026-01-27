@@ -93,11 +93,18 @@
 		},
 		"persistNamespaceFlags": {
 			"class": "BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerBeforePersistSettings\\PersistNamespaceFlags"
+		},
+		"runDatabaseUpdates": {
+			"class": "BlueSpice\\NamespaceManager\\HookHandler\\LoadExtensionSchemaUpdatesHook\\RunDatabaseUpdates"
+		},
+		"namespaceTableUpdater": {
+			"class": "BlueSpice\\NamespaceManager\\HookHandler\\NamespaceTableUpdater"
 		}
 	},
 	"Hooks": {
 		"LoadExtensionSchemaUpdates": [
-			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\MigrateLegacySettings::callback"
+			"\\BlueSpice\\NamespaceManager\\Hook\\LoadExtensionSchemaUpdates\\MigrateLegacySettings::callback",
+			"runDatabaseUpdates"
 		],
 		"NamespaceManager::editNamespace": [
 			"\\BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerEditNamespace\\SetContentFlag::callback",
@@ -105,7 +112,8 @@
 		],
 		"NamespaceManagerBeforePersistSettings": "persistNamespaceFlags",
 		"MWStakeCommonUIRegisterSkinSlotComponents": "common-user-interface",
-		"MWStakeDynamicConfigRegisterConfigs": "registerDynamicConfig"
+		"MWStakeDynamicConfigRegisterConfigs": "registerDynamicConfig",
+		"NamespaceManagerBeforeSerializeSettings": "namespaceTableUpdater"
 	},
 	"ResourceModules": {
 		"ext.bluespice.namespaceManager": {
