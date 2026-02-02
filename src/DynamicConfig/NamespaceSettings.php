@@ -7,14 +7,14 @@ use MWStake\MediaWiki\Component\DynamicConfig\IDynamicConfig;
 
 class NamespaceSettings implements IDynamicConfig {
 
-	/** @var HookContainer */
-	private $hookContainer;
-
 	/**
 	 * @param HookContainer $hookContainer
+	 * @param array $fixedContentNamespaces
 	 */
-	public function __construct( HookContainer $hookContainer ) {
-		$this->hookContainer = $hookContainer;
+	public function __construct(
+		private readonly HookContainer $hookContainer,
+		private readonly array $fixedContentNamespaces
+	) {
 	}
 
 	/**
@@ -41,17 +41,35 @@ class NamespaceSettings implements IDynamicConfig {
 		}
 		foreach ( $unserialized['globals'] ?? [] as $global => $value ) {
 			$baseValue = $GLOBALS[$global] ?? [];
+
+			if ( empty( $value ) ) {
+				$GLOBALS[$global] = [];
+				continue;
+			}
+
 			if ( $this->isAssoc( $baseValue, $value ) ) {
 				// Use new value as the first array, so that it overrides defaults
 				$value = $value + $baseValue;
 				ksort( $value );
-			} elseif ( is_array( $value ) && is_array( $baseValue ) ) {
-				$value = array_values( array_unique( array_merge( $baseValue, $value ) ) );
+				$GLOBALS[$global] = $value;
+				continue;
 			}
-			$GLOBALS[$global] = $value;
+
+			if ( is_array( $value ) && is_array( $baseValue ) ) {
+				$value = array_values( array_unique( $value ) );
+				$GLOBALS[$global] = $value;
+			}
+		}
+
+		// Ensure that configured fixed namespaces are present in content namespaces
+		if ( !empty( $this->fixedContentNamespaces ) ) {
+			$GLOBALS['wgContentNamespaces'] = array_values(
+				array_unique( array_merge( $GLOBALS['wgContentNamespaces'] ?? [], $this->fixedContentNamespaces ) )
+			);
 		}
 
 		$GLOBALS['wgExtraSignatureNamespaces'] = $GLOBALS['wgContentNamespaces'] ?? [];
+
 		return true;
 	}
 
@@ -68,6 +86,7 @@ class NamespaceSettings implements IDynamicConfig {
 		$globals = [
 			'wgExtraNamespaces' => [],
 			'wgNamespaceAliases' => $GLOBALS['wgNamespaceAliases'] ?? [],
+			'wgContentNamespaces' => $GLOBALS['wgContentNamespaces'] ?? [],
 		];
 		$serialized = [ 'constants' => [] ];
 
@@ -85,8 +104,20 @@ class NamespaceSettings implements IDynamicConfig {
 				$globals['wgExtraNamespaces'][$nsId] = $GLOBALS['wgExtraNamespaces'][$nsId];
 			}
 
+			if ( !$definition['content'] ) {
+				$globals['wgContentNamespaces'] = array_diff( $globals['wgContentNamespaces'], [ $nsId ] );
+			} else {
+				if ( !in_array( $nsId, $globals['wgContentNamespaces'] ) ) {
+					$globals['wgContentNamespaces'][] = $nsId;
+				}
+			}
+			$globals['wgContentNamespaces'] = array_values( array_unique( $globals['wgContentNamespaces'] ) );
+
 			$this->hookContainer->run( 'NamespaceManagerBeforePersistSettings', [
-				&$globals, $nsId, $definition, $GLOBALS
+				&$globals,
+				$nsId,
+				$definition,
+				$GLOBALS
 			] );
 			if ( isset( $definition['alias'] ) ) {
 				if ( !empty( $definition['alias'] ) ) {

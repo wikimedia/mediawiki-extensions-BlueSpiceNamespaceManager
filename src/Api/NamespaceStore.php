@@ -60,6 +60,9 @@ class NamespaceStore extends BSApiExtJSStoreBase {
 				}
 			}
 
+			$config = $this->services->getConfigFactory()->makeConfig( 'bsg' );
+			$readOnlyContentNamespaces = $config->get( 'NamespaceManagerFixedContentNamespaces' );
+
 			$aResult[] = [
 				'id' => $iNs,
 				'name' => $sNamespace,
@@ -72,7 +75,7 @@ class NamespaceStore extends BSApiExtJSStoreBase {
 				'content_raw' => ( $wgContentNamespaces && in_array( $iNs, $wgContentNamespaces ) ),
 				'content' => [
 					'value' => ( $wgContentNamespaces && in_array( $iNs, $wgContentNamespaces ) ),
-					'read_only' => ( $iNs === NS_MAIN )
+					'read_only' => ( in_array( $iNs, $readOnlyContentNamespaces ) )
 				],
 				'subpages' => isset( $wgNamespacesWithSubpages[$iNs] )
 					&& $wgNamespacesWithSubpages[$iNs] === true
