@@ -47,7 +47,7 @@ class NamespaceSettingsTest extends TestCase {
 				'dummy' => NS_MEDIAWIKI,
 				'foo' => NS_FILE,
 			],
-			'G2' => [ 'foo', 'test', 'bar' ],
+			'G2' => [ 'foo', 'bar' ],
 			'G3' => [
 				NS_MAIN => true,
 				NS_FILE => 'foo',
@@ -55,13 +55,39 @@ class NamespaceSettingsTest extends TestCase {
 			'wgExtraSignatureNamespaces' => [],
 		];
 
-		$config = new NamespaceSettings( $this->createMock( HookContainer::class ) );
+		$config = new NamespaceSettings( $this->createMock( HookContainer::class ), [] );
 		$config->apply( $serialized );
 		$subsetGlobals = [
 			'X' => $GLOBALS['X'],
 			'G1' => $GLOBALS['G1'],
 			'G2' => $GLOBALS['G2'],
 			'G3' => $GLOBALS['G3'],
+			'wgExtraSignatureNamespaces' => []
+		];
+		$this->assertSame( $expected, $subsetGlobals );
+	}
+
+	/**
+	 * @covers \BlueSpice\NamespaceManager\DynamicConfig\NamespaceSettings::apply
+	 * @return void
+	 */
+	public function testApplyWithFixedContentNamespaces() {
+		$fixedContentNamespaces = [ 1, 5 ];
+		$serialized = serialize( [ 'globals' => [
+			'wgContentNamespaces' => [ 0, 2 ],
+		] ] );
+
+		$GLOBALS['wgContentNamespaces'] = [ 1, 2, 3, 4 ];
+
+		$expected = [
+			'wgContentNamespaces' => [ 0, 2, 1, 5 ],
+			'wgExtraSignatureNamespaces' => [],
+		];
+
+		$config = new NamespaceSettings( $this->createMock( HookContainer::class ), $fixedContentNamespaces );
+		$config->apply( $serialized );
+		$subsetGlobals = [
+			'wgContentNamespaces' => $GLOBALS['wgContentNamespaces'],
 			'wgExtraSignatureNamespaces' => []
 		];
 		$this->assertSame( $expected, $subsetGlobals );
