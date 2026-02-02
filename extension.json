@@ -72,6 +72,10 @@
 	"config": {
 		"NamespaceManagerNsOffset": {
 			"value": 2999
+		},
+		"NamespaceManagerFixedContentNamespaces": {
+			"value": [ 0, 102, 108 ],
+			"description": "List of namespaces that should be set always and not be editable by the user. Defaults to NS_MAIN, NS_PROPERTY and NS_CONCEPT (last two because of SemanticMediaWiki enforces them."
 		}
 	},
 	"AutoloadNamespaces": {
@@ -89,7 +93,7 @@
 		},
 		"registerDynamicConfig": {
 			"class": "\\BlueSpice\\NamespaceManager\\Hook\\RegisterDynamicConfig",
-			"services": [ "HookContainer" ]
+			"services": [ "HookContainer", "ConfigFactory" ]
 		},
 		"persistNamespaceFlags": {
 			"class": "BlueSpice\\NamespaceManager\\Hook\\NamespaceManagerBeforePersistSettings\\PersistNamespaceFlags"
