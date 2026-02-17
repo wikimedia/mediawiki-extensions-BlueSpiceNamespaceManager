@@ -2,8 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Hamilton Abreu",
-			"Vitorvicentevalente",
-			"Mansil alfalb"
+			"Mansil alfalb",
+			"Vitorvicentevalente"
 		]
 	},
 	"bs-namespacemanager-desc": "Interface de administração para criar, editar e eliminar domínios/espaços nominais",
