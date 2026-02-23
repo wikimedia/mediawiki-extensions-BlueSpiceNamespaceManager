@@ -1,10 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ucukor",
 			"W"
 		]
 	},
 	"bs-namespacemanager-label-subpages": "Падстаронкі",
 	"bs-namespacemanager-label-pagecount": "Старонкі",
-	"bs-namespacemanager-label-system": "Сыстэма"
+	"bs-namespacemanager-label-system": "Сыстэма",
+	"bs-namespacemanager-cancel": "Скасаваць"
 }

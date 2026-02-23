@@ -4,7 +4,8 @@
 			"MITO",
 			"Pyscowicz",
 			"Valtlai",
-			"Valtlait"
+			"Valtlait",
+			"Yupik"
 		]
 	},
 	"bs-namespacemanager-text": "Nimiavaruudet",
@@ -33,5 +34,6 @@
 	"bs-namespacemanager-nodeletetalk": "Keskustelunimiavaruutta ei voida poistaa",
 	"bs-namespacemanager-label-istalk": "Keskustelu",
 	"bs-namespacemanager-hide-talk-label": "Piilota keskustelunimiavaruudet",
-	"bs-namespacemanager-labelnsalias": "Alias"
+	"bs-namespacemanager-labelnsalias": "Alias",
+	"bs-namespacemanager-save": "Tallenna"
 }
