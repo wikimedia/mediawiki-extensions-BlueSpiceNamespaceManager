@@ -1,14 +1,8 @@
 <?php
 
-use MediaWiki\Maintenance\Maintenance;
+require_once __DIR__ . '/ImportExportBase.php';
 
-$IP = getenv( 'MW_INSTALL_PATH' );
-if ( !$IP ) {
-	$IP = dirname( __DIR__, 3 );
-}
-require_once "$IP/maintenance/Maintenance.php";
-
-class ExportNamespaces extends Maintenance {
+class ExportNamespaces extends ImportExportBase {
 
 	public function __construct() {
 		parent::__construct();
@@ -18,9 +12,7 @@ class ExportNamespaces extends Maintenance {
 	public function execute() {
 		$outputPath = $this->getOption( 'output' );
 
-		/** @var NamespaceManager $nsManager */
-		$nsManager = $this->getServiceContainer()->getService( 'BSNamespaceManager' );
-		$userNamespaces = $nsManager->getUserNamespaces( true );
+		$userNamespaces = $this->getNamespaceData();
 		$export = [];
 
 		foreach ( $userNamespaces as $nsId => $config ) {
