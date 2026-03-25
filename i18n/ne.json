@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"पर्वत सुबेदी",
+			"बडा काजी",
 			"बिप्लब आनन्द"
 		]
 	},
-	"bs-namespacemanager-desc": "नामस्थानहरू जोड्न, सम्पादन गर्न, मेट्न प्रवन्धक अवतरण",
+	"bs-namespacemanager-desc": "नामपदहरू थप्ने, सम्पादन गर्ने र मेटाउने प्रशासन इन्टरफेस",
 	"bs-namespacemanager-label": "नामस्थान प्रवन्धक",
 	"bs-namespacemanager-wrong-name": "यो नामपदले अमान्य चरित्र बोकेको छ।",
 	"bs-namespacemanager-ns-exists": "यो नामपद पहिले देखि समावेश छ।",
@@ -31,5 +32,6 @@
 	"bs-namespacemanager-deletewarning": "के तपाईं यस नामस्थानलाई पक्का मेट्न चाहनुहुन्छ? एक नामस्थानलाई मेट्दा पूर्ववत गर्न सकिँदैन।",
 	"bs-namespacemanager-pagepresent": "यस नामपदमा रहेका पृष्ठहरू:",
 	"bs-namespacemanager-deletens-movepages": "\"$1\" नामपदबाट यो पृष्ठलाई \"{{int:bs-ns_main}}\"मा सारिएको छ, किनभने नामपद \"$1\" लाइ मेटिएको थियो ।",
-	"bs-namespacemanager-deletens-deletepages": "यो पृष्ठलाई मेटिएको छ, किनभने नामस्थान \"$1\" लाइ मेटिएको थियो।"
+	"bs-namespacemanager-deletens-deletepages": "यो पृष्ठलाई मेटिएको छ, किनभने नामस्थान \"$1\" लाइ मेटिएको थियो।",
+	"bs-namespacemanager-label-istalk": "वार्तालाप"
 }

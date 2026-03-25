@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fraxinus.cs"
+			"Fraxinus.cs",
+			"Jrobicek"
 		]
 	},
-	"bs-namespacemanager-pseudo-ns": "Ve standardním jmenném prostoru jsou články, jež začínají názvem nebo aliasem navrhovaného jmenného prostoru."
+	"bs-namespacemanager-pseudo-ns": "Ve standardním jmenném prostoru jsou články, jež začínají názvem nebo aliasem navrhovaného jmenného prostoru.",
+	"bs-namespacemanager-tipedit": "Upravit jmenný prostor"
 }

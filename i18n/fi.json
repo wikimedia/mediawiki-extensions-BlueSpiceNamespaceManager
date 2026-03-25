@@ -4,7 +4,8 @@
 			"MITO",
 			"Pyscowicz",
 			"Valtlai",
-			"Valtlait"
+			"Valtlait",
+			"Yupik"
 		]
 	},
 	"bs-namespacemanager-ns-exists": "Nimiavaruus on jo olemassa.",
@@ -34,5 +35,6 @@
 	"bs-namespacemanager-hide-talk-label": "Piilota keskustelunimiavaruudet",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-text": "Nimiavaruudet",
-	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|on luonut}} nimiavaruuden $4"
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|on luonut}} nimiavaruuden $4",
+	"bs-namespacemanager-save": "Tallenna"
 }

@@ -67,5 +67,8 @@
 	"bs-namespacemanager-error-save-fail": "Navneromskonfigurasjonen kunne ikke lagres",
 	"bs-namespacemanager-hide-non-content-ns-label": "Skjul navnerom uten innhold",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "krysset av",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "ikke krysset av"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "ikke krysset av",
+	"bs-namespacemanager-save": "Lagre",
+	"bs-namespacemanager-cancel": "Avbryt",
+	"bs-namespacemanager-delete": "Slett"
 }

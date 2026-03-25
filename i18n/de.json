@@ -3,6 +3,7 @@
 		"authors": [
 			"Hwboehm",
 			"Jkonrad",
+			"Justman10000",
 			"Kghbln",
 			"Lukasaiko",
 			"MarkusRost",
@@ -46,7 +47,7 @@
 	"bs-namespacemanager-willdelete": "Werden gelöscht",
 	"bs-namespacemanager-willmove": "Werden in \"{{int:bs-ns_main}}\" verschoben*",
 	"bs-namespacemanager-willmovesuffix": "Werden mit dem Suffix „$1“ in „{{int:bs-ns_main}}“ verschoben",
-	"bs-namespacemanager-deletewarning": "Bist du dir sicher, dass du den Namensraum löschen willst? Das Löschen eines Namensraums kann nicht rückgängig gemacht werden.",
+	"bs-namespacemanager-deletewarning": "{{#FORMAL:Bist du dir|Sind Sie sich}} sicher, dass {{#FORMAL:du|Sie}} den Namensraum löschen {{#FORMAL:willst|wollen}}? Das Löschen eines Namensraums kann nicht zurückgesetzt werden.",
 	"bs-namespacemanager-pagepresent": "Seiten in diesem Namensraum:",
 	"bs-namespacemanager-deletens-movepages": "Diese Seite wurde vom dem „$1“ Namensraum in den „{{int:bs-ns_main}}“ Namensraum verschoben, da der „$1“ Namensraum gelöscht wurde.",
 	"bs-namespacemanager-deletens-deletepages": "Diese Seite wurde gelöscht, da ihr Namensraum „$1“ gelöscht wurde.",
@@ -72,10 +73,13 @@
 	"bs-namespacemanager-hide-talk-label": "Diskussionsnamensräume ausblenden",
 	"bs-namespacemanager-labelnsalias": "Alias",
 	"bs-namespacemanager-invalid-namespace": "Der bearbeitete Namensraum ist ungültig",
-	"bs-namespacemanager-pseudo-ns": "Es gibt Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
+	"bs-namespacemanager-pseudo-ns": "Es existieren Seiten im Standardnamensraum, die mit dem vorgeschlagenen Namensraumnamen oder Alias beginnen.",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "deaktiviert",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "ausgewählt",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "Nicht ausgewählt",
 	"bs-namespacemanager-error-save-fail": "Die Namensraum-Konfiguration konnte nicht gespeichert werden",
-	"bs-namespacemanager-hide-non-content-ns-label": "Ausblenden von Nicht-Inhalts-Namensräumen"
+	"bs-namespacemanager-hide-non-content-ns-label": "Ausblenden von Nicht-Inhalts-Namensräumen",
+	"bs-namespacemanager-save": "Speichern",
+	"bs-namespacemanager-cancel": "Abbrechen",
+	"bs-namespacemanager-delete": "Löschen"
 }

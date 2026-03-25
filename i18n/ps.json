@@ -5,5 +5,8 @@
 		]
 	},
 	"bs-namespacemanager-label-pagecount": "مخونه",
-	"bs-namespacemanager-label-system": "غونډال"
+	"bs-namespacemanager-label-system": "غونډال",
+	"bs-namespacemanager-save": "خوندي کول",
+	"bs-namespacemanager-cancel": "ناگارل",
+	"bs-namespacemanager-delete": "ړنگول"
 }
