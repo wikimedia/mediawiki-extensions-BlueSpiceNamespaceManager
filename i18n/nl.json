@@ -2,14 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Edoderoo",
+			"Elphie",
 			"Esketti",
 			"Mainframe98",
 			"McDutchie",
 			"Romaine",
 			"SPQRobin",
 			"Siebrand",
-			"Sjoerddebruin",
-			"Elphie"
+			"Sjoerddebruin"
 		]
 	},
 	"bs-namespacemanager-desc": "Administratie-interface voor het toevoegen, bewerken en verwijderen van naamruimten",
