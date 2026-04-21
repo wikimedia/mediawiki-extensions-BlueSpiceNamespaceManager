@@ -34,7 +34,11 @@ class NamespaceTableUpdater implements NamespaceManagerBeforeSerializeSettingsHo
 		$contentLanguage = $services->getContentLanguage();
 		foreach ( $canonicalNamespaces as $nsId => $_ ) {
 			if ( $nsId === NS_MAIN ) {
-				$allNamespaces[$nsId] = $messageCache->get( 'blanknamespace', false, $contentLanguage ) ?? '';
+				$allNamespaces[$nsId] = $messageCache->get(
+					'blanknamespace',
+					false,
+					$contentLanguage->getCode()
+				) ?? '';
 				continue;
 			}
 
