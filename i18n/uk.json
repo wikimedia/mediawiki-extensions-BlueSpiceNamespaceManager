@@ -5,6 +5,7 @@
 			"DDPAT",
 			"Ice bulldog",
 			"Piramidion",
+			"Repakr",
 			"SimondR",
 			"Vlad5250",
 			"Ата"
@@ -64,6 +65,7 @@
 	"bs-namespacemanager-hide-talk-label": "Приховати простори назв обговорень",
 	"bs-namespacemanager-labelnsalias": "Псевдонім",
 	"bs-namespacemanager-invalid-namespace": "Простір назв, який редагується, є недійсним",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "вимкнено",
 	"bs-namespacemanager-save": "Зберегти",
 	"bs-namespacemanager-cancel": "Скасувати",
 	"bs-namespacemanager-delete": "Вилучити"
