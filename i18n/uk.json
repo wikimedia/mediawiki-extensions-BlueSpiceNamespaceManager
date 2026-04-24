@@ -5,6 +5,7 @@
 			"DDPAT",
 			"Ice bulldog",
 			"Piramidion",
+			"Repakr",
 			"SimondR",
 			"Vlad5250",
 			"Ата"
@@ -66,5 +67,6 @@
 	"bs-namespacemanager-alias-exists-as-ns": "Псевдонім простору назв уже існує як назва простору назв.",
 	"bs-namespacemanager-save": "Зберегти",
 	"bs-namespacemanager-cancel": "Скасувати",
-	"bs-namespacemanager-delete": "Вилучити"
+	"bs-namespacemanager-delete": "Вилучити",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "вимкнено"
 }
