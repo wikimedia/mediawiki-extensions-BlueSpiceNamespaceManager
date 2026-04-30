@@ -3,6 +3,7 @@
 		"authors": [
 			"Hwangjy9",
 			"SeoJeongHo",
+			"Tensama0415",
 			"Ykhwong",
 			"Yunbj",
 			"밥풀떼기",
@@ -62,5 +63,5 @@
 	"bs-namespacemanager-cancel": "취소",
 	"bs-namespacemanager-delete": "삭제",
 	"bs-namespacemanager-hide-talk-label": "토론 이름공간 숨기기",
-	"bs-namespacemanager-hide-non-content-ns-label": "빈 이름공간 숨기기"
+	"bs-namespacemanager-hide-non-content-ns-label": "콘텐츠가 아닌 이름공간 숨기기"
 }
