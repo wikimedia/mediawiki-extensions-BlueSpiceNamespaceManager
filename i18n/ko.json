@@ -62,5 +62,8 @@
 	"bs-namespacemanager-invalid-namespace": "편집 중인 이름공간이 유효하지 않습니다",
 	"bs-namespacemanager-save": "저장",
 	"bs-namespacemanager-cancel": "취소",
-	"bs-namespacemanager-delete": "삭제"
+	"bs-namespacemanager-delete": "삭제",
+	"bs-namespacemanager-icon-tristate-disabled-aria-label": "비활성화됨",
+	"bs-namespacemanager-icon-tristate-true-aria-label": "체크됨",
+	"bs-namespacemanager-icon-tristate-false-aria-label": "체크 해제됨"
 }
