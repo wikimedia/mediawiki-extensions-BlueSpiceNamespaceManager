@@ -9,6 +9,7 @@ use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\HookContainer\HookContainer;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Registration\ExtensionRegistry;
 use MediaWiki\Status\Status;
 use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 
@@ -59,19 +60,32 @@ class NamespaceManager {
 		$userNamespaces = array_values( $data['constants'] );
 
 		if ( $fullDetails ) {
-			$tmp = [];
-			foreach ( $userNamespaces as $ns ) {
-				$tmp[$ns] = [
-					'content' => in_array( $ns, $this->config->get( 'ContentNamespaces' ) ),
-					'subpages' => isset( $this->config->get( 'NamespacesWithSubpages' )[$ns] )
-						&& $this->config->get( 'NamespacesWithSubpages' )[$ns]
-				];
-				if ( $ns >= 100 && isset( $this->config->get( 'ExtraNamespaces' )[$ns] ) ) {
-					$tmp[$ns]['name'] = $this->config->get( 'ExtraNamespaces' )[$ns];
-				}
-			}
+			$userNamespaces = [];
+			$globals = $data['globals'];
 
-			$userNamespaces = $tmp;
+			foreach ( $globals['wgExtraNamespaces'] as $id => $name ) {
+				$base = [
+					'name' => $name,
+					'alias' => $this->getNamespaceAlias( $id ),
+					'subpages' => !empty( $globals['wgNamespacesWithSubpages'][$id] ),
+					'content' => in_array( $id, $globals['wgContentNamespaces'] ?? [] ),
+				];
+
+				$extensionProps = [];
+				$this->hookContainer->run(
+					'NamespaceManagerCollectNamespaceProperties',
+					[ $id, $globals, &$extensionProps ]
+				);
+
+				if ( ExtensionRegistry::getInstance()->isLoaded( 'VisualEditor' ) ) {
+					$extensionProps['visualeditor'] = !empty( $globals['wgVisualEditorAvailableNamespaces'][$id] );
+				}
+				if ( ExtensionRegistry::getInstance()->isLoaded( 'SemanticMediaWiki' ) ) {
+					$extensionProps['smw'] = ( $globals['smwgNamespacesWithSemanticLinks'][$id] ?? false ) === true;
+				}
+
+				$userNamespaces[$id] = $base + $extensionProps;
+			}
 		}
 
 		return $userNamespaces;
