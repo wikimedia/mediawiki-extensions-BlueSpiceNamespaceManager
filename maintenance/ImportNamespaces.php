@@ -2,10 +2,15 @@
 
 use BlueSpice\NamespaceManager\NamespaceManager;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Maintenance\Maintenance;
 
-require_once __DIR__ . '/ImportExportBase.php';
+$IP = getenv( 'MW_INSTALL_PATH' );
+if ( !$IP ) {
+	$IP = dirname( __DIR__, 3 );
+}
+require_once "$IP/maintenance/Maintenance.php";
 
-class ImportNamespaces extends ImportExportBase {
+class ImportNamespaces extends Maintenance {
 
 	public function __construct() {
 		parent::__construct();
@@ -120,7 +125,7 @@ class ImportNamespaces extends ImportExportBase {
 	private function appendNamespaces( array $namespaces, array $settingsMap = [] ): void {
 		/** @var NamespaceManager $nsManager */
 		$nsManager = $this->getServiceContainer()->getService( 'BSNamespaceManager' );
-		$userNamespaces = $this->getNamespaceData();
+		$userNamespaces = $nsManager->getUserNamespaces( true );
 
 		foreach ( $namespaces as $ns ) {
 			$key = $ns['key'];
