@@ -66,7 +66,7 @@
 	"bs-namespacemanager-label-istalk": "Overleg",
 	"right-namespacemanager-viewspecialpage": "Toegang hebben tot de speciale pagina [[Special:NamespaceManager]]",
 	"bs-namespacemanager-labelnsalias": "Alias",
-	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt, is ongeldig",
+	"bs-namespacemanager-invalid-namespace": "De naamruimte die wordt bewerkt is onjuist",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "uitgeschakeld",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "aangevinkt",
 	"bs-namespacemanager-icon-tristate-false-aria-label": "niet aangevinkt",
