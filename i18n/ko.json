@@ -55,6 +55,7 @@
 	"logentry-bs-namespace-manager-remove": "$1님이 $4 이름공간을 {{GENDER:$2|제거했습니다}}",
 	"bs-namespacemanager-ns-config-saved": "이름공간 구성이 저장되었습니다.",
 	"bs-namespacemanager-error-save-fail": "이름공간 구성을 저장하지 못했습니다",
+	"apihelp-bs-namespace-store-summary": "모든 이름 공간과 임의의 구성을 나열합니다. 정렬, 필터링, 쪽 번호 매기기를 허용합니다. ExtJS Store 변수를 구현합니다.",
 	"apihelp-bs-namespace-tasks-summary": "이름공간 구성의 수정을 허용합니다.",
 	"action-namespacemanager-viewspecialpage": "이름공간 관리자의 특수문서 보기",
 	"namespacemanager": "이름공간 관리자",
