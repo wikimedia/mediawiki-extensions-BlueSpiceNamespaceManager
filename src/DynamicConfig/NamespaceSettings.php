@@ -61,6 +61,20 @@ class NamespaceSettings implements IDynamicConfig {
 			}
 		}
 
+		// Fix talk namespace aliases stored with an empty base (e.g. '_talk').
+		// A custom namespace saved without an explicit alias on a
+		// non-English wiki lets the  talk alias be computed as $sAlias . '_talk',
+		// producing '_talk'.
+		foreach ( $GLOBALS['wgNamespaceAliases'] ?? [] as $alias => $nsId ) {
+			if ( $alias === '_talk' && $nsId >= 101 && $nsId % 2 === 1 ) {
+				$mainNsName = $GLOBALS['wgExtraNamespaces'][$nsId - 1] ?? null;
+				if ( $mainNsName !== null ) {
+					unset( $GLOBALS['wgNamespaceAliases']['_talk'] );
+					$GLOBALS['wgNamespaceAliases'][$mainNsName . '_talk'] = $nsId;
+				}
+			}
+		}
+
 		// Ensure that configured fixed namespaces are present in content namespaces
 		if ( !empty( $this->fixedContentNamespaces ) ) {
 			$GLOBALS['wgContentNamespaces'] = array_values(
