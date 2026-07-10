@@ -8,19 +8,16 @@ use MediaWiki\Context\IContextSource;
 
 abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 	/**
-	 *
 	 * @var \BlueSpice\Extension
 	 */
 	protected $namespaceManager;
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $bsSystemNamespaces;
 
 	/**
-	 *
 	 * @param \BlueSpice\Extension $namespaceManager
 	 * @param array &$systemNamespaces
 	 * @return bool
@@ -37,7 +34,6 @@ abstract class BSNamespaceManagerBeforeSetUsernamespaces extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param \BlueSpice\Extension $namespaceManager

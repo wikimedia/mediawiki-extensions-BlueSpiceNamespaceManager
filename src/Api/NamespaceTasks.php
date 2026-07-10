@@ -15,7 +15,6 @@ use Throwable;
 class NamespaceTasks extends BSApiTasksBase {
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $aTasks = [
@@ -96,7 +95,6 @@ class NamespaceTasks extends BSApiTasksBase {
 	];
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getRequiredTaskPermissions() {

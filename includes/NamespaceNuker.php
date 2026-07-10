@@ -13,7 +13,6 @@ use MediaWiki\Request\DerivativeRequest;
 class NamespaceNuker {
 
 	/**
-	 *
 	 * @param int $idNS
 	 * @param string $nameNS
 	 * @param bool $bWithSuffix
@@ -69,7 +68,6 @@ class NamespaceNuker {
 	}
 
 	/**
-	 *
 	 * @param int $idNS
 	 * @param string $nameNS
 	 * @return bool

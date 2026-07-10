@@ -8,7 +8,6 @@ use MediaWiki\SpecialPage\SpecialPage;
 class BSApiNamespaceTasks extends BSApiTasksBase {
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $aTasks = [
@@ -89,7 +88,6 @@ class BSApiNamespaceTasks extends BSApiTasksBase {
 	];
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getRequiredTaskPermissions() {

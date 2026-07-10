@@ -41,7 +41,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers \BlueSpice\NamespaceManager\Utils\NameChecker::checkNamingConvention()
-	 * @dataProvider checkNameDataProvider()
+	 * @dataProvider checkNameDataProvider
 	 */
 	public function testCheckNamingConvention( $name, $alias, $id, $expected, $expectedMessage ) {
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
@@ -60,7 +60,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers \BlueSpice\NamespaceManager\Utils\NameChecker::checkExists()
-	 * @dataProvider checkExistsDataProvider()
+	 * @dataProvider checkExistsDataProvider
 	 */
 	public function testCheckExists( $name, $alias, $id, $expected, $expectedMessage ) {
 		$messageLocalizer = $this->createMock( MessageLocalizer::class );
@@ -79,7 +79,7 @@ class NameCheckerTest extends MediaWikiIntegrationTestCase {
 
 	/**
 	 * @covers \BlueSpice\NamespaceManager\Utils\NameChecker::checkPseudoNamespace()
-	 * @dataProvider checkPseudoNamespaceDataProvider()
+	 * @dataProvider checkPseudoNamespaceDataProvider
 	 */
 	public function testCheckPseudoNamespace( $name, $alias, $expected, $expectedMessage ) {
 		$dbDataMock = [
