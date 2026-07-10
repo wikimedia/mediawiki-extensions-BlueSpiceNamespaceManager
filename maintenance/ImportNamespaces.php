@@ -108,7 +108,9 @@ class ImportNamespaces extends Maintenance {
 			$namespaces[] = [ 'key' => $key, 'name' => (string)$ns ];
 		}
 
-		$this->output( 'Found ' . count( $namespaces ) . ' custom namespaces ≥ 3000: ' . json_encode( $namespaces ) . "\n" );
+		$this->output(
+			'Found ' . count( $namespaces ) . ' custom namespaces ≥ 3000: ' . json_encode( $namespaces ) . "\n"
+		);
 		return $namespaces;
 	}
 

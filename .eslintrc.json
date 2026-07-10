@@ -5,6 +5,9 @@
 		"wikimedia/jquery",
 		"wikimedia/mediawiki"
 	],
+	"parserOptions": {
+		"sourceType": "commonjs"
+	},
 	"globals": {
 		"bs": "readonly",
 		"OOJSPlus": "readonly"

@@ -113,7 +113,6 @@ class NamespaceNuker {
 	}
 
 	/**
-	 *
 	 * @param int $namespaceId
 	 * @param string $namespaceName
 	 * @return Status

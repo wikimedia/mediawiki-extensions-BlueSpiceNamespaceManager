@@ -7,7 +7,6 @@ use BlueSpice\NamespaceManager\Hook\NamespaceManagerEditNamespace;
 class SetContentFlag extends NamespaceManagerEditNamespace {
 
 	/**
-	 *
 	 * @return bool
 	 */
 	protected function doProcess() {
