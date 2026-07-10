@@ -120,7 +120,7 @@ bs.namespaceManager.ui.dialog.EditNamespaceDialog.prototype.getActionProcess = f
 					if ( !this.checkboxValues.hasOwnProperty( checkboxkey ) ) {
 						continue;
 					}
-					settings[ checkboxkey ] = selected.indexOf( checkboxkey ) !== -1;
+					settings[ checkboxkey ] = selected.indexOf( checkboxkey ) !== -1; // eslint-disable-line unicorn/prefer-includes
 				}
 				const dfd = $.Deferred();
 				this.pushPending();

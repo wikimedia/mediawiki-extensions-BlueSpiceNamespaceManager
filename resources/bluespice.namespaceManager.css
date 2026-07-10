@@ -35,7 +35,7 @@
 	padding: 0;
 	height: 120px;
 	text-align: left;
-	text-orientation: sideways;
+	text-orientation: sideways;  /* stylelint-disable-line plugin/no-unsupported-browser-features */
 	white-space: break-spaces;
 }
 
