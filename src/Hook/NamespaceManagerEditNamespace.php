@@ -8,31 +8,26 @@ use MediaWiki\Context\IContextSource;
 
 abstract class NamespaceManagerEditNamespace extends Hook {
 	/**
-	 *
 	 * @var array
 	 */
 	protected $namespaceDefinition;
 
 	/**
-	 *
 	 * @var int
 	 */
 	protected $nsId;
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $additionalSettings;
 
 	/**
-	 *
 	 * @var bool
 	 */
 	protected $useInternalDefaults;
 
 	/**
-	 *
 	 * @param array &$namespaceDefinition
 	 * @param int &$nsId
 	 * @param array $additionalSettings
@@ -54,7 +49,6 @@ abstract class NamespaceManagerEditNamespace extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param array &$namespaceDefinition

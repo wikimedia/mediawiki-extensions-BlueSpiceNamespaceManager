@@ -8,7 +8,6 @@ use MediaWiki\Context\IContextSource;
 
 abstract class NamespaceManagerGetMetaFields extends Hook {
 	/**
-	 *
 	 * @var array
 	 */
 	protected $metaFields;
@@ -30,7 +29,6 @@ abstract class NamespaceManagerGetMetaFields extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param array &$metaFields

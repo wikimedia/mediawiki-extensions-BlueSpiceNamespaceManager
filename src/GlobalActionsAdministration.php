@@ -8,15 +8,11 @@ use MWStake\MediaWiki\Component\CommonUserInterface\Component\RestrictedTextLink
 
 class GlobalActionsAdministration extends RestrictedTextLink {
 
-	/**
-	 *
-	 */
 	public function __construct() {
 		parent::__construct( [] );
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getId(): string {
@@ -24,7 +20,6 @@ class GlobalActionsAdministration extends RestrictedTextLink {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getPermissions(): array {

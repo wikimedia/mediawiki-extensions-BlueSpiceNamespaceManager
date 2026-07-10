@@ -8,7 +8,6 @@ use MediaWiki\Context\IContextSource;
 
 abstract class BSApiNamespaceStoreMakeData extends Hook {
 	/**
-	 *
 	 * @var array
 	 */
 	protected $results;
@@ -30,7 +29,6 @@ abstract class BSApiNamespaceStoreMakeData extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param array &$results

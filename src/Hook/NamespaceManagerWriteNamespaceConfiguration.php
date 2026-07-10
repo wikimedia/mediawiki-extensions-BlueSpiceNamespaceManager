@@ -8,31 +8,26 @@ use MediaWiki\Context\IContextSource;
 
 abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 	/**
-	 *
 	 * @var string
 	 */
 	protected $saveContent;
 
 	/**
-	 *
 	 * @var string
 	 */
 	protected $constName;
 
 	/**
-	 *
 	 * @var int
 	 */
 	protected $ns;
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $definition;
 
 	/**
-	 *
 	 * @param string &$saveContent
 	 * @param string $constName
 	 * @param int $ns
@@ -53,7 +48,6 @@ abstract class NamespaceManagerWriteNamespaceConfiguration extends Hook {
 	}
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param string &$saveContent
