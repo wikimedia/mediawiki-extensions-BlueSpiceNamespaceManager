@@ -6,7 +6,6 @@ use MediaWiki\SpecialPage\SpecialPage;
 class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getRequiredPermissions() {
@@ -14,7 +13,6 @@ class BSApiNamespaceStore extends BSApiExtJSStoreBase {
 	}
 
 	/**
-	 *
 	 * @param int $nsId
 	 * @param int $linkcontent
 	 * @return string

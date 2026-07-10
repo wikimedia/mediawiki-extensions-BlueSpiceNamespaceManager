@@ -16,7 +16,6 @@ use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $aSettings = [
@@ -25,7 +24,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	];
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getModuleName() {
@@ -33,7 +31,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getTokens() {
@@ -122,7 +119,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	/**
-	 *
 	 * @return int
 	 */
 	protected function getLastNS() {
@@ -141,7 +137,6 @@ class BSApiNamespaceTasksTest extends BSApiTasksTestBase {
 	}
 
 	/**
-	 *
 	 * @param int $iID
 	 * @return bool
 	 */
