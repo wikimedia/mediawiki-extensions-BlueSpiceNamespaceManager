@@ -4,7 +4,8 @@
 			"Chrumps",
 			"Pio387",
 			"Rail",
-			"Railfail536"
+			"Railfail536",
+			"PanWor"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfejs administracyjny do dodawania, edytowania i usuwania przestrzeni nazw",
@@ -33,10 +34,10 @@
 	"bs-namespacemanager-deletewarning": "Czy na pewno chcesz usunąć tę przestrzeń nazw? Tego kroku nie można cofnąć.",
 	"bs-namespacemanager-pagepresent": "Strony w tej przestrzeni nazw:",
 	"log-description-bs-namespace-manager": "To jest rejestr zmian w przestrzeniach nazw.",
-	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|utworzył|utworzyła|utworzył(a)}} przestrzeń nazw $4",
-	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} ustawienia dla przestrzeni nazw $4",
-	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} nazwę przestrzeni nazw $4 na $5",
-	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|usunął|usunęła}} przestrzeń nazw $4",
+	"logentry-bs-namespace-manager-create": "$1 {{GENDER:$2|utworzył|utworzyła|utworzył(a)}} przestrzeń nazw „$4”",
+	"logentry-bs-namespace-manager-modify": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} ustawienia dla przestrzeni nazw „$4”",
+	"logentry-bs-namespace-manager-rename": "$1 {{GENDER:$2|zmienił|zmieniła|zmienił(a)}} nazwę przestrzeni nazw „$4” na „$5”",
+	"logentry-bs-namespace-manager-remove": "$1 {{GENDER:$2|usunął|usunęła|usunął(-ęła)}} przestrzeń nazw „$4”",
 	"bs-namespacemanager-ns-config-saved": "Konfiguracja przestrzeni nazw została zapisana.",
 	"namespacemanager": "Menedżer przestrzeni nazw",
 	"bs-namespacemanager-label-istalk": "Dyskusja",
