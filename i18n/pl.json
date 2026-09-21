@@ -10,7 +10,7 @@
 	},
 	"bs-namespacemanager-desc": "Interfejs administracyjny do dodawania, edytowania i usuwania przestrzeni nazw",
 	"bs-namespacemanager-text": "Przestrzenie nazw",
-	"bs-namespacemanager-wrong-name": "Przestrzeń nazw posiada nieprawidłowe znaki.",
+	"bs-namespacemanager-wrong-name": "Przestrzeń nazw zawiera nieprawidłowe znaki.",
 	"bs-namespacemanager-ns-exists": "Przestrzeń nazw już istnieje.",
 	"bs-namespacemanager-ns-length": "Przestrzeń nazw musi mieć co najmniej dwa znaki długości.",
 	"bs-namespacemanager-invalid-id": "Nieprawidłowy identyfikator przestrzeni nazw",
