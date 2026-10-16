@@ -2,10 +2,10 @@
 	"@metadata": {
 		"authors": [
 			"Chrumps",
+			"PanWor",
 			"Pio387",
 			"Rail",
-			"Railfail536",
-			"PanWor"
+			"Railfail536"
 		]
 	},
 	"bs-namespacemanager-desc": "Interfejs administracyjny do dodawania, edytowania i usuwania przestrzeni nazw",
