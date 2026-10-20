@@ -65,5 +65,8 @@
 	"bs-namespacemanager-invalid-namespace": "Urejani imenski prostor ni veljaven",
 	"bs-namespacemanager-icon-tristate-disabled-aria-label": "onemogočeno",
 	"bs-namespacemanager-icon-tristate-true-aria-label": "obkljukano",
-	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano"
+	"bs-namespacemanager-icon-tristate-false-aria-label": "odkljukano",
+	"bs-namespacemanager-save": "Shrani",
+	"bs-namespacemanager-cancel": "Prekliči",
+	"bs-namespacemanager-delete": "Izbriši"
 }
