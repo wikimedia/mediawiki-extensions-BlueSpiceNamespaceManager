@@ -3,9 +3,9 @@
 namespace BlueSpice\NamespaceManager\Tests;
 
 use BlueSpice\NamespaceManager\Utils\NameChecker;
+use MediaWiki\Language\MessageLocalizer;
 use MediaWiki\Language\RawMessage;
 use MediaWikiIntegrationTestCase;
-use MessageLocalizer;
 use Wikimedia\Rdbms\FakeResultWrapper;
 use Wikimedia\Rdbms\IDatabase;
 use Wikimedia\Rdbms\SelectQueryBuilder;
