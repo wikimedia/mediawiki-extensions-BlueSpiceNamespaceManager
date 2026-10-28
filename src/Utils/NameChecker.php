@@ -3,7 +3,7 @@
 namespace BlueSpice\NamespaceManager\Utils;
 
 use BlueSpice\Api\Response\Standard;
-use MessageLocalizer;
+use MediaWiki\Language\MessageLocalizer;
 use Wikimedia\Rdbms\Database;
 use Wikimedia\Rdbms\IDatabase;
 
