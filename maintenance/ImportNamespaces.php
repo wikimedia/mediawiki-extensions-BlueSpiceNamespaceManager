@@ -127,7 +127,7 @@ class ImportNamespaces extends Maintenance {
 	private function appendNamespaces( array $namespaces, array $settingsMap = [] ): void {
 		/** @var NamespaceManager $nsManager */
 		$nsManager = $this->getServiceContainer()->getService( 'BSNamespaceManager' );
-		$userNamespaces = $nsManager->getUserNamespaces( true );
+		$userNamespaces = $nsManager->getUserNamespaces( true ) + $nsManager->getSystemNamespaces( true );
 
 		foreach ( $namespaces as $ns ) {
 			$key = $ns['key'];

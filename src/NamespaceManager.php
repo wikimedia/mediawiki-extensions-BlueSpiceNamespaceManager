@@ -41,11 +41,29 @@ class NamespaceManager {
 	}
 
 	/**
-	 * Get all namespaces, which are created with the NamespaceManager.
+	 * Get all namespaces created with the NamespaceManager.
 	 * @param bool $fullDetails should the complete configuration of the namespaces be loaded
 	 * @return array the namespace data
 	 */
 	public function getUserNamespaces( $fullDetails = false ) {
+		return $this->getConfiguredNamespaces( $fullDetails, false );
+	}
+
+	/**
+	 * Get saved configuration overrides for system namespaces.
+	 * @param bool $fullDetails
+	 * @return array
+	 */
+	public function getSystemNamespaces( $fullDetails = false ) {
+		return $this->getConfiguredNamespaces( $fullDetails, true );
+	}
+
+	/**
+	 * @param bool $fullDetails
+	 * @param bool $systemNamespaces
+	 * @return array
+	 */
+	private function getConfiguredNamespaces( $fullDetails, $systemNamespaces ) {
 		$configObject = $this->configManager->getConfigObject( 'bs-namespacemanager-namespaces' );
 		if ( !$configObject ) {
 			return [];
@@ -57,19 +75,27 @@ class NamespaceManager {
 		}
 
 		$data = unserialize( $raw );
-		$userNamespaces = array_values( $data['constants'] );
+		$globals = $data['globals'];
+		$namespaceIds = array_values( array_filter(
+			$data['constants'],
+			static function ( $id ) use ( $globals, $systemNamespaces ) {
+				return isset( $globals['wgExtraNamespaces'][$id] ) !== $systemNamespaces;
+			}
+		) );
+		$namespaces = $namespaceIds;
 
 		if ( $fullDetails ) {
-			$userNamespaces = [];
-			$globals = $data['globals'];
+			$namespaces = [];
 
-			foreach ( $globals['wgExtraNamespaces'] as $id => $name ) {
+			foreach ( $namespaceIds as $id ) {
 				$base = [
-					'name' => $name,
 					'alias' => $this->getNamespaceAlias( $id ),
 					'subpages' => !empty( $globals['wgNamespacesWithSubpages'][$id] ),
 					'content' => in_array( $id, $globals['wgContentNamespaces'] ?? [] ),
 				];
+				if ( isset( $globals['wgExtraNamespaces'][$id] ) ) {
+					$base['name'] = $globals['wgExtraNamespaces'][$id];
+				}
 
 				$extensionProps = [];
 				$this->hookContainer->run(
@@ -84,11 +110,11 @@ class NamespaceManager {
 					$extensionProps['smw'] = ( $globals['smwgNamespacesWithSemanticLinks'][$id] ?? false ) === true;
 				}
 
-				$userNamespaces[$id] = $base + $extensionProps;
+				$namespaces[$id] = $base + $extensionProps;
 			}
 		}
 
-		return $userNamespaces;
+		return $namespaces;
 	}
 
 	/**
