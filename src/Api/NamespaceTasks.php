@@ -122,8 +122,9 @@ class NamespaceTasks extends BSApiTasksBase {
 		$oResult = $this->getResult();
 		$contLang = $this->services->getContentLanguage();
 		$aNamespaces = $contLang->getNamespaces();
-		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
-			->getUserNamespaces( true );
+		$namespaceManager = $this->services->getService( 'BSNamespaceManager' );
+		$aUserNamespaces = $namespaceManager->getUserNamespaces( true )
+			+ $namespaceManager->getSystemNamespaces( true );
 		end( $aNamespaces );
 		$iNS = key( $aNamespaces ) + 1;
 		reset( $aNamespaces );
@@ -229,8 +230,9 @@ class NamespaceTasks extends BSApiTasksBase {
 				&$systemNamespaces
 			]
 		);
-		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
-			->getUserNamespaces( true );
+		$namespaceManager = $this->services->getService( 'BSNamespaceManager' );
+		$aUserNamespaces = $namespaceManager->getUserNamespaces( true )
+			+ $namespaceManager->getSystemNamespaces( true );
 
 		if ( !is_numeric( $oData->id ) ) {
 			$oResult->message = $this->msg( 'bs-namespacemanager-invalid-id' )->text();
@@ -344,12 +346,13 @@ class NamespaceTasks extends BSApiTasksBase {
 			return $oResult;
 		}
 
-		$aUserNamespaces = $this->services->getService( 'BSNamespaceManager' )
-			->getUserNamespaces( true );
+		$namespaceManager = $this->services->getService( 'BSNamespaceManager' );
+		$aUserNamespaces = $namespaceManager->getUserNamespaces( true );
 		if ( !isset( $aUserNamespaces[$iNS] ) ) {
 			$oResult->message = $this->msg( 'bs-namespacemanager-msgnoteditabledelete' )->text();
 			return $oResult;
 		}
+		$aUserNamespaces += $namespaceManager->getSystemNamespaces( true );
 
 		$namespceInfo = $this->services->getNamespaceInfo();
 		$isTalkNS = $namespceInfo->isTalk( $iNS );
