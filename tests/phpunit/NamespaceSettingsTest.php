@@ -3,10 +3,84 @@
 namespace BlueSpice\Namespacemanager\Tests;
 
 use BlueSpice\NamespaceManager\DynamicConfig\NamespaceSettings;
+use BlueSpice\NamespaceManager\Hook\NamespaceManagerBeforePersistSettings\PersistNamespaceFlags;
+use BlueSpice\NamespaceManager\NamespaceManager;
+use MediaWiki\Config\Config;
 use MediaWiki\HookContainer\HookContainer;
+use MWStake\MediaWiki\Component\DynamicConfig\DynamicConfigManager;
 use PHPUnit\Framework\TestCase;
 
 class NamespaceSettingsTest extends TestCase {
+	/**
+	 * @covers \BlueSpice\NamespaceManager\NamespaceManager::getUserNamespaces
+	 * @covers \BlueSpice\NamespaceManager\NamespaceManager::getSystemNamespaces
+	 * @covers \BlueSpice\NamespaceManager\DynamicConfig\NamespaceSettings::serialize
+	 * @dataProvider provideSystemNamespaceFlags
+	 */
+	public function testPreserveSystemNamespaceOverrides( bool $enabled ): void {
+		$hooks = $this->createMock( HookContainer::class );
+		$hooks->method( 'run' )->willReturnCallback( static function ( $name, $args ) {
+			if ( $name === 'NamespaceManagerBeforePersistSettings' ) {
+				( new PersistNamespaceFlags() )->onNamespaceManagerBeforePersistSettings( ...$args );
+			} elseif ( $name === 'NamespaceManagerCollectNamespaceProperties' ) {
+				$args[2]['customFlag'] = !empty( $args[1]['testNamespaceFlags'][$args[0]] );
+			}
+			return true;
+		} );
+		$config = new NamespaceSettings( $hooks, [] );
+		$raw = serialize( [
+			'constants' => [ 'NS_MAIN' => 0, 'NS_PROJECT' => 4, 'NS_CUSTOM' => 3000 ],
+			'globals' => [
+				'wgExtraNamespaces' => [ 3000 => 'Custom' ],
+				'wgNamespacesWithSubpages' => [ 0 => $enabled, 4 => !$enabled, 3000 => false ],
+				'wgContentNamespaces' => $enabled ? [ 0 ] : [ 4 ],
+				'testNamespaceFlags' => [ 0 => $enabled ],
+			],
+		] );
+		$dynamicConfig = $this->createMock( DynamicConfigManager::class );
+		$dynamicConfig->method( 'getConfigObject' )->willReturn( $config );
+		$dynamicConfig->method( 'retrieveRaw' )->willReturnCallback( static function () use ( &$raw ) {
+			return $raw;
+		} );
+		$manager = new NamespaceManager( $this->createMock( Config::class ), $hooks, $dynamicConfig );
+
+		$this->assertSame( [ 3000 ], $manager->getUserNamespaces() );
+		$this->assertSame( [ 0, 4 ], $manager->getSystemNamespaces() );
+		$this->assertSame( [ 3000 ], array_keys( $manager->getUserNamespaces( true ) ) );
+		$this->assertSame( [ 0, 4 ], array_keys( $manager->getSystemNamespaces( true ) ) );
+		$this->assertSame( $enabled, $manager->getSystemNamespaces( true )[0]['customFlag'] );
+
+		// Editing another namespace must preserve both enabled and disabled system overrides.
+		$definitions = $manager->getUserNamespaces( true ) + $manager->getSystemNamespaces( true );
+		$definitions[3000]['subpages'] = true;
+		$raw = $config->serialize( [
+			'constantsNames' => [ 0 => 'NS_MAIN', 4 => 'NS_PROJECT', 3000 => 'NS_CUSTOM' ],
+			'userNSDefinition' => $definitions,
+		] );
+		$this->assertSame( $enabled, $manager->getSystemNamespaces( true )[0]['subpages'] );
+		$this->assertSame( $enabled, $manager->getSystemNamespaces( true )[0]['content'] );
+		$this->assertSame( !$enabled, $manager->getSystemNamespaces( true )[4]['subpages'] );
+		$this->assertTrue( $manager->getUserNamespaces( true )[3000]['subpages'] );
+
+		// Removing a user namespace must not remove system overrides.
+		$definitions = $manager->getUserNamespaces( true ) + $manager->getSystemNamespaces( true );
+		unset( $definitions[3000] );
+		$raw = $config->serialize( [
+			'constantsNames' => [ 0 => 'NS_MAIN', 4 => 'NS_PROJECT' ],
+			'userNSDefinition' => $definitions,
+		] );
+		$this->assertSame( [], $manager->getUserNamespaces( true ) );
+		$this->assertSame( $enabled, $manager->getSystemNamespaces( true )[0]['subpages'] );
+		$this->assertSame( !$enabled, $manager->getSystemNamespaces( true )[4]['subpages'] );
+	}
+
+	public static function provideSystemNamespaceFlags(): array {
+		return [
+			'enabled' => [ true ],
+			'disabled' => [ false ],
+		];
+	}
+
 	/**
 	 * @covers \BlueSpice\NamespaceManager\DynamicConfig\NamespaceSettings::apply
 	 * @return void
