@@ -15,8 +15,13 @@ class SpecialNamespaceManager extends SpecialPage {
 	 * @param NamespaceManager $namespaceManager
 	 */
 	public function __construct( NamespaceManager $namespaceManager ) {
-		parent::__construct( 'NamespaceManager', 'namespacemanager-viewspecialpage' );
+		parent::__construct( 'NamespaceManager' );
 		$this->namespaceManager = $namespaceManager;
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'namespacemanager-viewspecialpage';
 	}
 
 	/**
